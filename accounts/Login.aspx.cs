@@ -66,7 +66,7 @@ public partial class accounts_Login : CommonPage
                         // FormsAuthentication.RedirectFromLoginPage(usrname, false);
                         FormsAuthentication.SetAuthCookie(usrname, false);
                         if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
-                        else Response.Redirect("myaccount.aspx");
+                        else Response.Redirect("/myaccount.aspx");
                         //  if (backlinkpassed) Response.Redirect(CommonFunctions.PrepareURL(backlinkurl));
                         //  else Response.Redirect(CommonFunctions.PrepareURL("myaccount.aspx"));
                         /*  if (backlinkpassed) Response.Redirect(CommonFunctions.PrepareURL(backlinkurl));
@@ -163,7 +163,7 @@ public partial class accounts_Login : CommonPage
                         FormsAuthentication.SetAuthCookie(signname, false);
                         //Response.Write(backlinkurl);
                         if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"]+ backlinkurl);
-                        else Response.Redirect("myaccount.aspx");
+                        else Response.Redirect("/myaccount.aspx");
                         /* if (AuthenticationManager.IfAdmin)
                               Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
                           else
