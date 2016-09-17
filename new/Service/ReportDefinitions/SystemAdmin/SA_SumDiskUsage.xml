@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="FE50475FE0FB4899BCB3C571F80085E5" title="~Report_SumDiskUsage" friendly="SA_SumDiskUsage" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="4E88419DF3D84B28A4715B61F7090AFB" autoOptions="true" exclude="User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="False" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" /> 
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="4E88419DF3D84B28A4715B61F7090AFB">
+				<Sort value="TotalDisk" order="DESC"/>
+				<ChartType value="Clustered,Smooth,Bar,3D," />
+				<MaxValues value="10" />
+				<XValue labelCol="Default" labelType="None" xAngle="0" />
+				<YValue columns="TotalDisk" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="4E88419DF3D84B28A4715B61F7090AFB">
+				<Sort value="TotalDisk" order="DESC" />
+				<AutoRank implement="true" align="center" title="~ReportCol_Rank" />
+				<Values columns="Domain,TotalDisk" />
+				<LinkColumn column="Domain" url="javascript:parent.UpdateFrame('{VPATH}Reports/frmViewReport.aspx?domain={0}&amp;drillToId={1}');" linkedId="3790F84A17824C208FACC3475B4EC328" />
+				<FooterRow colSpan="2" name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow colSpan="2" name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow colSpan="2" name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

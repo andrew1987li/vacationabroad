@@ -1,0 +1,553 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/MasterPageNoCss7.master.cs" Inherits="MasterPage7" %>
+
+
+<%@ Register TagPrefix="uc" TagName="ddMenu" Src="~/DropDownMenu.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head runat="server">
+    <link rel="icon" href="http://vacations-abroad.com/favicon.ico" type="image/x-icon" />
+    <link rel="Shortcut Icon" href="http://vacations-abroad.com/favicon.ico" />
+    <title></title>
+    <%--<link href="http://www.vacations-abroad.com/css/StyleSheet1.css" rel="stylesheet" type="text/css" />--%>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <script src="/js/hoverintent.js"></script>
+
+    <%--new stuff--%>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+    
+<script type="text/javascript">
+        $(document).ready(function () {
+            var timer;
+            //Default Action
+            $(".tab_content").hide(); //Hide all content
+            $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            var config = {
+                over: MouseOverNav, // function = onMouseOver callback (REQUIRED)    
+                timeout: 500, // number = milliseconds delay before onMouseOut    
+                out: MouseOutNav // function = onMouseOut callback (REQUIRED)    
+            };
+
+            var configTab = {
+                over: MouseOverNavTab, // function = onMouseOver callback (REQUIRED)    
+                timeout: 200, // number = milliseconds delay before onMouseOut    
+                out: MouseOutNavTab // function = onMouseOut callback (REQUIRED)    
+            };
+
+            $(".new_li").hoverIntent(config);
+            $("#tabNorthAmerica").hoverIntent(configTab);
+            $("#tabSouthAmerica").hoverIntent(configTab);
+            $("#tabAfrica").hoverIntent(configTab);
+            $("#tabAsia").hoverIntent(configTab);
+            $("#tabOceania").hoverIntent(configTab);
+            $("#tabEurope").hoverIntent(configTab);
+            
+            function MouseOverNav() {
+                if ($.browser.msie && $.browser.version == "7.0") {
+
+                } else {
+                    var activeTab = $(this).find("a").attr("rel"); //Find the rel attribute value to identify the active tab + content
+                    $(".tab_content").hide(); //Hide all tab content
+                    $(activeTab).fadeIn();
+                }
+
+
+            }
+            function MouseOutNav() {
+                var isHovered;
+                //if ($.browser.msie && $.browser.version == "7.0") {
+                if ($.browser.msie) {
+
+                } else {
+                    if ($('#tabNorthAmerica').is(":hover")) {
+                        isHovered = true;
+                    }
+                    else if ($('#tabSouthAmerica').is(":hover")) {
+                        isHovered = true;
+                    }
+                    else if ($('#tabEurope').is(":hover")) {
+                        isHovered = true;
+                    }
+                    else if ($('#tabAsia').is(":hover")) {
+                        isHovered = true;
+                    }
+                    else if ($('#tabAfrica').is(":hover")) {
+                        isHovered = true;
+                    }
+                    else if ($('#tabOceania').is(":hover")) {
+                        isHovered = true;
+                    }
+                    var activeTab = $(this).find("a").attr("rel"); //Find the rel attribute value to identify the active tab + content
+                    if (!isHovered) {
+                        $(activeTab).fadeOut();
+                    }
+                }
+
+            }
+            function MouseOverNavTab() {
+                //we do nothing
+            }
+
+            function MouseOutNavTab() {
+                var activeTab = $(this).find("a").attr("rel"); //Find the rel attribute value to identify the active tab + content
+                $(this).fadeOut();
+            }
+
+        });
+
+        
+    </script>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css' />
+
+    <style type="text/css">
+        .TripleListMain {
+            margin-bottom: 20px;
+            overflow: hidden;
+            /*border-top: 1px solid #CCC;*/
+            padding-top: 15px;
+        }
+
+            .TripleListMain li {
+                width: 20%;
+                /*border-bottom: 1px solid #CCC;*/
+                float: left;
+                display: inline;
+                padding-bottom: 10px;
+            }
+            
+         div#thank-you-inquiry
+         {
+             font-size: 16px;
+             padding: 30px;
+             font-family: verdana;
+             line-height: 25px;
+         } 
+         
+         div#thank-you-inquiry .message
+         {
+             text-align: center;
+             margin-top: 10px;
+         }
+         
+         div#thank-you-inquiry .msg2
+         {
+             margin-top: 40px;
+         }
+         
+         div#thank-you-inquiry img
+         {
+             border-width: 0px;
+             width: 200px;
+             margin-top: 40px;
+         }
+         
+         div#thank-you-inquiry .msg2 img
+         {
+             margin: 45px 0 40px 0;
+         }
+         
+    </style>
+
+    <%--new stuff--%>
+</head>
+<body runat="server" style="background-color: #ffffff; font-family: Arial; font-size: 12px;" id="BodyTag">
+    <form id="MainForm" runat="server">
+    <div id="header">
+        <!--  Container  -->
+        <div class="container">
+            <div><%--style="position: absolute; top: 0px; left: 50%; margin-left: -437px; z-index: 400;"--%>
+                <a href="/">
+                    <asp:Image runat="server" ID="Logo" ImageAlign="middle" AlternateText="Vacations-Abroad.com" BorderWidth="0" ImageUrl="/images/logo.png" CssClass="logo" Height="204" Width="276" /></a>
+            </div>
+            <div class="head_rht">
+                <div style="float: left; padding-top: 7px; padding-left: 180px;">
+                    <asp:TextBox ID="tbKeyWords" runat="server" />
+                    <asp:Button ID="btnSearchByKeyWords" runat="server" Text="Search" OnClick="SearchByKeyWords_Click" UseSubmitBehavior="false" />
+                </div>
+                <div class="social_link">
+                    <ul>
+                        <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad"  target="_blank">
+                            <img src="/images/social01.jpg" width="24" height="25" alt=""></a></li>
+                        <li><a rel="nofollow" href="https://twitter.com/vacationsabroad" target="_blank" >
+                            <img src="/images/social02.jpg" width="24" height="25" alt=""></a></li>
+                        <li><a rel="nofollow" href="https://pinterest.com/vacationsabroad" target="_blank" >
+                            <img src="/images/social03.jpg" width="24" height="25" alt=""></a></li>
+                        <li class="last"><a rel="nofollow" href="http://vacationsabroad.tumblr.com/"a target="_blank" >
+                            <img src="/images/social04.png" width="24" height="25" alt=""></a></li>
+                    </ul>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="top_location">
+                    <ul class="tabs">
+                        <li class="new_li"><a  href="/africa/default.aspx" title="Africa Vacations" rel="#tabAfrica">
+                            <img src="/images/loc_05.jpg" width="60" height="89" alt=""></a></li>
+                        <li class="new_li"><a  href="/asia/default.aspx" title="Asia Vacations" rel="#tabAsia">
+                            <img src="/images/loc_04.jpg" width="122" height="89" alt=""></a></li>
+                        <li class="new_li"><a  href="/europe/default.aspx" title="Europe Vacations" rel="#tabEurope">
+                            <img src="/images/loc_03.jpg" width="71" height="89" alt=""></a></li>
+                        <li class="new_li"><a  href="/north_america/default.aspx" title="North America Vacations" rel="#tabNorthAmerica">
+                            <img src="/images/loc_01.jpg" width="115" height="89" alt=""></a></li>
+                        <li class="new_li"><a  href="/south_america/default.aspx" title="South America Vacations" rel="#tabSouthAmerica">
+                            <img src="/images/loc_02.jpg" width="38" height="89" alt=""></a></li>
+                        
+                        
+                        
+                        <li class="new_li last"><a href="/oceania/default.aspx" title="Oceania Vacations" rel="#tabOceania">
+                            <img src="/images/loc_06.jpg" width="58" height="89" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="clear">&nbsp;</div>
+        </div>
+        <!--  End Container  -->
+    </div>
+    <!--  End Header  -->
+
+
+    <!--  Body Container  -->
+    <div id="body_contnainer">
+        <!--  Container  -->
+        <div class="container">
+
+            <div class="cont_lft fltlft" id="dvLft" runat="server">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--BOF tab_container-->
+                <div class="tab_container">
+
+
+                    <!--BOF tab1-->
+                    <div id="tab1" class="tab_content">
+                    </div>
+                    <!--EOF tab1-->
+
+                    <!--BOF tabNorthAmerica-->
+                    <div style="display: none;" id="tabNorthAmerica" class="tab_content" title="North America Vacations">
+                        <div class="tapsectionNorthAmerica">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    North America Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divnAmerica" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div6">
+                            <div class="rhtsection">
+                                <h2>Maui Hawaii</h2>
+                                <a href="http://www.vacations-abroad.com/usa/hawaii/maui/default.aspx">
+                                    <img src="/images/RightSideNorthAmerica01.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Mt Tremblant Canada</h2>
+                                <a href="http://www.vacations-abroad.com/canada/quebec/mont_tremblant/default.aspx">
+                                    <img src="/images/RightSideNorthAmerica02.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Whistler Canada</h2>
+                                <a href="http://www.vacations-abroad.com/usa/hawaii/maui/default.aspx">
+                                    <img src="/images/RightSideNorthAmerica03.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--EOF tabNorthAmerica-->
+
+                    <!--BOF tabSouthAmerica-->
+                    <div style="display: none;" id="tabSouthAmerica" class="tab_content"  title="South America Vacations">
+                        <div class="tapsectionSouthAmerica">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    South America Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divSouthAmerica" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div5">
+                            <div class="rhtsection">
+                                <h2>Buenos Aires Argentina</h2>
+                                <a href="http://www.vacations-abroad.com/argentina/buenos_aires/default.aspx">
+                                    <img src="/images/RightSideSouthAmerica01.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Lima Peru</h2>
+                                <a href="http://www.vacations-abroad.com/peru/lima/default.aspx">
+                                    <img src="/images/RightSideSouthAmerica02.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Rio de Janerio Brazil</h2>
+                                <a href="http://www.vacations-abroad.com/brazil/rio_de_janeiro/default.aspx">
+                                    <img src="/images/RightSideSouthAmerica03.jpg" /></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--EOF tabNorthAmerica-->
+
+                    <!--BOF tabSouthAmerica-->
+                    <div style="display: none;" id="tabEurope" class="tab_content"  title="Europe Vacations">
+                        <div class="tapsectionEurope">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    Europe Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divEurope" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div4">
+                            <div class="rhtsection">
+                                <h2>Algarve Portugal</h2>
+                                <a href="http://www.vacations-abroad.com/portugal/algarve/default.aspx">
+                                    <img src="/images/RightSideEurope01.jpg" width="181" height="132" alt=""></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Chamonix France</h2>
+                                <a href="http://www.vacations-abroad.com/france/rhone_alps/chamonix/default.aspx">
+                                    <img src="/images/RightSideEurope02.jpg" width="181" height="132" alt=""></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Zermatt Switzerland</h2>
+                                <a href="http://www.vacations-abroad.com/switzerland/valais/zermatt/default.aspx">
+                                    <img src="/images/RightSideEurope03.jpg" width="181" height="130" alt=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--EOF tabNorthAmerica-->
+
+                    <!--BOF tabAsia-->
+                    <div style="display: none;" id="tabAsia" class="tab_content" title="Asia Vacations">
+                        <div class="tapsectionAsia">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    Asia
+                                    <br />
+                                    Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divAsia" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div3">
+                            <div class="rhtsection">
+                                <h2>Koh Chang Thailand</h2>
+                                <a href="http://www.vacations-abroad.com/thailand/trat/koh_chang/default.aspx">
+                                    <img src="/images/RightSideAsia01.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Manilla Philippines</h2>
+                                <a href="http://www.vacations-abroad.com/philippines/metro_manila/default.aspx">
+                                    <img src="/images/RightSideAsia02.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Kalutara Sri Lanka</h2>
+                                <a href="http://www.vacations-abroad.com/sri_lanka/western_province/kalutara/default.aspx">
+                                    <img src="/images/RightSideAsia03.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--EOF tabAsia-->
+
+                    <!--BOF tabAfrica-->
+                    <div style="display: none;" id="tabAfrica" class="tab_content" title="Africa Vacations">
+                        <div class="tapsectionAfrica">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    Africa Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divAfrica" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div2">
+                            <div class="rhtsection">
+                                <h2>Cape Province South Africa</h2>
+                                <a href="http://www.vacations-abroad.com/south_africa/cape_province/default.aspx">
+                                    <img src="/images/RightSideAfrica02.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Diani Beach Kenya</h2>
+                                <a href="http://www.vacations-abroad.com/kenya/coast/diani_beach/default.aspx">
+                                    <img src="/images/RightSideAfrica03.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Marrakesh Morocco</h2>
+                                <a href="http://www.vacations-abroad.com/morocco/marrakech/default.aspx">
+                                    <img src="/images/RightSideAfrica01.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--EOF tabAfrica-->
+
+                    <!--BOF tabOceania-->
+                    <div style="display: none;" id="tabOceania" class="tab_content"  title="Oceania Vacations">
+                        <div class="tapsectionOceania">
+                            <div class="section2">
+                                <h2 class="BlueHeader">
+                                    Oceania Vacations
+                                </h2>
+                                <div style="border: solid 0px #ececec; padding: 2px;">
+                                    <div id="divOceania" runat="server">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cont_rht fltrht dvRight" runat="server" id="Div1">
+                            <div class="rhtsection">
+                                <h2>Cairns Australia</h2>
+                                <a href="http://www.vacations-abroad.com/australia/queensland/cairns/default.aspx">
+                                    <img src="/images/RightSideOceania01.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Auckland New Zealand</h2>
+                                <a href="http://www.vacations-abroad.com/new_zealand/auckland/default.aspx">
+                                    <img src="/images/RightSideOceania02.jpg" /></a>
+                            </div>
+
+                            <div class="rhtsection">
+                                <h2>Sydney Australia</h2>
+                               <a rel="nofollow" href="http://www.vacations-abroad.com/australia/new_south_wales/sydney/default.aspx">
+                                    <img src="/images/RightSideOceania03.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--EOF tabOceania-->
+                    <!--EOF tab4-->
+                    <!--EOF tabEurope-->
+                </div>
+                <!--EOF tab_container-->
+            </div>
+
+
+            <div class="cont_rht fltrht" runat="server" style="padding-top: 0px;" id="dvRightFloat">
+                <div class="rhtsection">
+                    <h2><a style="text-decoration: none;" href="http://www.vacations-abroad.com/costa_rica/default.aspx">Costa Rica</a></h2>
+                    <a style="text-decoration: none;" href="http://www.vacations-abroad.com/costa_rica/default.aspx">
+                        <img src="/images/ImgHomeCostaRica.jpg" width="181" height="132" alt=""></a>
+                </div>
+
+                <div class="rhtsection">
+                    <h2><a style="text-decoration: none;" href="http://www.vacations-abroad.com/st_lucia/default.aspx">St Lucia</a></h2>
+                    <a style="text-decoration: none;" href="http://www.vacations-abroad.com/st_lucia/default.aspx">
+                        <img src="/images/ImgHomeStLucia.jpg" width="181" height="132" alt=""></a>
+                </div>
+
+                <div class="rhtsection">
+                    <h2><a style="text-decoration: none;" href="http://www.vacations-abroad.com/mexico/quintana_roo/playa_del_carmen/default.aspx">Playa Del Carmen</a></h2>
+                    <a style="text-decoration: none;" href="http://www.vacations-abroad.com/mexico/quintana_roo/playa_del_carmen/default.aspx">
+                        <img src="/images/ImgHomePlayaDelCarmen.jpg" width="181" height="130" alt=""></a>
+                </div>
+            </div>
+
+            <div class="clear">&nbsp;</div>
+        </div>
+        <!--  End Container  -->
+    </div>
+    <!--  End Body Container  -->
+
+
+    <!--  End footer  -->
+    <%--end new content--%>
+
+    <!--  footer  -->
+    <div style="margin-left: auto; width: auto;">
+        <div id="footer">
+            <!--  Container  -->
+            <div class="container">
+                <div class="footernav">
+                    <ul>
+                        <li><a rel="nofollow" href="http://blog2.vacations-abroad.com/">Travel Blog</a></li>
+                        <li><a rel="nofollow" href="http://www.vacations-abroad.com/applications.htm">LIST PROPERTY</a></li>
+                        <% if (AuthenticationManager.IfAuthenticated)
+                           { %>
+	                    <li><a rel="nofollow" href="http://www.vacations-abroad.com/MyAccount.aspx">MY ACCOUNT</a></li>
+                        <li><a rel="nofollow" href="http://www.vacations-abroad.com/logout.aspx">LOG OUT</a></li>
+	                    <% }
+                           else
+                           {%>
+                        <li><a rel="nofollow" href="http://www.vacations-abroad.com/login.aspx">LOG IN</a></li>
+                               
+                           <%} %>
+                        
+                        <li class="last"><a rel="nofollow" href="http://www.vacations-abroad.com/findowner.aspx">CREATE ACCOUNT</a></li>
+                    </ul>
+                </div>
+                <div class="searchdiv" style="display: none;">
+                    <input type="text">
+                </div>
+
+            </div>
+            <!--  End Container  -->
+        </div>
+    </div>
+    <div>
+        <%--<center>--%>
+        <div align="center" style="padding-top: 15px; width: 932px; height: auto; margin: 0 auto;">
+            <table class="MainTable" bgcolor="#ffffff" cellspacing="1" cellpadding="">
+                <tr id="TR2">
+                    <td style="width: 100%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <br />
+                            Other information: <a rel="nofollow" href="http://www.vacations-abroad.com/travelagents.aspx"> Travel Agents</a>, 
+                            <a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("Disclaimer.htm") %>'>Rental Guarantee</a>, 
+                            <a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("FAQ.htm") %>'>FAQs</a>, 
+                            <a rel="nofollow" href="http://www.vacations-abroad.com/Contacts.aspx">Contact</a>, 
+                         
+                            <a href="http://www.vacations-abroad.com">Vacation Apartments</a>
+                            <br />
+                            Copyright ©2000-2013
+									<%= CommonFunctions.GetSiteName () %>
+									is a registered trademark - All rights reserved. <img src="logosmall.jpg" />
+									<br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <%--</center>--%>
+    </div>
+    </form>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>
+
+
+

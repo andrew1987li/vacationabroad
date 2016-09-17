@@ -1,0 +1,91 @@
+﻿.nav {
+        padding: 0;
+        margin-top: 10px;
+        list-style-type: none;
+    }
+
+
+        .nav li ul {
+            display: none;
+        }
+
+            .nav li ul li {
+                padding: 0 0 5px 0;
+                width: 100%;
+                border-color: #FF6600;
+            }
+
+    .navavig li ul li {
+        padding: 0 0 7px 0;
+        width: 150px;
+    }
+
+    .navavig ul li {
+        border-bottom: 0px solid !important;
+    }
+
+    .navavig li ul {
+        display: none;
+        position: absolute;
+        margin-top: 1px;
+    }
+
+    .navavig li:hover ul {
+        position: absolute;
+        display: block;
+        background: #E6E6E6;
+        color: #000;
+        text-decoration: none;
+        margin-top: 0;
+    }
+
+
+    .nav li:hover ul {
+        position: absolute;
+        display: block;
+        z-index: 9999;
+        width: 20%;
+        background: #FFFFFF;
+        color: #000;
+        text-decoration: none;
+        min-width: 125px;
+        border: 2px solid;
+        border-color: #FF6600;
+    }
+
+    .navavig li:hover > ul li a {
+        float: left;
+        font: bold 1.1em arial,verdana,tahoma,sans-serif;
+        line-height: 20px;
+        margin: 0;
+        color: #A8240D;
+        padding: 10px 138px 0 0;
+        border: none;
+    }
+
+    .nav li:hover > ul li a {
+        float: left;
+        font: bold 1.1em arial,verdana,tahoma,sans-serif;
+        line-height: 20px;
+        margin: 0;
+        color: #FF6600;
+        padding: 10px 138px 0 0;
+    }
+
+
+    .nav li ul li a:hover {
+        text-decoration: underline;
+        color: #FF6600;
+    }
+
+    .navavig li ul li a:hover {
+        text-decoration: underline;
+    }
+
+.tablecss {
+
+    background-color:#F5EDE3;
+    text-align:center;
+    width:250px;
+    border:2px solid;
+}

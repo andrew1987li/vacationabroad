@@ -1,0 +1,275 @@
+﻿body
+{
+    text-align: center;
+    color: #202027;
+    margin: 0;
+    top: 0;
+}
+a:link {color: #104a63; text-decoration:none !important;}
+a:visited {color: #104a63;}
+a:hover {color: #104a63; text-decoration:underline !important;}
+a:active {color: #104a63;}
+.MainTable
+{
+    background-color: #ffffff;
+    width: 932px;
+    text-align: center;
+    border-spacing: 0;
+    padding: 0;
+}
+#MainTable2
+{
+    border: 0;
+    width: 100%;
+    border-spacing: 0;
+    padding: 0;
+}
+#TD2A
+{
+    width: 33%;
+    text-align: left;
+    border: 0;
+    border-spacing: 0;
+    padding-left: 7px;
+}
+.TD2B
+{
+    width: 33%;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+    border: 0;
+    border-spacing: 0;
+    padding: 0px;
+}
+#TR2
+{
+    vertical-align: top;
+    background-color: #ffffff;
+    width: 100%;
+}
+.rtHeader
+{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f6f6f6;
+}
+.rtOuter
+{
+    width: 21%;
+    float: right;
+    border: solid 1px #999999;
+    font-size: 12px;
+}
+.rtText2
+{
+    margin-left: 5px;
+    text-align: left;
+}
+.rtText2 a
+{
+    text-decoration: none;
+}
+
+
+#PropertyTable
+{
+    border: 0;
+    width: 100%;
+}
+
+#PropertyTable4
+{
+    text-align: center;
+    border: 0;
+    width: 100%;
+}
+.PropertyTable5
+{
+    border-spacing: 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    font-size: 15px;
+    color:#1d2d33;
+  
+}
+
+.PropertyTable6
+{
+    border: 0;
+    text-align: center;
+    padding: 0;
+    border-spacing: 0;
+}
+.PropertyTable6 a
+{
+    color: #202027;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.PropertyTable6A
+{
+    width: 33%;
+    height: 100%;
+    text-align: center;
+ 
+    color: #202027;
+    border: 0px;
+}
+.PropTable10
+{
+    width: 75%;
+    text-align: center;
+    padding: 0;
+    border-spacing: 0;
+}
+.PropTable11
+{
+    text-align: left;
+    border-color: #336666;
+   
+}
+.PropTable12
+{
+    border-spacing: 0;
+    padding: 0;
+    width: 640px;
+    text-align: center;
+    border: 0;
+    color: #333366;
+    font-size: 16px;
+    font-weight: bold;
+}
+.PropTable12 a
+{
+    color: #333366;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.PropTable13
+{
+    width: 100%;
+    padding: 0;
+    border-spacing: 0;
+    font-family:Arial;
+    font-size:11pt;
+}
+.PropTable13A
+{
+    width: 30%;
+    text-align: center;
+}
+.PropTable13B
+{
+    width: 20%;
+    text-align: center;
+}
+
+.PropTable15
+{
+    border: 0;
+    width: 100%;
+}
+.PropTable16
+{
+    text-align: left;
+    color:#104a63;
+}
+.PropertiesFont2
+{
+    font-family:Arial;
+    font-size:10pt;
+    text-align: center;
+    color:#1d2d33;
+}
+.PropTable12 a
+{
+    color: White;
+}
+.NormalText
+{
+    font-size: 13px;
+    font-family: Arial;
+}
+.Center
+{
+    text-align: center;
+}
+.Left
+{
+    text-align: left;
+}
+/*h1
+{
+    font-size: 20px;
+    font-weight: bold;  
+    color:#ffffff; 
+}*/
+.regionMenu{background-color:#000039;font-size:12px;}
+.regionMenu a{text-decoration:none;color:#ffffff;}
+.regionMenu a:visited{text-decoration:none;color:#ffffff;}.regionMenu td{width:9%;}
+.regionMenu td
+{
+    width: 9%;
+}
+.grdImg2
+{border-color:#bfbfe5;background-color:#bfbfe5;padding:2px; border:1px;}
+#breadcrumb
+{
+    width: 50%;
+text-align: center;
+font-size: 10pt;
+font-weight:bold;
+    }
+
+.breadcrumb2
+{
+    color: #104a63;
+}
+.ownerdetails
+{
+    background-color:#c6dae4;
+    color:Black;
+    font-size:9pt;
+    font-family:Arial;
+    text-indent:5px;
+}
+.formrow
+{
+    text-align:left;
+    color:#343d6c;
+    font-size:10pt;
+}
+.citycountryattractions{
+    width:50%; 
+    text-align:center;
+    color: #2194c7;
+    font-family : Arial;
+    font-weight:bold;
+}
+.propLink a:link
+{
+    color: #333366;
+}
+.propLink a:active
+{
+    color: #333366;
+}
+.propLink a:visited
+{
+    color: #333366;
+    text-decoration: underline;
+}
+
+/*top part */
+#top1 { float:left; width:33%; }
+#top2 { float:left; width 32%; }
+#top3 { float:left; width:33%; background-color:Gray; }
+#topPart { background-color:Lime; }

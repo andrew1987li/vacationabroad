@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="11C1F32194C14D7780E16C2878FBB37B" title="~Report_TndOutSpamPerc" friendly="DA_TndOutSpamPerc" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="DomainAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="DFF25A29E38D43DE9977B0A38B14757B" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="DFF25A29E38D43DE9977B0A38B14757B">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="BlockedMessagesPerc" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="DFF25A29E38D43DE9977B0A38B14757B">
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,BlockedMessagesPerc" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

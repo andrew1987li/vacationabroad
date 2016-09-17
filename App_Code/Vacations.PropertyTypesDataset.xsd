@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PropertyTypesDataset" targetNamespace="http://www.tempuri.org/PropertyTypesDataset.xsd" xmlns:mstns="http://www.tempuri.org/PropertyTypesDataset.xsd" xmlns="http://www.tempuri.org/PropertyTypesDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PropertyTypesDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PropertyTypesDataset" msprop:Generator_DataSetName="PropertyTypesDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PropertyTypes" msprop:Generator_TableClassName="PropertyTypesDataTable" msprop:Generator_TableVarName="tablePropertyTypes" msprop:Generator_TablePropName="PropertyTypes" msprop:Generator_RowDeletingName="PropertyTypesRowDeleting" msprop:Generator_UserTableName="PropertyTypes" msprop:Generator_RowChangingName="PropertyTypesRowChanging" msprop:Generator_RowEvHandlerName="PropertyTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="PropertyTypesRowDeleted" msprop:Generator_RowEvArgName="PropertyTypesRowChangeEvent" msprop:Generator_RowChangedName="PropertyTypesRowChanged" msprop:Generator_RowClassName="PropertyTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" />
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PropertyTypes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

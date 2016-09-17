@@ -1,0 +1,146 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 12.sub-70-222-47.myvzw.com [70.222.47.12] by mail.vacations-abroad.com with SMTP;
+   Wed, 5 Aug 2009 09:16:03 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: "'Logan Gray'" <logan@intensetech.com>
+Subject: Vacations-Abroad.com Modifications
+Date: Wed, 5 Aug 2009 09:15:31 -0400
+Organization: Vacations-abroad.com
+Message-ID: <F0B3C08271BA453A92E2BBE2E4B9F3D1@lindalaptop>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_09E6_01CA15AD.4986B190"
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+Thread-Index: AcoVzs8aPWj7KfKfQri7Pepsj1I4WA==
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_09E6_01CA15AD.4986B190
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+
+
+
+The original email address becomes part of the database from this page
+Input is on this page
+http://www.vacations-abroad.com/AccountInformation.aspx
+
+The email field is 
+
+<input name="ctl00$Content$EmailAddress" type="text"
+id="ctl00_Content_EmailAddress" style="width:304px;" />
+				
+
+I want to be able to do a search for owners by email address from this page
+when I am logged in as administrator
+
+https://www.vacations-abroad.com/Administration.aspx
+
+And this is the page I want displayed.
+
+www.vacations-abroad.com/OwnerInformation.aspx
+
+
+Linda Jenkins
+Director of Relaxation and Getaways
+
+Vacations-Abroad.com
+Telephone 1-770-298-8090
+Email: linda@vacations-abroad.com
+
+
+------=_NextPart_000_09E6_01CA15AD.4986B190
+Content-Type: text/html;
+	charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+6.5.7036.0">
+<TITLE>Vacations-Abroad.com Modifications</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/rtf format -->
+<BR>
+<BR>
+
+<P><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">The original email =
+address becomes part of the database from this page</FONT>
+
+<BR><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">Input is on this =
+page</FONT>
+
+<BR><A =
+HREF=3D"http://www.vacations-abroad.com/AccountInformation.aspx"><U></U><=
+U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Verdana">http://www.vacations-abroad.com/AccountInformation.aspx<=
+/FONT></U></A>
+</P>
+
+<P><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">The email field is =
+</FONT>
+</P>
+
+<P><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">&lt;input =
+name=3D&quot;ctl00$Content$EmailAddress&quot; type=3D&quot;text&quot; =
+id=3D&quot;ctl00_Content_EmailAddress&quot; =
+style=3D&quot;width:304px;&quot; /&gt;</FONT>
+
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+</P>
+
+<P><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">I want to be able =
+to do a search for owners by email address from this page when I am =
+logged in as administrator</FONT>
+</P>
+
+<P><A =
+HREF=3D"https://www.vacations-abroad.com/Administration.aspx"><U></U><U><=
+FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Verdana">https://www.vacations-abroad.com/Administration.aspx</FO=
+NT></U></A>
+</P>
+
+<P><FONT COLOR=3D"#000000" SIZE=3D2 FACE=3D"Verdana">And this is the =
+page I want displayed.</FONT>
+</P>
+
+<P><A =
+HREF=3D"file://www.vacations-abroad.com/OwnerInformation.aspx"><U></U><U>=
+<FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Verdana">www.vacations-abroad.com/OwnerInformation.aspx</FONT></U=
+></A>
+</P>
+<BR>
+
+<P><B><FONT COLOR=3D"#D00202" SIZE=3D2 FACE=3D"Verdana">Linda =
+Jenkins</FONT></B>
+
+<BR><B><FONT COLOR=3D"#D00202" FACE=3D"Verdana">Director of Relaxation =
+and Getaways</FONT></B>
+</P>
+
+<P><FONT COLOR=3D"#C00000" SIZE=3D2 =
+FACE=3D"Verdana">Vacations-Abroad.com</FONT>
+
+<BR><FONT COLOR=3D"#C00000" SIZE=3D2 FACE=3D"Verdana">Telephone =
+1-770-298-8090</FONT>
+
+<BR><FONT COLOR=3D"#C00000" SIZE=3D2 FACE=3D"Verdana">Email: </FONT><A =
+HREF=3D"mailto:linda@vacations-abroad.com"><U><FONT COLOR=3D"#C00000" =
+SIZE=3D2 FACE=3D"Verdana">linda@vacations-abroad.com</FONT></U></A>
+</P>
+
+</BODY>
+</HTML>
+------=_NextPart_000_09E6_01CA15AD.4986B190--
+

@@ -1,0 +1,378 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 244.sub-70-214-237.myvzw.com [70.214.237.244] by mail.vacations-abroad.com with SMTP;
+   Tue, 8 Sep 2009 12:28:55 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: "'Logan Gray'" <logan@intensetech.com>
+Subject: error
+Date: Tue, 8 Sep 2009 12:28:01 -0400
+Organization: Vacations-abroad.com
+Message-ID: <A0548EC2F29D4BEBBF6BBBC6478E8CB6@lindalaptop>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0000_01CA307F.CF93A4E0"
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+Thread-Index: AcowoVUuLJCjAbMnR5y7PXyUYjVSFw==
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CA307F.CF93A4E0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Server Error in '/' Application. 
+
+Compilation Error 
+Description: An error occurred during the compilation of a resource required
+to service this request. Please review the following specific error details
+and modify your source code appropriately. 
+
+Compiler Error Message: CS0583: Internal Compiler Error (0xc0000017 at
+address 77E4BEF7): likely culprit is 'BIND'.
+
+Source Error:
+
+	
+
+[No relevant source lines]	
+
+Source File: Line: 0 
+
+
+Show Detailed Compiler Output: 
+
+c:\windows\system32\inetsrv>
+"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library
+/utf8output /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary
+ASP.NET
+Files\root\95958499\809e1ee6\assembly\dl3\7934050f\000971d6_5d79c701\WebPage
+Security.DLL"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d50a3a\Acc
+essibility.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f11d50a3a
+\System.Deployment.dll"
+/R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\assembly\dl3\41072f94\009870ca_b68dc801\paypal_
+base.DLL" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary
+ASP.NET Files\root\95958499\809e1ee6\App_global.asax.y4kcp2sc.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5
+f7f11d50a3a\System.Configuration.Install.dll"
+/R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11
+d50a3a\System.EnterpriseServices.dll"
+/R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_masterpage.master.cdcab7d2.1uwbk8pn.dll
+" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\assembly\dl3\7083f5a3\006a45da_1f6fc701\log4net
+.DLL"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50
+a3a\System.Configuration.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\Sy
+stem.Drawing.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll
+"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11d50a3a\S
+ystem.Security.dll"
+/R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.
+Data.dll"
+/R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.W
+eb.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soa
+p\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll
+"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System
+.Xml.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a
+3a\System.Web.Services.dll"
+/R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Code.mabib_mj.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e
+089\System.Windows.Forms.dll"
+/R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a
+\System.Web.Mobile.dll"
+/R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll"
+/out:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.dll"
+/D:DEBUG /debug+ /optimize- /w:4 /nowarn:1659;1699
+"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs"
+"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.1.cs"
+"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.2.cs"
+
+
+Microsoft (R) Visual C# 2005 Compiler version 8.00.50727.42
+for Microsoft (R) Windows (R) 2005 Framework version 2.0.50727
+Copyright (C) Microsoft Corporation 2001-2005. All rights reserved.
+
+error CS0583: Internal Compiler Error (0xc0000017 at address 77E4BEF7):
+likely culprit is 'BIND'.
+        
+        An internal error has occurred in the compiler. To work around this
+problem, try simplifying or changing the program near the locations listed
+below. Locations at the top of the list are closer to the point at which the
+internal error occurred. Errors such as this can be reported to Microsoft by
+using the /errorreport option.
+         
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(179,3): error CS0585:
+Internal Compiler Error: stage 'BIND'
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): error
+CS0584: Internal Compiler Error: stage 'BIND' symbol
+'LoginPage.SendPassword_Click(object, System.EventArgs)'
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): error
+CS0584: Internal Compiler Error: stage 'COMPILE' symbol
+'LoginPage.SendPassword_Click(object, System.EventArgs)'
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): error
+CS0584: Internal Compiler Error: stage 'COMPILE' symbol
+'LoginPage.SendPassword_Click(object, System.EventArgs)'
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): error
+CS0584: Internal Compiler Error: stage 'COMPILE' symbol
+'LoginPage.SendPassword_Click(object, System.EventArgs)'
+c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs(14,22
+): error CS0584: Internal Compiler Error: stage 'COMPILE' symbol 'LoginPage'
+c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(14,22): (Location of
+symbol related to previous error)
+c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs:
+error CS0584: Internal Compiler Error: stage 'COMPILE' symbol '<global
+namespace>'
+c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs:
+error CS0586: Internal Compiler Error: stage 'COMPILE'
+error CS0587: Internal Compiler Error: stage 'COMPILE'
+error CS0587: Internal Compiler Error: stage 'BEGIN'	
+
+
+
+
+Linda Jenkins
+Director of Relaxation and Getaways
+
+Vacations-Abroad.com
+Telephone 1-770-298-8090
+Email: linda@vacations-abroad.com
+
+
+------=_NextPart_000_0000_01CA307F.CF93A4E0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+6.5.7036.0">
+<TITLE>error</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/rtf format -->
+
+<P><B><FONT SIZE=3D6 FACE=3D"Times New Roman">Server Error in '/' =
+Application. </FONT></B>
+</P>
+
+<P><B><I><FONT SIZE=3D5 FACE=3D"Times New Roman">Compilation =
+Error</FONT></I><FONT SIZE=3D5 FACE=3D"Times New Roman"> </FONT></B>
+
+<BR><B><FONT FACE=3D"Arial">Description:</FONT></B> <FONT =
+FACE=3D"Arial">An error occurred during the compilation of a resource =
+required to service this request. Please review the following specific =
+error details and modify your source code appropriately.<BR>
+<BR>
+</FONT><B><FONT FACE=3D"Arial">Compiler Error Message:</FONT></B> <FONT =
+FACE=3D"Arial">CS0583: Internal Compiler Error (0xc0000017 at address =
+77E4BEF7): likely culprit is 'BIND'.<BR>
+<BR>
+</FONT><B><FONT FACE=3D"Arial">Source Error:</FONT></B><BR>
+
+
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier New">[No relevant source =
+lines]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>
+</FONT><BR>
+<B><FONT FACE=3D"Arial">Source File:</FONT></B><FONT =
+FACE=3D"Arial"></FONT><B> <FONT FACE=3D"Arial">Line:</FONT></B><FONT =
+FACE=3D"Arial"> 0<BR>
+<BR>
+</FONT>
+
+<BR><FONT FACE=3D"Arial">Show Detailed Compiler Output: </FONT>
+</P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier New">c:\windows\system32\inetsrv&gt; =
+&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe&quot; =
+/t:library /utf8output =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\assembly\dl3\7934050f\000971d6_5d79c701\WebP=
+ageSecurity.DLL&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d5=
+0a3a\Accessibility.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f=
+11d50a3a\System.Deployment.dll&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\assembly\dl3\41072f94\009870ca_b68dc801\payp=
+al_base.DLL&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_global.asax.y4kcp2sc.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.=
+0__b03f5f7f11d50a3a\System.Configuration.Install.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b0=
+3f5f7f11d50a3a\System.EnterpriseServices.dll&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_masterpage.master.cdcab7d2.1uwbk8pn.=
+dll&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\assembly\dl3\7083f5a3\006a45da_1f6fc701\log4=
+net.DLL&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5=
+f7f11d50a3a\System.Configuration.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d=
+50a3a\System.Drawing.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\Sy=
+stem.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11=
+d50a3a\System.Security.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089=
+\System.Data.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\=
+System.Web.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization.Format=
+ters.Soap\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatte=
+rs.Soap.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e08=
+9\System.Xml.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f=
+7f11d50a3a\System.Web.Services.dll&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Code.mabib_mj.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5=
+c561934e089\System.Windows.Forms.dll&quot; =
+/R:&quot;C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f=
+11d50a3a\System.Web.Mobile.dll&quot; =
+/R:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll&quot;=
+ /out:&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary =
+ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.dll&quo=
+t; /D:DEBUG /debug+ /optimize- /w:4 /nowarn:1659;1699&nbsp; =
+&quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs&qu=
+ot; &quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary =
+ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.1.cs&qu=
+ot; &quot;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary =
+ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.2.cs&qu=
+ot;</FONT></P>
+<BR>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier New">Microsoft (R) Visual C# 2005 =
+Compiler version 8.00.50727.42</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier New">for Microsoft (R) Windows (R) =
+2005 Framework version 2.0.50727</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier New">Copyright (C) Microsoft =
+Corporation 2001-2005. All rights reserved.</FONT>
+</P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier New">error CS0583: Internal Compiler =
+Error (0xc0000017 at address 77E4BEF7): likely culprit is 'BIND'.</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier =
+New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier =
+New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An internal error has =
+occurred in the compiler. To work around this problem, try simplifying =
+or changing the program near the locations listed below. Locations at =
+the top of the list are closer to the point at which the internal error =
+occurred. Errors such as this can be reported to Microsoft by using the =
+/errorreport option.</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(179,3): =
+error CS0585: Internal Compiler Error: stage 'BIND'</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): =
+error CS0584: Internal Compiler Error: stage 'BIND' symbol =
+'LoginPage.SendPassword_Click(object, System.EventArgs)'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): =
+error CS0584: Internal Compiler Error: stage 'COMPILE' symbol =
+'LoginPage.SendPassword_Click(object, System.EventArgs)'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): =
+error CS0584: Internal Compiler Error: stage 'COMPILE' symbol =
+'LoginPage.SendPassword_Click(object, System.EventArgs)'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(177,17): =
+error CS0584: Internal Compiler Error: stage 'COMPILE' symbol =
+'LoginPage.SendPassword_Click(object, System.EventArgs)'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs(14=
+,22): error CS0584: Internal Compiler Error: stage 'COMPILE' symbol =
+'LoginPage'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\Inetpub\vacations-abroad-com\httpdocs\Login.aspx.cs(14,22): =
+(Location of symbol related to previous error)</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs: =
+error CS0584: Internal Compiler Error: stage 'COMPILE' symbol =
+'&lt;global namespace&gt;'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier =
+New">c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET =
+Files\root\95958499\809e1ee6\App_Web_login.aspx.cdcab7d2.xg6ir9vu.0.cs: =
+error CS0586: Internal Compiler Error: stage 'COMPILE'</FONT></P>
+
+<P><FONT SIZE=3D2 FACE=3D"Courier New">error CS0587: Internal Compiler =
+Error: stage 'COMPILE'</FONT>
+
+<BR><FONT SIZE=3D2 FACE=3D"Courier New">error CS0587: Internal Compiler =
+Error: stage 'BEGIN'&nbsp;&nbsp;&nbsp;<BR>
+</FONT><BR>
+
+</P>
+<BR>
+
+<P><B><FONT COLOR=3D"#D00202" SIZE=3D2 FACE=3D"Verdana">Linda =
+Jenkins</FONT></B>
+
+<BR><B><FONT COLOR=3D"#D00202" FACE=3D"Verdana">Director of Relaxation =
+and Getaways</FONT></B>
+</P>
+
+<P><FONT COLOR=3D"#C00000" SIZE=3D2 =
+FACE=3D"Verdana">Vacations-Abroad.com</FONT>
+
+<BR><FONT COLOR=3D"#C00000" SIZE=3D2 FACE=3D"Verdana">Telephone =
+1-770-298-8090</FONT>
+
+<BR><FONT COLOR=3D"#C00000" SIZE=3D2 FACE=3D"Verdana">Email: </FONT><A =
+HREF=3D"mailto:linda@vacations-abroad.com"><U><FONT COLOR=3D"#C00000" =
+SIZE=3D2 FACE=3D"Verdana">linda@vacations-abroad.com</FONT></U></A>
+</P>
+
+</BODY>
+</HTML>
+------=_NextPart_000_0000_01CA307F.CF93A4E0--
+

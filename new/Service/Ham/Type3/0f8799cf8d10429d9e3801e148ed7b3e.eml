@@ -1,0 +1,85 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 157.sub-70-214-31.myvzw.com [70.214.31.157] by vacations-abroad.com with SMTP;
+   Tue, 14 Jul 2009 19:31:45 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: <vps@hostmysite.com>
+References: <10395203.3391247613551219.JavaMail.InternalServices@10.10.2.120>
+In-Reply-To: <10395203.3391247613551219.JavaMail.InternalServices@10.10.2.120>
+Subject: RE: (#T7151793) Cannot Send Mail From Site
+Date: Tue, 14 Jul 2009 19:31:25 -0400
+Organization: Vacations-abroad.com
+Message-ID: <3C4749E752584AFA9C08CD5E8F1700F0@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+Thread-Index: AcoE2YRyR9gTLIEiTn+YbXAj5iKlbwAAX3BQ
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+Bryan,
+I had a new vps set up today to handle all my email function and
+discontinued the email server through the old ip address 76-12.121.214 
+The email is supposed to be going through my new mail server.
+
+
+Linda Jenkins
+Director of Relaxation and Getaways
+
+Vacations-Abroad.com
+Telephone 1-770-298-8090
+Email: linda@vacations-abroad.com
+
+-----Original Message-----
+From: vps@hostmysite.com [mailto:vps@hostmysite.com] 
+Sent: Tuesday, July 14, 2009 7:19 PM
+To: linda@vacations-abroad.com
+Cc: logan@intensetech.com
+Subject: Re: (#T7151793) Cannot Send Mail From Site
+
+Ref: vacations-abroad.com (H157327) 
+ 
+ Hello Linda,
+
+Your mail form was not working because there was no domain set up in
+SmarterMail to handle the email.  SmarterMail requires that there be a
+domain configured to allow message relay.
+
+I configured the domain localdomain.local and set it to use the IP address
+76.12.121.214, which is the IP address specified in your web.config.  The
+form now completes and displays a confirmation message that the email was
+sent.
+
+For your reference, here is som additional information for the domain I
+created:
+
+The domain admin is:
+Username: localadmin@localdomain.local
+Password: Fp59GmW284
+
+SMTP Auth is required but bypassed for local IP addresses.
+This means that all email from your server will be relayed but SMTP
+connections from any other source mush authenticate as a user to send email.
+This prevents your server from being used as an open relay by spammers.
+
+If you have any other questions or need further assistance, feel free to
+contact us.
+
+Regards,    
+Bryan Wilson    
+http://www.HostMySite.com      
+Email: support@HostMySite.com    
+Technical Support: 1.877.215.4678    
+Customer Service & Billing Inquiries: 866.916.4678    
+International: 1.302.731.4948    
+Get your FREE .com, .net, .org, .biz and .info domain name at
+HostMySite.com!      
+Manage your hosting account using our Total Customer Control Center at
+https://controlpanel.hostmysite.com
+
+> -----Original Message-----
+> From:	linda@vacations-abroad.com
+> Sent:	 
+> Subject: Cannot Send Mail From Site
+> 
+

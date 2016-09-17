@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="PhotosDataset" targetNamespace="http://www.tempuri.org/PhotosDataset.xsd" xmlns:mstns="http://www.tempuri.org/PhotosDataset.xsd" xmlns="http://www.tempuri.org/PhotosDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="PhotosDataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="PropertyPhotos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="PropertyID" type="xs:int" />
+              <xs:element name="FileName" type="xs:string" />
+              <xs:element name="Width" type="xs:int" />
+              <xs:element name="Height" type="xs:int" />
+              <xs:element name="OrderNumber" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PropertyPhotos" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

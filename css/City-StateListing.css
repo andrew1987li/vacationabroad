@@ -1,0 +1,193 @@
+/*------------------Listing pages new layout------------------------*/
+
+.listingContainerMain .StateTable1TD1 h1
+        {
+            font-size: 22px;
+            font-family: Arial;
+            color: #253981;
+        }
+        .listingContainerMain .VacationAndSubscribeTabs td
+        {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0A2B8C;
+            border: 1px solid #738EA7;
+            padding: 6px;
+        }
+        .listingContainerMain .tdCityNameBlock
+        {
+            border-right: none !important;
+        }
+       .listingContainerMain #filerMain
+        {
+            margin-bottom: 10px;
+        }
+        .listingContainerMain .steps1-3
+        {
+            color: #FFFFFF !important;
+            font-size: 14px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            width: 55px !important;
+        }
+        .listingContainerMain .step1-3fonts
+        {
+            background-color: #738EA7 !important;
+        }
+        .listingContainerMain .step1Bg
+        {
+            background-color: #014063 !important;
+        }
+        .listingContainerMain .step2Bg
+        {
+            background-color: #345778 !important;
+        }
+        .listingContainerMain .step3Bg
+        {
+            background-color: #738EA7 !important;
+        }
+        .listingContainerMain .stepsContainer
+        {
+            font-family: Arial;
+            color: #3C3C3C;
+        }
+        .listingContainerMain .showMePropBox
+        {
+            border: 1px solid #738EA7;
+            box-shadow: 2px 4px 3px 2px #B4B4B4;
+            color: #253981;
+            font-family: arial;
+            font-size: 14px;
+            background: white;
+	    cursor:pointer;
+        }
+        .listingContainerMain .categoryTitle
+        {
+            font-size: 22px;
+            font-family: Tempus Sans ITC;
+            color: #0A2B8C;
+            font-weight: bold;
+        }
+        .listingContainerMain .tdRentalRates
+        {
+            font-family: Arial;
+            font-size: 16px;
+            color: #A8240D;
+            font-weight: bold;
+        }
+        .listingContainerMain .tdNoSleeps
+        {
+            font-family: Arial;
+            font-size: 14px;
+            color: #345778;
+            font-weight: bold;
+        }
+        .listingContainerMain .liDesc
+        {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 10px;
+            color: #000000;
+            font-size: 15px;
+        }
+      
+        .listingContainerMain .flowerImg
+        {
+            width: 25px;
+            height: 25px;
+            margin-left:5px;
+            margin-right:5px;
+            position:relative;
+            top:7px;
+        }
+        .listingContainerMain .subscribeLink
+        {
+            color: #0A2B8C !important;
+            text-decoration: none;
+        }
+        .listingContainerMain .divClickToView
+        {
+            font-size: 19px;
+            text-align: center;
+            color: #A8240D;
+            display: none;
+            border: 2px solid #738EA7;
+            margin: 2px;
+            box-shadow: 1px 3px 3px 3px #B4B4B4;
+            width: 136px;
+            height: 115px;
+            background: white;
+        }
+        .listingContainerMain .LinkClickToView
+        {
+            color: #A8240D !important;
+            float: right;
+            font-size: 16px !important;
+            text-decoration: none;
+        }
+        .listingContainerMain .rightSideHeaders
+        {
+            font-family: Arial;
+            font-weight: bold;
+            background: #738EA7;
+            color: #FFFFFF;
+            font-size: 14px !important;
+        }
+        .listingContainerMain .rtOuterCnty a:active
+        {
+            font-family: Arial;
+            color: #0A2B8C !important;
+            font-size: 12px !important;
+        }
+        .listingContainerMain .rtOuterCnty a:visited
+        {
+            font-family: Arial;
+            color: #738EA7 !important;
+            font-size: 12px !important;
+        }
+        .listingContainerMain .rtOuterCnty
+        {
+            border: 1px solid #E6E6E6 !important;
+	    text-align:center;
+        }
+        .listingContainerMain #Content_divClicktoSubscribe
+        {
+            font-family: Arial;
+            font-size: 22px;
+        }
+        .listingContainerMain .linkSubscribe
+        {
+            color: #A8240D !important;
+            text-decoration: none;
+        }
+        .listingContainerMain .liLinkClicktoView
+        {
+            float: right;
+            margin-top: -30px;
+            margin-right: 5px;
+        }
+        .listingContainerMain .propertyImg{
+            border: 2px solid #738EA7;
+            box-shadow: 1px 3px 3px 3px #B4B4B4;
+            padding: 0px; 
+            margin: 2px;
+        }
+       .listingContainerMain a.subscribeLink, .listingContainerMain a.subscribeLink:hover, .listingContainerMain a.subscribeLink:visited, .listingContainerMain a.subscribeLink:active {
+            color:#A8240D !important;
+        }
+        .listingContainerMain .vacationsAndSubsTabs{
+        padding:5px;
+        background-color: #ffffff;
+        }
+        .listingContainerMain .tableMainContainer{
+            border: 1px solid #EE6539; 
+            background-color: White;
+            min-height:150px;
+        }
+        .listingContainerMain .linkImgClickToView{
+            left: 6px;
+            position: relative;
+            top: 8px;
+            text-decoration:none;
+        }

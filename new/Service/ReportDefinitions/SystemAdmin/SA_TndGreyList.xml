@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="08ACF095D0114E64810D32C57A43113D" title="~Report_TndGreyList" friendly="SA_TndGreyList" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="F9D5707103664E99A64DC511A836666B" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="F9D5707103664E99A64DC511A836666B">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="AllowedConnections" />
+				<YValue columns="TotalConnections" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="F9D5707103664E99A64DC511A836666B">				
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,AllowedConnections,DelayedConnections,TotalConnections," />
+				<FooterRow name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

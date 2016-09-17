@@ -1,0 +1,575 @@
+﻿Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Creating EventLog source AppScheduler in log Application...
+Rolling back assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Restoring event log to previous state for source AppScheduler.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Creating EventLog source AppScheduler in log Application...
+Rolling back assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Restoring event log to previous state for source AppScheduler.
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Attempt to stop service AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Attempt to stop service AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.
+Installing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Installing service AppScheduler...
+Service AppScheduler has been successfully installed.
+Creating EventLog source AppScheduler in log Application...
+Committing assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Uninstalling assembly 'c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe'.
+Affected parameters are:
+   assemblypath = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.exe
+   logfile = c:\documents and settings\aradhakrishnan\my documents\visual studio projects\appscheduler\bin\release\appscheduler.InstallLog
+Removing EventLog source AppScheduler.
+Service AppScheduler is being removed from the system...
+Service AppScheduler was successfully removed from the system.

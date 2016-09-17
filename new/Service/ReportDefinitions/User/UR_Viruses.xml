@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="A9D30E4D763744809E7D608D514979A0" title="~Report_TndViruses" friendly="UR_Viruses" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="User" />
+	</Header>
+	<UserOptions dataItemGuid="36BB830FCC024460BD0BBFDF6C3E3056" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="36BB830FCC024460BD0BBFDF6C3E3056">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="Viruses" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="36BB830FCC024460BD0BBFDF6C3E3056">
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,Viruses" />
+				<FooterRow name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+tr.limebkgrd td {
+	border-top: 1px solid #FB7A31;
+	border-bottom: 1px solid #FB7A31;
+	background: #b8b83d;
+	}
+
+.greenheaderwhitelink
+{
+	height: 21px; text-align:center; font:Arial, Helvetica, sans-serif; color:#ffffff; font-size:smaller;
+}
+a.greenheaderwhitelink:link
+{ color:white; }
+a.greenheaderwhitelink:visited
+{ color:white; }
+
+a.greenheaderwhitelink:hover
+{ color:#0F0; }
+
+.arial2 {font:arial; font-size:small;}
+
+.arial2white
+    {font:arial; font-size:small; color:White}

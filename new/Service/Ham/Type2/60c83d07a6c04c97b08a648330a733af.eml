@@ -1,0 +1,95 @@
+Received: by mail.vacations-abroad.com via HTTP;
+	Sun, 23 May 2010 13:03:57 -0400
+From: "linda@vacations-abroad.com" <linda@vacations-abroad.com>
+To: <juan_k_liner@yahoo.com>
+Subject: fw: Re: (#T8445823) Site vacations-abroad.com is down
+Date: Sun, 23 May 2010 13:03:57 -0400
+Reply-To: linda@vacations-abroad.com
+Message-ID: <3c9d7d75$19383982$2b6185d6$@com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0001_569C4544.ACD9118"
+X-Originating-IP: [74.232.134.134]
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0001_569C4544.ACD9118
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+
+
+----------------------------------------
+
+From: vps@hosting.com
+Sent: Sunday, May 23, 2010 12:46 PM
+To: linda@vacations-abroad.com
+Subject: Re: (#T8445823) Site vacations-abroad.com is down 
+
+Ref: vacations-abroad.com (H157327) 
+
+Hello Linda,
+
+I have once again rebooted the VPS so the site is currently up and running. 
+Since we are unsure as to what is spawning these mail processes it is 
+unclear as to correct the problem. The best solution would be to contact 
+your developer as soon as they are available. 
+
+Let us know if there is anything we can do to assist you in the mean time.
+
+Regards,
+Jonathan Jinks
+Cloud & Virtual Server Support
+1.866.637.4678
+vps@hosting.com 
+Learn more about Cloud Hosting!
+http://www.hosting.com/cloudhosting/
+
+> -----Original Message-----
+> From: linda@vacations-abroad.com
+> Sent: 05/23/2010 11:41:52 AM
+> Subject: Site vacations-abroad.com is down
+>Hello Linda,
+
+The only way we have been able to keep the VPS running is my manually 
+killing the NewsletterDeploy.exe process each time it spawns. We have been 
+unable to determine where the programmer has configured the process to 
+continually run, so you should consult with him/her today to determine how 
+to tweak the settings of this new mail application. We have no means to 
+prevent the process from running without knowing the source which is 
+spawning it. 
+
+ 
+
+------=_NextPart_000_0001_569C4544.ACD9118
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<font style=3D"font-family: Tahoma; font-size: 10pt"><BR><BR><FONT size=3D2=
+ face=3D"Tahoma, Arial, Sans-Serif">
+<HR align=3Dcenter SIZE=3D2 width=3D"100%">
+<B>From</B>: vps@hosting.com<BR><B>Sent</B>: Sunday, May 23, 2010 12:46 PM<=
+BR><B>To</B>: linda@vacations-abroad.com<BR><B>Subject</B>: Re: (#T8445823)=
+ Site vacations-abroad.com is down</FONT><BR><BR>Ref: vacations-abroad.com =
+(H157327) <BR><BR>Hello Linda,<BR><BR>I have once again rebooted the VPS so=
+ the site is currently up and running. Since we are unsure as to what is sp=
+awning these mail processes it is unclear as to correct the problem. The be=
+st solution would be to contact your developer as soon as they are availabl=
+e. <BR><BR>Let us know if there is anything we can do to assist you in the =
+mean time.<BR><BR>Regards,<BR>Jonathan Jinks<BR>Cloud &amp; Virtual Server =
+Support<BR>1.866.637.4678<BR>vps@hosting.com <mailto:vps@hosting.com><BR>Le=
+arn more about Cloud Hosting!<BR>http://www.hosting.com/cloudhosting/<BR><B=
+R>&gt; -----Original Message-----<BR>&gt; From: linda@vacations-abroad.com<=
+BR>&gt; Sent: 05/23/2010 11:41:52 AM<BR>&gt; Subject: Site vacations-abroad=
+.com is down<BR>&gt;Hello Linda,<BR><BR>The only way we have been able to k=
+eep the VPS running is my manually killing the NewsletterDeploy.exe process=
+ each time it spawns. We have been unable to determine where the programmer=
+ has configured the process to continually run, so you should consult with =
+him/her today to determine how to tweak the settings of this new mail appli=
+cation. We have no means to prevent the process from running without knowin=
+g the source which is spawning it. <BR><BR><BR></mailto:vps@hosting.com></f=
+ont>
+
+------=_NextPart_000_0001_569C4544.ACD9118--

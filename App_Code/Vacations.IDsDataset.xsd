@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="IDsDataset" targetNamespace="http://www.tempuri.org/IDsDataset.xsd" xmlns:mstns="http://www.tempuri.org/IDsDataset.xsd" xmlns="http://www.tempuri.org/IDsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="IDsDataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Regions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="CountryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="StateProvinceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="CityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="PropertyID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Regions" />
+      <xs:field xpath="mstns:RegionID" />
+      <xs:field xpath="mstns:CountryID" />
+      <xs:field xpath="mstns:StateProvinceID" />
+      <xs:field xpath="mstns:CityID" />
+      <xs:field xpath="mstns:PropertyID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="A9DB134E7A624891939BAAFCE88EF213" title="~Report_SumOnlineUsers" friendly="SA_SumOnlineUsers" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SystemAdmin" autoRefresh="60000" />
+	</Header>
+	<UserOptions dataItemGuid="31AAA6CE6C284862ADDDB02AC540DA92" autoOptions="true" exclude="User,AcctType,Domain,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="False" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Table dataItemGuid="31AAA6CE6C284862ADDDB02AC540DA92">
+				<AutoRank implement="false" align="center" title="~ReportCol_Rank" />
+				<Values columns="Username,Type,IP,StartDate,Duration" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="BF3BFA7232F04E30B2C1162117C50623" title="@Greylisting" friendly="SA_DashboardSystemGreylist" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SyetemAdminDashboard" />
+	</Header>
+	<Row>
+		<Column>
+			<Table dataItemGuid="BEA7F922B1C8448CB03EA33688015710">
+				<AutoRank implement="false" align="center" title="~ReportCol_Rank" />
+				<Values columns="Description,Last5Min,LastHour,Last24Hours,SinceStart" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

@@ -1,0 +1,74 @@
+Return-Path: <noreply@vacations-abroad.com>
+Received: from 52.sub-70-221-254.myvzw.com [70.221.254.52] by vacations-abroad.com with SMTP;
+   Sun, 19 Jul 2009 15:11:33 -0400
+From: "noreply" <noreply@vacations-abroad.com>
+To: <vps@hostmysite.com>
+References: <1815847.29421248030357473.JavaMail.internalServices@10.10.2.120>
+In-Reply-To: <1815847.29421248030357473.JavaMail.internalServices@10.10.2.120>
+Subject: RE: (#T7172512) Vacations-Abroa.com  Delivery Failure
+Date: Sun, 19 Jul 2009 15:11:03 -0400
+Message-ID: <29257EBD2C084037B9E6175EB37FA105@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+Thread-Index: AcoIo/b91XacwPiGS9u5C6scu0WuywAAEJxw
+
+Mark, Thank you so much for your help.
+Website www.vacations-abroad.com
+My main domain is 76.12.121.214
+My email domain is 76.12.12.144
+I set up a separate ip for my mail because my email was using a lot of
+memory when I sent out emails to my clients... Trying to get them to make a
+payment on their account. 
+
+Login: yg87c6
+Password: Vacationnow56
+Domain: vacations-abroad.com
+Contact Type: Account Administrator
+
+Can you correct this?
+Linda
+
+-----Original Message-----
+From: vps@hostmysite.com [mailto:vps@hostmysite.com] 
+Sent: Sunday, July 19, 2009 3:06 PM
+To: noreply@vacations-abroad.com
+Subject: Re: (#T7172512) Vacations-Abroa.com Delivery Failure
+
+Ref:  (H1) 
+ 
+ Hello Linda,
+
+The issue is that the source IP 76.12.12.144 reverses to
+vacations-abroad.com, however vacations-abroad.com points to 76.12.121.214.
+This creates a Reverse DNS failure because the domain isn't pointing back to
+the same IP.
+
+We'll need to have a reverse record for 76.12.12.144 point to a domain that
+points back to that IP. What domains do you have pointing to 76.12.12.144?
+Also, please verify the account administrator login and password for the
+Hostmysite control panel or the last 4 digits of the credit card on file to
+approve the Reverse DNS change.
+Thank you for using Hostmysite.com.
+
+Regards,    
+Mark Molaison    
+http://www.HostMySite.com      
+Email: support@HostMySite.com    
+Technical Support: 1.877.215.4678    
+Customer Service & Billing Inquiries: 866.916.4678    
+International: 1.302.731.4948    
+Get your FREE .com, .net, .org, .biz and .info domain name at
+HostMySite.com!      
+Manage your hosting account using our Total Customer Control Center at
+https://controlpanel.hostmysite.com
+
+> -----Original Message-----
+> From:	noreply@vacations-abroad.com
+> Sent:	 
+> Subject: Vacations-Abroa.com  Delivery Failure
+> 
+

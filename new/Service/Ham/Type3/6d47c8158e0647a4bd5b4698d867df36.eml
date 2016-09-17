@@ -1,0 +1,739 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 99.sub-70-223-106.myvzw.com [70.223.106.99] by mail.vacations-abroad.com with SMTP;
+   Thu, 3 Sep 2009 17:32:26 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: "'Logan Gray'" <logan@intensetech.com>
+References: <AEECF9F8AEFA4D38AFE4DB408B8BB5D5@lindalaptop> <004101ca1787$fc041430$f40c3c90$@com> <DBBF17701876407FA1D78E6987A99B90@lindalaptop> <00ae01ca2cd9$9063b7a0$b12b26e0$@com>
+In-Reply-To: <00ae01ca2cd9$9063b7a0$b12b26e0$@com>
+Subject: RE: Blocking certain IPS
+Date: Thu, 3 Sep 2009 17:31:42 -0400
+Organization: Vacations-abroad.com
+Message-ID: <2647B28035FF4BF1BEB7603EFEC0A6F6@lindalaptop>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_04F4_01CA2CBC.68B5A910"
+X-Mailer: Microsoft Office Outlook 11
+Thread-Index: AcoXfTpNpWuhTaVDTfyXL2AMsdAs6QACCZ1QBVTmutAAABkIIAAA+zBg
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_04F4_01CA2CBC.68B5A910
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_04F5_01CA2CBC.68B5A910"
+
+
+------=_NextPart_001_04F5_01CA2CBC.68B5A910
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+I get fraudulent emails and users logging into the system. 
+
+Host my site told me how to block specific IPs . Any other suggestions?
+
+Linda Jenkins 
+Director of Relaxation and Getaways 
+
+Vacations-Abroad.com 
+Telephone 1-770-298-8090 
+Email:  <mailto:linda@vacations-abroad.com> linda@vacations-abroad.com 
+
+ 
+
+  _____  
+
+From: Logan Gray [mailto:logan@intensetech.com] 
+Sent: Thursday, September 03, 2009 5:01 PM
+To: 'Linda Jenkins'
+Subject: RE: Blocking certain IPS
+
+
+
+Heh.  I don't blame you.   I see that a lot.
+
+ 
+
+I would have to trace their IP address to their ISP, and block their ISP.
+
+Are you getting emails as scams or users that actually log into the website?
+
+ 
+
+-Logan Gray
+Intense Tech, Inc.
+
+Small Business Technology Services
+http://www.intensetech.com
+
+(404) 376-3814
+
+ 
+
+From: Linda Jenkins [mailto:linda@vacations-abroad.com] 
+Sent: Thursday, September 03, 2009 4:57 PM
+To: 'Logan Gray'
+Subject: Blocking certain IPS
+
+ 
+
+Do you know how to do this? 
+
+I get scam artists from Nigeria and want to block all ips from that country.
+
+ 
+
+Linda Jenkins 
+Director of Relaxation and Getaways 
+
+Vacations-Abroad.com 
+Telephone 1-770-298-8090 
+Email:  <mailto:linda@vacations-abroad.com> linda@vacations-abroad.com 
+
+ 
+
+ 
+
+  _____  
+
+From: Logan Gray [mailto:logan@intensetech.com] 
+Sent: Friday, August 07, 2009 1:54 PM
+To: 'Linda Jenkins'
+Subject: RE: Good Afternoon from Vacations-abroad.com
+
+Hey Linda, 
+
+The email search is now working.  
+
+ 
+
+Please check it to make sure it's what you want.
+
+ 
+
+ 
+
+Re:  google and
+
+ <http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx>
+http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx
+
+ 
+
+a:  this is cached in googles database, and Google knows this is the same as
+it's equivalent in lower case.  
+
+I'd suggest reading this:
+
+http://www.soloseo.com/blog/2007/06/05/keyword-capitalization-matters-google
+-seo/
+
+ 
+
+also, pulled from:  
+
+ 
+
+google in oct 2008 says:
+
+Question: "
+
+Does inconsistent capitalization of URLs cause duplicate content issues and
+dilution of page rank? For example www.site.com/abc vs www.site.com/Abc. On
+Windows hosts, these are the same page, but are different pages on Unix
+hosts."
+
+Answer: ". 
+
+based on the existing standards, URLs are case-sensitive, so yes, these
+would be seen as separate URLs. Since the content on the URLs is the same,
+we'll generally recognize that and only keep one of them. However, we'd
+recommend that you try to keep all links going to one version of the URL.
+Keep in mind that this also applies to robots.txt files." (that answer was
+provided by John Mu of Google's Switzerland office)
+
+ 
+
+ 
+
+ 
+
+Re:  <http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170>
+http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170
+
+ 
+
+Q: Are you essentially saying that you want it to redirect, if it sees
+ViewProperty.asp in the URL?
+
+ 
+
+-Logan Gray
+
+Intense Tech, Inc.
+
+Small Business Focused Computer Services
+
+http://www.intensetech.com
+
+(404) 376-3814
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+From: Linda Jenkins [mailto:linda@vacations-abroad.com] 
+Sent: Friday, August 07, 2009 12:37 PM
+To: 'Logan Gray'
+Subject: Good Afternoon from Vacations-abroad.com
+
+ 
+
+Hi Logan, 
+I see the redirects for www. etc. 
+
+ 
+
+Also, need same type of redirects for this 
+
+You will see it in Google if you put in these key words 
+Vacations-abroad.com charleston 236 
+And then look at the url. 
+
+ <http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx>
+http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx 
+Google is picking up some of the urls where they were stored from that
+programming error. I think it would be good to make sure the same type of
+redirect informs the search engines of the correct url
+
+One with lower cases. 
+
+Also, Yahoo site explorer for my site is showing urls that should not be
+there. 
+ <http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170>
+http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170 
+
+Is an example. I need the same type of redirect so that it goes to the
+correct url.. 
+ 
+<http://www.vacations-abroad.com/canada/british_columbia/ucluelet/1170/defau
+lt.aspx>
+http://www.vacations-abroad.com/canada/british_columbia/ucluelet/1170/defaul
+t.aspx 
+
+Thanks. 
+
+Linda Jenkins 
+Director of Relaxation and Getaways 
+
+Vacations-Abroad.com 
+Telephone 1-770-298-8090 
+Email:  <mailto:linda@vacations-abroad.com> linda@vacations-abroad.com 
+
+
+------=_NextPart_001_04F5_01CA2CBC.68B5A910
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word" xmlns:m =3D=20
+"http://schemas.microsoft.com/office/2004/12/omml"><HEAD><TITLE>Good =
+Afternoon from Vacations-abroad.com</TITLE>
+<META content=3D"text/html; charset=3Dus-ascii" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18813"><!--[if !mso]>
+<STYLE>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</STYLE>
+<![endif]-->
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.EmailStyle18
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=3DEN-US link=3Dblue vLink=3Dpurple><!-- Converted from =
+text/rtf format -->
+<P><B><FONT color=3D#d00202 size=3D2 face=3DVerdana><SPAN =
+class=3D990112721-03092009>I=20
+get fraudulent emails and users logging into the system. =
+</SPAN></FONT></B></P>
+<P><B><FONT color=3D#d00202 size=3D2 face=3DVerdana><SPAN=20
+class=3D990112721-03092009>Host my site told me how to block specific =
+IPs . Any=20
+other suggestions?</SPAN></FONT></B></P>
+<P><B><FONT color=3D#d00202 size=3D2 face=3DVerdana>Linda =
+Jenkins</FONT></B>=20
+<BR><B><FONT color=3D#d00202 face=3DVerdana>Director of Relaxation and=20
+Getaways</FONT></B> </P>
+<P><FONT color=3D#c00000 size=3D2 =
+face=3DVerdana>Vacations-Abroad.com</FONT> <BR><FONT=20
+color=3D#c00000 size=3D2 face=3DVerdana>Telephone 1-770-298-8090</FONT> =
+<BR><FONT=20
+color=3D#c00000 size=3D2 face=3DVerdana>Email: </FONT><A=20
+href=3D"mailto:linda@vacations-abroad.com"><U><FONT color=3D#c00000 =
+size=3D2=20
+face=3DVerdana>linda@vacations-abroad.com</FONT></U></A> </P>
+<DIV>&nbsp;</DIV><BR>
+<DIV dir=3Dltr lang=3Den-us class=3DOutlookMessageHeader align=3Dleft>
+<HR tabIndex=3D-1>
+<FONT size=3D2 face=3DTahoma><B>From:</B> Logan Gray =
+[mailto:logan@intensetech.com]=20
+<BR><B>Sent:</B> Thursday, September 03, 2009 5:01 PM<BR><B>To:</B> =
+'Linda=20
+Jenkins'<BR><B>Subject:</B> RE: Blocking certain =
+IPS<BR></FONT><BR></DIV>
+<DIV></DIV>
+<DIV class=3DSection1>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Heh&#8230;&nbsp;=20
+I don&#8217;t blame you.&nbsp;&nbsp; I see that a =
+lot.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">I=20
+would have to trace their IP address to their ISP, and block their=20
+ISP.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Are=20
+you getting emails as scams or users that actually log into the=20
+website?<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">-Logan=20
+Gray<BR>Intense Tech, Inc.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Small=20
+Business Technology Services<BR></SPAN><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><A=20
+href=3D"http://www.intensetech.com"=20
+target=3D_blank>http://www.intensetech.com</A><o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><IMG=20
+id=3D_x0000_i1026 border=3D0 src=3D"cid:990112721@03092009-1FBF" =
+width=3D1=20
+height=3D1>(404) 376-3814<IMG id=3D_x0000_i1027 border=3D0=20
+src=3D"cid:990112721@03092009-1FC6" width=3D11=20
+height=3D11><o:p></o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<DIV=20
+style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: =
+#b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+<P class=3DMsoNormal><B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: =
+10pt">From:</SPAN></B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt"> Linda =
+Jenkins=20
+[mailto:linda@vacations-abroad.com] <BR><B>Sent:</B> Thursday, September =
+03,=20
+2009 4:57 PM<BR><B>To:</B> 'Logan Gray'<BR><B>Subject:</B> Blocking =
+certain=20
+IPS<o:p></o:p></SPAN></P></DIV></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 10pt">Do you =
+know how to=20
+do this? </SPAN><o:p></o:p></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 10pt">I get =
+scam artists=20
+from Nigeria and want to block all ips from that =
+country.</SPAN><o:p></o:p></P>
+<DIV>
+<P class=3DMsoNormal>&nbsp;<o:p></o:p></P></DIV>
+<P><B><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #d00202; FONT-SIZE: =
+10pt">Linda=20
+Jenkins</SPAN></B> <BR><B><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #d00202">Director =
+of=20
+Relaxation and Getaways</SPAN></B> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Vacations-Abroad.com</SPAN>=20
+<BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Telephone=20
+1-770-298-8090</SPAN> <BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Email:=20
+</SPAN><A href=3D"mailto:linda@vacations-abroad.com"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">linda@vacations-abroad.com</SPAN></A>=20
+<o:p></o:p></P>
+<DIV>
+<P class=3DMsoNormal>&nbsp;<o:p></o:p></P></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<DIV style=3D"TEXT-ALIGN: center" class=3DMsoNormal align=3Dcenter>
+<HR align=3Dcenter SIZE=3D2 width=3D"100%">
+</DIV>
+<P style=3D"MARGIN-BOTTOM: 12pt" class=3DMsoNormal><B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: =
+10pt">From:</SPAN></B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt"> Logan =
+Gray=20
+[mailto:logan@intensetech.com] <BR><B>Sent:</B> Friday, August 07, 2009 =
+1:54=20
+PM<BR><B>To:</B> 'Linda Jenkins'<BR><B>Subject:</B> RE: Good Afternoon =
+from=20
+Vacations-abroad.com</SPAN><o:p></o:p></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Hey=20
+Linda, <o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">The=20
+email search is now working.&nbsp; <o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Please=20
+check it to make sure it&#8217;s what you want.<o:p></o:p></SPAN></P>
+<DIV=20
+style=3D"BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 1pt; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0in">
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Re:&nbsp;=20
+google and<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><A=20
+href=3D"http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default=
+.aspx"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: =
+10pt">http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.a=
+spx</SPAN></A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>a:&nbsp; this is cached in googles database, and =
+Google knows=20
+this is the same as it&#8217;s equivalent in lower case.&nbsp; =
+<o:p></o:p></P>
+<P class=3DMsoNormal>I&#8217;d suggest reading this:<o:p></o:p></P>
+<P class=3DMsoNormal><A=20
+href=3D"http://www.soloseo.com/blog/2007/06/05/keyword-capitalization-mat=
+ters-google-seo/">http://www.soloseo.com/blog/2007/06/05/keyword-capitali=
+zation-matters-google-seo/</A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>also, pulled from:&nbsp; <o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>google in oct 2008 says:<o:p></o:p></P>
+<P style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"=20
+class=3DMsoNormal>Question: &#8220;<o:p></o:p></P>
+<P style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"=20
+class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Arial','sans-serif'; COLOR: blue; FONT-SIZE: =
+10pt">Does=20
+inconsistent capitalization of URLs cause duplicate content issues and =
+dilution=20
+of page rank? For example www.site.com/abc vs www.site.com/Abc. On =
+Windows=20
+hosts, these are the same page, but are different pages on Unix=20
+hosts.</SPAN>&#8221;<o:p></o:p></P>
+<P style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"=20
+class=3DMsoNormal>Answer: &#8220;&#8230; <o:p></o:p></P>
+<P style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"=20
+class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Arial','sans-serif'; COLOR: blue; FONT-SIZE: =
+10pt">based on=20
+the existing standards, URLs are case-sensitive, so yes, these would be =
+seen as=20
+separate URLs. </SPAN><B><SPAN=20
+style=3D"FONT-FAMILY: 'Arial','sans-serif'; COLOR: red; FONT-SIZE: =
+10pt">Since the=20
+content on the URLs is the same, we&#8217;ll generally recognize that =
+and only keep=20
+one of them</SPAN></B><SPAN=20
+style=3D"FONT-FAMILY: 'Arial','sans-serif'; COLOR: blue; FONT-SIZE: =
+10pt">.=20
+However, we&#8217;d recommend that you try to keep all links going to =
+one version of=20
+the URL. Keep in mind that this also applies to robots.txt =
+files.</SPAN>&#8221; (that=20
+answer was provided by John Mu of Google&#8217;s Switzerland =
+office)<o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<DIV=20
+style=3D"BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 1pt; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0in">
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>Re: <A=20
+href=3D"http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D11=
+70"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: =
+10pt">http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D1170=
+</SPAN></A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>Q: Are you essentially saying that you want it to =
+redirect,=20
+if it sees ViewProperty.asp in the URL?<o:p></o:p></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">-Logan=20
+Gray<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Intense=20
+Tech, Inc.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">Small=20
+Business Focused Computer Services<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><A=20
+href=3D"http://www.intensetech.com">http://www.intensetech.com</A><o:p></=
+o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt">(404)=20
+376-3814<o:p></o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SIZE: =
+11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<DIV=20
+style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: =
+#b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+<P class=3DMsoNormal><B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: =
+10pt">From:</SPAN></B><SPAN=20
+style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt"> Linda =
+Jenkins=20
+[mailto:linda@vacations-abroad.com] <BR><B>Sent:</B> Friday, August 07, =
+2009=20
+12:37 PM<BR><B>To:</B> 'Logan Gray'<BR><B>Subject:</B> Good Afternoon =
+from=20
+Vacations-abroad.com<o:p></o:p></SPAN></P></DIV></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Hi=20
+Logan,</SPAN> <BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">I see=20
+the redirects for www&#8230; etc.</SPAN> <o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Also,=20
+need same type of redirects for this</SPAN> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">You=20
+will see it in Google if you put in these key words</SPAN> <BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Vacations-abroad.com=20
+charleston 236</SPAN> <BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">And=20
+then look at the url.</SPAN> <o:p></o:p></P>
+<P><A=20
+href=3D"http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default=
+.aspx"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: =
+10pt">http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.a=
+spx</SPAN></A>=20
+<BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Google=20
+is picking up some of the urls where they were stored from that =
+programming=20
+error. I think it would be good to make sure the same type of redirect =
+informs=20
+the search engines of the correct url</SPAN><o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">One=20
+with lower cases.</SPAN> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Also,=20
+Yahoo site explorer for my site is showing urls that should not be =
+there.</SPAN>=20
+<BR><A=20
+href=3D"http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D11=
+70"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: =
+10pt">http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D1170=
+</SPAN></A>=20
+<o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Is an=20
+example. I need the same type of redirect so that it goes to the correct =
+
+url..</SPAN> <BR><A=20
+href=3D"http://www.vacations-abroad.com/canada/british_columbia/ucluelet/=
+1170/default.aspx"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: =
+10pt">http://www.vacations-abroad.com/canada/british_columbia/ucluelet/11=
+70/default.aspx</SPAN></A>=20
+<o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: =
+10pt">Thanks.</SPAN>=20
+<o:p></o:p></P>
+<P><B><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #d00202; FONT-SIZE: =
+10pt">Linda=20
+Jenkins</SPAN></B> <BR><B><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #d00202">Director =
+of=20
+Relaxation and Getaways</SPAN></B> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Vacations-Abroad.com</SPAN>=20
+<BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Telephone=20
+1-770-298-8090</SPAN> <BR><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">Email:=20
+</SPAN><A href=3D"mailto:linda@vacations-abroad.com"><SPAN=20
+style=3D"FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #c00000; FONT-SIZE: =
+10pt">linda@vacations-abroad.com</SPAN></A>=20
+<o:p></o:p></P></DIV></BODY></HTML>
+
+------=_NextPart_001_04F5_01CA2CBC.68B5A910--
+
+------=_NextPart_000_04F4_01CA2CBC.68B5A910
+Content-Type: image/png;
+	name="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <990112721@03092009-1FBF>
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAAXNSR0ICQMB9xQAAAANQTFRFAAAA
+p3o92gAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAE1p
+Y3Jvc29mdCBPZmZpY2V/7TVxAAAACklEQVQY02NgAAAAAgABmGNs1wAAAABJRU5ErkJggg==
+
+------=_NextPart_000_04F4_01CA2CBC.68B5A910
+Content-Type: image/png;
+	name="image002.png"
+Content-Transfer-Encoding: base64
+Content-ID: <990112721@03092009-1FC6>
+
+iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAAAXNSR0ICQMB9xQAAAANQTFRFAAAA
+p3o92gAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAE1p
+Y3Jvc29mdCBPZmZpY2V/7TVxAAAADElEQVQY02NgGHgAAACEAAFRRPp4AAAAAElFTkSuQmCC
+
+------=_NextPart_000_04F4_01CA2CBC.68B5A910--
+

@@ -1,0 +1,150 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/MasterPage.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="uc" TagName="ddMenu" Src="~/DropDownMenu.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="http://69.89.14.163:86/css/StyleSheet1.css" rel="stylesheet"
+        type="text/css" />
+</head>
+<body runat="server" style="background-color: #bfbfce; font-family: Arial;
+    font-size: 12px;">
+    <form id="MainForm" runat="server">
+    <center>
+        <div align="center" style="width: 932px;">
+            <table class="MainTable" bgcolor="#ffffff" cellspacing="1" cellpadding="" style="height: 200px">
+                <tr>
+                    <td colspan="5">
+                        <table id="MainTable2">
+                            <tr>
+                                <td id="TD2A" class="NormalText">
+                                    Search for vacation rentals<br />
+                                    <asp:TextBox ID="KeyWords" runat="server" TabIndex="9" />
+                                    <asp:Button ID="SearchByKeyWords" runat="server" OnClick="SearchByKeyWords_Click"
+                                        Text="Search" UseSubmitBehavior="false" CausesValidation="False" TabIndex="10" />
+                                </td>
+                                <td class="TD2B">
+                                    <table width="550px"><tr><td rowspan="2">
+                                    <a href='<%= CommonFunctions.PrepareURL ("") %>'>
+                                        <asp:Image runat="server" ID="Logo" ImageAlign="middle" AlternateText='Vacations-Abroad.com'
+                                            Width="215" Height="58" BorderWidth="0" ImageUrl='images/logo.jpg' />
+                                    </a>
+									</td><td width="295px" align="center">
+                               <div id="fb-root"></div>
+									<script src="http://connect.facebook.net/en_US/all.js#appId=159812020755747&amp;xfbml=1"></script>
+									<fb:like href="https://www.facebook.com/pages/Vacations-abroadcom/194401702538" width="295" show_faces="false" font="verdana"></fb:like>
+									</td></tr><tr><td>
+									<a href="http://twitter.com/vacationsabroad" class="twitter-follow-button" data-show-count="false">Follow @vacationsabroad</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+									</td></tr>
+							   </table>
+								</td>
+                                <td style="padding-right: 5px;">
+                                    <br />
+                                    <% if (!AuthenticationManager.IfAuthenticated)
+                                       { %>
+                                    <asp:HyperLink ID="LogInLink" runat="server" NavigateUrl="Login.aspx">Log In</asp:HyperLink><br />
+                                    <asp:HyperLink ID="CreateAccountLink" runat="server" NavigateUrl="FindOwner.aspx">Create An Account</asp:HyperLink><br />
+                                    <% }
+                                       else
+                                       { %>
+                                    <asp:HyperLink ID="LogOutLink" runat="server" NavigateUrl="Logout.aspx">Log Out</asp:HyperLink>
+                                    <br />
+                                    <asp:HyperLink ID="UserIDLink" runat="server" NavigateUrl="Listings.aspx">User ID (<%= AuthenticationManager.Username %>)</asp:HyperLink><br />
+                                    <% } %>
+                                    <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
+                                       { %>
+                                    <asp:HyperLink ID="OwnersLinkLink" runat="server" NavigateUrl="OwnersList.aspx">Owners List</asp:HyperLink>
+                                    /
+                                    <asp:HyperLink ID="OutStandingInvoicesLink" runat="server" NavigateUrl="OutstandingInvoices.aspx">Outstanding Inv</asp:HyperLink>
+                                    /
+                                    <asp:HyperLink ID="AdminLink" runat="server" NavigateUrl="Administration.aspx">Admin</asp:HyperLink>
+                                    <% } %>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="5">
+                        <%--<uc:ddMenu id="ddMenu1" 
+        runat="server" />--%>
+                        <table width="930px" class="regionMenu">
+                            <tr>
+ 				<td>
+                                    <a href="http://69.89.14.163:86">VACATION RENTALS</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/africa/default.aspx">AFRICA</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/asia/default.aspx">ASIA</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/caribbean/default.aspx">CARIBBEAN</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/central_america/default.aspx">
+                                        C. AMERICA</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/europe/default.aspx">EUROPE</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/middle_east/default.aspx">MIDDLE 
+                                    EAST</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/north_america/default.aspx">
+                                        N. AMERICA</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/oceania/default.aspx">OCEANIA</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/south_america/default.aspx">
+                                        S. AMERICA</a>
+                                </td>
+                                <td>
+                                    <a href="http://BLOG2.VACATIONS-ABROAD.com">Travel Blog</a>
+                                </td>
+                                <td>
+                                    <a href="http://69.89.14.163:86/applications.htm">LIST PROPERTY</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr id="TR2">
+                    <td colspan="5">
+                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <div>
+                            <a href='<%= CommonFunctions.PrepareURL ("TravelAgents.aspx") %>'>Travel
+                                Agents</a>, <a rel="nofollow" href="http://69.89.14.163:86/Disclaimer.htm">
+                                    Rental Guarantee</a>, <a href='<%= CommonFunctions.PrepareURL ("FAQ.htm") %>'>
+                                        FAQs</a>, <a href='<%= CommonFunctions.PrepareURL ("Contacts.aspx") %>'>
+                                            Contact</a>, 
+                            <a href="http://vacations-abroad.com/resources/htm/resources.htm">Travel Links</a>, <a href="http://69.89.14.163:86">Holiday Villas</a>, <a href="http://www.vacations-abroad.co.uk">Vacations-Abroad.co.uk</a>, <a href="http://69.89.14.163:86">Vacation Apartments</a>, <a href="http://69.89.14.163:86/NewsletterArchives.aspx">Newsletters</a>
+
+                            <br />
+                            Copyright ©2000-2012
+                            <%= CommonFunctions.GetSiteName () %>
+                            is a registered trademark - All rights reserved.
+                             <br />Thank you for visiting Vacations-Abroad.com<br />
+                            <div />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="IssuedInvoicesDataset" targetNamespace="http://www.tempuri.org/IssuedInvoicesDataset.xsd" xmlns:mstns="http://www.tempuri.org/IssuedInvoicesDataset.xsd" xmlns="http://www.tempuri.org/IssuedInvoicesDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="IssuedInvoicesDataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="IssueInvoices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MinimumNightlyRental" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="FirstName" type="xs:string" />
+              <xs:element name="LastName" type="xs:string" />
+              <xs:element name="PrimaryTelephone" type="xs:string" minOccurs="0" />
+              <xs:element name="OwnerCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Username" type="xs:string" />
+              <xs:element name="OwnerAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="EveningTelephone" type="xs:string" minOccurs="0" />
+              <xs:element name="DaytimeTelephone" type="xs:string" minOccurs="0" />
+              <xs:element name="MobileTelephone" type="xs:string" minOccurs="0" />
+              <xs:element name="Website" type="xs:string" minOccurs="0" />
+              <xs:element name="OwnerCity" type="xs:string" minOccurs="0" />
+              <xs:element name="OwnerState" type="xs:string" minOccurs="0" />
+              <xs:element name="OwnerZip" type="xs:string" minOccurs="0" />
+              <xs:element name="Registered" type="xs:string" minOccurs="0" />
+              <xs:element name="IfPayTravelAgents" type="xs:boolean" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="StateProvince" type="xs:string" minOccurs="0" />
+              <xs:element name="Country" type="xs:string" minOccurs="0" />
+              <xs:element name="Region" type="xs:string" minOccurs="0" />
+              <xs:element name="Smoking" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="PetFriendly" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="UserID" type="xs:int" />
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="TypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="CityID" type="xs:int" minOccurs="0" />
+              <xs:element name="IfShowAddress" type="xs:boolean" />
+              <xs:element name="NumBedrooms" type="xs:int" />
+              <xs:element name="NumBaths" type="xs:int" />
+              <xs:element name="NumSleeps" type="xs:int" />
+              <xs:element name="MinimumNightlyRentalID" type="xs:int" minOccurs="0" />
+              <xs:element name="NumTVs" type="xs:int" />
+              <xs:element name="NumVCRs" type="xs:int" />
+              <xs:element name="NumCDPlayers" type="xs:int" />
+              <xs:element name="IfMoreThan7PhotosAllowed" type="xs:boolean" />
+              <xs:element name="IfFinished" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IfApproved" type="xs:boolean" />
+              <xs:element name="DateAvailable" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IfDiscounted" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IfLastMinuteCancellations" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LastMinuteComments" type="xs:string" minOccurs="0" />
+              <xs:element name="HomeExchangeCityID1" type="xs:int" minOccurs="0" />
+              <xs:element name="HomeExchangeCityID2" type="xs:int" minOccurs="0" />
+              <xs:element name="HomeExchangeCityID3" type="xs:int" minOccurs="0" />
+              <xs:element name="HomeExchangeComments" type="xs:string" minOccurs="0" />
+              <xs:element name="IfPaid" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+              <xs:element name="DateAdded" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateStartViewed" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VirtualTour" type="xs:string" minOccurs="0" />
+              <xs:element name="RatesTable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PricesCurrency" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckIn" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckOut" type="xs:string" minOccurs="0" />
+              <xs:element name="LodgingTax" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxIncluded" type="xs:boolean" minOccurs="0" />
+              <xs:element name="InvoiceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="InvoiceDate" type="xs:dateTime" />
+              <xs:element name="InvoiceAmount" type="xs:decimal" />
+              <xs:element name="PaymentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PaymentAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PaymentType" type="xs:string" minOccurs="0" />
+              <xs:element name="Balance" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

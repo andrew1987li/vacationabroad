@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="EC7DFDFD4267484396C84CC21EFAE711" title="~Report_TndTrustedSenders" friendly="UR_TrustedSenders" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="User" />
+	</Header>
+	<UserOptions dataItemGuid="1627DB59335941C8A549AAE5C801D33A" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="1627DB59335941C8A549AAE5C801D33A">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="MessagesTrusted" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="1627DB59335941C8A549AAE5C801D33A">
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,MessagesTrusted" />
+				<FooterRow name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

@@ -1,0 +1,1776 @@
+﻿<?xml version ="1.0"?>
+<configuration xmlns="urn:microsoft-catalog:XML_Metabase_V64_0">
+<MBProperty>
+<IIS_Global	Location ="."
+		SessionKey="496353625000000034000000100000000b020000016800000168000090e52fb2c0f8eea5cd07d3bdb22a67cc34775fc6f633592761995a8efe4da70a6aa5761da182bcfe46004400e1bbad3ca1ae070f2aee3651cbc31ccc"
+	>
+</IIS_Global>
+<IIsWebService	Location ="/LM/W3SVC"
+		AllowKeepAlive="TRUE"
+		AnonymousUserName="IUSR_WEB-B"
+		AnonymousUserPass="49634462700000002200000040000000ada3dac77537493c9a9d604f148b0e63708874694077b20bee85ad0469f39654777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		AppAllowClientDebug="FALSE"
+		AppAllowDebugging="FALSE"
+		AppPoolId="DefaultAppPool"
+		ApplicationDependencies="Active Server Pages;ASP
+			Internet Data Connector;HTTPODBC
+			Server Side Includes;SSINC
+			WebDAV;WEBDAV
+			Remote Administration Tools;ASP
+			ASP.NET v1.1.4322;ASP.NET v1.1.4322
+			FrontPage Server Extensions 2002;FPSE2002,ASP,IndexingService
+			FrontPage Server Extensions;FPSE,ASP,IndexingService
+			ASP.NET v2.0.50727;ASP.NET v2.0.50727"
+		AspAllowOutOfProcComponents="TRUE"
+		AspAllowSessionState="TRUE"
+		AspAppServiceFlags="0"
+		AspBufferingLimit="4194304"
+		AspBufferingOn="TRUE"
+		AspCalcLineNumber="TRUE"
+		AspCodepage="0"
+		AspDiskTemplateCacheDirectory="%windir%\system32\inetsrv\ASP Compiled Templates"
+		AspEnableApplicationRestart="TRUE"
+		AspEnableAspHtmlFallback="FALSE"
+		AspEnableChunkedEncoding="TRUE"
+		AspEnableParentPaths="FALSE"
+		AspEnableTypelibCache="TRUE"
+		AspErrorsToNTLog="FALSE"
+		AspExceptionCatchEnable="TRUE"
+		AspExecuteInMTA="0"
+		AspKeepSessionIDSecure="0"
+		AspLCID="2048"
+		AspLogErrorRequests="TRUE"
+		AspMaxDiskTemplateCacheFiles="2000"
+		AspMaxRequestEntityAllowed="204800"
+		AspProcessorThreadMax="25"
+		AspQueueConnectionTestTime="3"
+		AspQueueTimeout="4294967295"
+		AspRequestQueueMax="3000"
+		AspRunOnEndAnonymously="TRUE"
+		AspScriptEngineCacheMax="250"
+		AspScriptErrorMessage="An error occurred on the server when processing the URL.  Please contact the system administrator."
+		AspScriptErrorSentToBrowser="TRUE"
+		AspScriptFileCacheSize="500"
+		AspScriptLanguage="VBScript"
+		AspScriptTimeout="90"
+		AspSessionMax="4294967295"
+		AspSessionTimeout="20"
+		AspTrackThreadingModel="FALSE"
+		AuthChangeURL="/iisadmpwd/achg.asp"
+		AuthExpiredURL="/iisadmpwd/aexp.asp"
+		AuthExpiredUnsecureURL="/iisadmpwd/aexp3.asp"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		AuthNotifyPwdExpURL="/iisadmpwd/anot.asp"
+		AuthNotifyPwdExpUnsecureURL="/iisadmpwd/anot3.asp"
+		CGITimeout="300"
+		CacheISAPI="TRUE"
+		CentralBinaryLoggingEnabled="FALSE"
+		ConnectionTimeout="3001"
+		ContentIndexed="TRUE"
+		DefaultDoc="Default.htm,Default.asp,index.htm,Default.aspx"
+		DefaultLogonDomain="\"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		DownlevelAdminInstance="1"
+		HttpCustomHeaders="X-Powered-By: ASP.NET"
+		HttpErrors="400,*,FILE,C:\WINDOWS\help\iisHelp\common\400.htm
+			401,1,FILE,C:\WINDOWS\help\iisHelp\common\401-1.htm
+			401,2,FILE,C:\WINDOWS\help\iisHelp\common\401-2.htm
+			401,3,FILE,C:\WINDOWS\help\iisHelp\common\401-3.htm
+			401,4,FILE,C:\WINDOWS\help\iisHelp\common\401-4.htm
+			401,5,FILE,C:\WINDOWS\help\iisHelp\common\401-5.htm
+			401,7,FILE,C:\WINDOWS\help\iisHelp\common\401-1.htm
+			403,1,FILE,C:\WINDOWS\help\iisHelp\common\403-1.htm
+			403,2,FILE,C:\WINDOWS\help\iisHelp\common\403-2.htm
+			403,3,FILE,C:\WINDOWS\help\iisHelp\common\403-3.htm
+			403,4,FILE,C:\WINDOWS\help\iisHelp\common\403-4.htm
+			403,5,FILE,C:\WINDOWS\help\iisHelp\common\403-5.htm
+			403,6,FILE,C:\WINDOWS\help\iisHelp\common\403-6.htm
+			403,7,FILE,C:\WINDOWS\help\iisHelp\common\403-7.htm
+			403,8,FILE,C:\WINDOWS\help\iisHelp\common\403-8.htm
+			403,9,FILE,C:\WINDOWS\help\iisHelp\common\403-9.htm
+			403,10,FILE,C:\WINDOWS\help\iisHelp\common\403-10.htm
+			403,11,FILE,C:\WINDOWS\help\iisHelp\common\403-11.htm
+			403,12,FILE,C:\WINDOWS\help\iisHelp\common\403-12.htm
+			403,13,FILE,C:\WINDOWS\help\iisHelp\common\403-13.htm
+			403,15,FILE,C:\WINDOWS\help\iisHelp\common\403-15.htm
+			403,16,FILE,C:\WINDOWS\help\iisHelp\common\403-16.htm
+			403,17,FILE,C:\WINDOWS\help\iisHelp\common\403-17.htm
+			403,18,FILE,C:\WINDOWS\help\iisHelp\common\403.htm
+			403,19,FILE,C:\WINDOWS\help\iisHelp\common\403.htm
+			403,20,FILE,C:\WINDOWS\help\iisHelp\common\403-20.htm
+			404,*,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			404,2,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			404,3,FILE,C:\WINDOWS\help\iisHelp\common\404b.htm
+			405,*,FILE,C:\WINDOWS\help\iisHelp\common\405.htm
+			406,*,FILE,C:\WINDOWS\help\iisHelp\common\406.htm
+			407,*,FILE,C:\WINDOWS\help\iisHelp\common\407.htm
+			412,*,FILE,C:\WINDOWS\help\iisHelp\common\412.htm
+			414,*,FILE,C:\WINDOWS\help\iisHelp\common\414.htm
+			415,*,FILE,C:\WINDOWS\help\iisHelp\common\415.htm
+			500,12,FILE,C:\WINDOWS\help\iisHelp\common\500-12.htm
+			500,13,FILE,C:\WINDOWS\help\iisHelp\common\500-13.htm
+			500,15,FILE,C:\WINDOWS\help\iisHelp\common\500-15.htm
+			500,16,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,17,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,18,FILE,C:\WINDOWS\help\iisHelp\common\500.htm
+			500,19,FILE,C:\WINDOWS\help\iisHelp\common\500.htm"
+		IIs5IsolationModeEnabled="FALSE"
+		InProcessIsapiApps="C:\WINDOWS\system32\inetsrv\httpext.dll
+			C:\WINDOWS\system32\inetsrv\httpodbc.dll
+			C:\WINDOWS\system32\inetsrv\ssinc.dll
+			C:\WINDOWS\system32\msw3prt.dll
+			C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_aut\author.dll
+			C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_adm\admin.dll
+			C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_adm\fpadmdll.dll
+			C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\shtml.dll
+			C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\owssvr.dll
+			C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+			C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll"
+		LogExtFileFlags="LogExtFileDate | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\WINDOWS\system32\LogFiles"
+		LogFilePeriod="1"
+		LogFileTruncateSize="20971520"
+		LogInUTF8="FALSE"
+		LogOdbcDataSource="HTTPLOG"
+		LogOdbcPassword="49634462600000001200000040000000ada3dac731370a3cc89d304f1e8b086316886f006c0075006d00650031005c00570049004e0044004f00570053005c00730079007300740065006d00330032005c006d006d0063002e006500780065000000630073000000"
+		LogOdbcTableName="InternetLog"
+		LogOdbcUserName="InternetAdmin"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		LogType="1"
+		MD_ETAG_CHANGENUMBER="3630"
+		MaxConnections="4294967295"
+		MaxGlobalBandwidth="4294967295"
+		MinFileBytesPerSec="240"
+		PasswordChangeFlags="AuthChangeDisable | AuthAdvNotifyDisable"
+		ScriptMaps=".asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+		WAMUserName="IWAM_WEB-B"
+		WAMUserPass="49634462700000002200000040000000ada3dac70f370e3c969d7d4f388b586350880a696477fe0be385c3047df3d854777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		WebSvcExtRestrictionList="0,*.dll
+			0,*.exe
+			1,C:\WINDOWS\system32\inetsrv\asp.dll,0,ASP,Active Server Pages
+			0,C:\WINDOWS\system32\inetsrv\httpodbc.dll,0,HTTPODBC,Internet Data Connector
+			0,C:\WINDOWS\system32\inetsrv\ssinc.dll,0,SSINC,Server Side Includes
+			0,C:\WINDOWS\system32\inetsrv\httpext.dll,0,WEBDAV,WebDAV
+			1,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,0,ASP.NET v1.1.4322,ASP.NET v1.1.4322
+			1,C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_aut\author.dll,0,FPSE2002,FrontPage Server Extensions 2002
+			1,C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_adm\admin.dll,0,FPSE2002,FrontPage Server Extensions 2002
+			1,C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_adm\fpadmdll.dll,0,FPSE2002,FrontPage Server Extensions 2002
+			1,C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\shtml.dll,0,FPSE2002,FrontPage Server Extensions 2002
+			1,C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\fpcount.exe,0,FPSE2002,FrontPage Server Extensions 2002
+			1,C:\Program Files\SWsoft\Plesk\isapi\isapi_redirect.dll,1,JAKARTA,Tomcat Redirector
+			1,C:\Program Files\SWsoft\Plesk\isapi\sitepreview.dll,1,PLESK,Plesk Extensions
+			1,C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe,1,PHP,PHP Extensions
+			1,C:\Program Files\SWsoft\Plesk\Additional\Php\sapi\php4isapi.dll,1,PHP,PHP Extensions
+			1,C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe &quot;%s&quot; %s,1,PERL,Perl Extensions
+			1,C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll,1,PERL,Perl Extensions
+			1,C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe -u &quot;%s&quot; %s,1,PYTHON,Python Extensions
+			1,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,0,ASP.NET v2.0.50727,ASP.NET v2.0.50727"
+	>
+	<Custom
+		Name="MD_ISM_ACCESS_CHECK"
+		ID="6269"
+		Value="65535"
+		Type="DWORD"
+		UserType="IIS_MD_UT_FILE"
+		Attributes="NO_ATTRIBUTES"
+	/>
+	<Custom
+		Name="UnknownName_2166"
+		ID="2166"
+		Value="1"
+		Type="DWORD"
+		UserType="IIS_MD_UT_SERVER"
+		Attributes="NO_ATTRIBUTES"
+	/>
+	<Custom
+		Name="UnknownName_9202"
+		ID="9202"
+		Value="4294967295"
+		Type="DWORD"
+		UserType="IIS_MD_UT_SERVER"
+		Attributes="NO_ATTRIBUTES"
+	/>
+</IIsWebService>
+<IIsWebServer	Location ="/LM/W3SVC/1"
+		AppPoolId="DefaultAppPool"
+		DefaultDoc="Default.htm,Default.asp,index.htm,iisstart.htm,Default.aspx"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileReferer | LogExtFileHttpSubStatus"
+		ServerAutoStart="FALSE"
+		ServerBindings=":80:"
+		ServerComment="Default Web Site"
+		ServerSize="1"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/1/Filters"
+		AdminACL="49634462f0000000a400000040000000ada3dac743377fac249d5c4fe18b6f63168847692f77d40bda85950454f3ed54777f3122ceac44ae3b8697a22e624345091a36b254354b9b33725568bd9fb2aec87fc52f572b7c1a9107c84b0fe00707eacdf9a88a1719e8bfb505ba1b30efba0c4ce1dffee597a673e05ab24277558afa93f4e818addf80aac7c033abb46198142c7103c8317f46a1369980e25d478764fd4bc2b53d30a2ede8424b9edcbf187d2b5670cb1f53d0c74124c6be24a4cd5332673376d843b39fbf80e572a76c2c0079500118000000496348621800000010000000000000000048708180258ee84a43bb8d27bf7676"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsCertMapper	Location ="/LM/W3SVC/1/IIsCertMapper"
+	>
+</IIsCertMapper>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/1/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="Default Application"
+		AppIsolated="2"
+		AppPoolId="DefaultAppPool"
+		AppRoot="/LM/W3SVC/1/ROOT"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		Path="C:\Inetpub\vhosts\default\htdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.asax,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vsdisco,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.rem,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.soap,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.webinfo,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resources,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.master,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.java,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/1/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/1/ROOT/jakarta"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/1/ROOT/sitepreview"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/1390"
+		ServerBindings=":8402:
+			208.109.21.139:80:sitebuilder.sawols.com
+			208.109.21.139:80:sitebuilder.herefordpies.com
+			208.109.21.139:80:sitebuilder.vacations-abroad.com"
+		ServerComment="sitebuilder(default)"
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/1390/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="sitebuilder(default)"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/1390/Root"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\Inetpub\vhosts\sitebuilder"
+		ScriptMaps=""
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/1390/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebServer	Location ="/LM/W3SVC/15916"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileComputerName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileTimeTaken | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileCookie | LogExtFileReferer | LogExtFileProtocolVersion | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\inetpub\vhosts\vacations-abroad.com\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		SSLCertHash="e35fd3ac5c9a88bc5b029139cbd974e448b4065a"
+		SSLStoreName="MY"
+		SecureBindings="208.109.21.139:443:"
+		ServerAutoStart="TRUE"
+		ServerBindings="208.109.21.139:80:www.vacations-abroad.com"
+		ServerComment="www.vacations-abroad.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/15916/Filters"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AnonymousPasswordSync="FALSE"
+		AnonymousUserName="IUSR_vacationsabroad"
+		AnonymousUserPass="49634462580000001000000040000000ada3dac70337023ced9d6f4f268b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+		AppFriendlyName="vacations-abroad.com"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(2.0)(pool)"
+		AppRoot="/LM/W3SVC/15916/Root"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="at_domains_index.html,Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_request.html
+			401,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			403,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,6,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,8,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,9,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,10,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,11,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,14,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,20,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			404,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			405,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\method_not_allowed.html
+			406,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_acceptable.html
+			407,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\proxy_authentication_required.html
+			412,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\precondition_failed.html
+			414,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\request-uri_too_long.html
+			415,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unsupported_media_type.html
+			500,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,100,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			501,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_implemented.html
+			502,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_gateway.html"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.master,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.dsdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsad,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssmap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dsprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsaprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/12345"
+		AccessFlags="AccessRead"
+		AppFriendlyName="12345"
+		AppIsolated="2"
+		AppRoot="/LM/W3SVC/15916/Root/12345"
+		AuthFlags="AuthNTLM"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\Documents and Settings\Administrator\Desktop\12345"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/15916/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/jakarta"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/plesk-stat"
+		AccessFlags="AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\statistics"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/sitepreview"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/15916/ROOT/test"
+		AuthFlags="AuthBasic"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\httpdocs\test"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/1988915259"
+		AuthFlags="0"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		ServerAutoStart="FALSE"
+		ServerBindings="208.109.21.139:8091:vacations-abroad.com
+			208.109.21.139:8091:www.vacations-abroad.com"
+		ServerComment="Staging"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/1988915259/filters"
+		AdminACL="49634462f0000000a400000040000000ada3dac743377fac249d5c4fe18b6f63168847692f77d40bda85950454f3ed54777f3122ceac44ae3b8697a22e624345091a36b254354b9b33725568bd9fb2aec87fc52f572b7c1a9107c84b0fe00707eacdf9a88a1719e8bfb505ba1b30efba0c4ce1dffee597a673e05ab24277558afa93f4e818addf80aac7c033abb46198142c7103c8317f46a1369980e25d478764fd4bc2b53d30a2ede8424b9edcbf187d2b5670cb1f53d0c74124c6be24a4cd5332673376d843b39fbf80e572a76c2c0079500118000000496348621800000010000000000000000048708180258ee84a43bb8d27bf7676"
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/1988915259/root"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		AppFriendlyName="Default Application"
+		AppIsolated="2"
+		AppPoolId="staging .net 2.0 Pool"
+		AppRoot="/LM/W3SVC/1988915259/Root"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\Inetpub\vhosts\staging\httpdocs"
+		ScriptMaps=".asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.aspx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.config,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.licx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.soap,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.vb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.master,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.java,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+		UNCPassword="49634462500000000600000040000000ada3dac74237450045003400440038003800430041003900310034003900370034003900330039004200300033003500460042004300430046004300330045005d00000000000000"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/29218"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileComputerName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileTimeTaken | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileCookie | LogExtFileReferer | LogExtFileProtocolVersion | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\inetpub\vhosts\sawols.com\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		ServerAutoStart="TRUE"
+		ServerBindings="208.109.21.139:80:sawols.com
+			208.109.21.139:80:www.sawols.com"
+		ServerComment="sawols.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/29218/Filters"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/29218/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AnonymousPasswordSync="FALSE"
+		AnonymousUserName="IUSR_sawolsftp"
+		AnonymousUserPass="49634462580000001000000040000000ada3dac71c374c3c809d324f3c8b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+		AppFriendlyName="sawols.com"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/29218/Root"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="at_domains_index.html,Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,File,C:\inetpub\vhosts\sawols.com\error_docs\bad_request.html
+			401,1,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			401,2,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			401,3,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			401,4,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			401,5,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			401,7,File,C:\inetpub\vhosts\sawols.com\error_docs\unauthorized.html
+			403,1,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,2,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,3,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,4,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,5,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,6,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,7,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,8,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,9,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,10,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,11,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,12,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,13,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,14,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,15,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,16,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,17,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,18,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,19,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			403,20,File,C:\inetpub\vhosts\sawols.com\error_docs\forbidden.html
+			404,*,File,C:\inetpub\vhosts\sawols.com\error_docs\not_found.html
+			404,2,File,C:\inetpub\vhosts\sawols.com\error_docs\not_found.html
+			404,3,File,C:\inetpub\vhosts\sawols.com\error_docs\not_found.html
+			405,*,File,C:\inetpub\vhosts\sawols.com\error_docs\method_not_allowed.html
+			406,*,File,C:\inetpub\vhosts\sawols.com\error_docs\not_acceptable.html
+			407,*,File,C:\inetpub\vhosts\sawols.com\error_docs\proxy_authentication_required.html
+			412,*,File,C:\inetpub\vhosts\sawols.com\error_docs\precondition_failed.html
+			414,*,File,C:\inetpub\vhosts\sawols.com\error_docs\request-uri_too_long.html
+			415,*,File,C:\inetpub\vhosts\sawols.com\error_docs\unsupported_media_type.html
+			500,*,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,12,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,13,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,15,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,16,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,17,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,18,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,19,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			500,100,File,C:\inetpub\vhosts\sawols.com\error_docs\internal_server_error.html
+			501,*,File,C:\inetpub\vhosts\sawols.com\error_docs\not_implemented.html
+			502,*,File,C:\inetpub\vhosts\sawols.com\error_docs\bad_gateway.html"
+		Path="C:\Inetpub\vhosts\sawols.com\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/29218/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/29218/ROOT/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\sawols.com\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/29218/ROOT/jakarta"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/29218/ROOT/sitepreview"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/29218/ROOT/test"
+		AuthFlags="AuthBasic"
+		Path="C:\Inetpub\vhosts\sawols.com\httpdocs\test"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/30503"
+		ConnectionTimeout="3000"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileComputerName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileTimeTaken | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileCookie | LogExtFileReferer | LogExtFileProtocolVersion | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\inetpub\vhosts\herefordpies.com\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		SSLCertHash="8ab903f654418534dc26003870a2d43c554b436a"
+		SSLStoreName="MY"
+		SecureBindings=""
+		ServerAutoStart="TRUE"
+		ServerBindings="208.109.21.139:80:herefordpies.com
+			208.109.21.139:80:www.herefordpies.com"
+		ServerComment="herefordpies.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/30503/Filters"
+		FilterLoadOrder=",urlprotect"
+	>
+</IIsFilters>
+<IIsFilter	Location ="/LM/W3SVC/30503/Filters/urlprotect"
+		FilterDescription="Plesk URL Protection"
+		FilterEnableCache="TRUE"
+		FilterPath="C:\Program Files\SWsoft\Plesk\isapi\urlprotect.dll"
+	>
+</IIsFilter>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AnonymousPasswordSync="FALSE"
+		AnonymousUserName="IUSR_qwe"
+		AnonymousUserPass="49634462580000001000000040000000ada3dac76a37213cdc9d024f328b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+		AppFriendlyName="herefordpies.com"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(2.0)(pool)"
+		AppRoot="/LM/W3SVC/30503/Root"
+		AspScriptTimeout="3000"
+		AspSessionTimeout="120"
+		AuthFlags="AuthNTLM"
+		DefaultDoc="at_domains_index.html,Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\bad_request.html
+			401,1,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			401,2,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			401,3,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			401,4,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			401,5,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			401,7,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unauthorized.html
+			403,1,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,2,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,3,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,4,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,5,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,6,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,7,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,8,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,9,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,10,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,11,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,12,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,13,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,14,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,15,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,16,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,17,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,18,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,19,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			403,20,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\forbidden.html
+			404,*,FILE,C:\Inetpub\vhosts\herefordpies.com\httpdocs\404error.html
+			404,2,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\not_found.html
+			404,3,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\not_found.html
+			405,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\method_not_allowed.html
+			406,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\not_acceptable.html
+			407,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\proxy_authentication_required.html
+			412,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\precondition_failed.html
+			414,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\request-uri_too_long.html
+			415,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\unsupported_media_type.html
+			500,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,12,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,13,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,15,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,16,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,17,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,18,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,19,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			500,100,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\internal_server_error.html
+			501,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\not_implemented.html
+			502,*,FILE,C:\inetpub\vhosts\herefordpies.com\error_docs\bad_gateway.html"
+		Path="C:\Inetpub\vhosts\herefordpies.com\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.master,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.dsdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsad,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssmap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dsprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsaprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST"
+		UNCPassword="49634462500000000600000040000000ada3dac74237450045003400440038003800430041003900310034003900370034003900330039004200300033003500460042004300430046004300330045005d00000000000000"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/30503/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\herefordpies.com\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT/jakarta"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT/plesk-stat"
+		AccessFlags="AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\herefordpies.com\statistics"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT/sitepreview"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/30503/ROOT/test"
+		Path="C:\Inetpub\vhosts\herefordpies.com\httpdocs\test"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/360904924"
+		AuthFlags="0"
+		LogFileDirectory="C:\inetpub\vhosts\vacations-abroad.com\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		ServerAutoStart="TRUE"
+		ServerBindings="208.109.21.139:80:vacations-abroad.com
+			208.109.21.139:80:www.vacations-abroad.com"
+		ServerComment="vacations-abroad.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/360904924/filters"
+		AdminACL="49634462f0000000a400000040000000ada3dac743377fac249d5c4fe18b6f63168847692f77d40bda85950454f3ed54777f3122ceac44ae3b8697a22e624345091a36b254354b9b33725568bd9fb2aec87fc52f572b7c1a9107c84b0fe00707eacdf9a88a1719e8bfb505ba1b30efba0c4ce1dffee597a673e05ab24277558afa93f4e818addf80aac7c033abb46198142c7103c8317f46a1369980e25d478764fd4bc2b53d30a2ede8424b9edcbf187d2b5670cb1f53d0c74124c6be24a4cd5332673376d843b39fbf80e572a76c2c0079500118000000496348621800000010000000000000000048708180258ee84a43bb8d27bf7676"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/360904924/root"
+		AccessFlags="AccessRead"
+		AnonymousUserName="IUSR_vacationsabroad"
+		AppFriendlyName="Default Application"
+		AppIsolated="2"
+		AppPoolId="plesk(default)(2.0)(pool)"
+		AppRoot="/LM/W3SVC/360904924/Root"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_request.html
+			401,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			403,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,6,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,8,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,9,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,10,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,11,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,14,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,20,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			404,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			405,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\method_not_allowed.html
+			406,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_acceptable.html
+			407,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\proxy_authentication_required.html
+			412,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\precondition_failed.html
+			414,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\request-uri_too_long.html
+			415,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unsupported_media_type.html
+			500,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,100,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			501,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_implemented.html
+			502,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_gateway.html"
+		HttpRedirect="http://www.vacations-abroad.com$Q, PERMANENT"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.master,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.dsdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsad,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssmap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dsprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsaprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5
+			.idc,C:\WINDOWS\system32\inetsrv\httpodbc.dll,5,GET,POST
+			.shtm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.shtml,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.stm,C:\WINDOWS\system32\inetsrv\ssinc.dll,5,GET,POST
+			.ad,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sd,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.adprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lddprototype,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.exclude,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.refresh,c:\windows\microsoft.net\framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG"
+		UNCPassword="49634462500000000600000040000000ada3dac74237450045003400440038003800430041003900310034003900370034003900330039004200300033003500460042004300430046004300330045005d00000000000000"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/360904924/root/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/360904924/root/jakarta"
+		AccessFlags="AccessExecute | AccessRead"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/360904924/root/plesk-stat"
+		AccessFlags="AccessRead"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\statistics"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/360904924/root/sitepreview"
+		AccessFlags="AccessExecute | AccessRead"
+		Path="C:\Program Files\SWsoft\Plesk\isapi"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/5597"
+		ServerBindings=":8425:
+			208.109.21.139:80:webmail.sawols.com
+			208.109.21.139:80:webmail.herefordpies.com
+			208.109.21.139:80:webmail.vacations-abroad.com"
+		ServerComment="webmail(default)"
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/5597/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="webmail(default)"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/5597/Root"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\Inetpub\vhosts\webmail"
+		ScriptMaps=""
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/5597/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/5597/ROOT/horde"
+		AccessFlags="AccessRead | AccessScript"
+		AccessSSLFlags="0"
+		AnonymousUserName="IUSR_WEB-B"
+		AnonymousUserPass="49634462700000002200000040000000ada3dac77537493c9a9d604f148b0e63708874694077b20bee85ad0469f39654777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		AppFriendlyName="horde"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/5597/Root/horde"
+		AspEnableParentPaths="FALSE"
+		AspExecuteInMTA="0"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		DontLog="FALSE"
+		Path="C:\Inetpub\vhosts\webmail\horde"
+		ScriptMaps=".php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/5646"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileComputerName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileTimeTaken | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileCookie | LogExtFileReferer | LogExtFileProtocolVersion | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\inetpub\vhosts\vacations-abroad.com\subdomains\tours\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		MaxBandwidth="4294967295"
+		MaxConnections="4294967295"
+		ServerAutoStart="FALSE"
+		ServerBindings="208.109.21.139:80:tours.vacations-abroad.com"
+		ServerComment="tours.vacations-abroad.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/5646/Filters"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/5646/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AnonymousPasswordSync="FALSE"
+		AnonymousUserName="IUSR_vacationsabroad"
+		AnonymousUserPass="49634462700000002200000040000000ada3dac77537493c9a9d604f148b0e63708874694077b20bee85ad0469f39654777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		AppFriendlyName="tours.vacations-abroad.com"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(2.0)(pool)"
+		AppRoot="/LM/W3SVC/5646/Root"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_request.html
+			401,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			403,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,6,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,8,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,9,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,10,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,11,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,14,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,20,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			404,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			405,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\method_not_allowed.html
+			406,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_acceptable.html
+			407,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\proxy_authentication_required.html
+			412,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\precondition_failed.html
+			414,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\request-uri_too_long.html
+			415,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unsupported_media_type.html
+			500,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,100,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			501,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_implemented.html
+			502,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_gateway.html"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\subdomains\tours\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.master,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.skin,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.compiled,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.browser,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.mdb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sitemap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.msgx,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.dsdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssdgm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsad,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ssmap,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cd,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.dsprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.lsaprototype,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdm,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.sdmDocument,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldb,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.svc,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.mdf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ldf,C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/5646/ROOT/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\subdomains\tours\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/5646/ROOT/plesk-stat"
+		AccessFlags="AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\statistics"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/6446"
+		LogExtFileFlags="LogExtFileDate | LogExtFileHost | LogExtFileTime | LogExtFileClientIp | LogExtFileUserName | LogExtFileSiteName | LogExtFileComputerName | LogExtFileServerIp | LogExtFileMethod | LogExtFileUriStem | LogExtFileUriQuery | LogExtFileHttpStatus | LogExtFileWin32Status | LogExtFileBytesSent | LogExtFileBytesRecv | LogExtFileTimeTaken | LogExtFileServerPort | LogExtFileUserAgent | LogExtFileCookie | LogExtFileReferer | LogExtFileProtocolVersion | LogExtFileHttpSubStatus"
+		LogFileDirectory="C:\inetpub\vhosts\vacations-abroad.com\subdomains\photos\statistics\logs"
+		LogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"
+		MaxBandwidth="4294967295"
+		MaxConnections="4294967295"
+		ServerAutoStart="FALSE"
+		ServerBindings="208.109.21.139:80:photos.vacations-abroad.com"
+		ServerComment="photos.vacations-abroad.com"
+	>
+</IIsWebServer>
+<IIsFilters	Location ="/LM/W3SVC/6446/Filters"
+		FilterLoadOrder=""
+	>
+</IIsFilters>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6446/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AnonymousPasswordSync="FALSE"
+		AnonymousUserName="IUSR_vacationsabroad"
+		AnonymousUserPass="49634462700000002200000040000000ada3dac77537493c9a9d604f148b0e63708874694077b20bee85ad0469f39654777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		AppFriendlyName="photos.vacations-abroad.com"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/6446/Root"
+		AuthFlags="AuthAnonymous"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		HttpErrors="400,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_request.html
+			401,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			401,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unauthorized.html
+			403,1,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,4,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,5,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,6,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,7,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,8,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,9,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,10,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,11,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,14,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			403,20,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\forbidden.html
+			404,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,2,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			404,3,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_found.html
+			405,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\method_not_allowed.html
+			406,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_acceptable.html
+			407,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\proxy_authentication_required.html
+			412,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\precondition_failed.html
+			414,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\request-uri_too_long.html
+			415,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\unsupported_media_type.html
+			500,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,12,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,13,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,15,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,16,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,17,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,18,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,19,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			500,100,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\internal_server_error.html
+			501,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\not_implemented.html
+			502,*,File,C:\inetpub\vhosts\vacations-abroad.com\error_docs\bad_gateway.html"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\subdomains\photos\httpdocs"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.php,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.php3,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.phtml,&quot;C:\Program Files\SWsoft\Plesk\Additional\Php\php.exe&quot;,5
+			.cgi,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.pl,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\perl.exe&quot; &quot;%s&quot; %s,5,GET,HEAD,POST
+			.plx,&quot;C:\Program Files\SWsoft\Plesk\Additional\Perl\bin\PerlIS.dll&quot;,5,GET,HEAD,POST
+			.py,&quot;C:\Program Files\SWsoft\Plesk\Additional\Python\python.exe&quot; -u &quot;%s&quot; %s,5"
+		UNCPassword="49634462500000000600000040000000ada3dac74237450045003400440038003800430041003900310034003900370034003900330039004200300033003500460042004300430046004300330045005d00000000000000"
+	>
+</IIsWebVirtualDir>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6446/ROOT/cgi-bin"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\subdomains\photos\cgi-bin"
+	>
+</IIsWebVirtualDir>
+<IIsWebFile	Location ="/LM/W3SVC/6446/ROOT/index.htm"
+		AccessFlags="AccessSource | AccessRead | AccessScript"
+		AuthFlags="0"
+	>
+	<Custom
+		Name="UNCPassword"
+		ID="3003"
+		Value="49634462500000000600000040000000ada3dac74237450045003400440038003800430041003900310034003900370034003900330039004200300033003500460042004300430046004300330045005d00000000000000"
+		Type="STRING"
+		UserType="IIS_MD_UT_FILE"
+		Attributes="INHERIT | SECURE"
+	/>
+</IIsWebFile>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6446/ROOT/plesk-stat"
+		AccessFlags="AccessRead | AccessScript"
+		Path="C:\Inetpub\vhosts\vacations-abroad.com\statistics"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/6668"
+		AccessSSLFlags="AccessSSL"
+		AspEnableParentPaths="FALSE"
+		AspScriptLanguage="VBScript"
+		AuthFlags="AuthBasic"
+		DefaultDoc="Default.asp,Default.aspx"
+		MimeMap=".evt,application/octet-stream
+			.csv,text/plain
+			.log,text/plain"
+		SSLStoreName="MY"
+		SecureBindings=":8098:"
+		ServerBindings=":8099:"
+		ServerComment="Administration"
+		ServerSize="1"
+	>
+	<Custom
+		Name="SSLCertHash"
+		ID="5506"
+		Value="551e85db6aa2e9de2590cd053b3689b10c7eb218"
+		Type="BINARY"
+		UserType="IIS_MD_UT_SERVER"
+		Attributes="NO_ATTRIBUTES"
+	/>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6668/Root"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="Default Application"
+		AppIsolated="0"
+		AppRoot="/LM/w3svc/6668/Root"
+		Path="C:\WINDOWS\system32\serverappliance\web"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/6668/Root/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6668/Root/tsweb"
+		AccessFlags="AccessRead"
+		ContentIndexed="FALSE"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension"
+		Path="C:\WINDOWS\system32\serverappliance\web\admin\tsweb\"
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/6669"
+		SecureBindings=""
+		ServerBindings=":3318:"
+		ServerComment="Microsoft SharePoint Administration"
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/6669/Root"
+		AccessFlags="AccessExecute | AccessRead | AccessScript"
+		AppIsolated="0"
+		AppPoolId="MSSharePointAppPool"
+		DefaultDoc="fpadmdll.dll"
+		Path="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\50\isapi\_vti_adm"
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/6669/Root/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebServer	Location ="/LM/W3SVC/760"
+		ServerBindings=":8401:
+			208.109.21.139:80:mssql.sawols.com
+			208.109.21.139:80:mssql.herefordpies.com
+			208.109.21.139:80:mssql.vacations-abroad.com"
+		ServerComment="sqladmin(default)"
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/760/ROOT"
+		AccessFlags="AccessRead | AccessScript"
+		AppFriendlyName="sqladmin(default)"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/760/Root"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		Path="C:\Inetpub\vhosts\sqladmin"
+		ScriptMaps=""
+	>
+</IIsWebVirtualDir>
+<IIsWebDirectory	Location ="/LM/W3SVC/760/ROOT/aspnet_client"
+		AccessFlags="AccessRead"
+		DirBrowseFlags="0"
+	>
+</IIsWebDirectory>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/760/ROOT/mssql"
+		AccessFlags="AccessRead | AccessScript"
+		AccessSSLFlags="0"
+		AnonymousUserName="IUSR_WEB-B"
+		AnonymousUserPass="49634462700000002200000040000000ada3dac77537493c9a9d604f148b0e63708874694077b20bee85ad0469f39654777f000001000100e725bc975141094daf832a202c6bf3ec02000000000000000000000000000000000000000000000001000000000000004c4d454d6800000078cb130000000000"
+		AppFriendlyName="mssql"
+		AppIsolated="0"
+		AppPoolId="plesk(default)(pool)"
+		AppRoot="/LM/W3SVC/760/Root/mssql"
+		AspEnableParentPaths="FALSE"
+		AspExecuteInMTA="0"
+		AuthFlags="AuthAnonymous | AuthNTLM"
+		DefaultDoc="Index.html,Index.htm,Index.cfm,Index.shtml,Index.shtm,Index.stm,Index.php,Index.php3,Index.asp,Index.aspx,Default.htm,Default.asp,Default.aspx"
+		DirBrowseFlags="DirBrowseShowDate | DirBrowseShowTime | DirBrowseShowSize | DirBrowseShowExtension | DirBrowseShowLongDate | EnableDefaultDoc"
+		DontLog="FALSE"
+		Path="C:\Inetpub\vhosts\sqladmin\mssql"
+		ScriptMaps=".asp,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cer,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asa,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.cdx,C:\WINDOWS\system32\inetsrv\asp.dll,5,GET,HEAD,POST,TRACE
+			.asax,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ascx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.ashx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.asmx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.aspx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.axd,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.config,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.cs,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.csproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.licx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.rem,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.resources,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.resx,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.soap,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vb,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vbproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.vsdisco,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.webinfo,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,5,GET,HEAD,POST,DEBUG
+			.jsl,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.java,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG
+			.vjsproj,C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll,1,GET,HEAD,POST,DEBUG"
+	>
+</IIsWebVirtualDir>
+<IIsApplicationPools	Location ="/LM/W3SVC/AppPools"
+		AdminACL="49634462f0000000a400000040000000ada3dac743377fac249d5c4fe18b6f63168847692f77d40bda85950454f3ed54777f3122c5ac44ae3b8697a22e624345091a36b254354b9b38725568bd9fb2aec87fc52f572b7c1a9107c84b04e00707eacdf9a88a1719e8bfb505ba1b30efba0c4ce1dffee597a673e05ab24277558afa93f4e818addf80aac7c033abb46198142c7103c8317f46a1369980e25d478764fd4bc2b53d30a2ede8424b9edcbf187d2b5670cb1f53d0c74124c6be24a4cd5332673376d843b39fbf80e572a76c2c0079500118000000496348621800000010000000000000000048708180258ee84a43bb8d27bf7676"
+		AppPoolIdentityType="2"
+		AppPoolQueueLength="4000"
+		CPULimit="0"
+		CPUResetInterval="5"
+		DisallowOverlappingRotation="FALSE"
+		DisallowRotationOnConfigChange="FALSE"
+		IdleTimeout="20"
+		LoadBalancerCapabilities="2"
+		LogEventOnRecycle="AppPoolRecycleTime | AppPoolRecycleMemory | AppPoolRecyclePrivateMemory"
+		MaxProcesses="1"
+		OrphanWorkerProcess="FALSE"
+		PeriodicRestartMemory="0"
+		PeriodicRestartPrivateMemory="0"
+		PeriodicRestartRequests="0"
+		PeriodicRestartTime="1740"
+		PingInterval="30"
+		PingResponseTime="90"
+		PingingEnabled="TRUE"
+		RapidFailProtection="TRUE"
+		RapidFailProtectionInterval="5"
+		RapidFailProtectionMaxCrashes="5"
+		SMPAffinitized="FALSE"
+		SMPProcessorAffinityMask="4294967295"
+		ShutdownTimeLimit="90"
+		StartupTimeLimit="90"
+	>
+</IIsApplicationPools>
+<IIsApplicationPool	Location ="/LM/W3SVC/AppPools/DefaultAppPool"
+		IdleTimeout="120"
+	>
+</IIsApplicationPool>
+<IIsApplicationPool	Location ="/LM/W3SVC/AppPools/MSSharePointAppPool"
+		AppPoolIdentityType="0"
+		DisallowOverlappingRotation="TRUE"
+		IdleTimeout="120"
+		MaxProcesses="1"
+	>
+</IIsApplicationPool>
+<IIsApplicationPool	Location ="/LM/W3SVC/AppPools/plesk(default)(2.0)(pool)"
+		AppPoolAutoStart="TRUE"
+		AppPoolIdentityType="3"
+		IdleTimeout="120"
+		ShutdownTimeLimit="3000"
+		WAMUserName="IWAM_plesk(default)"
+		WAMUserPass="49634462580000001000000040000000ada3dac72137093cfb9d0e4f1d8b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+	>
+</IIsApplicationPool>
+<IIsApplicationPool	Location ="/LM/W3SVC/AppPools/plesk(default)(pool)"
+		AppPoolAutoStart="TRUE"
+		AppPoolIdentityType="3"
+		IdleTimeout="120"
+		WAMUserName="IWAM_plesk(default)"
+		WAMUserPass="49634462580000001000000040000000ada3dac72137093cfb9d0e4f1d8b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+	>
+</IIsApplicationPool>
+<IIsApplicationPool	Location ="/LM/W3SVC/AppPools/staging .net 2.0 Pool"
+		AppPoolAutoStart="TRUE"
+		AppPoolIdentityType="3"
+		IdleTimeout="120"
+		ShutdownTimeLimit="3000"
+		WAMUserName="IWAM_plesk(default)"
+		WAMUserPass="49634462580000001000000040000000ada3dac72137093cfb9d0e4f1d8b6f6344656661756c74735c50726f76696465725c4d6963726f736f6674205374726f6e672043727970746f677261706869632050726f766964657200000073000000"
+	>
+</IIsApplicationPool>
+<IIsFilters	Location ="/LM/W3SVC/Filters"
+		AdminACL="49634462f0000000a400000040000000ada3dac743377fac249d5c4fe18b6f63168847692f77d40bda85950454f3ed54777f3122ceac44ae3b8697a22e624345091a36b254354b9b33725568bd9fb2aec87fc52f572b7c1a9107c84b0fe00707eacdf9a88a1719e8bfb505ba1b30efba0c4ce1dffee597a673e05ab24277558afa93f4e818addf80aac7c033abb46198142c7103c8317f46a1369980e25d478764fd4bc2b53d30a2ede8424b9edcbf187d2b5670cb1f53d0c74124c6be24a4cd5332673376d843b39fbf80e572a76c2c0079500118000000496348621800000010000000000000000048708180258ee84a43bb8d27bf7676"
+		FilterLoadOrder="jakarta,sitepreview,hotlinkprot,ASP.NET_2.0.50727.210"
+	>
+</IIsFilters>
+<IIsFilter	Location ="/LM/W3SVC/Filters/ASP.NET_2.0.50727.210"
+		FilterDescription="ASP.NET Cookieless Session Filter"
+		FilterEnableCache="TRUE"
+		FilterFlags="NotifyPreProcHeaders | NotifyUrlMap | NotifyOrderLow"
+		FilterPath="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_filter.dll"
+		FilterState="1"
+	>
+</IIsFilter>
+<IIsFilter	Location ="/LM/W3SVC/Filters/Compression"
+	>
+</IIsFilter>
+<IIsCompressionScheme	Location ="/LM/W3SVC/Filters/Compression/deflate"
+		HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"
+		HcCreateFlags="0"
+		HcDoDynamicCompression="TRUE"
+		HcDoOnDemandCompression="TRUE"
+		HcDoStaticCompression="FALSE"
+		HcDynamicCompressionLevel="0"
+		HcFileExtensions="htm
+			html
+			txt"
+		HcOnDemandCompLevel="10"
+		HcPriority="1"
+		HcScriptFileExtensions="asp
+			dll
+			exe"
+	>
+</IIsCompressionScheme>
+<IIsCompressionScheme	Location ="/LM/W3SVC/Filters/Compression/gzip"
+		HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"
+		HcCreateFlags="1"
+		HcDoDynamicCompression="TRUE"
+		HcDoOnDemandCompression="TRUE"
+		HcDoStaticCompression="TRUE"
+		HcDynamicCompressionLevel="0"
+		HcFileExtensions="htm
+			html
+			txt"
+		HcOnDemandCompLevel="10"
+		HcPriority="1"
+		HcScriptFileExtensions="asp
+			dll
+			exe"
+	>
+</IIsCompressionScheme>
+<IIsCompressionSchemes	Location ="/LM/W3SVC/Filters/Compression/Parameters"
+		HcCacheControlHeader="max-age=86400"
+		HcCompressionBufferSize="8192"
+		HcCompressionDirectory="%windir%\IIS Temporary Compressed Files"
+		HcDoDiskSpaceLimiting="FALSE"
+		HcDoDynamicCompression="FALSE"
+		HcDoOnDemandCompression="TRUE"
+		HcDoStaticCompression="FALSE"
+		HcExpiresHeader="Wed, 01 Jan 1997 12:00:00 GMT"
+		HcFilesDeletedPerDiskFree="256"
+		HcIoBufferSize="8192"
+		HcMaxDiskSpaceUsage="100000000"
+		HcMaxQueueLength="1000"
+		HcMinFileSizeForComp="1"
+		HcNoCompressionForHttp10="TRUE"
+		HcNoCompressionForProxies="TRUE"
+		HcNoCompressionForRange="FALSE"
+		HcSendCacheHeaders="FALSE"
+	>
+</IIsCompressionSchemes>
+<IIsFilter	Location ="/LM/W3SVC/Filters/hotlinkprot"
+		FilterDescription="HotLinkProtection ISAPI Filter"
+		FilterEnableCache="TRUE"
+		FilterFlags="NotifySecurePort | NotifyNonSecurePort | NotifyPreProcHeaders | NotifyEndOfNetSession | NotifyOrderHigh"
+		FilterPath="C:\Program Files\SWsoft\Plesk\isapi\hotlinkprot.dll"
+		FilterState="1"
+	>
+</IIsFilter>
+<IIsFilter	Location ="/LM/W3SVC/Filters/jakarta"
+		FilterDescription="Jakarta/ISAPI/1.2.6"
+		FilterFlags="NotifySecurePort | NotifyNonSecurePort | NotifyPreProcHeaders | NotifyOrderHigh | NotifyAuthComplete"
+		FilterPath="C:\Program Files\SWsoft\Plesk\isapi\isapi_redirect.dll"
+		FilterState="1"
+	>
+</IIsFilter>
+<IIsFilter	Location ="/LM/W3SVC/Filters/sitepreview"
+		FilterDescription="Site Preview ISAPI Filter"
+		FilterFlags="NotifySecurePort | NotifyNonSecurePort | NotifyPreProcHeaders | NotifyOrderHigh"
+		FilterPath="C:\Program Files\SWsoft\Plesk\isapi\sitepreview.dll"
+		FilterState="1"
+	>
+</IIsFilter>
+<IIsWebInfo	Location ="/LM/W3SVC/Info"
+		AdminACL="49634462a00000005800000040000000ada3dac743377fac909d5c4f358b6f63168847692f77d40bda85d90451f3ed54777f3d22eeac40ae3b8597a22e6243453a1a36b274375f9bb9705568bc9eb2abe87fc52a63297c1a9005ec4b84e00702cbc8f9a8aa1519ed3100300039002e00320031002e00310033003900000000000900ffff00001000ffff00000a00ffff00000e00ffff00001100ffff00001200ffff000000000000"
+		CustomErrorDescriptions="400,0,Bad Request,,0
+			401,1,Unauthorized,Logon failed,1
+			401,2,Unauthorized,Logon failed due to server configuration,1
+			401,3,Unauthorized,Unauthorized due to ACL on resource,1
+			401,4,Unauthorized,Authorization failed by filter,1
+			401,5,Unauthorized,Authorization failed by ISAPI/CGI app,1
+			401,7,Unauthorized,Denied due to URL Authorization policy,0
+			403,1,Forbidden,Execute access denied,0
+			403,2,Forbidden,Read access denied,0
+			403,3,Forbidden,Write access denied,0
+			403,4,Forbidden,SSL required,0
+			403,5,Forbidden,SSL128 required,0
+			403,6,Forbidden,IP address rejected,0
+			403,7,Forbidden,Client certificate required,0
+			403,8,Forbidden,Site access denied,0
+			403,9,Forbidden,Too many users,0
+			403,10,Forbidden,Invalid Configuration,0
+			403,11,Forbidden,Password Change,0
+			403,12,Forbidden,Mapper Denied Access,0
+			403,13,Forbidden,Client certificate revoked,0
+			403,14,Forbidden,Directory Listing Denied,0
+			403,15,Forbidden,Client Access Licenses Exceeded,0
+			403,16,Forbidden,Client certificate untrusted or ill-formed,0
+			403,17,Forbidden,Client certificate has expired or is not yet valid,0
+			403,18,Forbidden,Cannot execute request from this application pool,0
+			403,19,Forbidden,CGI Access denied,0
+			403,20,Forbidden,Passport Login failed,0
+			404,0,Not Found,,0
+			404,2,Not Found,Denied due to Lockdown Policy,0
+			404,3,Not Found,Denied due to MIMEMAP Policy,0
+			405,0,Method Not Allowed,,0
+			406,0,Not Acceptable,,0
+			407,0,Proxy Authentication Required,,1
+			412,0,Precondition Failed,,0
+			414,0,Request-URI Too Long,,0
+			415,0,Unsupported Media Type,,0
+			500,0,Internal Server Error,,0
+			500,12,Internal Server Error,Application restarting,0
+			500,13,Internal Server Error,Server too busy,0
+			500,15,Internal Server Error,Direct requests for GLOBAL.ASA forbidden,0
+			500,16,Internal Server Error,UNC Access Error,0
+			500,17,Internal Server Error,URL Authorization store not found,0
+			500,18,Internal Server Error,URL Authorization store cannot be opened,0
+			500,19,Internal Server Error,Bad file metadata,0
+			500,100,Internal Server Error,ASP error,0
+			501,0,Not Implemented,,0
+			502,0,Bad Gateway,,1"
+		LogModuleList="NCSA Common Log File Format,Microsoft IIS Log File Format,W3C Extended Log File Format,ODBC Logging"
+		MD_SERVER_CAPABILITIES="129983"
+		MD_SERVER_PLATFORM="1"
+		MajorIIsVersionNumber="6"
+		MinorIIsVersionNumber="0"
+	>
+</IIsWebInfo>
+<IIsConfigObject	Location ="/LM/W3SVC/Info/Templates"
+	>
+</IIsConfigObject>
+<IIsWebServer	Location ="/LM/W3SVC/Info/Templates/Public Web Site"
+		ServerComment="Allows all users to browse static and dynamic content."
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/Info/Templates/Public Web Site/Root"
+		AccessFlags="AccessRead | AccessScript"
+		AuthFlags="AuthAnonymous"
+		IPSecurity=""
+	>
+</IIsWebVirtualDir>
+<IIsWebServer	Location ="/LM/W3SVC/Info/Templates/Secure Web Site"
+		ServerComment="Allows users with a Windows account to view static and dynamic content."
+	>
+</IIsWebServer>
+<IIsWebVirtualDir	Location ="/LM/W3SVC/Info/Templates/Secure Web Site/Root"
+		AccessFlags="AccessRead | AccessScript"
+		AuthFlags="AuthBasic | AuthNTLM | AuthMD5"
+		IPSecurity=""
+	>
+</IIsWebVirtualDir>
+<IIsInheritedProperties	Location ="inherited:/LM/W3SVC"
+		AdminACL="4963446210010000c800000040000000ada3dac743377fac009d5c4fc58b6f63168847692f77d40bda85690455f3ed54777f01224cac44ae3b8297a22e6243450f1a36b208d3d04bb0a09dfbc52db94d3a7cc52a432b681a1807ec4b85e10707ebc8f9ad991719edaab511baced6606a059f294c87569c408de35ab24277698ad893f0e818aadf80aac7c0339eb4619868c8fed3c1e1b7d5d8859266285e478744ff53c21f3f34a2ecea424ebedcbf1d7d295670cf7bb1c395fd7903be16c2fc63585e887d37267055055e02d4d9a8ca83949e48dd3d52fc95c0a3f07ab090233d405861e2881ef27080cf6fd15f632ab227853b7b513b122178ba2c30d053683ec2ab1bf47315051fdae837494b7b10c4eacfbe2634ca7f"
+		MaxBandwidth="4294967295"
+	>
+</IIsInheritedProperties>
+</MBProperty>
+</configuration>

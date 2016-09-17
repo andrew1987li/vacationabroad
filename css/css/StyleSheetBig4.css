@@ -1,0 +1,57 @@
+﻿body{text-align:center;color:#370601;margin:0;top:0;}
+a:link {
+color: #940f04;
+}
+a:visited {
+color: #666666;
+}
+.MainTable{background-color:#ffffff;width:932px;text-align:center;border-spacing:0;padding:0;}
+#MainTable2{border:0;width:100%;border-spacing:0;padding:0;}
+#TD2A{width:33%;text-align:left;border:0;border-spacing:0;padding-left:7px;}
+.TD2B{width:33%;text-align:center;font-size:12px;font-family:Arial;border:0;border-spacing:0;padding:0px;}
+#TR2{vertical-align:top;background-color:#ffffff;width:100%;}
+.StateRow{background-color:#ffffff;text-align:center;font-size:12px;}
+.StateCityTable{border-spacing:0;padding:0;width:100%;text-align:center;border:0;}
+.StateTable1Row1{background-color:White;vertical-align:top;}
+.StateTable1TD1{text-align:center;}
+.StateTable1TD1 h1{font-size:20px;font-weight:bold;}
+.StateTable1TD2{height:40px;text-align:left;}
+.PurpleTable{background-color:#ffFFFF;font-size:12px;width:100%;margin:0;border-spacing:0;color:#000000;padding-top:0px;}
+.flrLeft{background-color:#ffFFFF;color:White;width:45px;font-size:12px;}
+.flr1{height:40px;padding:0px;margin:0px;border-spacing:0px;font-size:12px;}
+.flr2{height:20px;padding:0px;margin:0px;border-spacing:0px;font-size:12px;}
+.flr3{height:20px;padding:0px;margin:0px;border-spacing:0px;font-size:12px;}
+.rtHeader{text-align:center;width:100%;font-size:12px;padding-top:5px;padding-bottom:5px;background-color:#f6faf6;}
+.rtOuterCnty{width:99%;border:solid 1px #b6beb6;}
+.rtText{margin-left:5px;font-size:12px;}
+.rtText a{text-decoration:none;}
+.detailsBtnTxt{background-color:White;width:95px;border:solid 1px #CCAF00;text-align:center;font-size:12px;}
+.detailsBtnTxt a{text-decoration:none;color:#CCAF00;}
+.detailsBtnTxtRev{background-color:#999999;width:95px;border:solid 1px #CCAF00; color:#ffffff;text-align:center;font-size:12px;}
+.detailsBtnTxtRev a{text-decoration:none;color:#ffffff;}
+.NormalText{font-size:13px;font-family:Arial;}
+.LightText{text-align:left;font-size:12px;}
+.OrangeText{font-size:15px;color:#474747;}
+.Left{text-align:left;}
+h1{font-size:24px;font-weight:bold;color:#cc0000;}
+.regionMenu{background-color:#f6faf6;font-size:12px;}
+.regionMenu a{text-decoration:none;color:#660000;}
+.regionMenu a:visited{text-decoration:none;color:#660000;}
+.lftProperties{width:78%;float:left;border:solid 1px #999999;}
+.lftPropertiesTbl{width:76%;float:left;}
+.lftPropertiesTour2{width:100%;float:left;border:solid 1px #999999;}
+.lftPropertiesTour{width:78%;float:left;}
+.rtRates{padding-left:0px;width:28%;text-align:center;font-size:12px;}
+.rtRates a{color:#999999;}
+.grdImg{border-color:#ccaf00;background-color:#ccaf00;padding:2px;display:block;}
+.picStyle{width:100%;font-size:12px;}
+.propLink{font-size:12px;}
+.propLink a:link{font-size:14px;}
+.propLink a:active{font-size:14px;}
+.propLink a:visited{font-size:14px;}
+#ctl00_Content_rdoTypes_0{text-align:left;}
+.countryLarge{font-size:15px;}
+/*.tourTabs2 a:link{text-decoration:none;color:#CC6600;font-size:14px;}
+.tourTabs2 a:active{text-decoration:none;color:#CC6600;font-size:14px;}
+.tourTabs2 a:visited{text-decoration:none;color:#CC6600;font-size:14px;}*/
+a.propCrumb {color:#333366;text-decoration:none;font-weight:bold;}

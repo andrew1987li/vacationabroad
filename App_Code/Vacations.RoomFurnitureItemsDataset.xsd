@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="RoomFurnitureItemsDataset" targetNamespace="http://www.tempuri.org/RoomFurnitureItemsDataset.xsd" xmlns:mstns="http://www.tempuri.org/RoomFurnitureItemsDataset.xsd" xmlns="http://www.tempuri.org/RoomFurnitureItemsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="RoomFurnitureItemsDataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="RoomFurnitureItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="RoomID" type="xs:int" />
+              <xs:element name="FurnitureItemID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataItems>
+	<!-- Common values used for drill down reporting -->
+	<DataItem guid="4B1D9A19059F447EBAF6F411CA2B9BCC" friendlyName="HistogramValues">
+		<QueryName value="HistogramValues" />
+		<Value column="Hourly" coltype="STRING" formatString="{0:d} {0:t}" align="left" />
+		<Value column="HourDay" coltype="STRING" formatString="{0:t}" align="left" />
+		<Value column="Daily" coltype="STRING" formatString="{0:d}" align="left" />
+		<Value column="DayWeek" coltype="STRING" formatString="{0:dddd}" align="left" />
+		<Value column="Weekly" coltype="STRING" formatString="{0:d}" align="left" />
+		<Value column="Monthly" coltype="STRING" formatString="{0:MMM} {0:yyyy}" align="left" />
+		<Value column="MonthYear" coltype="STRING" formatString="{0:MMM}" align="left" />
+		<Value column="Quarterly" coltype="STRING" formatString="{0:STQuarter}" align="left" /> 
+	</DataItem>
+	<DataItem guid="3A518ECA5F5544C48025C1EE7FD15F1E" friendlyName="DrillDown">
+		<QueryName value="DrillDown" />
+		<Value column="Domain" coltype="STRING" formatString="{0:0}" align="left" imageUrl="{0}/Images/16x16/DrillDown.gif" />
+		<Value column="User" coltype="STRING" formatString="{0:0}" align="left" imageUrl="{0}/Images/16x16/DrillDown.gif" />
+		<Value column="AcctType" coltype="STRING" formatString="{0:0}" align="left" />
+	</DataItem>
+	<!-- /Common values-->
+	<DataItem guid="4E88419DF3D84B28A4715B61F7090AFB" friendlyName="DiskUsage">
+		<QueryName value="DiskUsage" />
+		<GetValues queryName="DrillDown" />
+		<Value column="TotalDisk" coltype="DOUBLE" formatString="{0:N0} MB" dashOnNull="false" align="center" />
+	</DataItem>
+	<DataItem guid="FB2FBFD21CE74A55B18CFAECDFDADB09" friendlyName="UserDiskUsage">
+		<QueryName value="UserDiskUsage" />
+		<Value column="Folder" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="DiskUsage" coltype="DOUBLE" formatString="{0:N0} MB" dashOnNull="false" align="right" />
+	</DataItem>
+	<DataItem guid="903F7CFA308F4F22A0D2238ED3FCF890" friendlyName="MessageTraffic">
+		<QueryName value="MessageTraffic" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="IncMessages" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="OutMessages" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="IncSpamMessages" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="OutSpamMessages" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="FC0DE17583B04B06984F11CA9C726B81" friendlyName="ProtocolUsage">
+		<QueryName value="ProtocolUsage" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="Bandwidth" coltype="DOUBLE" formatString="{0:N0} KB" dashOnNull="false" align="right" />
+		<Value column="NewConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="6D15F0EA31864A78895C63F1C56DE682" friendlyName="AdminProtocolUsage">
+		<QueryName value="AdminProtocolUsage" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="Bandwidth" coltype="DOUBLE" formatString="{0:N0} KB" dashOnNull="false" align="right" />
+		<Value column="ActiveConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="NewConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="BlockedConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="8D29D77310B74760B929C49D153CDF4D" friendlyName="ProtocolErrors">
+		<QueryName value="ProtocolErrors" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="BlockedConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="BadCommands" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="Terminations" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="1627DB59335941C8A549AAE5C801D33A" friendlyName="TrustedSenders">
+		<QueryName value="TrustedSenders" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="MessagesTrusted" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="1D1518ABE70F4FB2B313AB618B92355C" friendlyName="IncSpam">
+		<QueryName value="IncSpam" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="LowSpam" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="MedSpam" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="HighSpam" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="TotalSpam" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="C9A7FD9BA68F4D3E98D23AF00BEE2F89" friendlyName="IncSpamPercentage">
+		<QueryName value="IncSpamPercentage" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="LowSpamPerc" coltype="DOUBLE" formatString="{0:N0}%" align="right" />
+		<Value column="MedSpamPerc" coltype="DOUBLE" formatString="{0:N0}%" align="right" />
+		<Value column="HighSpamPerc" coltype="DOUBLE" formatString="{0:N0}%" align="right" />
+		<Value column="TotalSpamPerc" coltype="DOUBLE" formatString="{0:N0}%" align="right" />
+	</DataItem>
+	<DataItem guid="7AFD3E1AD8D0447991D18DE5419D1F9F" friendlyName="OutSpam">
+		<QueryName value="OutSpam" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="BlockedMessages" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="DFF25A29E38D43DE9977B0A38B14757B" friendlyName="OutSpamPercentage">
+		<QueryName value="OutSpamPercentage" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="BlockedMessagesPerc" coltype="DOUBLE" formatString="{0:N0}%" align="right" />
+	</DataItem>
+	<DataItem guid="F9D5707103664E99A64DC511A836666B" friendlyName="GreyListing">
+		<QueryName value="GreyListing" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="AllowedConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="DelayedConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="TotalConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="36BB830FCC024460BD0BBFDF6C3E3056" friendlyName="Virus">
+		<QueryName value="Virus" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="Viruses" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="9ABEAE6A2497428EB439F4C58F419E3C" friendlyName="ServerStatus">
+		<QueryName value="ServerStatus" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="CPU" coltype="DOUBLE" formatString="{0:N0}%" dashOnNull="false" align="right" />
+		<Value column="Memory" coltype="DOUBLE" formatString="{0:N0} MB" dashOnNull="false" align="right" />
+		<Value column="Threads" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="ActiveConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="SpoolCount" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="B07DA59457C7470587211FDC59E5134D" friendlyName="Connections">
+		<QueryName value="Connections" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="ActiveConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="NewConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="FailedConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="9E44E5ACD1594E2CAD5D8EDE04A96C1E" friendlyName="IDS">
+		<QueryName value="IDS" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="DOS" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="Harvesting" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="InternalSpammer" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="77806F91103B4B8F972208B937B7CBAD" friendlyName="BlackWhiteList">
+		<QueryName value="BlackWhiteList" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="BlackListed" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="WhiteListed" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="ED22363944CA4E9796D0D108793E1060" friendlyName="MessageData">
+		<QueryName value="MessageData" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="Sent" coltype="DOUBLE" formatString="{0:N0} KB" dashOnNull="false" align="right" />
+		<Value column="Received" coltype="DOUBLE" formatString="{0:N0} KB" dashOnNull="false" align="right" />
+	</DataItem>
+	<DataItem guid="31AAA6CE6C284862ADDDB02AC540DA92" friendlyName="UserInfo">
+		<QueryName value="UserInfo" />
+		<Value column="Username" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="Type" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="IP" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="StartDate" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="Duration" coltype="STRING" formatString="{0:0}" align="left" />
+	</DataItem>
+	<DataItem guid="0746D03AA7AF44FD81002B75632B8647" friendlyName="TrafficGAChart">
+		<QueryName value="TrafficGAChart" />
+		<Value column="Hour" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="IMAPCon10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="POPCon10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="SMTPCon10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="DeliveryThreads10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="LDAPCon10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="45B934870C214520BCDE3A91EC01F516" friendlyName="TrafficGeneralActivity">
+		<QueryName value="TrafficGeneralActivity" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="GenActivityDesc" coltype="STRING" formatString="{0:0}" align="left" title="~ReportColTitle_Description" />
+		<Value column="IMAPConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="POPConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="SMTPConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="DeliveryThreads" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="LDAPConnections" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="MessagesInSpool" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="391726136F18425EA9684189F2008850" friendlyName="TrafficMessageActivity">
+		<QueryName value="TrafficMessageActivity" />
+		<Value column="MsgActivityDesc" coltype="STRING" formatString="{0:0}" align="left" title="~ReportColTitle_Description" />
+		<Value column="MessagesDelivered" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="LocalDeliveries" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="RemoteDeliveries" coltype="DOUBLE" formatString="{0:0}" align="center" />			   
+	</DataItem>
+	<DataItem guid="BEA7F922B1C8448CB03EA33688015710" friendlyName="SystemSecurity">
+		<QueryName value="SystemSecurity" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="Hour" coltype="STRING" formatString="{0:t}" align="left" />
+		<Value column="Description" coltype="STRING" formatString="{0:0}" align="left" />
+		<Value column="Last5Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="LastHour" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="Last24Hours" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="SinceStart" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="Spam10Min" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="CAFAD4E708C846CC997C7E55AA80A166" friendlyName="TrafficPriority">
+		<QueryName value="TrafficPriority" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="P1" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P2" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P3" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P4" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P5" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P6" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P7" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P8" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P9" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="P10" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+	<DataItem guid="54CE6AB303954DF3B86D49E6D9A5D5EA" friendlyName="BandwidthPriority">
+		<QueryName value="BandwidthPriority" />
+		<GetValues queryName="HistogramValues" />
+		<Value column="P1" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P2" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P3" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P4" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P5" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P6" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P7" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P8" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P9" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+		<Value column="P10" coltype="DOUBLE" formatString="{0:N0} KB" align="center" />
+	</DataItem>
+	<DataItem guid="D48148ADE82E4608B0EDB6298B1EA180" friendlyName="ThrottleMsgConnections">
+		<QueryName value="ThrottleMsgConnections" />
+		<GetValues queryName="HistogramValues" />
+		<GetValues queryName="DrillDown" />
+		<Value column="BouncesReceived" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="MessagesSent" coltype="DOUBLE" formatString="{0:0}" align="center" />
+		<Value column="SmtpOutBandwidth" coltype="DOUBLE" formatString="{0:0}" align="center" />
+	</DataItem>
+</DataItems>

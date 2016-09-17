@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="62D752260AC945DCBB0D5511EED5BE3F" title="~Report_TndSvrStatus" friendly="SA_TndSvrStatus" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="9ABEAE6A2497428EB439F4C58F419E3C" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />	   
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="9ABEAE6A2497428EB439F4C58F419E3C">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="CPU" />
+				<YValue columns="Memory" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="9ABEAE6A2497428EB439F4C58F419E3C">
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,CPU,Memory,Threads,ActiveConnections,SpoolCount" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

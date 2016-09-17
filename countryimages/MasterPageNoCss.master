@@ -1,0 +1,217 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/MasterPageNoCss.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="uc" TagName="ddMenu" Src="~/DropDownMenu.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head runat="server">
+    <link rel="icon" href="http://vacations-abroad.com/favicon.ico" type="image/x-icon" />
+    <link rel="Shortcut Icon" href="http://vacations-abroad.com/favicon.ico" />
+    <title></title>
+    <%--<link href="https://www.vacations-abroad.com/css/StyleSheet1.css" rel="stylesheet" type="text/css" />--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="/js/hoverintent.js"></script>
+    <%--new stuff--%>
+    <link href="/css/style.css?v=1" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css' />
+  
+    <%--new stuff--%>
+</head>
+<body runat="server" style="background-color: #7A7AA3; font-family: Arial; font-size: 12px;"
+    id="BodyTag">
+    <form id="MainForm" runat="server">
+
+        <div style="border:5px solid #aca593; width:980px; margin:0px auto; background-color:#ffffff;">
+
+    <div id="header">
+
+    <div>
+    
+</div>
+  
+        <!--  Container  -->
+        <div class="container">
+        <div style="top:0px; position:absolute; width:100%; ">
+                <div class="footernav" style="width:1015px;">
+
+                <% if (AuthenticationManager.IfAuthenticated)
+                           { %>
+                           <ul class="whenuserloggedin">
+                        <li style="width:16%"><a rel="nofollow" href="http://blog2.vacations-abroad.com/">OWNER PROFILES</a></li>
+                        <li style="width:16%"><a rel="nofollow" href="http://www.vacations-abroad.com/applications.aspx">LIST PROPERTY</a></li>
+                        <li style="width:16%"><a rel="nofollow" href="http://www.vacations-abroad.com/MyAccount.aspx">MY ACCOUNT</a></li>
+                        <li style="width:16%"><a rel="nofollow" href="http://www.vacations-abroad.com/logout.aspx">LOG OUT</a></li>
+                        <li style="width:16%"><a rel='nofollow' href='http://www.vacations-abroad.com/rentalguarantee.aspx'>Rental Guarantee</a></li>
+                        <li style="width:16%"><a rel="nofollow" href="http://www.vacations-abroad.com/Contacts.aspx">Contact</a></li>
+                    </ul>
+                    <% }
+                           else
+                           {%>
+
+                <ul class="whennotloggedin">
+                        <li style="width:20%"><a rel="nofollow" href="http://blog2.vacations-abroad.com/">OWNER PROFILES</a></li>
+                        <li style="width:20%"><a rel="nofollow" href="http://www.vacations-abroad.com/applications.aspx">LIST PROPERTY</a></li>
+                        <li style="width:20%"><a rel="nofollow" href="http://www.vacations-abroad.com/login.aspx">LOG IN</a></li>
+                        <li style="width:20%"><a rel='nofollow' href='http://www.vacations-abroad.com/rentalguarantee.aspx'>Rental Guarantee</a></li>
+                        <li style="width:20%"><a rel="nofollow" href="http://www.vacations-abroad.com/Contacts.aspx">Contact</a></li>
+                    </ul>
+                    
+                    <%} %>
+                </div>
+        </div>
+
+        <div style=" background-color: 
+#A0522D; repeat; height: 18px; width: 100%;  position: absolute; left: 0px; z-index:-1;"></div>
+<div style=" background-color: 
+#6f92a1; repeat; width: 100%; position: absolute; top:100px; height: 38px; left: 0px;"></div>
+
+            <div>
+                <%--style="position: absolute; top: 0px; left: 50%; margin-left: -437px; z-index: 400;"--%>
+                <a href="/">
+                    <asp:Image runat="server" ID="Logo" ImageAlign="middle" AlternateText="Vacations-Abroad: Vacation rentals, Vacation Apartments, B&Bs and Hotels"
+                        ImageUrl="/images/logo.png" CssClass="logo" Height="202" Width="223" /></a>
+            </div>
+            <div class="head_rht upperSecLinksAndSocial">
+                <div style="float: left; padding-top: 20px; padding-left: 260px;">
+                    <asp:TextBox ID="tbKeyWords" runat="server" />
+                    <asp:Button ID="btnSearchByKeyWords" runat="server" Text="Search" OnClick="SearchByKeyWords_Click"
+                        UseSubmitBehavior="false" />
+                </div>
+                <div class="social_link">
+                    <ul>
+                        <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad" target="_blank">
+                            <img src="/images/social01.jpg" width="24" height="25" alt=""></a></li>
+                        <li><a rel="nofollow" href="https://twitter.com/vacationsabroad" target="_blank">
+                            <img src="/images/social02.jpg" width="24" height="25" alt=""></a></li>
+                        <li><a rel="nofollow" href="https://pinterest.com/vacationsabroad" target="_blank">
+                            <img src="/images/social03.jpg" width="24" height="25" alt=""></a></li>
+                        <li class="last"><a rel="nofollow" href="http://vacationsabroad.tumblr.com/" a target="_blank">
+                            <img src="/images/social04.png" width="24" height="25" alt=""></a></li>
+                    </ul>
+                    <div class="clear">
+                        &nbsp;</div>
+                </div>
+                <div class="clear">
+                    &nbsp;</div>
+                <div class="top_location">
+                    <ul class="tabs">
+                        <li class="new_li mTop7"><a href="/africa/default.aspx" title="Africa Vacations" rel="#tabAfrica">
+                           Africa</a></li>
+                        <li class="new_li mTop7"><a href="/asia/default.aspx" title="Asia Vacations" rel="#tabAsia">
+                            Asia</a></li>
+                        <li class="new_li mTop7"><a href="/europe/default.aspx" title="Europe Vacations" rel="#tabEurope">
+                            Europe</a></li>
+                        <li class="new_li"><a href="/north_america/default.aspx" title="North America Vacations"
+                            rel="#tabNorthAmerica">
+                           North<br />America</a></li>
+                        <li class="new_li"><a href="/south_america/default.aspx" title="South America Vacations"
+                            rel="#tabSouthAmerica">
+                           South<br />America</a></li>
+                        <li class="new_li last mTop7"><a href="/oceania/default.aspx" title="Oceania Vacations"
+                            rel="#tabOceania">
+                            Oceania</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+        <!--  End Container  -->
+    </div>
+    <!--  End Header  -->
+    <!--  Body Container  -->
+    <div id="body_contnainer">
+        <!--  Container  -->
+        <div class="container">
+            <div class="cont_lft fltlft" id="dvLft" runat="server">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="TabContainer" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="cont_rht fltrht" runat="server" style="padding-top: 0px;" id="dvRightFloat">
+                <asp:ContentPlaceHolder ID="DefaultPageFeaturedCitiesContainer" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+        <!--  End Container  -->
+
+        <%--<center>--%>
+        <div align="center" style="padding-top: 5px; width: 100%; height: auto; margin: 0 auto;">
+            <table class="MainTable" style="cellspacing="1" cellpadding="">
+                <tr id="TR2">
+                    <td style="width: 100%">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <br />
+                            Other information: <a rel="nofollow" href="http://www.vacations-abroad.com/travelagents.aspx">
+                                Travel Agents.</a>,
+                                   
+                           
+                            <br />
+                            
+                            Copyright ©2000-2013
+                            <%= CommonFunctions.GetSiteName () %>
+                            is a registered trademark - All rights reserved. <img src="/logosmall.jpg" />
+                            <br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <%--</center>--%>
+
+
+    </div>
+    <!--  End Body Container  -->
+
+    
+
+    <!--  End footer  -->
+    <%--end new content--%>
+    <!--  footer  -->
+    <div style="margin-left: auto; width: auto;">
+        <div id="footer">
+            <!--  Container  -->
+            <div class="container">
+                <div class="searchdiv" style="display: none;">
+                    <input type="text">
+                </div>
+            </div>
+            <!--  End Container  -->
+
+            
+    </div>
+    <div >
+        
+<div style=" height: 26px; width: 99%; left: 5px;">
+<%--  <div style=" background-color: #d9b9ab; repeat; height: 5px; width: 100%; padding: 0; box-shadow: 5px 5px 5px #ecdcd5; position: absolute; vertical-align: bottom; left: 5px;"></div>
+--%>
+</div>
+        
+        
+        </div>    
+        
+        
+
+        
+
+        </div>
+
+
+        
+
+            </div>
+
+    </form>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>

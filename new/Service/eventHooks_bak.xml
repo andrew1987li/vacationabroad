@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventHooks>
+  <defaultsLoaded>1</defaultsLoaded>
+  <Hook>
+    <GroupID />
+    <Name>New Version Available</Name>
+    <Owner />
+    <EventGroup>@DefaultEventGroup</EventGroup>
+    <EventGuid>10018</EventGuid>
+    <Guid>95b3e0a4199e48a4b262ed08cacee281</Guid>
+    <Repeating>False</Repeating>
+    <RepeatFrequency>3000000000</RepeatFrequency>
+    <LastOccuredUTC>0</LastOccuredUTC>
+    <Active>False</Active>
+    <EventAction>
+      <ResourceID>@EventAction_Alert</ResourceID>
+      <Guid>1fe483aa0bdc45d2a914bb01c89c0b77</Guid>
+      <Key>AlertAction</Key>
+      <Constrained>False</Constrained>
+      <ConstraintFrequency>20000000</ConstraintFrequency>
+      <ConstraintKey />
+      <EventInput>
+        <DescriptionResourceId>@EventInput_AlertProfile</DescriptionResourceId>
+        <Key>alertprofileguid</Key>
+        <Value>9138ee94aef949ea86416706499fb6f0</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_FromAddress</DescriptionResourceId>
+        <Key>alertfrom</Key>
+        <Value>System Administrator</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_Subject</DescriptionResourceId>
+        <Key>alertsubject</Key>
+        <Value>New version notification.</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_EmailShort</DescriptionResourceId>
+        <Key>alertshortbody</Key>
+        <Value>#description#</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_EmailBody</DescriptionResourceId>
+        <Key>alertbody</Key>
+        <Value>#description#
+
+&lt;a href="#link#" target="_blank"&gt;More Info&lt;/a&gt;</Value>
+      </EventInput>
+    </EventAction>
+  </Hook>
+  <Hook>
+    <GroupID />
+    <Name>License Expiration</Name>
+    <Owner />
+    <EventGroup>@DefaultEventGroup</EventGroup>
+    <EventGuid>10019</EventGuid>
+    <Guid>ca18758d33b8493481fc1105d9bd1749</Guid>
+    <Repeating>False</Repeating>
+    <RepeatFrequency>3000000000</RepeatFrequency>
+    <LastOccuredUTC>0</LastOccuredUTC>
+    <Active>False</Active>
+    <EventAction>
+      <ResourceID>@EventAction_Alert</ResourceID>
+      <Guid>f59f8b883bb64c128a8de14cba6b6340</Guid>
+      <Key>AlertAction</Key>
+      <Constrained>False</Constrained>
+      <ConstraintFrequency>20000000</ConstraintFrequency>
+      <ConstraintKey />
+      <EventInput>
+        <DescriptionResourceId>@EventInput_AlertProfile</DescriptionResourceId>
+        <Key>alertprofileguid</Key>
+        <Value>9138ee94aef949ea86416706499fb6f0</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_FromAddress</DescriptionResourceId>
+        <Key>alertfrom</Key>
+        <Value>System Administrator</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_Subject</DescriptionResourceId>
+        <Key>alertsubject</Key>
+        <Value>License expiration notification.</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_EmailShort</DescriptionResourceId>
+        <Key>alertshortbody</Key>
+        <Value>Your #licensetype# license is set to expire in #daysleft# days.  Contact sales@smartertools.com for more information.</Value>
+      </EventInput>
+      <EventInput>
+        <DescriptionResourceId>@EventInput_EmailBody</DescriptionResourceId>
+        <Key>alertbody</Key>
+        <Value>Your #licensetype# license is set to expire in #daysleft# days.  Contact sales@smartertools.com for more information.</Value>
+      </EventInput>
+    </EventAction>
+    <EventCondition>
+      <Type>SmarterTools.Events.EventConditionInt</Type>
+      <DescriptionResourceId>@EventInput_DaysLeft</DescriptionResourceId>
+      <Key>daysleft</Key>
+      <Value1>2</Value1>
+      <Value2>2</Value2>
+      <Condition>LessThan</Condition>
+      <AffectsReset>False</AffectsReset>
+    </EventCondition>
+  </Hook>
+</EventHooks>

@@ -1,0 +1,138 @@
+<%@ master language="C#" autoeventwireup="true" CodeFile="~/MasterPage10.master.cs" inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+
+<title></title>       
+<style type="text/css">
+
+ html { width:100%; height:100%; background:#999999; }
+ body { 
+font-family:Arial; 
+color:#474747; 
+text-align:center; font-size:12px; margin:0; top:0; 
+ min-height:600px;
+ height:100%;
+ } 
+  .left td {
+   text-align:left;
+  }
+  .regionMenu
+{
+background-color:#ececec;
+}
+  .regionMenu a
+{
+ text-decoration:none;
+ color:#000000;
+}
+.regionMenu td
+{
+ width:9%;
+}
+  </style>
+
+<%--<script type="text/javascript" src="countryStateCityBack.js"></script>--%>
+</head>
+
+<body runat="server" id="BodyTag" bgcolor="#999999" text="#000000" vlink="#9C9C9C" alink="#828282" link="#3366CC" marginwidth="0">
+	<form id="MainForm" runat="server">
+	<center>
+	
+    <div align="center" style="width:932px;"> 
+		<table bordercolor="#006699" bgcolor="#ffffff" cellspacing="1" cellpadding="" width="750px" align="center" border="0">
+			<tr bordercolor="#ffffff">
+				<td colspan="5">
+					<table border="0" width="100%">
+						<tr>
+							<td width="33%" align="left"><font size="2" face="Arial">
+								Search for vacation rentals<br />
+								<asp:TextBox ID="KeyWords" runat="server" />
+								<asp:Button ID="SearchByKeyWords" runat="server" OnClick="SearchByKeyWords_Click"
+									Text="Search" CausesValidation="False" />
+							</font></td>
+							<td> 
+                                    <a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("") %>'>
+                                        <asp:Image runat="server" ID="Logo" ImageAlign="middle" AlternateText='Vacations-Abroad.com'
+                                            Width="215" Height="58" BorderWidth="0" ImageUrl='images2/logo.jpg' />
+                                    </a>
+									
+								</td>
+                                <td style="padding-right: 5px;"><font size="2" face="Arial">
+<br/>
+
+								<% if (!AuthenticationManager.IfAuthenticated) { %>
+								<asp:HyperLink ID="LogInLink" runat="server" NavigateUrl="Login.aspx">Log In</asp:HyperLink><br />
+								<asp:HyperLink ID="CreateAccountLink" runat="server" NavigateUrl="FindOwner.aspx">Create An Account</asp:HyperLink><br />
+								<% } else { %>
+								<asp:HyperLink ID="LogOutLink" runat="server" NavigateUrl="Logout.aspx">Log Out</asp:HyperLink> <br />
+								<asp:HyperLink ID="UserIDLink" runat="server" NavigateUrl="Listings.aspx">User ID (<%= AuthenticationManager.Username %>)</asp:HyperLink><br />
+								<% } %>
+								<% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin) { %>
+								<asp:HyperLink ID="OwnersLinkLink" runat="server" NavigateUrl="OwnersList.aspx">Owners List</asp:HyperLink> /
+								<asp:HyperLink ID="OutStandingInvoicesLink" runat="server" NavigateUrl="OutstandingInvoices.aspx">Outstanding Inv</asp:HyperLink> /
+								<asp:HyperLink ID="AdminLink" runat="server" NavigateUrl="Administration.aspx">Admin</asp:HyperLink>
+								<% } %>
+							</font></td>
+
+						</tr>
+
+
+					</table>
+				</td>
+			</tr>
+			 <tr bordercolor="#ffffff">
+				<td align="center" colspan="5">
+					<table width="930px" class="regionMenu">
+<tr>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/africa/default.aspx">AFRICA</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/asia/default.aspx">ASIA</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/caribbean/default.aspx">CARIBBEAN</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/central_america/default.aspx">C. AMERICA</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/europe/default.aspx">EUROPE</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/middle_east/default.aspx">MIDDLE EAST</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/north_america/default.aspx">N. AMERICA</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/oceania/default.aspx">OCEANIA</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/south_america/default.aspx">S. AMERICA</a></td>
+<td><a rel="nofollow" href="http://blog2.vacationsabroad.com">OWNER PROFILES</a></td>
+<td><a rel="nofollow" href="http://www.vacations-abroad.com/applications.htm">List Property</a></td>
+</tr>
+</table>
+				</td>
+			</tr>
+           		
+			
+			<tr valign="top" bordercolor="#ffffff" bgcolor="#ffffff">
+				<td colspan="5">
+					<asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+				</td>
+			</tr>
+			
+			<tr>
+<td colspan="5" style="text-align:center;">
+<div class="c30" >
+								<a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("TravelAgents.aspx") %>'>Travel Agents</a>,
+								<a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("Disclaimer.htm") %>'>Disclaimer</a>,
+								<a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("FAQ.htm") %>'>FAQs</a>,
+								<a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("Contacts.htm") %>'>Contact</a>,
+<a rel="nofollow" href='<%= CommonFunctions.PrepareURL ("sitemaps.html") %>'>Sitemaps</a>,
+								<a rel="nofollow" href="http://resources.vacations-abroad.com/index.asp">Travel Links</a>,
+								<a rel="nofollow" href="DrawingResults.aspx">Email Winners</a>, <a rel="nofollow" href="NewsletterArchives.aspx">Newsletters</a>
+								<br />
+								
+								Copyright ©2000-2010 <%= CommonFunctions.GetSiteName () %> is a registered trademark - All rights reserved. 
+							<br/>Thank you for visiting Vacations-Abroad.com<br/><div/>
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		</div>
+		
+		</center>
+	</form></body>
+</html>

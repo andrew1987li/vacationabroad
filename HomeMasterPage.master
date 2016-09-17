@@ -1,0 +1,464 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/HomeMasterPage.master.cs"
+    Inherits="HomeMasterPage" %>
+
+<%@ Register TagPrefix="uc" TagName="ddMenu" Src="~/DropDownMenu.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head runat="server">
+    <link rel="icon" href="http://vacations-abroad.com/favicon.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="http://vacations-abroad.com/favicon.ico">
+    <title></title>
+    <%--<link href="https://www.vacations-abroad.com/css/StyleSheet1.css" rel="stylesheet" type="text/css" />--%>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/hoverintent.js"></script>
+    <%--new stuff--%>
+    <link href="/css/style.css?v=2" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css' />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <%--new stuff--%>
+</head>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('body').css('background-color', '#D9E7F1');
+    });
+
+
+</script>
+<style>
+    #map-canvas {
+        height: 800px;
+        width: 800px;
+    }
+
+    .search {
+        background-color: white;
+        border: 1px solid;
+        border-color: gray;
+        color: black;
+    }
+
+    .nav {
+        padding: 0;
+        margin-top: 10px;
+        list-style-type: none;
+    }
+
+
+        .nav li ul {
+            display: none;
+        }
+
+            .nav li ul li {
+                padding: 0 0 5px 0;
+                width: 100%;
+                border-color: #A8210F;
+            }
+
+    .navavig li ul li {
+        padding: 0 0 7px 0;
+        width: 150px;
+    }
+
+    .navavig ul li {
+        border-bottom: 0px solid !important;
+    }
+
+    .navavig li ul {
+        display: none;
+        position: absolute;
+        margin-top: 1px;
+    }
+
+    
+
+
+    .nav li:hover ul {
+        position: absolute;
+        display: block;
+        z-index: 9999;
+        width: 12%;
+        background: #FFFFFF;
+        color: #000;
+        text-decoration: none;
+        min-width: 125px;
+        border: 2px solid;
+        border-color: #CDBFAC;
+        margin-left:20px;
+    }
+
+    /*.navavig li:hover > ul li a {
+        float: left;
+        font: bold 1.1em arial,verdana,tahoma,sans-serif;
+        line-height: 20px;
+        margin: 0;
+        color: #A8240D;
+        padding: 10px 138px 0 0;
+        border: none;
+    }*/
+
+    /*.nav li:hover > ul li a {
+        float: left;
+        font: bold 1.1em arial,verdana,tahoma,sans-serif;
+        line-height: 20px;
+        margin: 0;
+        color: #A8210F;
+        padding: 10px 138px 0 0;
+    }*/
+
+
+    /*.nav li ul li a:hover {
+        text-decoration: underline;
+        color: #A8210F;
+    }*/
+
+    .navavig li ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #Companyname a:hover {
+        text-decoration: none !important;
+    }
+
+    /*.AllPagesNavigation {
+        background-color: #E26433;
+        box-shadow: 3px 3px 8px #c00000;
+        width: 100%;
+        height: 40px;
+    }*/
+
+    /*.Searchlabel {
+        margin: 0px;
+        float: left;
+        color: #ffffff;
+        font-family: Verdana;
+        font-size: 14px;
+        width: 516px;
+        height: 30px;
+        font-weight: bold;
+        padding-top: 4px;
+    }*/
+</style>
+
+<body runat="server" style="font-family: Arial; font-size: 12px; min-height:1000px;"
+    id="BodyTag">
+    <form id="MainForm" runat="server">
+    <div><%=HttpContext.Current.User.Identity.IsAuthenticated %>
+                            <h1><%=HttpContext.Current.User.Identity.Name %></h1>
+        <%=AuthenticationManager.UserID %>
+                        </div>
+        <div class="pageborder">
+
+            <div id="header">
+
+                <div>
+                </div>
+
+                <!--  Container  -->
+                <div class="container">
+                    <div style="top: 0px; position: absolute; width: 100%;">
+                        <div id="searchwithnavigation" runat="server" class="footernav  AllPagesNavigation">
+                            <div style="text-align: center; padding-top: 7px;">
+                                <div class="Searchlabel">Search by Property Name,City,State or Country</div>
+                                <div id="previous_update">
+                                    <div style="float: left; padding-left: 150px">
+                                        <asp:TextBox ID="tbKeyWords" runat="server" CssClass="search" Height="22" Style="margin-top: 0px" Width="219px" />
+                                    </div>
+                                    <div style="padding-right: 15px">
+                                        <asp:Button ID="btnSearchByKeyWords" runat="server" Text="Search" OnClick="SearchByKeyWords_Click" Height="25"
+                                            UseSubmitBehavior="false" CausesValidation="False" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="clear">
+                            &nbsp;
+                        </div>
+
+                        <div id="searchwithoutnavigation" class="footernav AllPagesNavigation" runat="server">
+
+
+
+                            
+
+
+                        </div>
+                    </div>
+
+                    <%-- <div style="background-color: #ffffff; repeat; height: 18px; width: 100%; position: absolute; left: 0px; z-index: -1;">
+                    </div>
+                    <div style="background-color: #ffffff; repeat; width: 100%; position: absolute; top: 61px; height: 38px; left: 0px;">
+                    </div>--%>
+
+                    <div>
+                        <%--style="position: absolute; top: 0px; left: 50%; margin-left: -437px; z-index: 400;"--%>
+
+                        <%--17/7/2015 below Comments--%>
+                        <a href="/">
+                            <asp:Image runat="server" ID="Logo" ImageAlign="middle" AlternateText="Vacations-Abroad: Vacation rentals, Vacation Apartments, B&Bs and Hotels"
+                                ImageUrl="/images/logosmaller.jpg" CssClass="logo" Style="display: none;" />
+
+                            <%--  <asp:Image runat="server" ID="Image1" ImageAlign="middle" AlternateText="Vacations-Abroad: Vacation rentals, Vacation Apartments, B&Bs and Hotels"
+                                ImageUrl="/images/logosmaller.jpg" CssClass="logo" Height="202" Width="223" Style="left: 34px; display: none;" />--%>
+
+                        </a>
+                    </div>
+                    <div class="clear">
+                        &nbsp;
+                    </div>
+                    <div id="Companyname" >
+                        <a href="http://69.89.14.163:86">VACATIONS ABROAD</a>
+                    </div>
+                    <div class="navigation" style="width: 100%;">
+                        <% //if (AuthenticationManager.IfAuthenticated)
+                           if(HttpContext.Current.User.Identity.IsAuthenticated)
+                           {%>
+                    
+                        <ul class="whenuserloggedin navavig">
+                            <li style="width: 20%"><a rel="nofollow" href="#">list a property</a>
+                                <ul class="submenu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/applications.aspx">TERMS</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/MyAccount.aspx">MY ACCOUNT</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/logout.aspx">LOG OUT</a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <li style="width: 20%"><a rel="nofollow" href="#">rent a property</a>
+                                <ul class="submenu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/rentalguarantee.aspx ">RENTAL GUARANTEE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/travelagents.aspx  ">TRAVEL AGENTS</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">About us</a>
+                                <ul class="submenu">
+
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/AboutUs.aspx">WHO WE ARE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/press/AboutLindaKJenkins.pdf">THE FOUNDER</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">our press</a>
+                                <ul class="submenu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/presscoverage.aspx">PRESS COVERAGE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/pressreleases.aspx">PRESS RELEASES</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">stay in touch</a>
+                                <ul class="submenu" id="stayulwith" style="right:50px;">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/Contacts.aspx ">CONTACT</a></li>
+                                    <li><a rel="nofollow" href="http://blog2.vacations-abroad.com">blog</a></li>
+                                    <li><a rel="nofollow" href="http://madmimi.com/signups/121428/join">newsletter</a></li>
+                                    <li><a rel="nofollow" href="https://plus.google.com/+Vacations-abroad/posts">googleplus</a></li>
+                                    <li><a rel="nofollow" href="https://twitter.com/vacationsabroad">twitter</a></li>
+                                    <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad">facebook</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <% }
+                           else
+                           {%>
+                        <ul class="whenuserloggedin navavig">
+                            <li style="width: 20%"><a rel="nofollow" href="#">LIST a PROPERTY</a>
+                                <ul class="submenu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/applications.aspx">TERMS</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/FindOwner.aspx">CREATE AN ACCOUNT</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/Login.aspx">LOGIN</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">RENT a PROPERTY</a>
+                                <ul class="submenu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/rentalguarantee.aspx ">RENTAL GUARANTEE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/travelagents.aspx  ">TRAVEL AGENTS</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">About us</a>
+                                <ul class="submenu">
+
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/AboutUs.aspx">WHO WE ARE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/press/AboutLindaKJenkins.pdf">THE FOUNDER</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%"><a rel="nofollow" href="#">our press</a>
+                                <ul class="submenu" style="right: 5%;">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/presscoverage.aspx">PRESS COVERAGE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/pressreleases.aspx">PRESS RELEASES</a></li>
+                                </ul>
+                            </li>
+                            <li style="width: 20%;"><a rel="nofollow" href="#">stay in touch</a>
+                                <ul class="submenu" id="stayul" style="right:50px;">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/Contacts.aspx ">CONTACT</a></li>
+                                    <li><a rel="nofollow" href="http://blog2.vacations-abroad.com">blog</a></li>
+                                    <li><a rel="nofollow" href="http://madmimi.com/signups/121428/join">newsletter</a></li>
+                                    <li><a rel="nofollow" href="https://plus.google.com/+Vacations-abroad/posts">googleplus</a></li>
+                                    <li><a rel="nofollow" href="https://twitter.com/vacationsabroad">twitter</a></li>
+                                    <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad">facebook</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <%}%>
+                    </div>
+
+                    <div class="head_rht upperSecLinksAndSocial">
+                        <%--  <div id="fb-root"></div>
+                        <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=159812020755747";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" style="float:left" data-href="https://www.facebook.com/VacationsAbroad" data-width="75" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                        --%>
+
+
+                        <%--<div style="float: left; padding-top: 0px;">
+                            <asp:TextBox ID="tbKeyWords" runat="server" CssClass="search" />
+                            <asp:Button ID="btnSearchByKeyWords" runat="server" Text="Search" OnClick="SearchByKeyWords_Click"
+                                UseSubmitBehavior="false" CausesValidation="False" />
+                        </div>
+                        
+                        <div class="social_link">
+                            <ul>
+                                <li>
+                                    <a rel="nofollow" href="https://www.facebook.com/VacationsAbroad" target="_blank">
+                                        <img src="/images/social01.jpg" width="24" height="25" alt=""></a></li>
+                                <li><a rel="nofollow" href="https://twitter.com/vacationsabroad" target="_blank">
+                                    <img src="/images/social02.jpg" width="24" height="25" alt=""></a></li>
+                                <li><a rel="nofollow" href="https://pinterest.com/vacationsabroad" target="_blank">
+                                    <img src="/images/social03.jpg" width="24" height="25" alt=""></a></li>
+                                <li class="last"><a rel="nofollow" href="http://vacationsabroad.tumblr.com/" target="_blank">
+                                    <img src="/images/social04.png" width="24" height="25" alt=""></a></li>
+                            </ul>
+                            <div class="clear">
+                                &nbsp;
+                            </div>
+                        </div>--%>
+                        <div class="clear">
+                            &nbsp;
+                        </div>
+                        <div class="top_location" runat="server" id="regionmenu">
+                            <ul class="tabs">
+                                <%--<li class="new_li mTop7"><a href="/africa/default.aspx" title="Africa Vacations" rel="#tabAfrica">Africa</a></li>
+                                <li class="new_li mTop7"><a href="/asia/default.aspx" title="Asia Vacations" rel="#tabAsia">Asia</a></li>
+                                <li class="new_li mTop7"><a href="/europe/default.aspx" title="Europe Vacations" rel="#tabEurope">Europe</a></li>
+                                <li class="new_li"><a href="/north_america/default.aspx" title="North America Vacations"
+                                    rel="#tabNorthAmerica">North<br>
+                                    America</a></li>
+                                <li class="new_li"><a href="/south_america/default.aspx" title="South America Vacations"
+                                    rel="#tabSouthAmerica">South<br>
+                                    America</a></li>
+                                <li class="new_li last mTop7"><a href="/oceania/default.aspx" title="Oceania Vacations"
+                                    rel="#tabOceania">Oceania</a></li>--%>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        &nbsp;
+                    </div>
+                </div>
+                <!--  End Container  -->
+            </div>
+            <!--  End Header  -->
+            <!--  Body Container  -->
+            <div id="body_contnainer">
+                <!--  Container  -->
+                <div class="container">
+                    <div class="cont_lft fltlft" id="dvLft" runat="server">
+                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="TabContainer" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="cont_rht fltrht" runat="server" style="padding-top: 0px;" id="dvRightFloat">
+                        <asp:ContentPlaceHolder ID="DefaultPageFeaturedCitiesContainer" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear">
+                        &nbsp;
+                    </div>
+                </div>
+                <!--  End Container  -->
+
+                <%--<center>--%>
+                <div align="center" style="padding-top: 50px; width: 100%; height: auto; margin: 0 auto;">
+                    <table class="MainTable" cellspacing="1" cellpadding="0">
+                        <tr id="TR2">
+                            <td style="width: 100%"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    
+
+
+                                    <br>
+                                    Copyright ©2000-<%= DateTime.Now.Year.ToString() %>
+                            <%= CommonFunctions.GetSiteName () %>
+                            is a registered trademark - All rights reserved.
+                                    <img src="/logosmall.jpg" alt="">
+                                    <br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <%--</center>--%>
+            </div>
+            <!--  End Body Container  -->
+
+
+
+            <!--  End footer  -->
+            <%--end new content--%>
+            <!--  footer  -->
+            <div style="margin-left: auto; width: auto;">
+                <div id="footer">
+                    <!--  Container  -->
+                    <div class="container">
+                        <div class="searchdiv" style="display: none;">
+                            <input type="text" value="">
+                        </div>
+                    </div>
+                    <!--  End Container  -->
+
+
+                </div>
+                <div>
+
+                    <div style="height: 26px; width: 99%; left: 5px;">
+                        <%--  <div style=" background-color: #d9b9ab; repeat; height: 5px; width: 100%; padding: 0; box-shadow: 5px 5px 5px #ecdcd5; position: absolute; vertical-align: bottom; left: 5px;"></div>
+                        --%>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </form>
+    <script type="text/javascript">
+        
+        <% if (AuthenticationManager.IfAuthenticated)
+           {%>
+                document.getElementById("stayulwith").style.right = "50px";
+        <% }
+        else
+        {%>
+                document.getElementById("stayul").style.right = "50px";
+        <% }%>
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+
+    </script>
+</body>
+</html>

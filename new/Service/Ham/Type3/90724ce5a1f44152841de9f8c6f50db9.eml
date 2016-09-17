@@ -1,0 +1,71 @@
+Return-Path: <ar@vacations-abroad.com>
+Received: from 117.sub-70-223-188.myvzw.com [70.223.188.117] by mail.vacations-abroad.com with SMTP;
+   Mon, 20 Jul 2009 12:25:44 -0400
+From: "ar" <ar@vacations-abroad.com>
+To: <vps@hostmysite.com>
+References: <29966598.28681248104478901.JavaMail.InternalServices@hmsapp3>
+In-Reply-To: <29966598.28681248104478901.JavaMail.InternalServices@hmsapp3>
+Subject: RE: (#T7175032) We d onot accept mail from Dynamic Ips....Delivery Failure
+Date: Mon, 20 Jul 2009 12:25:19 -0400
+Message-ID: <586D286F4085437CB6AD59BE076162D3@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+thread-index: AcoJUIzvNSws35nRTQ2koc+gEjcJCQABhwyg
+
+Thank you Ryan. 
+
+-----Original Message-----
+From: vps@hostmysite.com [mailto:vps@hostmysite.com] 
+Sent: Monday, July 20, 2009 11:41 AM
+To: ar@vacations-abroad.com
+Subject: Re: (#T7175032) We d onot accept mail from Dynamic Ips....Delivery
+Failure
+
+Ref: vacations-abroad.com (H157327) 
+ 
+ Hello Anna,
+
+It is very odd that Hotmail thinks that your IP is a dynamic IP as it is not
+dynamic, but rather static and only assigned to your server.
+
+Your IP has a valid rDNS address of mail.vacations-abroad.com.  I have
+updated your SmarterMail hostname to match this rDNS entry which will help
+in sending mail.  I also noticed that your server did not require SMTP
+authentication, meaning that your server could be used as an "open relay"
+for spammers to send spam through.  Not requiring SMTP authentication means
+that someone could send mail without providing a login and password.  I have
+changed this so that SMTP authentication is not required.
+
+I would recommend contacting Hotmail by filling out this form.
+
+https://support.msn.com/eform.aspx?productKey=edfsmsbl&ct=eformts&scrx=1
+
+Explain to them that the IP address 76.12.12.144 is not a dynamic IP, but a
+static one assigned only to your server.  You may also want to note that
+your IP has a valid rDNS entry and your domain vacations-abroad.com has a
+valid SPF record.
+
+If you have any further questions, please ask.
+
+Regards,    
+Ryan Bradley    
+http://www.HostMySite.com      
+Email: support@HostMySite.com    
+Technical Support: 1.877.215.4678    
+Customer Service & Billing Inquiries: 866.916.4678    
+International: 1.302.731.4948    
+Get your FREE .com, .net, .org, .biz and .info domain name at
+HostMySite.com!      
+Manage your hosting account using our Total Customer Control Center at
+https://controlpanel.hostmysite.com
+
+> -----Original Message-----
+> From:	ar@vacations-abroad.com
+> Sent:	 
+> Subject: We d onot accept mail from Dynamic Ips....Delivery Failure
+> 
+

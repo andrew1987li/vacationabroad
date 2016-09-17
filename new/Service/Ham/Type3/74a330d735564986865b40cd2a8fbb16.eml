@@ -1,0 +1,571 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 145.sub-70-223-252.myvzw.com [70.223.252.145] by mail.vacations-abroad.com with SMTP;
+   Fri, 7 Aug 2009 16:40:17 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: "'Logan Gray'" <logan@intensetech.com>
+References: <AEECF9F8AEFA4D38AFE4DB408B8BB5D5@lindalaptop> <004101ca1787$fc041430$f40c3c90$@com>
+In-Reply-To: <004101ca1787$fc041430$f40c3c90$@com>
+Subject: RE: Good Afternoon from Vacations-abroad.com
+Date: Fri, 7 Aug 2009 16:39:42 -0400
+Organization: Vacations-abroad.com
+Message-ID: <31F2F1FEC7874B44932ADA2901677608@lindalaptop>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_1355_01CA177D.AB3182E0"
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+Thread-Index: AcoXfTpNpWuhTaVDTfyXL2AMsdAs6QACCZ1QAAXbxLA=
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_1355_01CA177D.AB3182E0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+
+Logan, the search by email works fine.
+I talked to my SEO person regarding the 301 redirects.
+ 
+1-He said the capitalization url issue is not important.
+ 
+However, this one is.
+2-Yahoo site explorer for my site is showing urls that should not be there. 
+ <http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170>
+http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170 
+
+We decided that the 301 redirect should go to the city page.
+
+ 
+
+so far, everything looks Fine. 
+
+ 
+ 
+ 
+
+Linda Jenkins 
+Director of Relaxation and Getaways 
+
+Vacations-Abroad.com 
+Telephone 1-770-298-8090 
+Email:  <mailto:linda@vacations-abroad.com> linda@vacations-abroad.com 
+
+ 
+
+  _____  
+
+From: Logan Gray [mailto:logan@intensetech.com] 
+Sent: Friday, August 07, 2009 1:54 PM
+To: 'Linda Jenkins'
+Subject: RE: Good Afternoon from Vacations-abroad.com
+
+
+
+Hey Linda, 
+
+The email search is now working.  
+
+ 
+
+Please check it to make sure it's what you want.
+
+ 
+
+ 
+
+Re:  google and
+
+ <http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx>
+http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx
+
+ 
+
+a:  this is cached in googles database, and Google knows this is the same as
+it's equivalent in lower case.  
+
+I'd suggest reading this:
+
+http://www.soloseo.com/blog/2007/06/05/keyword-capitalization-matters-google
+-seo/
+
+ 
+
+also, pulled from:  
+
+ 
+
+google in oct 2008 says:
+
+Question: "
+
+Does inconsistent capitalization of URLs cause duplicate content issues and
+dilution of page rank? For example www.site.com/abc vs www.site.com/Abc. On
+Windows hosts, these are the same page, but are different pages on Unix
+hosts."
+
+Answer: ". 
+
+based on the existing standards, URLs are case-sensitive, so yes, these
+would be seen as separate URLs. Since the content on the URLs is the same,
+we'll generally recognize that and only keep one of them. However, we'd
+recommend that you try to keep all links going to one version of the URL.
+Keep in mind that this also applies to robots.txt files." (that answer was
+provided by John Mu of Google's Switzerland office)
+
+ 
+
+ 
+
+ 
+
+Re:  <http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170>
+http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=1170
+
+ 
+
+Q: Are you essentially saying that you want it to redirect, if it sees
+ViewProperty.asp in the URL?
+
+ 
+
+-Logan Gray
+
+Intense Tech, Inc.
+
+Small Business Focused Computer Services
+
+http://www.intensetech.com
+
+(404) 376-3814
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+From: Linda Jenkins [mailto:linda@vacations-abroad.com] 
+Sent: Friday, August 07, 2009 12:37 PM
+To: 'Logan Gray'
+Subject: Good Afternoon from Vacations-abroad.com
+
+ 
+
+Hi Logan, 
+I see the redirects for www. etc. 
+
+ 
+
+Also, need same type of redirects for this 
+
+You will see it in Google if you put in these key words 
+Vacations-abroad.com charleston 236 
+And then look at the url. 
+
+ <http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx>
+http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default.aspx 
+Google is picking up some of the urls where they were stored from that
+programming error. I think it would be good to make sure the same type of
+redirect informs the search engines of the correct url
+
+One with lower cases. 
+
+Thanks. 
+
+Linda Jenkins 
+Director of Relaxation and Getaways 
+
+Vacations-Abroad.com 
+Telephone 1-770-298-8090 
+Email:  <mailto:linda@vacations-abroad.com> linda@vacations-abroad.com 
+
+
+------=_NextPart_000_1355_01CA177D.AB3182E0
+Content-Type: text/html;
+	charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word" xmlns:m =3D=20
+"http://schemas.microsoft.com/office/2004/12/omml"><HEAD><TITLE>Good =
+Afternoon from Vacations-abroad.com</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii">
+<META content=3D"MSHTML 6.00.6001.18294" name=3DGENERATOR>
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.EmailStyle18
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=3DEN-US vLink=3Dpurple link=3Dblue>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2>Logan, the search by email works fine.</FONT></SPAN></DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2>I talked to my SEO person regarding the 301=20
+redirects.</FONT></SPAN></DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2>1-He said the capitalization url&nbsp;issue is not=20
+important.</FONT></SPAN></DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2>However, this one is.</FONT></SPAN></DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'"><SPAN=20
+class=3D386402220-07082009>2-</SPAN>Yahoo site explorer for my site is =
+showing=20
+urls that should not be there.</SPAN> <BR><A=20
+href=3D"http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D11=
+70"><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Verdana','sans-serif'">http://www.vacations-abroad.com/ViewProperty.aspx=
+?PropertyID=3D1170</SPAN></A>=20
+</P>
+<P><o:p><SPAN class=3D386402220-07082009><FONT face=3DVerdana =
+size=3D2>We decided that=20
+the 301 redirect should go to the city page.</FONT></SPAN></o:p></P>
+<P><o:p><SPAN class=3D386402220-07082009><FONT face=3DVerdana=20
+size=3D2></FONT></SPAN></o:p>&nbsp;</P>
+<P><o:p><SPAN class=3D386402220-07082009><FONT face=3DVerdana =
+size=3D2>so far,=20
+everything looks Fine.</FONT>&nbsp;</SPAN></o:p></P></SPAN></DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV dir=3Dltr align=3Dleft><SPAN class=3D386402220-07082009><FONT =
+face=3DVerdana=20
+size=3D2></FONT></SPAN>&nbsp;</DIV>
+<DIV>&nbsp;</DIV><!-- Converted from text/rtf format -->
+<P><B><FONT face=3DVerdana color=3D#d00202 size=3D2>Linda =
+Jenkins</FONT></B>=20
+<BR><B><FONT face=3DVerdana color=3D#d00202>Director of Relaxation and=20
+Getaways</FONT></B> </P>
+<P><FONT face=3DVerdana color=3D#c00000 =
+size=3D2>Vacations-Abroad.com</FONT> <BR><FONT=20
+face=3DVerdana color=3D#c00000 size=3D2>Telephone 1-770-298-8090</FONT> =
+<BR><FONT=20
+face=3DVerdana color=3D#c00000 size=3D2>Email: </FONT><A=20
+href=3D"mailto:linda@vacations-abroad.com"><U><FONT face=3DVerdana =
+color=3D#c00000=20
+size=3D2>linda@vacations-abroad.com</FONT></U></A> </P>
+<DIV>&nbsp;</DIV><BR>
+<DIV class=3DOutlookMessageHeader lang=3Den-us dir=3Dltr align=3Dleft>
+<HR tabIndex=3D-1>
+<FONT face=3DTahoma size=3D2><B>From:</B> Logan Gray =
+[mailto:logan@intensetech.com]=20
+<BR><B>Sent:</B> Friday, August 07, 2009 1:54 PM<BR><B>To:</B> 'Linda=20
+Jenkins'<BR><B>Subject:</B> RE: Good Afternoon from=20
+Vacations-abroad.com<BR></FONT><BR></DIV>
+<DIV></DIV>
+<DIV class=3DSection1>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Hey=20
+Linda, <o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">The=20
+email search is now working.&nbsp; <o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Please=20
+check it to make sure it&#8217;s what you want.<o:p></o:p></SPAN></P>
+<DIV=20
+style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; PADDING-LEFT: 0in; PADDING-BOTTOM: 1pt; BORDER-LEFT: medium =
+none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; =
+mso-element: para-border-div">
+<P class=3DMsoNormal=20
+style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; PADDING-LEFT: 0in; PADDING-BOTTOM: 0in; BORDER-LEFT: medium =
+none; PADDING-TOP: 0in; BORDER-BOTTOM: medium none"><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Re:&nbsp;=20
+google and<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><A=20
+href=3D"http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default=
+.aspx"><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Verdana','sans-serif'">http://www.vacations-abroad.com/USA/Oregon/Charle=
+ston/236/default.aspx</SPAN></A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>a:&nbsp; this is cached in googles database, and =
+Google knows=20
+this is the same as it&#8217;s equivalent in lower case.&nbsp; =
+<o:p></o:p></P>
+<P class=3DMsoNormal>I&#8217;d suggest reading this:<o:p></o:p></P>
+<P class=3DMsoNormal><A=20
+href=3D"http://www.soloseo.com/blog/2007/06/05/keyword-capitalization-mat=
+ters-google-seo/">http://www.soloseo.com/blog/2007/06/05/keyword-capitali=
+zation-matters-google-seo/</A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>also, pulled from:&nbsp; <o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>google in oct 2008 says:<o:p></o:p></P>
+<P class=3DMsoNormal=20
+style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: =
+auto">Question:=20
+&#8220;<o:p></o:p></P>
+<P class=3DMsoNormal=20
+style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: =
+'Arial','sans-serif'">Does=20
+inconsistent capitalization of URLs cause duplicate content issues and =
+dilution=20
+of page rank? For example www.site.com/abc vs www.site.com/Abc. On =
+Windows=20
+hosts, these are the same page, but are different pages on Unix=20
+hosts.</SPAN>&#8221;<o:p></o:p></P>
+<P class=3DMsoNormal=20
+style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Answer: =
+&#8220;&#8230;=20
+<o:p></o:p></P>
+<P class=3DMsoNormal=20
+style=3D"mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: =
+'Arial','sans-serif'">based on=20
+the existing standards, URLs are case-sensitive, so yes, these would be =
+seen as=20
+separate URLs. </SPAN><B><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: red; FONT-FAMILY: =
+'Arial','sans-serif'">Since the=20
+content on the URLs is the same, we&#8217;ll generally recognize that =
+and only keep=20
+one of them</SPAN></B><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: =
+'Arial','sans-serif'">.=20
+However, we&#8217;d recommend that you try to keep all links going to =
+one version of=20
+the URL. Keep in mind that this also applies to robots.txt =
+files.</SPAN>&#8221; (that=20
+answer was provided by John Mu of Google&#8217;s Switzerland =
+office)<o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<DIV=20
+style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; PADDING-LEFT: 0in; PADDING-BOTTOM: 1pt; BORDER-LEFT: medium =
+none; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; =
+mso-element: para-border-div">
+<P class=3DMsoNormal=20
+style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: =
+medium none; PADDING-LEFT: 0in; PADDING-BOTTOM: 0in; BORDER-LEFT: medium =
+none; PADDING-TOP: 0in; BORDER-BOTTOM: medium none"><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>Re: <A=20
+href=3D"http://www.vacations-abroad.com/ViewProperty.aspx?PropertyID=3D11=
+70"><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Verdana','sans-serif'">http://www.vacations-abroad.com/ViewProperty.aspx=
+?PropertyID=3D1170</SPAN></A><o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P class=3DMsoNormal>Q: Are you essentially saying that you want it to =
+redirect,=20
+if it sees ViewProperty.asp in the URL?<o:p></o:p></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">-Logan=20
+Gray<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Intense=20
+Tech, Inc.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">Small=20
+Business Focused Computer Services<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><A=20
+href=3D"http://www.intensetech.com">http://www.intensetech.com</A><o:p></=
+o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'">(404)=20
+376-3814<o:p></o:p></SPAN></P></DIV>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal><SPAN=20
+style=3D"FONT-SIZE: 11pt; COLOR: #1f497d; FONT-FAMILY: =
+'Calibri','sans-serif'"><o:p>&nbsp;</o:p></SPAN></P>
+<DIV>
+<DIV=20
+style=3D"BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: =
+#b5c4df 1pt solid; PADDING-LEFT: 0in; PADDING-BOTTOM: 0in; BORDER-LEFT: =
+medium none; PADDING-TOP: 3pt; BORDER-BOTTOM: medium none">
+<P class=3DMsoNormal><B><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Tahoma','sans-serif'">From:</SPAN></B><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: 'Tahoma','sans-serif'"> Linda =
+Jenkins=20
+[mailto:linda@vacations-abroad.com] <BR><B>Sent:</B> Friday, August 07, =
+2009=20
+12:37 PM<BR><B>To:</B> 'Logan Gray'<BR><B>Subject:</B> Good Afternoon =
+from=20
+Vacations-abroad.com<o:p></o:p></SPAN></P></DIV></DIV>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">Hi=20
+Logan,</SPAN> <BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">I see=20
+the redirects for www&#8230; etc.</SPAN> <o:p></o:p></P>
+<P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">Also,=20
+need same type of redirects for this</SPAN> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">You=20
+will see it in Google if you put in these key words</SPAN> <BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">Vacations-abroad.com=20
+charleston 236</SPAN> <BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">And=20
+then look at the url.</SPAN> <o:p></o:p></P>
+<P><A=20
+href=3D"http://www.vacations-abroad.com/USA/Oregon/Charleston/236/default=
+.aspx"><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: =
+'Verdana','sans-serif'">http://www.vacations-abroad.com/USA/Oregon/Charle=
+ston/236/default.aspx</SPAN></A>=20
+<BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">Google=20
+is picking up some of the urls where they were stored from that =
+programming=20
+error. I think it would be good to make sure the same type of redirect =
+informs=20
+the search engines of the correct url</SPAN><o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">One=20
+with lower cases.</SPAN> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: =
+'Verdana','sans-serif'">Thanks.</SPAN>=20
+<o:p></o:p></P>
+<P><B><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: #d00202; FONT-FAMILY: =
+'Verdana','sans-serif'">Linda=20
+Jenkins</SPAN></B> <BR><B><SPAN=20
+style=3D"COLOR: #d00202; FONT-FAMILY: 'Verdana','sans-serif'">Director =
+of=20
+Relaxation and Getaways</SPAN></B> <o:p></o:p></P>
+<P><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: #c00000; FONT-FAMILY: =
+'Verdana','sans-serif'">Vacations-Abroad.com</SPAN>=20
+<BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: #c00000; FONT-FAMILY: =
+'Verdana','sans-serif'">Telephone=20
+1-770-298-8090</SPAN> <BR><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: #c00000; FONT-FAMILY: =
+'Verdana','sans-serif'">Email:=20
+</SPAN><A href=3D"mailto:linda@vacations-abroad.com"><SPAN=20
+style=3D"FONT-SIZE: 10pt; COLOR: #c00000; FONT-FAMILY: =
+'Verdana','sans-serif'">linda@vacations-abroad.com</SPAN></A>=20
+<o:p></o:p></P></DIV></BODY></HTML>
+
+------=_NextPart_000_1355_01CA177D.AB3182E0--
+

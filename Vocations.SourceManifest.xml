@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Administrator.WEB1\AppData\Local\Temp\2\WebSitePublish\Vocations--1607041174\obj\Debug\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\Administrator.WEB1\AppData\Local\Temp\2\WebSitePublish\Vocations--1607041174\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Administrator.WEB1\AppData\Local\Temp\2\WebSitePublish\Vocations--1607041174\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

@@ -1,0 +1,84 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 157.sub-70-214-31.myvzw.com [70.214.31.157] by vacations-abroad.com with SMTP;
+   Tue, 14 Jul 2009 13:54:51 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: <vps@hostmysite.com>
+References: <14940851.13541247590798544.JavaMail.internalservices@10.10.2.120>
+In-Reply-To: <14940851.13541247590798544.JavaMail.internalservices@10.10.2.120>
+Subject: RE: (#T7150066) Move mail to base vps
+Date: Tue, 14 Jul 2009 13:54:31 -0400
+Organization: Vacations-abroad.com
+Message-ID: <38D977D75C114800A52E0BCE69873653@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+Thread-Index: AcoEpJhPnDBLmtDKQpOvEoQNoDnl8wAB11dw
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+Hi,
+Did you delete the information regarding mail server off of my main VPS? 
+I moved my mail server to the new vps to free up space and memory. Did you
+insure that the migration deleted everything off my old server regarding
+mail.
+
+Linda Jenkins
+Director of Relaxation and Getaways
+
+Vacations-Abroad.com
+Telephone 1-770-298-8090
+Email: linda@vacations-abroad.com
+
+-----Original Message-----
+From: vps@hostmysite.com [mailto:vps@hostmysite.com] 
+Sent: Tuesday, July 14, 2009 1:00 PM
+To: linda@vacations-abroad.com
+Cc: logan@intensetech.com
+Subject: Re: (#T7150066) Move mail to base vps
+
+Ref: vacations-abroad.com (H157327) 
+ 
+ Hello Linda,
+
+I've just finished migrating mail from your .NET VPS to the new Windows Base
+VPS.  At this time all mail for vacations-abroad.com should be delivered to
+the new server.
+
+- - - 
+
+updated MX, SPF, rDNS
+
+copied mail to new VPS
+
+updated host name to vacations-abroad.com
+
+confirmed grey listing is disabled
+
+sent test messages TO/FROM Yaoo/Google and all worked
+
+- - -
+
+You can access SmarterMail on the new VPS @ http://76.12.12.144:9998 with
+admin/admin as the login
+
+Let us know if we can be of any further assistance.
+
+Regards,    
+Larry Dougherty    
+http://www.HostMySite.com      
+Email: support@HostMySite.com    
+Technical Support: 1.877.215.4678    
+Customer Service & Billing Inquiries: 866.916.4678    
+International: 1.302.731.4948    
+Get your FREE .com, .net, .org, .biz and .info domain name at
+HostMySite.com!      
+Manage your hosting account using our Total Customer Control Center at
+https://controlpanel.hostmysite.com
+
+> -----Original Message-----
+> From:	linda@vacations-abroad.com
+> Sent:	 
+> Subject: Move mail to base vps
+> 
+

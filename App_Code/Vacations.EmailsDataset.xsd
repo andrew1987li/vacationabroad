@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="EmailsDataset" targetNamespace="http://www.tempuri.org/EmailsDataset.xsd" xmlns:mstns="http://www.tempuri.org/EmailsDataset.xsd" xmlns="http://www.tempuri.org/EmailsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="EmailsDataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Emails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="PropertyID" type="xs:int" />
+              <xs:element name="DateTime" type="xs:dateTime" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactTelephone" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrivalDate" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartureDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Nights" type="xs:string" minOccurs="0" />
+              <xs:element name="Adults" type="xs:string" minOccurs="0" />
+              <xs:element name="Children" type="xs:string" minOccurs="0" />
+              <xs:element name="Telephone" type="xs:string" minOccurs="0" />
+              <xs:element name="Telephone2" type="xs:string" minOccurs="0" />
+              <xs:element name="Notes" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" type="xs:string" />
+              <xs:element name="IfCustom" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Emails" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+[DEFAULT]
+BASEURL=http://www.smartertools.com/Help/SmarterMail/Pro/v1.6x/Default.asp?page=getting%20Started
+[InternetShortcut]
+URL=http://www.smartertools.com/Help/SmarterMail/v5/Default.aspx?p=SA&page=getting%20Started
+Modified=C0DF37CF70FCC601D8
+IconFile=http://www.smartertools.com/favicon.ico
+IconIndex=1
+HotKey=0
+IDList=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2

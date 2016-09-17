@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportSkin>
+	<ReportColor value="#5eabe6" />
+	<ReportColor value="#e9be34" />
+	<ReportColor value="#5c9d43" />
+	<ReportColor value="#ae4444" />
+	<ReportColor value="#514f8f" />
+	<ReportColor value="#a8a8a8" />
+	<!--<ReportColor value="#be2348" a5d0f1 0aaf18 973B3B 8d3d3b />-->
+	<!--<ReportColor value="#ccb91c" EDDF01 d4360b  487a34/>-->
+	<!--<ReportColor value="#d5ea91"   a6db2c 7768de/>-->
+	<ReportColor value="#4cbd6a" />
+	<ReportColor value="#7768de" />
+	<ReportColor value="#feb965" />
+	<ReportColor value="#4594af" />
+	<ReportColor value="#60b1c1" />
+	<ReportColor value="#feef11" />
+	<ReportColor value="#7fa575" />
+	<ReportColor value="#e7bd42" />
+	<ReportColor value="#7f16ae" />
+</ReportSkin>

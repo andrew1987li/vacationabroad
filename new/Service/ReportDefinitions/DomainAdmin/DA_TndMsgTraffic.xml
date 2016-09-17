@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="0401E3986BC14D91820A563F47D12620" title="~Report_TndMsgTraffic" friendly="DA_TndMsgTraffic" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="DomainAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="903F7CFA308F4F22A0D2238ED3FCF890" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="903F7CFA308F4F22A0D2238ED3FCF890">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="IncMessages" />
+				<YValue columns="OutMessages" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="903F7CFA308F4F22A0D2238ED3FCF890">
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,IncMessages,OutMessages,IncSpamMessages,OutSpamMessages" />
+				<FooterRow name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

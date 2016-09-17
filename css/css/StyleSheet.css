@@ -1,0 +1,43 @@
+﻿body{text-align:center;color:#aabbaa;margin:0;top:0;}
+a:visited{color:#9999cc;text-decoration:none;}
+a:active{color:#9999cc;text-decoration:none;}
+a:link{color:#9999cc;text-decoration:underline;}
+.MainTable{background-color:#ffffff;width:98%;text-align:center;border-spacing:0;padding:0;}
+#MainTable2{border:0;width:100%;border-spacing:0;padding:0;}
+#TD2A{width:33%;text-align:left;border:0;border-spacing:0;padding-left:7px;}
+.TD2B{width:33%;text-align:center;font-size:12px;font-family:Arial;border:0;border-spacing:0;padding:0px;}
+#TR2{vertical-align:top;background-color:#ffffff;width:100%;}
+#MainTable3{width:100%;border:1px;text-align:center;height:200px;font-size:13px;}
+.TD3B{width:33%;font-family:Arial; background-color:#ccaf00; color:#ffffff;}
+.MainTable4{width:100%;border:0;border-spacing:0;padding:0;}
+.TR3{color:White;background-color:White;height:23px;}
+#TD4A{text-align:center;vertical-align:middle;padding-top:14px; background-color:#999999; color:White;}
+#DefaultContent{width:90%;border:0;border-spacing:0;padding:0;text-align:center;}
+.DefaultContentA{text-align:left;font-size:17px;font-family:Arial;font-weight:bold;}
+.DefaultContentB{text-align:left;font-size:12px;font-family:Arial;}
+#TD5A{text-align:center;vertical-align:middle;font-family:Arial;color:White;padding-top:14px;height:30px;}
+#DefaultRepeaterHeader{width:100%;border-color:#ccaf00;background-color:White;text-align:center;}
+#DefaultRepeaterHeaderTR{background-color:#cc6633;}
+.DefaultRptHdTD{text-align:center;font-family:Arial;font-weight:bold;color:White;font-size:12px;}
+#TR6{color:#f2f2f7;}
+.DefaultRptTD{text-align:left;font-family:Arial;color:Black;font-size:12px;}
+#MainTable6{width:100%;border:0;border-spacing:0;padding:0;}
+.TD6A{text-align:center;vertical-align:middle;padding-top:14px;}
+.dvDefaultCenter{text-align:center;font-family:Arial;font-size:12px;}
+#MainTable7{width:100%;border:0;border-spacing:0;padding:0;}
+.NormalText{font-size:13px;font-family:Arial;}
+h3{font-size:16px;font-family:Arial;color:#cc6633;}
+.regionMenu{background-color:#ede9ed;font-size:12px;}
+.regionMenu a{text-decoration:none;color:#40404e;}
+.regionMenu a:visited{text-decoration:none;color:#80809d;}.regionMenu td{width:9%;}
+a.mainPgCountry { text-decoration:none; color:#40404e;}
+a.mainRegion { color:#660000; text-decoration:none; font-weight:bold; font-size:13px; }
+a.mainCity { color:#333333; text-decoration:none;}
+a.mainState { color:#999999; text-decoration:none;}
+.grdImg{border-color:#ccaf00;background-color:#ccaf00;padding:2px;display:block;}
+a:link {
+color: #940f04;
+}
+a:visited {
+color: #666666;
+}

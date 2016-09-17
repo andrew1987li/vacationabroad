@@ -1,0 +1,66 @@
+Return-Path: <noreply@vacations-abroad.com>
+Received: from 125.sub-70-223-25.myvzw.com [70.223.25.125] by vacations-abroad.com with SMTP;
+   Sat, 18 Jul 2009 15:59:26 -0400
+From: "noreply" <noreply@vacations-abroad.com>
+To: <customerservice@connect.com.fj>
+Subject: FW: Delivery Failure
+Date: Sat, 18 Jul 2009 15:59:06 -0400
+Message-ID: <B4B2D0EB01264E91ABDC6181266798FD@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+Thread-Index: AcoH1y0FL6oyrASvS22uGRvSTV9FdgACtLfQ
+
+ 
+I have a client coconutgrove@connect.com.fj
+And they tried to get their password reset so that they could use our site.
+However, when the password was sent to them, it was bounced back with an
+error. I am attaching that error.
+My site only sends email to our customers and I was wondering how to get our
+site removed from your banned list?
+
+Linda Jenkins
+Vacations-Abroad.com
+IP for web 76.12.121.214
+Mail Ip 76.12.12.144
+
+-----Original Message-----
+From: 
+Sent: Saturday, July 18, 2009 2:38 PM
+To: noreply@vacations-abroad.com
+Subject: Delivery Failure
+
+
+Could not deliver message to the following recipient(s):
+
+Failed Recipient: coconutgrove@connect.com.fj
+Reason: Remote host said: 554 Your access to this mail system has been
+rejected due to the sending MTA's poor reputation. If you believe that this
+failure is in error, please contact the intended recipient via alternate
+means.
+
+   -- The header and top 20 lines of the message follows --
+
+Received: from vacations-abroad.com [76.12.121.214] by vacations-abroad.com
+with SMTP;
+   Sat, 18 Jul 2009 14:37:19 -0400
+content-type: text/plain; charset = "iso-8859-1"
+mime-version: 1.0
+from: noreply@vacations-abroad.com
+to: coconutgrove@connect.com.fj
+date: 18 Jul 2009 14:37:18 -0400
+subject: Your Vacations-abroad.com Password
+content-type: text/plain; charset=us-ascii
+content-transfer-encoding: quoted-printable
+
+Dear Ronna Goldstein!=0D=0A=0D=0AYour Vacations-abroad.com password has=
+been reset according to your request on the Vacations-abroad.com web site=
+(http://www.vacations-abroad.com).=0D=0A=0D=0AYour Vacations-abroad.com=
+login name is: rgoldstein =0D=0AHere is your new Vacations-abroad.com
+password:=
+ XQRh7v8n6
+
+

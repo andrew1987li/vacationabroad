@@ -1,0 +1,961 @@
+﻿body
+{
+ text-align:center;
+ background-color:#bfbfce;
+ color:#8c7F8c;
+ margin:0;  
+ top:0;
+ font-family:Arial;
+ font-size:12px;
+}
+#BodyTag {
+ background-color:#ffffff;
+ color:#000000;
+ margin:0; 
+ text-align:center;
+ top:0;
+ font-family:Arial;
+ font-size:12px;
+}
+a:link {
+color: #40404E;
+}
+a:visited {
+color: #80809D;
+}
+.PageContent
+{
+ font-family:Arial;
+}
+.MainTable
+{
+ background-color:#ffffff;
+ width:932px;
+ text-align:center;
+/* border:solid 1px #ccaf00; */
+ border-spacing:0; 
+ padding:0;
+}
+#MainTable2
+{
+ border:0;
+ width:100%; 
+ border-spacing:0;
+ padding:0;
+}
+#TD2A
+{
+ width:33%;
+ text-align:left; 
+ border:0;
+ border-spacing:0;
+ padding-left:7px;
+}
+.TD2B
+{
+ width:33%;
+ text-align:center;
+ font-size:12px;
+ font-family:Arial;
+ border:0;
+ border-spacing:0;
+ padding:0px;
+}
+#TD2C
+{
+ text-align:center;
+ border:0;
+ border-spacing:0;
+ padding:0;
+}
+#TR1
+{
+ background-color:#8AA37B;
+ border:0;
+ border-spacing:0;
+ padding:0;
+}
+.TD2Menu
+{
+ width:20%;
+ height:21px;
+ text-align:center; 
+ border:0;
+ border-spacing:0;
+ padding:0;
+}
+#TR2
+{
+ vertical-align:top;
+ background-color:#ffffff;
+ width:100%;
+}
+#MainTable3
+{
+ width:100%;
+ border:1px;
+ text-align:center;  
+  height:200px;
+  font-size:13px;
+}
+#TD3A
+{
+ width:25%;
+ height:185px; 
+ background-color:#8793AD; 
+ font-family:Arial;
+ color:White;
+}
+#TD3AA
+{ 
+}
+.DefaultSelect
+{
+ width:137px;
+}
+.TD3B
+{
+ width:33%;
+ vertical-align:middle;
+ background-color:#ffffff; 
+ font-family:Arial;
+ color:White;
+}
+#MainTable4
+{
+ width:100%;
+ border:0;
+ border-spacing:0;
+ padding:0; 
+ 
+}
+.TR3
+{
+ color:#cc6633;
+ background-color:White;
+ height:23px;
+}
+#TD4A
+{
+ text-align:center;
+ vertical-align:middle;
+ padding-top:14px;
+ 
+}
+#DefaultContent
+{
+ width:90%;
+ border:0;
+ border-spacing:0;
+ padding:0;
+ text-align:center;
+}
+.DefaultContentA
+{
+ text-align:left;
+ font-size:17px;
+ font-family:Arial;
+ /*color:#336699;  */
+ font-weight:bold;
+}
+.DefaultContentB
+{
+ text-align:left;
+ font-size:12px;
+ font-family:Arial;
+/* color:#3B8471; */
+}
+#TR5
+{
+ background-color:#8AA37B;
+ height:30px;
+}
+#MainTable5
+{
+ width:100%;
+ border:0;
+ border-spacing:0;
+ padding:0; 
+ text-align:center;
+}
+#TD5A
+{
+ text-align:center;
+ vertical-align:middle; 
+ font-family:Arial;
+ color:White;
+ padding-top:14px;
+ height:30px;
+}
+#DefaultRepeaterHeader
+{ 
+ width:100%; 
+ border-color:#8793AD;
+ background-color:White;
+ text-align:center;
+}
+#DefaultRepeaterHeaderTR
+{
+ background-color:#cc6633;
+}
+.DefaultRptHdTD
+{
+ text-align:center;
+ font-family:Arial;
+ font-weight:bold; 
+ color:White;
+ font-size:12px;
+}
+#TR6
+{
+ color:#EDE9ED;
+}
+.DefaultRptTD
+{
+ text-align:left;
+ font-family:Arial;  
+ color:Black;
+ font-size:12px;
+}
+#TR7
+{
+ background-color:#79A888;
+}
+#MainTable6
+{
+ width:100%;
+ border:0;
+ border-spacing:0;
+ padding:0;
+}
+.TD6A
+{
+ text-align:center;
+  vertical-align:middle;
+  padding-top:14px;
+}
+.dvDefaultCenter
+{
+ text-align:center; 
+ font-family:Arial;
+ font-size:12px;
+}
+#MainTable7
+{
+ width:100%;
+ border:0;
+ border-spacing:0;
+ padding:0; 
+}
+#TR8
+{
+ background-color:#388E8E;
+}
+#DefaultErrors
+{
+ text-align:center;
+ color:Red;
+}
+#CntyTable1
+{
+ background-color:White;
+ border-spacing:0;
+ padding:0;
+ width:90%;
+ text-align:center;
+}
+.CntyTable1A
+{
+ text-align:left;
+ vertical-align:top;
+ width:100%;
+}
+.CntyListFont
+{
+ font-size:27px;
+}
+.CntyTable1A h1
+{
+  font-size:20px;  
+  font-weight:bold;
+  color:#000099;
+}
+.StateGrid
+{ 
+ width:100%;
+}
+.StateFooter
+{
+ color:White;
+ background-color:#507CD1;
+ font-weight:bold;
+}
+.StateRow
+{
+ background-color:#ede9ed;
+ text-align:center; 
+ font-size:12px;
+}
+.StatePager
+{
+ color:White;
+ background-color:#2461BF;
+ text-align:center;
+}
+.StateSelected
+{
+ background-color:#D1DDF1;
+ font-weight:bold;
+ color:#333333;
+}
+.StateHeader
+{
+ font-weight:bold;
+ color:White;
+ background-color:#8793AD;
+ font-size:13px;
+}
+.StateEdit
+{
+ background-color:#2461BF; 
+}
+.StateAlt
+{
+ background-color:#EDE9ED;
+}
+.CntyTable2
+{
+ width:100%;
+}
+#CntyTable2B
+{ 
+ vertical-align:bottom;
+ text-align:center;
+ 
+}
+.StateCityTable
+{
+ border-spacing:0;
+ padding:0;
+ width:100%;
+ text-align:center;
+ border:0;
+}
+
+.StateTable1Row1
+{
+ background-color:White;
+ vertical-align:top;
+}
+.StateTable1TD1
+{
+ text-align:center;
+}
+.StateTable1TD1 h1
+{
+ font-size:20px;
+ font-weight:bold;
+ /* color:#000099; */
+ color:#000099;
+}
+.StateTable1TD2
+{
+ height:40px;
+ text-align:left;
+
+}
+.PurpleTable
+{
+ background-color:#ffffff;
+ 
+ font-size:12px;
+ width:100%;
+ margin:0;
+ border-spacing:0;
+ color:Black;
+ padding-top:0px;
+}
+.flrLeft
+{
+ background-color:#8080cc;
+ color:White;
+ width:45px; 
+ font-size:12px;
+}
+.flr1
+{
+  height:40px;
+  padding:0px;
+  margin:0px;
+  border-spacing:0px;
+  font-size:12px;
+}
+.flr2
+{
+  height:20px;
+  padding:0px;
+  margin:0px;
+  border-spacing:0px;
+  font-size:12px;
+}
+.flr3
+{
+height:20px;
+padding:0px;
+  margin:0px;
+  border-spacing:0px;
+  font-size:12px;
+}
+.rtHeader
+{
+ text-align:center; 
+ width:100%;
+    font-size:12px;
+ padding-top:5px; 
+ padding-bottom:5px; 
+ background-color:#ded;
+}
+.rtOuter
+{
+ width: 21%; 
+ float: right;  
+ border: solid 1px #999999;
+ font-size:12px;
+ /*color:#669966;*/
+}
+.rtOuterCnty
+{
+ width: 99%;    
+ border: solid 1px #b6beb6;
+}
+.rtText
+{
+ margin-left:5px; 
+ font-size:12px;
+}
+.rtText a
+{
+ text-decoration:none;
+ /*color:#669966;*/
+}
+.rtText2
+{
+ margin-left:5px; 
+ text-align:left;
+}
+.rtText2 a
+{
+ text-decoration:none;
+ /*color:#669966;*/
+}
+.filterUpper
+{
+ float:left;
+ 
+ width:100%; 
+
+}
+.filterBtn
+{
+ 
+ float:right;
+ text-align:right;
+ 
+}
+.detailsBtn
+{
+ background-color:White;
+ width:60px; 
+ border: solid 1px #8AA37B;
+ float:left;
+ text-align:center;
+}
+.detailsBtn a
+{
+ text-decoration:none;
+ color:#999900;
+}
+.detailsBtnTxt
+{
+ background-color:White; 
+ width:95px; 
+ border: solid 1px #8AA37B;  
+ text-align:center;
+ font-size:12px;
+}
+.detailsBtnTxt a
+{
+ text-decoration:none;
+ color:#cc6633;
+}
+#StateTable1TD3
+{
+ text-align:center;
+ font-size:12px;
+}
+#CityTable1
+{
+ width:100%;
+ border:0;
+ border-spacing:0;
+}
+#CityTable1A
+{
+ height:40px;
+ text-align:left;
+ border: solid 0 #ffffff;
+}
+#CityTable2
+{
+ width:100%;
+ border:0;
+ 
+}
+#CityTable2A
+{
+ vertical-align:middle;
+}
+#CityTable2B
+{
+ text-align:right;
+ vertical-align:middle;
+}
+.Calendar
+{
+ height:190px;
+ width:280px; 
+ background-color:White;
+ border-color:White;
+ 
+}
+.CalendarNext
+{
+ color:Black; 
+}
+.CalendarTitle
+{
+ color:Black;
+ background-color:White;
+ border:0;
+}
+.CalendarRes
+{
+ color:Red;
+ font-size:8px;
+ float:right;
+ clear:right;
+}
+#CityTable2C
+{
+ text-align:center;
+}
+#PropertyTable
+{
+ border:0;
+ width:100%;
+}
+#PropertyTable2
+{
+ background-color:#F2F2F7;
+ border-spacing:0;
+ padding:0;
+ width:250px;
+ text-align:center;
+ border:0;
+}
+#PropertyTable3
+{
+ background-color:#F2F2F7;
+ border-spacing:0;
+ padding:0;
+ width:80%;
+ text-align:center;
+ border:0;
+}
+#PropertyTable4
+{
+ text-align:center;
+ border:0;
+ width:100%;
+}
+.PropertyTable5
+{
+ border-spacing:0;
+ padding:0;
+ width:100%;
+ text-align:left;
+ border:0;
+ font-size:15px;
+ color:#474747;
+}
+.PropertyTable6
+{
+ width:450px;
+ border:0;
+ text-align:center;
+ padding:0;
+ border-spacing:0;
+ 
+}
+.PropertyTable6 a
+{
+ color:#cc6600; 
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+}
+#propTitle
+{
+ font-size:25px;
+ 
+}
+.PropertyTable6A
+{
+ width:33%;
+ height:100%;
+ text-align:center;
+ background-color:White;
+ color:#cc6600; 
+ border:0px;
+}
+.PropertyTable7
+{
+ border-color:#990066;
+ border-spacing:0;
+ background-color:#cc9933;
+ padding:0;
+ width:450px;
+ text-align:center;
+ border:0;
+}
+.PropertyTable7A
+{
+ text-align:center;
+ color:White;
+}
+.PropertyTable8
+{
+ width:450px;
+ border:0;
+ text-align:center;
+ padding:0;
+ border-spacing:0;
+ background-color:#F2F2F7;
+}
+.PropertyTable8 a
+{
+ color:White;
+} 
+.PropertyTable9
+{
+ width:450px;
+ border:0;
+ text-align:center;
+ padding:0;
+ border-spacing:0;
+ background-color:#b6beb6;
+}
+.PropertyTable9A
+{
+ width:450px;
+ text-align:center; 
+ color:White;
+}
+
+.PropTable10
+{
+ width:75%;
+ 
+ text-align:center;
+ padding:0;
+ border-spacing:0; 
+ 
+ 
+} 
+.PropTable10A
+{
+ background-color:#dcdcdc; 
+}
+.PropTable10B
+{
+}
+.PropTable11
+{
+ text-align:left; 
+ border-color:#336666;
+}
+.PropTable12
+{
+ background-color:White;
+ border-spacing:0;
+ padding:0;
+ width:640px;
+ text-align:center;
+ border:0; 
+ color:#cc6600;
+ font-size:16px;
+ font-weight:bold;
+}
+.PropTable12 a
+{
+ color:#cc6600;
+ font-weight:bold;
+ font-size:15px;
+}
+.PropTable12A
+{
+ font-weight:bold;
+ width:33%;
+ text-align:center;
+}
+.PropTable12B
+{
+ width:450px;
+ text-align:center;
+}
+.PropTable13
+{
+ width:100%;
+ 
+ padding:0;
+ border-spacing:0;
+}
+.PropTable13A
+{
+ width:30%;
+ 
+ text-align:center; 
+ }
+ .PropTable13B
+{
+ width:20%;
+ text-align:center; 
+ }
+ .PropTable14
+ {
+  width:70%; 
+  border-spacing:0;
+  text-align:center;
+  background-color:#DBE7F2;  
+ }
+ .PropTable15
+ {
+  border:0;
+  width:100%;
+ }
+ .PropTable16
+ {
+  text-align:left;  
+ }
+ .SndEmlTable
+ {
+  background-color:#e4e4af;
+  border-spacing:0;
+  padding:0;
+  width:250px;
+  text-align:center;
+  border:0;  
+ }
+ .SndEmlTable2
+ {
+  height:230px;
+  width:98%;
+  border:0px; 
+  background-color:#dbe7f2;
+  text-align:left;  
+ }
+ .SndEmlTable2A
+ {
+  width:100%;
+  background-color:#dbe7f2;  
+  height:17px;
+ }
+ .SndEmlTable2B
+ {
+  width:100%;
+  background-color:#dbe7f2;
+  /* height:20px; */
+  text-align:center;
+  vertical-align:middle;
+ }
+ .SndEmlTable3
+ {
+  text-align:left;
+  width:100%;
+  border:0;
+ }
+ .SndEmlTable10
+ {  
+  width:100%;
+  /*height:230px;*/
+ }
+ .SndEmlFont
+ {
+  text-align:center;
+  font-size:16px;
+  color:#cc3300;
+  width:99%;
+  background-color:#dbe7f2;
+  height:20px;
+ }
+ .SndEmlRed
+ {
+ text-align:center;
+  font-size:16px;
+  color:#cc3300;
+ }
+.PropertiesFont
+{ 
+ color:#336699;
+ text-align:center;
+}
+.PropertiesFont2
+{ 
+ text-align:center;
+}
+.PropertiesFont3
+{
+ text-align:center;
+ font-size:14px;
+ font-weight:bold;
+}
+.PropertyTable9A a
+{
+ color:White;
+} 
+.PropTable12 a
+{
+ color:White;
+}
+.NormalText
+{
+ font-size:13px;
+ font-family:Arial;
+}
+.LightText
+{
+ /*color:#1C0201;*/
+ text-align:left;
+ font-size:12px;
+}
+.OrangeText
+{
+ font-size:15px;
+ color:#474747;
+}
+.Center
+{
+ text-align:center;
+} 
+.Left
+{
+ text-align:left;
+}
+h3
+{ 
+ font-size:16px;
+ font-family:Arial;
+ color:#000099;
+}
+h1
+{
+ font-size:20px;  
+  font-weight:bold;
+  color:#000099;
+}
+.regionMenu
+{
+background-color:#ede9ed; 
+ font-size:12px;
+}
+.regionMenu a{text-decoration:none;color:#40404e;}
+.regionMenu a:visited{text-decoration:none;color:#80809d;}
+.regionMenu td
+{
+ width:9%;
+}
+.lftProperties
+{
+width:78%; 
+float:left;
+border: solid 1px #999999;
+ 
+}
+.divCrumbs
+{
+ color:#993300;
+
+ height:15px;
+ width:100%;
+ text-align:left;
+ font-size:12px;
+}
+.rtRates
+{ 
+ 
+ width:28%; 
+ text-align: center;
+ font-size:12px;
+}
+.rtRates a
+{
+color:#cc9933;
+}
+.grdImg{border-color:#ccaf00;background-color:#ccaf00;padding:2px;display:block;}
+.grdImg2
+{
+ border:solid 1px #336666;
+ /*border-color: #336666; 
+ background-color: */
+ padding: 1px; 
+
+}
+.picStyle
+{
+ color:#993300;
+ width:100%;
+ font-size:12px;
+}
+.propLink
+{
+ font-size:12px;
+}
+.propLink a:link
+{
+ color:#993300; 
+}
+.propLink a:active
+{
+ color:#993300;
+}
+.propLink a:visited
+{
+ color:#9999cc;
+ text-decoration:underline;
+}
+.tblFont
+{
+ font-size:12px;
+}
+.rdo
+{ 
+  
+}
+input
+{
+  
+ 
+}
+.rdo label
+{
+  text-align:left;
+} 
+.rdo td { }
+#ctl00_Content_rdoTypes_0
+{
+ text-align:left;
+}
+.DrawingTable
+{
+ width:500px;
+}

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="1C1DD34D1F3443C0891075E8076FD750" title="~Report_TndIncSpamPerc" friendly="SA_TndIncSpamPerc" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="C9A7FD9BA68F4D3E98D23AF00BEE2F89" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="C9A7FD9BA68F4D3E98D23AF00BEE2F89">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="LowSpamPerc" />
+				<YValue columns="HighSpamPerc" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="C9A7FD9BA68F4D3E98D23AF00BEE2F89">				
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,LowSpamPerc,MedSpamPerc,HighSpamPerc,TotalSpamPerc" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

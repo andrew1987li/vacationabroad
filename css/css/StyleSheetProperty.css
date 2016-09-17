@@ -1,0 +1,237 @@
+﻿body
+{
+    text-align: center;
+    color: #370601;
+    margin: 0;
+    top: 0;
+}
+a:link {
+color: #940f04;
+}
+a:visited {
+color: #666666;
+}
+.MainTable
+{
+    background-color: #ffffff;
+    width: 932px;
+    text-align: center;
+    border-spacing: 0;
+    padding: 0;
+}
+#MainTable2
+{
+    border: 0;
+    width: 100%;
+    border-spacing: 0;
+    padding: 0;
+}
+#TD2A
+{
+    width: 33%;
+    text-align: left;
+    border: 0;
+    border-spacing: 0;
+    padding-left: 7px;
+}
+.TD2B
+{
+    width: 33%;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+    border: 0;
+    border-spacing: 0;
+    padding: 0px;
+}
+#TR2
+{
+    vertical-align: top;
+    background-color: #ffffff;
+    width: 100%;
+}
+.rtHeader
+{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f6f6f6;
+}
+.rtOuter
+{
+    width: 21%;
+    float: right;
+    border: solid 1px #999999;
+    font-size: 12px;
+}
+.rtText2
+{
+    margin-left: 5px;
+    text-align: left;
+}
+.rtText2 a
+{
+    text-decoration: none;
+}
+
+
+#PropertyTable
+{
+    border: 0;
+    width: 100%;
+}
+
+#PropertyTable4
+{
+    text-align: center;
+    border: 0;
+    width: 100%;
+}
+.PropertyTable5
+{
+    border-spacing: 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    font-size: 15px;
+  
+}
+
+.PropertyTable6
+{
+    border: 0;
+    text-align: center;
+    padding: 0;
+    border-spacing: 0;
+}
+.PropertyTable6 a
+{
+    color: #370601;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.PropertyTable6A
+{
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    background-color: White;
+    color: #370601;
+    border: 0px;
+}
+.PropTable10
+{
+    width: 75%;
+    text-align: center;
+    padding: 0;
+    border-spacing: 0;
+}
+.PropTable11
+{
+    text-align: left;
+    border-color: #336666;
+}
+.PropTable12
+{
+    background-color: White;
+    border-spacing: 0;
+    padding: 0;
+    width: 640px;
+    text-align: center;
+    border: 0;
+    color: #333366;
+    font-size: 16px;
+    font-weight: bold;
+}
+.PropTable12 a
+{
+    color: #333366;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.PropTable13
+{
+    width: 100%;
+    padding: 0;
+    border-spacing: 0;
+}
+.PropTable13A
+{
+    width: 30%;
+    text-align: center;
+}
+.PropTable13B
+{
+    width: 20%;
+    text-align: center;
+}
+
+.PropTable15
+{
+    border: 0;
+    width: 100%;
+}
+.PropTable16
+{
+    text-align: left;
+}
+.PropertiesFont2
+{
+    text-align: center;
+}
+.PropTable12 a
+{
+    color: White;
+}
+.NormalText
+{
+    font-size: 13px;
+    font-family: Arial;
+}
+.Center
+{
+    text-align: center;
+}
+.Left
+{
+    text-align: left;
+}
+h1
+{
+    font-size: 20px;
+    font-weight: bold;  
+    color:#cc0000; 
+}
+.regionMenu{background-color:#f6f6f6;font-size:12px;}
+.regionMenu a{text-decoration:none;color:#660000;}
+.regionMenu a:visited{text-decoration:none;color:#660000;}.regionMenu td{width:9%;}
+.regionMenu td
+{
+    width: 9%;
+}
+.grdImg2
+{border-color:#ccaf00;background-color:#ccaf00;padding:2px; border:1px;}
+.propLink a:link
+{
+    color: #333366;
+}
+.propLink a:active
+{
+    color: #333366;
+}
+.propLink a:visited
+{
+    color: #333366;
+    text-decoration: underline;
+}
+
+/*top part */
+#top1 { float:left; width:33%; }
+#top2 { float:left; width 32%; }
+#top3 { float:left; width:33%; background-color:Gray; }
+#topPart { background-color:Lime; }

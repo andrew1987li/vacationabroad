@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MailConfigDataSet>
+  <MailConfig>
+    <!-- ** Licensing ************************************ -->
+    <licenseKey />
+    <oldLicenseKey />
+    <activation />
+    <!-- ** System Admin ********************************* -->
+    <!-- ** To reset admin password, delete these items ** -->
+    <!-- ** and then restart the SmarterMail Service.   ** -->
+    <!-- ************************************************* -->
+    <sysAdminUserName>admin</sysAdminUserName>
+    <sysAdminPassword>j8e8vlh7woY=</sysAdminPassword>
+    <!-- ************************************************* -->
+    <allowSkinSettingForDomains>False</allowSkinSettingForDomains>
+    <allowDomainsToOverrideUrl>False</allowDomainsToOverrideUrl>
+    <allowSystemResponsesToCatchallMessages>False</allowSystemResponsesToCatchallMessages>
+    <archiveAllIncomingMessages>False</archiveAllIncomingMessages>
+    <archiveAllOutgoingMessages>False</archiveAllOutgoingMessages>
+    <archivedDataLimitInMB>100</archivedDataLimitInMB>
+    <archivePath>c:\SmarterMail\Archive\</archivePath>
+    <autoResponseRestrictionLevel>Enabled</autoResponseRestrictionLevel>
+    <bypassdnscache>True</bypassdnscache>
+    <bounceDNSErrorsAfterXAttempts>2</bounceDNSErrorsAfterXAttempts>
+    <contentFilterBounceRestrictionLevel>Enabled</contentFilterBounceRestrictionLevel>
+    <default5Skin>Viridian</default5Skin>
+    <deliveryCommandTimeout>60</deliveryCommandTimeout>
+    <deliveryLogLevel>-1000</deliveryLogLevel>
+    <disableOriginatingIP>False</disableOriginatingIP>
+    <syncMLLogLevel>1000</syncMLLogLevel>
+    <eventsLogLevel>1000</eventsLogLevel>
+    <dns1>76.12.32.110</dns1>
+    <dns2>208.112.89.187</dns2>
+    <dnsLookupTypeEx>SmarterTools</dnsLookupTypeEx>
+    <doubleBounceOption>Delete</doubleBounceOption>
+    <enableAsSmarthost>False</enableAsSmarthost>
+    <eventGroup>@DefaultEventGroup</eventGroup>
+    <EnforceSMTPAuth>False</EnforceSMTPAuth>
+    <fallbackToPrimary>True</fallbackToPrimary>
+    <firstStartUp>False</firstStartUp>
+    <globalFilter_EnableSubjectFilter>False</globalFilter_EnableSubjectFilter>
+    <globalFilter_SubjectSearchText />
+    <greyList_Enabled>False</greyList_Enabled>
+    <greyList_UserOverrideEnabled>False</greyList_UserOverrideEnabled>
+    <greyList_BlockPeriodInMinutes>15</greyList_BlockPeriodInMinutes>
+    <greyList_PassedMessageExpirationInMinutes>360</greyList_PassedMessageExpirationInMinutes>
+    <greyList_RecordExpirationInDays>36</greyList_RecordExpirationInDays>
+    <greyList_Smarthost>True</greyList_Smarthost>
+    <hostName>mail.vacations-abroad.com</hostName>
+    <Ldap_RunService>True</Ldap_RunService>
+    <LDAP_CommandIdleTimeOut>120</LDAP_CommandIdleTimeOut>
+    <LDAP_LogLevel>1000</LDAP_LogLevel>
+    <LDAP_SessionIdleTimeOut>300</LDAP_SessionIdleTimeOut>
+    <imapCommandIdleTimeoutInMinutes>15</imapCommandIdleTimeoutInMinutes>
+    <imapHelloMessage />
+    <imapLogLevel>1000</imapLogLevel>
+    <imapMaxBadCommands>8</imapMaxBadCommands>
+    <imapIdle>False</imapIdle>
+    <imapConnections>1000</imapConnections>
+    <imapIdleConnections>500</imapIdleConnections>
+    <lastAlertedVersion>5.5.3362</lastAlertedVersion>
+    <logCleaningInterval>0</logCleaningInterval>
+    <logCleaningEnabled>False</logCleaningEnabled>
+    <syncMLServiceEnabled>True</syncMLServiceEnabled>
+    <listenerQueueLength>50</listenerQueueLength>
+    <logLevel>1000</logLevel>
+    <logPath>c:\SmarterMail\Logs\</logPath>
+    <mailboxCacheTimeout>10</mailboxCacheTimeout>
+    <maxbadconsecutiverecipients>20</maxbadconsecutiverecipients>
+    <maxMessageSizeInMB>30</maxMessageSizeInMB>
+    <maxRelayThreads>50</maxRelayThreads>
+    <maxSpamThreads>30</maxSpamThreads>
+    <messageCacheTimeout>5</messageCacheTimeout>
+    <messageIDLogLevel>1000</messageIDLogLevel>
+    <passNumber>False</passNumber>
+    <passCapital>False</passCapital>
+    <passLower>False</passLower>
+    <passSymbol>False</passSymbol>
+    <disablePassStrength>False</disablePassStrength>
+    <passLength>5</passLength>
+    <passLengthEnabled>True</passLengthEnabled>
+    <passNotUsername>True</passNotUsername>
+    <popCommandIdleTimeoutInMinutes>5</popCommandIdleTimeoutInMinutes>
+    <popHelloMessage />
+    <popLogLevel>-1000</popLogLevel>
+    <popMaxBadCommands>8</popMaxBadCommands>
+    <popRetrievalDownloadPath>c:\SmarterMail\PopRetrieval</popRetrievalDownloadPath>
+    <popRetrievalInterval>10</popRetrievalInterval>
+    <popRetrievalLogLevel>1000</popRetrievalLogLevel>
+    <popRetrievalThreads>10</popRetrievalThreads>
+    <popThreads>500</popThreads>
+    <postMasterMailbox />
+    <popupAlertTimeUTC>3155378975999999999</popupAlertTimeUTC>
+    <redirectOnLogout>False</redirectOnLogout>
+    <relay>False</relay>
+    <relayGateway />
+    <relayInterval>1000</relayInterval>
+    <relayOption>LocalUsers</relayOption>
+    <spamForwardOption>Medium</spamForwardOption>
+    <spamRelayOption>Low</spamRelayOption>
+    <relayRetryTimes>15, 30, 60, 90</relayRetryTimes>
+    <relayToGatewayOnRetry>-1</relayToGatewayOnRetry>
+    <rootMailPath>c:\SmarterMail\</rootMailPath>
+    <rowsPerPage>20</rowsPerPage>
+    <runExecutableOnSpoolMessages>False</runExecutableOnSpoolMessages>
+    <runImap>True</runImap>
+    <runPop>True</runPop>
+    <runPopRetrieval>True</runPopRetrieval>
+    <runSmtp>True</runSmtp>
+    <runSpool>True</runSpool>
+    <serverUrl />
+    <showAliasAndListInLDAP>True</showAliasAndListInLDAP>
+    <showNewFeatures3_5>True</showNewFeatures3_5>
+    <sideBarHelpEnabled>True</sideBarHelpEnabled>
+    <skipIntraDomainSpamFiltering>False</skipIntraDomainSpamFiltering>
+    <skipSmtpWhiteListedIPSpamCheck>False</skipSmtpWhiteListedIPSpamCheck>
+    <smtpAuthBypassRelay>True</smtpAuthBypassRelay>
+    <smtpCommandIdleTimeOut>120</smtpCommandIdleTimeOut>
+    <smtpEnableExpn>False</smtpEnableExpn>
+    <smtpEnableVrfy>False</smtpEnableVrfy>
+    <smtpNoAuthLogin>False</smtpNoAuthLogin>
+    <smtpHelloMessage />
+    <smtpLogLevel>-1000</smtpLogLevel>
+    <smtpMaxBadCommands>8</smtpMaxBadCommands>
+    <smtpMaxHopCount>20</smtpMaxHopCount>
+    <smtpResponseCode_mailboxSizeExceeded>452</smtpResponseCode_mailboxSizeExceeded>
+    <smtpSessionTimeoutEnabled>False</smtpSessionTimeoutEnabled>
+    <smtpSessionTimeout>15</smtpSessionTimeout>
+    <smtpThreads>1000</smtpThreads>
+    <spamCheckTimeout>2</spamCheckTimeout>
+    <statCleanerAutoDeleteDomainStats>True</statCleanerAutoDeleteDomainStats>
+    <statCleanerAutoDeleteDomainStatsMonths>13</statCleanerAutoDeleteDomainStatsMonths>
+    <statCleanerAutoDeleteServerStats>False</statCleanerAutoDeleteServerStats>
+    <statCleanerAutoDeleteServerStatsMonths>13</statCleanerAutoDeleteServerStatsMonths>
+    <statCleanerAutoDeleteUserStats>True</statCleanerAutoDeleteUserStats>
+    <statCleanerAutoDeleteUserStatsMonths>13</statCleanerAutoDeleteUserStatsMonths>
+    <statCleanerLastCompletionDate>5/1/2010</statCleanerLastCompletionDate>
+    <statCleanerProgress_Domains>0</statCleanerProgress_Domains>
+    <statCleanerProgress_Users>0</statCleanerProgress_Users>
+    <SubPort>587</SubPort>
+    <SubPortIP />
+    <SubEnabled>False</SubEnabled>
+    <spoolExecutableCmdLine />
+    <spoolExecutableTimeOut>5</spoolExecutableTimeOut>
+    <spoolExecutableVisible>False</spoolExecutableVisible>
+    <spoolPath>c:\SmarterMail\Spool\</spoolPath>
+    <bounceOutgoingBlocks>False</bounceOutgoingBlocks>
+    <spoolsubspoolcount>10</spoolsubspoolcount>
+    <useProcFolder>False</useProcFolder>
+    <virusAction>Delete</virusAction>
+    <virusQuarentineDirectory />
+    <virusCommandPath />
+    <virusCommandEnabled>False</virusCommandEnabled>
+    <virusScanner>None</virusScanner>
+    <welcomeWizardProgress>2</welcomeWizardProgress>
+  </MailConfig>
+  <IPBindings>
+    <default_smtp_out />
+    <OutboundDeliveryBinding>PrimaryIP</OutboundDeliveryBinding>
+  </IPBindings>
+  <DomainDefaults>
+    <defaultAltSmtpPort>0</defaultAltSmtpPort>
+    <defaultBypassGreyListing>False</defaultBypassGreyListing>
+    <defaultBypassForwardBlackList>False</defaultBypassForwardBlackList>
+    <defaultEnableEmailReports>True</defaultEnableEmailReports>
+    <defaultEnableDomainKeys>True</defaultEnableDomainKeys>
+    <defaultEnablePopRetrieval>False</defaultEnablePopRetrieval>
+    <defaultImapPort>143</defaultImapPort>
+    <defaultMaxAliases>1000</defaultMaxAliases>
+    <defaultMaxDomainAliases>2</defaultMaxDomainAliases>
+    <defaultMaxDomainSize>512000</defaultMaxDomainSize>
+    <defaultMaxDomainUsers>100</defaultMaxDomainUsers>
+    <defaultMaxIMUsers>0</defaultMaxIMUsers>
+    <defaultMaxLists>0</defaultMaxLists>
+    <defaultMaxMailboxSize>102400</defaultMaxMailboxSize>
+    <defaultMaxMessageSize>10000</defaultMaxMessageSize>
+    <defaultMaxPopRetrievalAccounts>10</defaultMaxPopRetrievalAccounts>
+    <defaultMaxMessagesPerHourEnabled>False</defaultMaxMessagesPerHourEnabled>
+    <defaultMaxMessagesPerHour>5000</defaultMaxMessagesPerHour>
+    <defaultMaxSmtpOutBandwidthPerHourEnabled>False</defaultMaxSmtpOutBandwidthPerHourEnabled>
+    <defaultMaxSmtpOutBandwidthPerHour>100</defaultMaxSmtpOutBandwidthPerHour>
+    <defaultMaxBouncesReceivedPerHourEnabled>False</defaultMaxBouncesReceivedPerHourEnabled>
+    <defaultMaxBouncesReceivedPerHour>1000</defaultMaxBouncesReceivedPerHour>
+    <defaultMessagePriorityEnabled>False</defaultMessagePriorityEnabled>
+    <defaultMessagePriority>5</defaultMessagePriority>
+    <defaultMessagePriority_SizeThreshold>2</defaultMessagePriority_SizeThreshold>
+    <defaultMessagePriority_SizeThresholdEnabled>False</defaultMessagePriority_SizeThresholdEnabled>
+    <defaultMessagePriority_SizeThresholdPriority>5</defaultMessagePriority_SizeThresholdPriority>
+    <defaultMessagePriority_AutoResponderPriorityEnabled>False</defaultMessagePriority_AutoResponderPriorityEnabled>
+    <defaultMessagePriority_AutoResponderPriority>5</defaultMessagePriority_AutoResponderPriority>
+    <defaultMessagePriority_BouncePriorityEnabled>False</defaultMessagePriority_BouncePriorityEnabled>
+    <defaultMessagePriority_BouncePriority>5</defaultMessagePriority_BouncePriority>
+    <defaultMessagePriority_EmailReportPriorityEnabled>False</defaultMessagePriority_EmailReportPriorityEnabled>
+    <defaultMessagePriority_EmailReportPriority>5</defaultMessagePriority_EmailReportPriority>
+    <defaultMessagePriority_EventEmailPriorityEnabled>False</defaultMessagePriority_EventEmailPriorityEnabled>
+    <defaultMessagePriority_EventEmailPriority>5</defaultMessagePriority_EventEmailPriority>
+    <defaultMessagePriority_FirstRetryPriorityEnabled>False</defaultMessagePriority_FirstRetryPriorityEnabled>
+    <defaultMessagePriority_FirstRetryPriority>5</defaultMessagePriority_FirstRetryPriority>
+    <defaultMessagePriority_MailingListPriorityEnabled>False</defaultMessagePriority_MailingListPriorityEnabled>
+    <defaultMessagePriority_MailingListPriority>5</defaultMessagePriority_MailingListPriority>
+    <defaultMessagePriority_SecondRetryPriorityEnabled>False</defaultMessagePriority_SecondRetryPriorityEnabled>
+    <defaultMessagePriority_SecondRetryPriority>5</defaultMessagePriority_SecondRetryPriority>
+    <defaultCaRestrictionLevel>Disabled</defaultCaRestrictionLevel>
+    <defaultSpamForwardOption>Medium</defaultSpamForwardOption>
+    <defaultSpamRelayOption>Low</defaultSpamRelayOption>
+    <defaultMaxRecipients>200</defaultMaxRecipients>
+    <defaultPopPort>110</defaultPopPort>
+    <defaultShowContentFilteringMenu>True</defaultShowContentFilteringMenu>
+    <defaultShowDomainAliasMenu>True</defaultShowDomainAliasMenu>
+    <defaultShowIMMenu>False</defaultShowIMMenu>
+    <defaultShowListMenu>False</defaultShowListMenu>
+    <defaultShowSpamMenu>True</defaultShowSpamMenu>
+    <defaultShowUserReports>True</defaultShowUserReports>
+    <defaultShowDomainReports>True</defaultShowDomainReports>
+    <defaultShowCalendar>True</defaultShowCalendar>
+    <defaultShowContacts>True</defaultShowContacts>
+    <defaultShowNotes>True</defaultShowNotes>
+    <defaultSyncML>True</defaultSyncML>
+    <defaultShowTasks>True</defaultShowTasks>
+    <defaultSmtpAuthenticationRequired>False</defaultSmtpAuthenticationRequired>
+    <defaultAltSmtpPortEnabled>True</defaultAltSmtpPortEnabled>
+    <defaultAllowUnlimitedAutoResponders>True</defaultAllowUnlimitedAutoResponders>
+    <defaultSmtpPort>25</defaultSmtpPort>
+    <defaultSharedCal>True</defaultSharedCal>
+    <defaultSharedContact>True</defaultSharedContact>
+    <defaultSharedFolder>True</defaultSharedFolder>
+    <defaultSharedGAL>True</defaultSharedGAL>
+    <defaultSharedNotes>True</defaultSharedNotes>
+    <defaultSharedTasks>True</defaultSharedTasks>
+    <ldap_port>389</ldap_port>
+    <ldap_disallowoptout>True</ldap_disallowoptout>
+  </DomainDefaults>
+  <UserDefaults>
+    <defaultTimeZoneIndex>-1</defaultTimeZoneIndex>
+    <defaultMailboxSize>100</defaultMailboxSize>
+    <defaultWindowsDomainName />
+    <defaultLockPassword>False</defaultLockPassword>
+    <defaultHideFromLdap>False</defaultHideFromLdap>
+    <defaultForwardingAddress />
+    <defaultDeleteMailOnForward>False</defaultDeleteMailOnForward>
+    <defaultBlockImages>False</defaultBlockImages>
+    <defaultPreviewAutoPreview>True</defaultPreviewAutoPreview>
+    <defaultPreviewUsePreview>True</defaultPreviewUsePreview>
+    <defaultPreviewOnRight>True</defaultPreviewOnRight>
+    <defaultAutoPopupReminders>True</defaultAutoPopupReminders>
+    <defaultDisableReminders>False</defaultDisableReminders>
+    <defaultEnableSounds>True</defaultEnableSounds>
+    <defaultSyncPanels>True</defaultSyncPanels>
+    <defaultPlusAddressingEnable>False</defaultPlusAddressingEnable>
+    <defaultPlusAddressingFolder />
+    <defaultSortBy>InternalDate</defaultSortBy>
+    <defaultSortDescending>True</defaultSortDescending>
+    <defaultMessagesPerPage>20</defaultMessagesPerPage>
+    <defaultUpcomingEventsDuration>3</defaultUpcomingEventsDuration>
+    <defaultMessageRefreshRateInSeconds>0</defaultMessageRefreshRateInSeconds>
+    <defaultViewMessagesAs>html</defaultViewMessagesAs>
+    <defaultDeleteOption>MoveToDeletedFolder</defaultDeleteOption>
+    <defaultStartupPage>today</defaultStartupPage>
+    <defaultOpenMessageInWindow>True</defaultOpenMessageInWindow>
+    <defaultPopupCalendars>True</defaultPopupCalendars>
+    <defaultPopupContacts>True</defaultPopupContacts>
+    <defaultPopupNotes>True</defaultPopupNotes>
+    <defaultPopupTasks>True</defaultPopupTasks>
+    <defaultScrollMenu>True</defaultScrollMenu>
+    <defaultDictionaryLanguage />
+    <defaultComposeMethod>html</defaultComposeMethod>
+    <defaultTextEncoding>28591</defaultTextEncoding>
+    <defaultForwardAs>normal</defaultForwardAs>
+    <defaultAutoSaveDraftTime>120000</defaultAutoSaveDraftTime>
+    <defaultHeaderDisplay>basic</defaultHeaderDisplay>
+    <defaultComposeFont>Tahoma</defaultComposeFont>
+    <defaultComposeFontSize>10pt</defaultComposeFontSize>
+    <defaultReplyMessageIndicator>&gt;</defaultReplyMessageIndicator>
+    <defaultEmbedReplies>True</defaultEmbedReplies>
+    <defaultPopupNewMessage>True</defaultPopupNewMessage>
+    <defaultCloseMessage>True</defaultCloseMessage>
+    <defaultSaveCopyAsSent>True</defaultSaveCopyAsSent>
+    <defaultRequestReceipts>False</defaultRequestReceipts>
+    <defaultEnableDomainKeySigning>True</defaultEnableDomainKeySigning>
+    <defaultDisableGreylisting>False</defaultDisableGreylisting>
+    <defaultUserEnablePopRetrieval>False</defaultUserEnablePopRetrieval>
+    <defaultAuthType>SmarterMail</defaultAuthType>
+  </UserDefaults>
+  <SmtpIPAccessList />
+  <PopIPAccessList />
+  <ImapIPAccessList />
+  <LdapIPAccessList />
+  <GreyListIPAccessList />
+  <SmtpAuthBypassList>
+    <address>127.0.0.1</address>
+    <description />
+  </SmtpAuthBypassList>
+  <SmtpAuthBypassList>
+    <address>76.12.12.144</address>
+    <description />
+  </SmtpAuthBypassList>
+  <SmtpAuthBypassList>
+    <address>76.12.121.214</address>
+    <description />
+  </SmtpAuthBypassList>
+  <SmtpAuthBypassList>
+    <address>76.12.107.173</address>
+    <description />
+  </SmtpAuthBypassList>
+  <SpamOptions>
+    <AllowDomainOverride>True</AllowDomainOverride>
+    <AllowUserOverride>True</AllowUserOverride>
+    <BayesianFilteringEnabled>False</BayesianFilteringEnabled>
+    <BayesianOutgoingFilteringEnabled>False</BayesianOutgoingFilteringEnabled>
+    <BayesianFilteringWeight>10</BayesianFilteringWeight>
+    <DecludeEnabled>False</DecludeEnabled>
+    <DecludeEnabledOut>False</DecludeEnabledOut>
+    <spamAssassinCommandLineArgs>--max-spare=1 --min-spare=0 --max-children=1 --min-children=0</spamAssassinCommandLineArgs>
+    <SpamAssassinEnabled>False</SpamAssassinEnabled>
+    <SpamAssassinEnabledOut>False</SpamAssassinEnabledOut>
+    <SpamCheckCustomHeaders>False</SpamCheckCustomHeaders>
+    <SpamCheckOutCustomHeaders>False</SpamCheckOutCustomHeaders>
+    <DecludeRecommendedWeight_Low>10</DecludeRecommendedWeight_Low>
+    <DecludeRecommendedWeight_Medium>20</DecludeRecommendedWeight_Medium>
+    <DecludeRecommendedWeight_High>30</DecludeRecommendedWeight_High>
+    <SpamAssassinCheckTimeout>60000</SpamAssassinCheckTimeout>
+    <SpamAssassinFailuresBeforeRestart>5</SpamAssassinFailuresBeforeRestart>
+    <SpamAssassinRecommendedWeight_Low>10</SpamAssassinRecommendedWeight_Low>
+    <SpamAssassinRecommendedWeight_Medium>20</SpamAssassinRecommendedWeight_Medium>
+    <SpamAssassinRecommendedWeight_High>30</SpamAssassinRecommendedWeight_High>
+    <SpamAssassinTimeout>5</SpamAssassinTimeout>
+    <SpamAssassinAttempts>5</SpamAssassinAttempts>
+    <SpamAssassinMaxSize>1</SpamAssassinMaxSize>
+    <SpamAssassinIP>127.0.0.1</SpamAssassinIP>
+    <SpamAssassinPort>783</SpamAssassinPort>
+    <SpamAssassinMultithread>False</SpamAssassinMultithread>
+    <ClamDIP>127.0.0.1</ClamDIP>
+    <ClamDPort>3310</ClamDPort>
+    <ClamDTimeout>10000</ClamDTimeout>
+    <ClamDFailuresBeforeRestart>5</ClamDFailuresBeforeRestart>
+    <ClamDEnabled>False</ClamDEnabled>
+    <ClamDRemote>False</ClamDRemote>
+    <SpamOutgoingBlockThreshold>30</SpamOutgoingBlockThreshold>
+    <SpamOutgoingBlockingEnabled>False</SpamOutgoingBlockingEnabled>
+    <SpamSmtpBlockingEnabled>False</SpamSmtpBlockingEnabled>
+    <SpamSmtpBlockThreshold>30</SpamSmtpBlockThreshold>
+    <ReverseDNSEnabled>False</ReverseDNSEnabled>
+    <ReverseDNSSmtpEnabled>False</ReverseDNSSmtpEnabled>
+    <ReverseDNSOutgoingSmtpEnabled>False</ReverseDNSOutgoingSmtpEnabled>
+    <ReverseDNSWeight>10</ReverseDNSWeight>
+    <SpamLevelLowWeight>10</SpamLevelLowWeight>
+    <SpamLevelMedWeight>20</SpamLevelMedWeight>
+    <SpamLevelHighWeight>30</SpamLevelHighWeight>
+    <SpamMaxMBForBayesianStats>10</SpamMaxMBForBayesianStats>
+    <SpamProcessBayesianStatsThreshold>3000</SpamProcessBayesianStatsThreshold>
+    <SpfEnabled>True</SpfEnabled>
+    <SpfSmtpEnabled>False</SpfSmtpEnabled>
+    <SpfOutgoingSmtpEnabled>False</SpfOutgoingSmtpEnabled>
+    <SpfFailWeight>30</SpfFailWeight>
+    <SpfSoftFailWeight>10</SpfSoftFailWeight>
+    <SpfNeutralWeight>0</SpfNeutralWeight>
+    <SpfNoneWeight>0</SpfNoneWeight>
+    <SpfNoRecordWeight>0</SpfNoRecordWeight>
+    <SpfPassWeight>0</SpfPassWeight>
+    <SpfPermErrorWeight>0</SpfPermErrorWeight>
+    <SpfTempErrorWeight>0</SpfTempErrorWeight>
+    <DkPassWeight>-10</DkPassWeight>
+    <DkFailWeight>30</DkFailWeight>
+    <DkNoneWeight>0</DkNoneWeight>
+    <DkEnabled>True</DkEnabled>
+    <DkMessageSign>0</DkMessageSign>
+    <DkMessageVerify>1</DkMessageVerify>
+    <DkMaxKeySize>1024</DkMaxKeySize>
+    <spamLevelLowAction>
+      <type>PrefixSubject</type>
+      <argument>SPAM-LOW: </argument>
+    </spamLevelLowAction>
+    <spamLevelMedAction>
+      <type>PrefixSubject</type>
+      <argument>SPAM-MED: </argument>
+    </spamLevelMedAction>
+    <spamLevelHighAction>
+      <type>PrefixSubject</type>
+      <argument>SPAM-HIGH: </argument>
+    </spamLevelHighAction>
+  </SpamOptions>
+  <AutoCleanOptions>
+    <AllowDomainOverride>True</AllowDomainOverride>
+    <AllowInbox>False</AllowInbox>
+  </AutoCleanOptions>
+  <SpamIp4rLookups>
+    <name>SpamCop</name>
+    <domainLookup>bl.spamcop.net</domainLookup>
+    <description />
+    <weight>10</weight>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookups>
+  <AbuseDetection />
+  <GatewayList />
+  <AlertProfileItem>
+    <Uid>9138ee94aef949ea86416706499fb6f0</Uid>
+    <Name>@DefaultNotifProfile</Name>
+    <DoPopup>True</DoPopup>
+    <DoEmail>False</DoEmail>
+    <EmailAddress />
+    <DoSMS>False</DoSMS>
+    <SMSAddress />
+    <DoMSN>False</DoMSN>
+    <MSNAddress />
+    <IsDefaultProfile>True</IsDefaultProfile>
+  </AlertProfileItem>
+</MailConfigDataSet>

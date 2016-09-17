@@ -1,0 +1,114 @@
+﻿body
+{
+ text-align:center;
+ 
+ color:#474747;
+ margin:0;  
+ top:0;
+ 
+}
+a:visited{color:#333366;text-decoration:none;}
+a:active{color:#333366;text-decoration:none;}
+a:link{color:#333366;text-decoration:none;}
+.MainTable
+{
+ background-color:#ffffff;
+ width:932px;
+ text-align:center;
+ border-spacing:0; 
+ padding:0;
+}
+#MainTable2
+{
+ border:0;
+ width:100%; 
+ border-spacing:0;
+ padding:0;
+}
+#TD2A
+{
+ width:33%;
+ text-align:left; 
+ border:0;
+ border-spacing:0;
+ padding-left:7px;
+}
+.TD2B
+{
+ width:33%;
+ text-align:center;
+ font-size:12px;
+ font-family:Arial;
+ border:0;
+ border-spacing:0;
+ padding:0px;
+}
+#TR2
+{
+ vertical-align:top;
+ background-color:#ffffff;
+ width:100%;
+}
+ .SndEmlTable2
+ {
+  height:230px;
+  width:98%;
+  border:0px; 
+  background-color:#dbe7f2;
+  text-align:left;  
+ }
+ 
+ .SndEmlTable3
+ {
+  text-align:left;
+  width:100%;
+  border:0;
+ }
+ .SndEmlTable10
+ {  
+  width:100%;
+
+ }
+ .SndEmlRed
+ {
+ text-align:center;
+  font-size:16px;
+  color:#cc3300;
+ }
+
+.NormalText
+{
+ font-size:13px;
+ font-family:Arial;
+}
+
+.regionMenu
+{
+background-color:#ede9ed; 
+ font-size:12px;
+}
+.regionMenu a
+{
+ text-decoration:none;
+ color:#000000;
+}
+.regionMenu td
+{
+ width:9%;
+}
+
+
+
+.propLink a:link
+{
+ color:#993300; 
+}
+.propLink a:active
+{
+ color:#993300;
+}
+.propLink a:visited
+{
+ color:#9999cc;
+ text-decoration:underline;
+}

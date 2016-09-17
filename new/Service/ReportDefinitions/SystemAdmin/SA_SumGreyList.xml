@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="E48C970B603542F189D4E20AC10CB66C" title="~Report_SumGreyList" friendly="SA_SumGreyList" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="F9D5707103664E99A64DC511A836666B" autoOptions="true" exclude="User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="False" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>	
+	<Row>
+		<Column>
+			<Chart dataItemGuid="F9D5707103664E99A64DC511A836666B">
+				<Sort value="TotalConnections" order="DESC"/>
+				<ChartType value="Clustered,Smooth,Bar,3D," />
+				<MaxValues value="10" />
+				<XValue labelCol="Default" labelType="None" xAngle="0" />
+				<YValue columns="AllowedConnections" />
+				<YValue columns="TotalConnections" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="F9D5707103664E99A64DC511A836666B">
+				<Sort value="TotalConnections" order="DESC" />
+				<AutoRank implement="true" align="center" title="~ReportCol_Rank" />
+				<Values columns="Domain,AllowedConnections,DelayedConnections,TotalConnections" />
+				<LinkColumn column="Domain" url="javascript:parent.UpdateFrame('{VPATH}Reports/frmViewReport.aspx?domain={0}&amp;drillToId={1}');" linkedId="CF8968DFA18E41C19CD906635BFB451D" />
+				<FooterRow colSpan="2" name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow colSpan="2" name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow colSpan="2" name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

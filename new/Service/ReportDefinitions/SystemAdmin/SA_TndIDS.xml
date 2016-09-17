@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="90839C39129140879DDE43AD7E6D1852" title="~Report_TndIDS" friendly="SA_TndIDS" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables startingGroupBy="Daily" reportLevel="SystemAdmin" />
+	</Header>
+	<UserOptions dataItemGuid="9E44E5ACD1594E2CAD5D8EDE04A96C1E" autoOptions="true" exclude="Domain,User,AcctType,Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly">
+		<Option name="GroupBy" visible="True" values="Hourly,HourDay,Daily,DayWeek,Weekly,Monthly,MonthYear,Quarterly" />
+	</UserOptions>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="9E44E5ACD1594E2CAD5D8EDE04A96C1E">
+				<ChartType value="Clustered,Smooth,Line,3D," />
+				<MaxValues value="100000" />
+				<XValue labelCol="Daily" labelType="Histogram" xAngle="0" />
+				<YValue columns="DOS" />
+				<YValue columns="Harvesting" />
+			</Chart>
+		</Column>
+	</Row>
+	<Row>
+		<Column>
+			<Table dataItemGuid="9E44E5ACD1594E2CAD5D8EDE04A96C1E">			
+				<AutoRank implement="Histogram" align="center" title="~ReportCol_Rank" />
+				<Values columns="Daily,DOS,Harvesting,InternalSpammer" />
+				<FooterRow name="OtherItems" visible="True" columnsToTotal="*" />
+				<FooterRow name="Totals" visible="True" columnsToTotal="*" />
+				<FooterRow name="Averages" visible="True" columnsToTotal="*" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

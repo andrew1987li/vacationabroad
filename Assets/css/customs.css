@@ -1,0 +1,200 @@
+body {
+  padding : 10px ;
+  
+}
+
+#exTab3{
+    background-color:white;
+    padding:5px 5px 5px;
+}
+
+#exTab3 .tab-content {
+  padding : 5px 15px, 5px, 15px;
+
+}
+
+.btnLogin {
+    background-color: #154890;
+    color: white;
+    font-size:10;
+    font-family:Verdana;
+    border: 0px; 
+    border-radius:3px;
+    height:40px;
+    width:150px;
+    margin: 10px -75px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+.btnSignLogin {
+    background-color: #f3ede3;
+    color: white;
+    font-size:10px;
+    font-family:Verdana;
+    border: 2px solid #f3ede3; 
+    border-radius:3px;
+    height:40px;
+    width:150px;
+    margin: 10px -75px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+.lblCheck{
+    color:orangered;
+    font-size:18px;
+
+}
+
+.btnLogins {
+    background-color: #6699ff;
+    color: white;
+    border: 0px solid #f3ede3; 
+    font-size:10;
+    font-family:Verdana;
+    border-radius:3px;
+    height:40px;
+    width:200px;
+    margin: 10px -100px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+.lblFor{
+    color:#767171;
+    font-family:Verdana;
+    font-size:12px;
+}
+
+.lblOr{
+    color:black;
+    font-family:Verdana;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.formpadding{
+    position:relative;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.tabback{
+    background-color:white;
+    padding-top:10px;
+
+}
+/* Tab Navigation */
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+    border: 0;  
+
+}
+.nav-tabs > li > a {
+    background: #f3ede3;
+    border-radius: 0;
+    box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4),-2px -2px 5px -2px rgba(0,0,0,.4);
+    color:#767171;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+    background: white;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+}
+
+/* Tab Content */
+.tab-pane {
+    background: white;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.socialchar{
+    font-size:10px;
+    color:white
+}
+
+.checkbox {
+  padding-left: 20px; }
+  .checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px; }
+    .checkbox label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+      margin-left: -20px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      background-color: #fff;
+      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+    .checkbox label::after {
+      display: inline-block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 0;
+      margin-left: -20px;
+      padding-left: 3px;
+      padding-top: 1px;
+      font-size: 11px;
+      color: #555555; }
+  .checkbox input[type="checkbox"] {
+    opacity: 0; }
+    .checkbox input[type="checkbox"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    .checkbox input[type="checkbox"]:checked + label::after {
+      font-family: 'FontAwesome';
+      content: "\f00c"; }
+    .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65; }
+      .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed; }
+  .checkbox.checkbox-circle label::before {
+    border-radius: 50%; }
+  .checkbox.checkbox-inline {
+    margin-top: 0; }
+  .checkbox-primary input[type="checkbox"]:checked + label::before {
+  background-color: #428bca;
+  border-color: #428bca; }
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+  border-color: #d9534f; }
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de; }
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e; }
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+  color: #fff; }
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c; }
+.checkbox-success input[type="checkbox"]:checked + label::after {
+  color: #fff; }

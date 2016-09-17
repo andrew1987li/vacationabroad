@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GreyListBypass>
+
+  <!-- Source of most of the IP Addresses in this list: puremagic.com -->
+  
+  <!-- Private Networks -->
+
+  <Address ip="127.0.0.1" />
+  <Address ip="192.168.0.0-192.168.255.255" />
+  <Address ip="10.0.0.0-10.255.255.255" />
+  <Address ip="172.16.0.0-172.31.255.255" />
+
+  <!-- Public Servers -->
+  
+  <!-- The servers below are trusted, but either will not retry or wait a very long time before retrying -->
+
+  <!--GMAIL-->
+  <Address ip="64.233.160.1-64.233.191.254" />
+  <Address ip="66.249.64.1-66.249.95.254" />
+  <Address ip="209.85.128.1-209.85.255.254" />
+  
+  <!--YAHOO-->
+  <Address ip="216.39.48.1-216.39.63.254" />
+  <Address ip="68.142.192.1-68.142.255.254" />
+  <Address ip="206.190.32.1-206.190.63.254" />
+  <Address ip="209.191.64.1-209.191.127.254" />
+  <Address ip="209.191.64.1-209.191.127.254" />
+  <Address ip="66.196.64.1-66.196.127.254" />
+  
+  <!--HOTMAIL-->
+  <Address ip="65.52.0.1-65.55.255.254" />
+
+  <!-- AOL -->
+  <Address ip="64.12.137.0-64.12.138.255" />
+  <Address ip="152.163.255.0-152.163.255.255" />
+  <Address ip="205.188.139.136" />
+  <Address ip="205.188.139.137" />
+  <Address ip="205.188.144.207" />
+  <Address ip="205.188.144.208" />
+  <Address ip="205.188.156.66" />
+  <Address ip="205.188.157.0-205.188.157.255" />
+  <Address ip="205.188.159.7" />
+
+  <!-- Southwest Airlines -->
+  <Address ip="12.5.136.141-12.5.136.144" />
+  <Address ip="63.169.44.143" />
+  <Address ip="63.169.44.144" />
+
+  <!-- kernel.org mailing lists -->
+  <Address ip="12.107.209.244" />
+
+  <!-- SLmail -->
+  <Address ip="63.82.37.110" />
+
+  <!-- sentex.ca -->
+  <Address ip="64.7.153.18" />
+  <Address ip="205.211.164.50" />
+
+  <!-- collab.net -->
+  <Address ip="64.125.132.254" />
+
+  <!-- Yahoo Groups -->
+  <Address ip="66.94.237.0-66.94.237.255" />
+  <Address ip="66.218.66.0-66.218.67.255" />
+  <Address ip="66.218.69.0-66.218.69.255" />
+
+  <!-- Groupwise -->
+  <Address ip="66.100.210.82" />
+  <Address ip="66.162.216.166" />
+
+  <!-- Ebay -->
+  <Address ip="66.135.209.0-66.135.209.255" />
+  <Address ip="66.135.197.0-66.135.197.255" />
+
+  <!-- Plexor -->
+  <Address ip="66.206.22.82-66.206.22.85" />
+
+  <!-- ljbtc.com -->
+  <Address ip="66.27.51.218" />
+
+  <!-- Joker.com -->
+  <Address ip="194.245.101.88" />
+
+  <!-- Tid Infomail Exchanger -->
+  <Address ip="195.235.39.19" />
+
+  <!-- Skynet.be -->
+  <Address ip="195.238.2.0-195.238.3.255" />
+
+  <!-- Ameritrade -->
+  <Address ip="204.107.120.10" />
+
+  <!-- SecurityFocus.com -->
+  <Address ip="205.206.231.0-205.206.231.255" />
+
+  <!-- Prodigy -->
+  <Address ip="207.115.63.0-207.115.63.255" />
+
+  <!-- Amazon.com -->
+  <Address ip="207.171.168.0-207.171.168.255" />
+  <Address ip="207.171.180.0-207.171.180.255" />
+  <Address ip="207.171.187.0-207.171.188.255" />
+  <Address ip="207.171.190.0-207.171.190.255" />
+
+  <!-- Sourceware.org -->
+  <Address ip="209.132.176.174" />
+
+  <!-- optusnet.com.au -->
+  <Address ip="211.29.132.0-211.29.132.255" />
+
+  <!-- MySql.com -->
+  <Address ip="213.136.52.31" />
+
+  <!-- AXKit mailing list-->
+  <Address ip="217.158.50.178" />
+  
+</GreyListBypass>

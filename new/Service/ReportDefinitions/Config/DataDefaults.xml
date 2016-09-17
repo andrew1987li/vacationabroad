@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GlobalDefaults>
+	<Global>
+		<Chart>
+			<Sort value="Default" order="DESC" />
+			<CssClass value="ReportChart" />
+			<Size width="510" height="200" />
+		</Chart>
+		<Table>
+			<Sort value="Default" order="DESC" />
+			<CssClass value="ReportTable" />
+			<DefaultRows value="100" />
+		</Table>
+		<CustomFooters nameColSpan="2" />
+	</Global>
+	<!--<GlobalDefault id="7CC58B74E649468AA4227162AABE0A1D" friendlyName="Trend">
+		<Chart>
+			<Sort value="Default" order="DESC"/>
+			<ChartType value="Clustered,Smooth,Line,3D," />
+			<MaxValues value="100000" />
+			<XValue labelCol="Hour" labelType="Histogram" xAngle="0" />
+		</Chart>
+		<Table>
+			
+			<Sort value="Default" order="DESC" />
+			
+			<AutoRank implement="Histogram" align="left" title="~ReportCol_Rank" />
+		</Table>
+	</GlobalDefault>
+	<GlobalDefault id="CE7FCF4477E6494B9635CC392D55A08C" friendlyName="Summary">
+		<Chart>
+			
+			<ChartType value="Clustered,Smooth,Bar,3D," />
+			<MaxValues value="10" />
+			
+			<XValue labelCol="Default" labelType="None" xAngle="0" />
+		</Chart>
+		<Table>
+			
+			
+			<AutoRank implement="true" align="left" title="~ReportCol_Rank" />
+		</Table>
+	</GlobalDefault>-->
+</GlobalDefaults>

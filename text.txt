@@ -1,0 +1,92 @@
+drop table Amenities;
+SELECT * INTO herefordpies.dbo.Amenities FROM herefordpies_test.dbo.Amenities;
+
+drop table Attractions;
+SELECT * INTO herefordpies.dbo.Attractions FROM herefordpies_test.dbo.Commissions;
+
+drop table Commissions;
+SELECT * INTO herefordpies.dbo.Commissions FROM herefordpies_test.dbo.Commissions;
+
+drop table Commissions;
+SELECT * INTO herefordpies.dbo.Commissions FROM herefordpies_test.dbo.Commissions;
+
+drop table Countries;
+SELECT * INTO herefordpies.dbo.Countries FROM herefordpies_test.dbo.Countries;
+
+drop table CreditCards;
+SELECT * INTO herefordpies.dbo.CreditCards FROM herefordpies_test.dbo.CreditCards;
+
+drop table Distances;
+SELECT * INTO herefordpies.dbo.Distances FROM herefordpies_test.dbo.Distances;
+
+drop table Emails;
+SELECT * INTO herefordpies.dbo.Emails FROM herefordpies_test.dbo.Emails;
+
+drop table Exceptions;
+SELECT * INTO herefordpies.dbo.Exceptions FROM herefordpies_test.dbo.Exceptions;
+
+drop table FurnitureItems;
+SELECT * INTO herefordpies.dbo.FurnitureItems FROM herefordpies_test.dbo.FurnitureItems;
+
+drop table Invoices;
+SELECT * INTO herefordpies.dbo.Invoices FROM herefordpies_test.dbo.Invoices;
+
+drop table MinimumNightlyRentalTypes;
+SELECT * INTO herefordpies.dbo.MinimumNightlyRentalTypes FROM herefordpies_test.dbo.MinimumNightlyRentalTypes;
+
+drop table PaymentMethods;
+SELECT * INTO herefordpies.dbo.PaymentMethods FROM herefordpies_test.dbo.PaymentMethods;
+
+drop table PeriodicOperations;
+SELECT * INTO herefordpies.dbo.PeriodicOperations FROM herefordpies_test.dbo.PeriodicOperations;
+
+drop table Properties;
+SELECT * INTO herefordpies.dbo.Properties FROM herefordpies_test.dbo.Properties;
+
+drop table PropertiesAmenities;
+SELECT * INTO herefordpies.dbo.PropertiesAmenities FROM herefordpies_test.dbo.PropertiesAmenities;
+
+drop table PropertiesAttractions;
+SELECT * INTO herefordpies.dbo.PropertiesAttractions FROM herefordpies_test.dbo.PropertiesAttractions;
+
+drop table PropertiesPaymentMethods;
+SELECT * INTO herefordpies.dbo.PropertiesPaymentMethods FROM herefordpies_test.dbo.PropertiesPaymentMethods;
+
+drop table PropertyAvailDates;
+SELECT * INTO herefordpies.dbo.PropertyAvailDates FROM herefordpies_test.dbo.PropertyAvailDates;
+
+drop table PropertyPhotos;
+SELECT * INTO herefordpies.dbo.PropertyPhotos FROM herefordpies_test.dbo.PropertyPhotos;
+
+drop table PropertyTypes;
+SELECT * INTO herefordpies.dbo.PropertyTypes FROM herefordpies_test.dbo.PropertyTypes;
+
+drop table PropertyViews;
+SELECT * INTO herefordpies.dbo.PropertyViews FROM herefordpies_test.dbo.PropertyViews;
+
+drop table Rates;
+SELECT * INTO herefordpies.dbo.Rates FROM herefordpies_test.dbo.Rates;
+
+drop table Regions;
+SELECT * INTO herefordpies.dbo.Regions FROM herefordpies_test.dbo.Regions;
+
+drop table RentalLengths;
+SELECT * INTO herefordpies.dbo.RentalLengths FROM herefordpies_test.dbo.RentalLengths;
+
+drop table RoomFurnitureItems;
+SELECT * INTO herefordpies.dbo.RoomFurnitureItems FROM herefordpies_test.dbo.RoomFurnitureItems;
+
+drop table RoomInfo;
+SELECT * INTO herefordpies.dbo.RoomInfo FROM herefordpies_test.dbo.RoomInfo;
+
+drop table StateProvinces;
+SELECT * INTO herefordpies.dbo.StateProvinces FROM herefordpies_test.dbo.StateProvinces;
+
+drop table Transactions;
+SELECT * INTO herefordpies.dbo.Transactions FROM herefordpies_test.dbo.Transactions;
+
+drop table Users;
+SELECT * INTO herefordpies.dbo.Users FROM herefordpies_test.dbo.Users;
+
+drop table WatchListItems;
+SELECT * INTO herefordpies.dbo.WatchListItems FROM herefordpies_test.dbo.WatchListItems;

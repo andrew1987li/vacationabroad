@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="F8087FA1CF514962964536BB7EC62B8D" title="~Report_IncomingSpam" friendly="SA_DashboardSystemIncSpamChart" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SyetemAdminDashboard" />
+	</Header>
+	<Row>
+		<Column>
+			<Chart dataItemGuid="BEA7F922B1C8448CB03EA33688015710">
+				<ChartType value="Clustered,Line,3D," />
+				<MaxValues value="100000" />
+				<Size width="600" height="210" />
+				<XValue labelCol="Hour" labelType="Histogram" labelSpacer="1" xAngle="0" />
+				<YValue columns="Spam10Min" />
+			</Chart>
+		</Column>
+	</Row>
+</Report>

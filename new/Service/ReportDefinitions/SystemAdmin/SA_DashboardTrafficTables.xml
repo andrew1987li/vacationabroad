@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report id="8B17C984A1854521B4836F340CEFF54F" title="" friendly="SA_DashboardTrafficTables" autoload="true" defaultTimeFrame="Last7Days">
+	<Header>
+		<CustomVariables reportLevel="SyetemAdminDashboard" />
+	</Header>
+	<Row>
+		<Column>
+			<Table dataItemGuid="45B934870C214520BCDE3A91EC01F516">
+				<AutoRank implement="false" align="center" title="~ReportCol_Rank" />
+				<Values columns="GenActivityDesc,IMAPConnections,POPConnections,SMTPConnections,DeliveryThreads,LDAPConnections,MessagesInSpool" />
+			</Table>
+		</Column>
+	</Row>
+	<Row>
+		<Column title="~ReportTitleCol_MessageActivity">
+			<Table dataItemGuid="391726136F18425EA9684189F2008850">
+				<AutoRank implement="false" align="center" title="~ReportCol_Rank" />
+				<Values columns="MsgActivityDesc,MessagesDelivered,LocalDeliveries,RemoteDeliveries" />
+			</Table>
+		</Column>
+	</Row>
+</Report>

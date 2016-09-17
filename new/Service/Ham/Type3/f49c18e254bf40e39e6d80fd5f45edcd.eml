@@ -1,0 +1,92 @@
+Return-Path: <linda@vacations-abroad.com>
+Received: from 56.sub-70-223-45.myvzw.com [70.223.45.56] by vacations-abroad.com with SMTP;
+   Fri, 17 Jul 2009 07:51:52 -0400
+From: "Linda Jenkins" <linda@vacations-abroad.com>
+To: <vps@hostmysite.com>
+References: <33021432.9351247700122192.JavaMail.internalServices@hmsapp1>
+In-Reply-To: <33021432.9351247700122192.JavaMail.internalServices@hmsapp1>
+Subject: RE: (#T7156041) Site www.vacations-abroad.com
+Date: Fri, 17 Jul 2009 07:51:28 -0400
+Organization: Vacations-abroad.com
+Message-ID: <08CE57EB24454A13A1B7B3B37D2B61E0@lindalaptop>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Office Outlook 11
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+thread-index: AcoFowSxG1iEuocfSlarZjm/hZwy7gBMdeXA
+
+Randy, thanks for your help. I was a bit concerned because I moved to a new
+mail server.  
+
+
+Linda Jenkins
+Director of Relaxation and Getaways
+
+Vacations-Abroad.com
+Telephone 1-770-298-8090
+Email: linda@vacations-abroad.com
+
+-----Original Message-----
+From: vps@hostmysite.com [mailto:vps@hostmysite.com] 
+Sent: Wednesday, July 15, 2009 7:22 PM
+To: linda@vacations-abroad.com
+Subject: Re: (#T7156041) Site www.vacations-abroad.com
+
+Ref: vacations-abroad.com (H157327) 
+ 
+ Hello,
+
+   As i stated, i should have also sent the actual mail logs:
+19:18:08 [35227] Sending remote mail for noreply@vacations-abroad.com
+19:18:08 [35227] Connecting to 205.188.252.17
+19:18:08 [35227] Connection to 205.188.252.17 succeeded
+19:18:08 [35227] RSP: 220-rly-df01.mx.aol.com ESMTP mail_relay_in-df01.5;
+Wed, 15 Jul 2009 19:17:49 -0400
+19:18:08 [35227] RSP: 220-America Online (AOL) and its affiliated companies
+do not
+19:18:08 [35227] RSP: 220-     authorize the use of its proprietary
+computers and computer
+19:18:08 [35227] RSP: 220-     networks to accept, transmit, or distribute
+unsolicited bulk
+19:18:08 [35227] RSP: 220-     e-mail sent from the internet.  Effective
+immediately:  AOL 
+19:18:08 [35227] RSP: 220-     may no longer accept connections from IP
+addresses which 
+19:18:08 [35227] RSP: 220      have no reverse-DNS (PTR record) assigned.
+19:18:08 [35227] CMD: EHLO vacations-abroad.com
+19:18:08 [35227] RSP: 250-rly-df01.mx.aol.com vacations-abroad.com
+19:18:08 [35227] RSP: 250 HELP
+19:18:08 [35227] CMD: MAIL FROM:<noreply@vacations-abroad.com>
+19:18:08 [35227] RSP: 250 OK
+19:18:08 [35227] CMD: RCPT TO:<testinghms@aol.com>
+19:18:08 [35227] RSP: 250 OK
+19:18:08 [35227] CMD: DATA
+19:18:08 [35227] RSP: 354 START MAIL INPUT, END WITH "." ON A LINE BY ITSELF
+19:18:09 [35227] RSP: 421-:  (RLY:NW)
+http://postmaster.info.aol.com/errors/421rlynw.html
+19:18:09 [35227] RSP: 421 SERVICE NOT AVAILABLE
+19:18:09 [35227] CMD: QUIT
+19:18:09 [35227] RSP: 221 SERVICE CLOSING CHANNEL
+
+Regards,    
+Randy Stubbs    
+http://www.HostMySite.com      
+Email: support@HostMySite.com    
+Technical Support: 1.877.215.4678    
+Customer Service & Billing Inquiries: 866.916.4678    
+International: 1.302.731.4948    
+Get your FREE .com, .net, .org, .biz and .info domain name at
+HostMySite.com!      
+Manage your hosting account using our Total Customer Control Center at
+https://controlpanel.hostmysite.com
+
+> -----Original Message-----
+> From:	linda@vacations-abroad.com
+> Sent:	07/15/2009 07:20:48 PM
+> Subject: Site www.vacations-abroad.com Hello,
+
+   Here is the exact aol link:
+http://postmaster.info.aol.com/errors/421rlynw.html 
+
