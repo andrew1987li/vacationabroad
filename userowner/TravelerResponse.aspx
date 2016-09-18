@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-offset-3 col-sm-6">
-                <form id="resp_form" runat="server">
+                <form id="resp_form" class="formborder" runat="server">
                     <div class="row">
                         <div id="headertitle" class="col-sm-6">Property #xxxx in City, State</div>
                         <div id="headerlast" class="col-sm-6"><span class="pull-right">Owner Response</span></div>
@@ -35,7 +35,7 @@
                         <div class="col-sm-4">
                           <div class="form-group">
                             <label for="currency" class="normaltxt">Select Currency </label>
-                             <asp:DropDownList ID="currency" runat="server" ClientIDMode="Static">
+                             <asp:DropDownList ID="currency" runat="server" CssClass="form-control" ClientIDMode="Static">
                                  <asp:ListItem Text="dollar" Value="0">
                                   </asp:ListItem>
                                  <asp:ListItem Text="euro" Value="1">
