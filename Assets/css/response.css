@@ -30,6 +30,11 @@
     border:3px solid #2390ee;
     border-radius:3px;
     background-color:#808080;
+     padding:20px;
+}
+
+.formpadding{
+    padding:20px;
 }
 
 .top_formrow { margin-top:20px; }
