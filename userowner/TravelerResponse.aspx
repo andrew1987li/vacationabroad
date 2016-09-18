@@ -29,7 +29,7 @@
                         <div class="col-sm-4">
                           <div class="form-group">
                             <label for="rates" class="normaltxt">Price Quote Nightly Rates</label>
-                            <label id="rates" class="normalval">(owner inputs nightly rates)</label>
+                              <asp:TextBox ID="rates" ClientIDMode="Static" CssClass="normalval" runat="server"></asp:TextBox>
                           </div>
                         </div>
                         <div class="col-sm-4">
