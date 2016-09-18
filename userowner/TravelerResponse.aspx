@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-offset-3 col-sm-6">
-                <form id="resp_form">
+                <form id="resp_form" runat="server">
                     <div class="row">
                         <div id="headertitle" class="col-sm-6">Property #xxxx in City, State</div>
                         <div id="headerlast" class="col-sm-6"><span class="pull-right">Owner Response</span></div>
