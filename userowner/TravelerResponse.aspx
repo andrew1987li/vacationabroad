@@ -115,7 +115,7 @@
                          %>
 
                     <div class="row top_formrow">
-                        This offer is valid for <input type="number"  id="validnumber" name="validnumber" runat="server" class="normalval" /> days from <%=cur.ToString("MM/dd/yyyy") %>.<br />
+                        This offer is valid for <input type="text"  id="validnumber" name="validnumber" runat="server" class="normalval" /> days from <%=cur.ToString("MM/dd/yyyy") %>.<br />
                         30 days prior to renter’s arrival; the funds are transferred to the property owner.
                     </div>
 
