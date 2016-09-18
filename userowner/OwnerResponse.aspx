@@ -1,16 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OwnerResponse.aspx.cs" Inherits="userowner_OwnerResponse" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/userowner/MasterPage.master" AutoEventWireup="true" CodeFile="OwnerResponse.aspx.cs" Inherits="userowner_OwnerResponse" %>
 
-<!DOCTYPE html>
+<asp:Content ID="content" ContentPlaceHolderID="bodycontent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+
+
+
+</asp:Content>

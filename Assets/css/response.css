@@ -1,0 +1,29 @@
+﻿#headertitle{
+    color:lightblue;
+    font-family:Verdana;
+    font-size:16px;
+}
+
+#headerlast{
+    color:black;
+    font-family:Verdana;
+    font-size:16px;
+}
+
+.normaltxt{
+    color:black;
+    font-family:Verdana;
+    font-size:12px;
+}
+
+.normalval{
+    color:lightblue;
+    font-family:Verdana;
+    font-size:12px;
+}
+
+#validnumber{
+    width:40px;
+}
+
+.top_formrow { margin-top:20px; }
