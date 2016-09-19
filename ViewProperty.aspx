@@ -503,7 +503,7 @@
                                     <td></td>
                                     <td colspan="2" align="right" style="width: 175px">
                                         <asp:TextBox ID="ContactTelephone" runat="server" Width="170px" MaxLength="300" />
-                                        <asp:RegularExpressionValidator ID="CheckTelephone" runat="server" ValidationExpression="^[a-zA-Z0-9 \.\-\(\)]{1,300}$"
+                                        <asp:RegularExpressionValidator ID="CheckTelephone" runat="server" ValidationExpression="^[a-zA-Z0-9 \.\-\(\)]{1,50}$"
                                             ErrorMessage="Invalid telephone entered" ControlToValidate="ContactTelephone"
                                             Display="Dynamic" />
                                     </td>

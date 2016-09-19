@@ -11,6 +11,7 @@ using System.Web.UI.HtmlControls;
 using System.Net.Mail;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Web.Security;
 
 public partial class ViewProperty : CommonPage
 {
@@ -1074,15 +1075,29 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
 
         if (!Page.IsValid) return;
 
-        if (!User.Identity.IsAuthenticated)
+        if (!User.Identity.IsAuthenticated || !AuthenticationManager.IfAuthenticated)
         {
+            FormsAuthentication.SignOut();
             Response.Redirect("/accounts/login.aspx?ReturnUrl=" + Request.RawUrl);
         }
 
         
         if (Page.IsValid)
         {
-            BookDBProvider.addEmailQuote("11","23","2016/09/20",10,10,"com", "123",12,123,123);
+            string contactname = ContactName.Text;
+            string contactemail = ContactEmail.Text;
+            string arrivedate = String.Format("{0}-{1}-{2}",ArrivalYear.Text, ArrivalMonth.Text, ArrivalDay.Text);
+            string phone = ContactTelephone.Text;
+            int adults, children , nights, ownerid=0;
+            Int32.TryParse(  HowManyAdults.Text, out adults);
+            Int32.TryParse(HowManyChildren.Text, out children);
+            Int32.TryParse(HowManyNights.Text, out nights);
+            ownerid = BookDBProvider.getUsrIDbyProperty(propertyid);
+
+            string comment = Comments.Text;
+
+            //adding sending email to emailquote table.
+            BookDBProvider.addEmailQuote(contactname, contactemail, arrivedate, adults, children, comment,phone,userid,  propertyid, ownerid);
 
         }
     }
