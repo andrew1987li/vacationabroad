@@ -29,7 +29,7 @@ public class UserInfo
     }
 }
 
-public class PropertyInfo
+public class PropertyInform
 {
     public int id { get; set; }
     public string name { get; set; }

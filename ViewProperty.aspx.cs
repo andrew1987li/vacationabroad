@@ -1099,7 +1099,7 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
             UserInfo ownerinfo = BookDBProvider.getUserInfo(ownerid);
             UserInfo userinfo = BookDBProvider.getUserInfo(userid);
 
-            PropertyInfo propinfo = BookDBProvider.getPropertyInfo(propertyid);
+            PropertyInform propinfo = BookDBProvider.getPropertyInfo(propertyid);
             BookDBProvider.sendEmailToAdmin(ownerinfo.name, ownerinfo.email,
                 contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
