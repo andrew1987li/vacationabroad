@@ -1096,8 +1096,21 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
 
             string comment = Comments.Text;
 
+            UserInfo ownerinfo = BookDBProvider.getUserInfo(ownerid);
+            UserInfo userinfo = BookDBProvider.getUserInfo(userid);
+
+            PropertyInfo propinfo = BookDBProvider.getPropertyInfo(propertyid);
+            BookDBProvider.sendEmailToAdmin(ownerinfo.name, ownerinfo.email,
+                contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+
+            BookDBProvider.sendEmailToOwner(ownerinfo.name, ownerinfo.email,
+                contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+
+            BookDBProvider.sendEmailToTraveler(ownerinfo.name, ownerinfo.email,
+                contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+
             //adding sending email to emailquote table.
-            BookDBProvider.addEmailQuote(contactname, contactemail, arrivedate, adults, children, comment,phone,userid,  propertyid, ownerid);
+            BookDBProvider.addEmailQuote(contactname, contactemail, arrivedate, adults, children, comment,phone,userid,  propertyid, ownerid,nights);
 
         }
     }
