@@ -174,7 +174,7 @@ public class BookDBProvider
         message.IsBodyHtml = true;
 
         message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
-        message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
+       // message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
 
         smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
         //smtpclient.UseDefaultCredentials = false;
@@ -250,7 +250,7 @@ public class BookDBProvider
          //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
          // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
 
-         string mailbody = "Dear {0}! Thanks for visiting our vocation abroad.<br> This is an inquiry for the property {1} on vocation-abroad.com.<br>" +
+         string mailbody = "Dear {0}! <br>Thanks for visiting our vocation abroad.<br> This is an inquiry for the property {1} on vocation-abroad.com.<br>" +
              "Deatiled inquiry:<br>"
              + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
 
