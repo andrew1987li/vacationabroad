@@ -1106,7 +1106,7 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
             BookDBProvider.sendEmailToOwner(ownerinfo.name, ownerinfo.email,
                 contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
-            BookDBProvider.sendEmailToTraveler(ownerinfo.name, ownerinfo.email,
+            BookDBProvider.sendEmailToTraveler(userinfo.name, userinfo.email,
                 contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
             //adding sending email to emailquote table.
