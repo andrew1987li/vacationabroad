@@ -46,9 +46,9 @@ public class BookDBProvider
 
     }
 
-    public static PropertyInfo getPropertyInfo(int propid)
+    public static PropertyInform getPropertyInfo(int propid)
     {
-        PropertyInfo propinfo = new PropertyInfo();
+        PropertyInform propinfo = new PropertyInform();
         try
         {
             using (SqlConnection con = new SqlConnection(connString))
