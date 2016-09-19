@@ -59,7 +59,7 @@
                             <label class="normaltxt">Cleaning Fee</label>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
-                            <asp:TextBox ID="cleaningfee" runat="server" ClientIDMode="Static"></asp:TextBox>
+                            <asp:TextBox ID="cleaningfee" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
                         </div>
                     </div>
 
@@ -68,7 +68,7 @@
                             <label class="normaltxt">Security Deposit</label>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
-                            <asp:TextBox ID="secdeposit" runat="server" ClientIDMode="Static"></asp:TextBox>
+                            <asp:TextBox ID="secdeposit" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@
                             <label class="normaltxt">Lodging Tax</label>
                         </div>
                         <div class="col-md-4">
-                            <asp:TextBox ID="loadingtax" runat="server" ClientIDMode="Static"></asp:TextBox>
+                            <asp:TextBox ID="loadingtax" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
                         </div>
                         <div class="col-md-4">
                             <label class="normaltxt">(Rate % x Price Quote)</label>
