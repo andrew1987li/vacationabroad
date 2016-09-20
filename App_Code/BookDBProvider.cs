@@ -15,6 +15,7 @@ using System.Web;
      
      */
 
+
 public class UserInfo
 {
     public int id { get; set; }
@@ -47,221 +48,227 @@ public class BookDBProvider
 
     }
 
-    public static PropertyInform getPropertyInfo(int propid)
+    public static DataSet getInquiryInfoSet(int ownerid)
     {
-        PropertyInform propinfo = new PropertyInform();
+        /*
+  * [ID]
+       ,[SentTime]
+       ,[ContactorName]
+       ,[ContactorEmail]
+       ,[ArrivalDate]
+       ,[DepartDate]
+       ,[Adults]
+       ,[Children]
+       ,[Comment]
+       ,[Telephone]
+       ,[UserID]
+       ,[PropertyID]
+       ,[PropertyOwnerID]
+       ,[Nights]
+       IfReplied
+  */
+
+        //  SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+
+        DataSet inquiry_set = new DataSet();
+      //  adapter.Fill(customers, "Customers");
         try
         {
             using (SqlConnection con = new SqlConnection(connString))
             {
-                using (SqlCommand cmd = new SqlCommand("select Name,UserID from Properties  where ID=@id", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter())
                 {
                     con.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = propid;
+                    SqlCommand cmd = new SqlCommand("select * from EmailQuote em where PropertyOwnerID=@id", con);
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = ownerid;
 
+                    adapter.SelectCommand = cmd;
 
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            if (reader.Read())
-                            {
-                                //more code
-                                propinfo.id = propid;
-                                propinfo.name = reader[0].ToString();
-                                propinfo.userid = Convert.ToInt32(reader[1]);
-                            }
-                        }
-
-                    }
-
+                    adapter.Fill(inquiry_set, "InquiryList");
 
                     con.Close();
 
                 }
             }
-
-        }
+         }
         catch (Exception ex)
         {
-            // throw ex;
-            // return 0;
-        }
-        return propinfo;
-
-
-    }
-    public static UserInfo getUserInfo(int user_id) {
-        UserInfo userinfo = new UserInfo();
-        try
-        {
-            using (SqlConnection con = new SqlConnection(connString))
-            {
-                using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName,FirstName from Users  where ID=@id", con))
-                {
-                    con.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = user_id;
-
-
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            if (reader.Read())
-                            {
-                                //more code
-                                userinfo.id = user_id;
-                                userinfo.name = reader[0].ToString();
-                                userinfo.email = reader[1].ToString();
-                                userinfo.lastname = reader[2].ToString();
-                                userinfo.firstname = reader[3].ToString();
-                            }
-                        }
-
-                    }
-
-
-                    con.Close();
-
-                }
-            }
 
         }
-        catch (Exception ex)
-        {
-            // throw ex;
-            // return 0;
-        }
-        return userinfo;
 
-
-    }
-    public static object getValue(object par)
-    {
-        if(par == null)
-        {
-            return DBNull.Value;
-        }
-        return par;
-    }
-
-    public static bool sendEmailToOwner(string ownername,string owneremail, string name, string email, string arrive,int nights, int adults, int child, string comment, string telephone, string propname)
-    {
-        Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
-
-        // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
-        //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
-        SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
-
-        //MailMessage message = new MailMessage (IfShowContactInfo () ?
-        //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
-        // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
-
-        string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
-            "Deatiled inquiry:<br>"
-            + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
-
-        string emailbody = String.Format(mailbody, ownername, propname, name,email, arrive, nights,adults, child,telephone,comment);
-
-        // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
-        //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
-        MailMessage message = new MailMessage("noreply@vacations-abroad.com", owneremail);
-        message.Subject = "New Inquiry received.";
-        message.Body = emailbody;
-        message.IsBodyHtml = true;
-
-        message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
-       // message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-
-        smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-        //smtpclient.UseDefaultCredentials = false;
-
-
-        try
-        {
-            smtpclient.Send(message);
-        }
-        catch (Exception ex)
-        {
-            //throw ex;
-            return false;
-        }
-        return true;
-
+        return inquiry_set;
      }
 
-    public static bool sendEmailToAdmin(string ownername, string owneremail, string name, string email, string arrive, int nights, int adults, int child, string comment, string telephone, string propname)
-    {
-        Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
-
-        // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
-        //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
-        SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
-
-        //MailMessage message = new MailMessage (IfShowContactInfo () ?
-        //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
-        // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
-
-        string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
-            "Deatiled inquiry:<br>"
-            + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>"
-            +"<br>Property OwnerName:{10}<br> Email:{11}";
-
-        string emailbody = String.Format(mailbody, "Linda", propname, name, email, arrive, nights, adults, child, telephone, comment,ownername, owneremail);
-
-        // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
-        //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
-        MailMessage message = new MailMessage("noreply@vacations-abroad.com", "prop@vacations-abroad.com");
-        message.Subject = "New Inquiry received.";
-        message.Body = emailbody;
-        message.IsBodyHtml = true;
-
-        message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
-        //message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-
-        smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-        //smtpclient.UseDefaultCredentials = false;
+     public static PropertyInform getPropertyInfo(int propid)
+     {
+         PropertyInform propinfo = new PropertyInform();
+         try
+         {
+             using (SqlConnection con = new SqlConnection(connString))
+             {
+                 using (SqlCommand cmd = new SqlCommand("select Name,UserID from Properties  where ID=@id", con))
+                 {
+                     con.Open();
+                     cmd.CommandType = CommandType.Text;
+                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = propid;
 
 
-        try
-        {
-            smtpclient.Send(message);
-        }
-        catch (Exception ex)
-        {
-            //throw ex;
-            return false;
-        }
-        return true;
-    }
 
-    public static bool sendEmailToTraveler(string ownername, string owneremail, string name, string email, string arrive, int nights, int adults, int child, string comment, string telephone, string propname)
-    {
-        Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+                     using (SqlDataReader reader = cmd.ExecuteReader())
+                     {
+                         if (reader.HasRows)
+                         {
+                             if (reader.Read())
+                             {
+                                 //more code
+                                 propinfo.id = propid;
+                                 propinfo.name = reader[0].ToString();
+                                 propinfo.userid = Convert.ToInt32(reader[1]);
+                             }
+                         }
 
-        // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
-        //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
+                     }
+
+
+                     con.Close();
+
+                 }
+             }
+
+         }
+         catch (Exception ex)
+         {
+             // throw ex;
+             // return 0;
+         }
+         return propinfo;
+
+
+     }
+     public static UserInfo getUserInfo(int user_id) {
+         UserInfo userinfo = new UserInfo();
+         try
+         {
+             using (SqlConnection con = new SqlConnection(connString))
+             {
+                 using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName,FirstName from Users  where ID=@id", con))
+                 {
+                     con.Open();
+                     cmd.CommandType = CommandType.Text;
+                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = user_id;
+
+
+
+                     using (SqlDataReader reader = cmd.ExecuteReader())
+                     {
+                         if (reader.HasRows)
+                         {
+                             if (reader.Read())
+                             {
+                                 //more code
+                                 userinfo.id = user_id;
+                                 userinfo.name = reader[0].ToString();
+                                 userinfo.email = reader[1].ToString();
+                                 userinfo.lastname = reader[2].ToString();
+                                 userinfo.firstname = reader[3].ToString();
+                             }
+                         }
+
+                     }
+
+
+                     con.Close();
+
+                 }
+             }
+
+         }
+         catch (Exception ex)
+         {
+             // throw ex;
+             // return 0;
+         }
+         return userinfo;
+
+
+     }
+     public static object getValue(object par)
+     {
+         if(par == null)
+         {
+             return DBNull.Value;
+         }
+         return par;
+     }
+
+     public static bool sendEmailToOwner(string ownername,string owneremail, string name, string email, string arrive,int nights, int adults, int child, string comment, string telephone, string propname)
+     {
+         Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+
+         // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
+         //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
          SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
 
          //MailMessage message = new MailMessage (IfShowContactInfo () ?
          //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
          // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
 
-         string mailbody = "Dear {0}! <br>Thanks for visiting our vocation abroad.<br> This is an inquiry for the property {1} on vocation-abroad.com.<br>" +
+         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
              "Deatiled inquiry:<br>"
              + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
 
-         string emailbody = String.Format(mailbody, ownername, propname, name, email, arrive, nights, adults, child, telephone, comment);
+         string emailbody = String.Format(mailbody, ownername, propname, name,email, arrive, nights,adults, child,telephone,comment);
 
-        // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
-        //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
-        // MailMessage message = new MailMessage(new MailAddress("noreply@vacations-abroad.com"), new MailAddress( owneremail));
-        MailMessage message = new MailMessage("noreply@vacations-abroad.com", owneremail);
-        message.Subject = "You've sent the inquiry on vacation abroad";
+         // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
+         //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
+         MailMessage message = new MailMessage("noreply@vacations-abroad.com", owneremail);
+         message.Subject = "New Inquiry received.";
+         message.Body = emailbody;
+         message.IsBodyHtml = true;
+
+         message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
+        // message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
+
+         smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
+         //smtpclient.UseDefaultCredentials = false;
+
+
+         try
+         {
+             smtpclient.Send(message);
+         }
+         catch (Exception ex)
+         {
+             //throw ex;
+             return false;
+         }
+         return true;
+
+      }
+
+     public static bool sendEmailToAdmin(string ownername, string owneremail, string name, string email, string arrive, int nights, int adults, int child, string comment, string telephone, string propname)
+     {
+         Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+
+         // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
+         //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
+         SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
+
+         //MailMessage message = new MailMessage (IfShowContactInfo () ?
+         //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
+         // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
+
+         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
+             "Deatiled inquiry:<br>"
+             + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>"
+             +"<br>Property OwnerName:{10}<br> Email:{11}";
+
+         string emailbody = String.Format(mailbody, "Linda", propname, name, email, arrive, nights, adults, child, telephone, comment,ownername, owneremail);
+
+         // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
+         //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
+         MailMessage message = new MailMessage("noreply@vacations-abroad.com", "prop@vacations-abroad.com");
+         message.Subject = "New Inquiry received.";
          message.Body = emailbody;
          message.IsBodyHtml = true;
 
@@ -269,28 +276,73 @@ public class BookDBProvider
          //message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
 
          smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-        //smtpclient.UseDefaultCredentials = false;
+         //smtpclient.UseDefaultCredentials = false;
 
-        try
-        {
-            smtpclient.Send(message);
-        }
-        catch (Exception ex)
-        {
-            //  throw ex;
-            return false;
-        }
-        /*SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
 
-        MailMessage message = new MailMessage(new MailAddress("noreply@" + CommonFunctions.GetDomainName()), new MailAddress( owneremail));
-        message.Subject = "test";
-        message.Body = "dear , this is the test";
-        message.IsBodyHtml = false;
+         try
+         {
+             smtpclient.Send(message);
+         }
+         catch (Exception ex)
+         {
+             //throw ex;
+             return false;
+         }
+         return true;
+     }
 
-        message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
-        message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-        smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-        smtpclient.Send(message);*/
+     public static bool sendEmailToTraveler(string ownername, string owneremail, string name, string email, string arrive, int nights, int adults, int child, string comment, string telephone, string propname)
+     {
+         Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+
+         // SmtpClient smtpclient = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"],
+         //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
+          SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
+
+          //MailMessage message = new MailMessage (IfShowContactInfo () ?
+          //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
+          // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
+
+          string mailbody = "Dear {0}! <br>Thanks for visiting our vocation abroad.<br> This is an inquiry for the property {1} on vocation-abroad.com.<br>" +
+              "Deatiled inquiry:<br>"
+              + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
+
+          string emailbody = String.Format(mailbody, ownername, propname, name, email, arrive, nights, adults, child, telephone, comment);
+
+         // MailMessage message = new MailMessage(regex.Match(EmailAddress.Text).Success ?
+         //   EmailAddress.Text : "admin@" + CommonFunctions.GetDomainName(), ConfigurationManager.AppSettings["NewOwnerEmail"]);
+         // MailMessage message = new MailMessage(new MailAddress("noreply@vacations-abroad.com"), new MailAddress( owneremail));
+         MailMessage message = new MailMessage("noreply@vacations-abroad.com", owneremail);
+         message.Subject = "You've sent the inquiry on vacation abroad";
+          message.Body = emailbody;
+          message.IsBodyHtml = true;
+
+          message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
+          //message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
+
+          smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
+         //smtpclient.UseDefaultCredentials = false;
+
+         try
+         {
+             smtpclient.Send(message);
+         }
+         catch (Exception ex)
+         {
+             //  throw ex;
+             return false;
+         }
+         /*SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
+
+         MailMessage message = new MailMessage(new MailAddress("noreply@" + CommonFunctions.GetDomainName()), new MailAddress( owneremail));
+         message.Subject = "test";
+         message.Body = "dear , this is the test";
+         message.IsBodyHtml = false;
+
+         message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
+         message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
+         smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
+         smtpclient.Send(message);*/
         return true;
     }
 

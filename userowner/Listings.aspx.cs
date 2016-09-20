@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -9,13 +10,15 @@ using System.Web.UI.WebControls;
 public partial class userowner_Listing : CommonPage
 {
     public UserInfo userinfo;
-    public List<PropertyInform> list_inquiry= ;
+    public DataSet inquiry_set;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!AuthenticationManager.IfAuthenticated) FormsAuthentication.SignOut();
 
         userinfo = BookDBProvider.getUserInfo(userid);
+
+        inquiry_set = BookDBProvider.getInquiryInfoSet(userid);
     }
 
     protected void ListProperty_Click(object sender, EventArgs e)

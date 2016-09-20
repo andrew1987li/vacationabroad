@@ -60,11 +60,19 @@
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                      </tr>
+                                        <% if (inquiry_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = inquiry_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=inquiry_set.Tables[0].Rows[index]["PropertyID"] %></td>
+                                                <td><%=inquiry_set.Tables[0].Rows[index]["ArrivalDate"] %></td>
+                                                <td><a href="/userowner/TravelerResponse.aspx?quoteid=<%=inquiry_set.Tables[0].Rows[index]["ID"] %>"></a></td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>
