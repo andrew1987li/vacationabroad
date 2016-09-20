@@ -29,16 +29,74 @@
 .formborder{
     border:3px solid #2390ee;
     border-radius:3px;
-    background-color:#808080;
+    background-color:#f3ede3;
      padding:50px;
 }
 
 .listingpadding{
-    padding-top:100px;
+    margin-top:50px;
+    text-align:center;
+    border:3px solid black;
+    border-radius:3px;
+    background-color:#f3ede3;
+    padding-top:10px;
+    padding-bottom:10px;    
+}
+
+.textcenter{
+    text-align:center;
+}
+
+.tablepanel{
+    padding:20px;
+
+    margin:30px;
+    border:2px solid #2390ee;
 }
 
 .formpadding{
     padding:20px;
 }
 
+.formcontrolmargin{
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.formcommadbt{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.formtable{
+    background-color:#f3ede3;
+}
+
 .top_formrow { margin-top:20px; }
+
+.tab-pane {
+    background: white;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.tabback{
+    background-color:white;
+    padding-top:10px;
+
+}
+
+#exTab3{
+    background-color:white;
+    padding:5px 5px 5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.titletxt{
+    font-family:Verdana;
+    font-size:14px;
+    font-weight:bold;
+}

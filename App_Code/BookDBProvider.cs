@@ -21,6 +21,7 @@ public class UserInfo
     public string name { get; set; }
     public string email { get; set; }
     public string lastname { get; set; }
+    public string firstname { get; set; }
 
     public UserInfo()
     {
@@ -98,7 +99,7 @@ public class BookDBProvider
         {
             using (SqlConnection con = new SqlConnection(connString))
             {
-                using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName from Users  where ID=@id", con))
+                using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName,FirstName from Users  where ID=@id", con))
                 {
                     con.Open();
                     cmd.CommandType = CommandType.Text;
@@ -117,7 +118,7 @@ public class BookDBProvider
                                 userinfo.name = reader[0].ToString();
                                 userinfo.email = reader[1].ToString();
                                 userinfo.lastname = reader[2].ToString();
-                                
+                                userinfo.firstname = reader[3].ToString();
                             }
                         }
 
