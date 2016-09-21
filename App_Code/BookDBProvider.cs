@@ -15,6 +15,35 @@ using System.Web;
      
      */
 
+public class CountryInfo
+{
+    public string country { get; set; }
+    public string state { get; set; }
+    public string city { get; set; }
+    public CountryInfo()
+    {
+        country = "";
+        state = "";
+        city = "";
+    }
+}
+public class InquiryInfo
+{
+    public int id { get; set; }
+    public DateTime SentTime { get; set; }
+    public string ContactorName { get; set; }
+    public string ContactorEmail { get; set; }
+    public string ArrivalDate { get; set; }
+    public int Adults { get; set; }
+    public int Children { get; set; }
+    public string Telephone { get; set; }
+    public int UserID { get; set; }
+    public int PropertyID { get; set; }
+    public int Nights { get; set; }
+
+       //,[DepartDate]
+
+}
 
 public class UserInfo
 {
@@ -47,6 +76,96 @@ public class BookDBProvider
     {
 
     }
+
+    public static CountryInfo getCountryInfo(int prop_id)
+    {
+        //uspGetCountryInfo  @PropID
+        CountryInfo country_info = new CountryInfo();
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("uspGetCountryInfo", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@PropID", SqlDbType.Int).Value = prop_id;
+
+
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                //more code
+                                country_info.country = reader[0].ToString();
+                                country_info.state = reader[1].ToString();
+                                country_info.city = reader[2].ToString();
+                            }
+                        }
+
+                    }
+
+
+                    con.Close();
+
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // throw ex;
+            // return 0;
+        }
+        return country_info;
+    }
+
+    public static DataSet getPropertySet(int ownerid)
+    {
+        /*
+   [ID]    ,[UserID]     ,[Name]     ,[TypeID]    ,[Address]    ,[IfShowAddress]     ,[NumBedrooms]    ,[NumBaths]     ,[NumSleeps]     ,[MinimumNightlyRentalID]     ,[NumTVs]
+      ,[NumVCRs]      ,[NumCDPlayers]      ,[Description]      ,[Amenities]      ,[LocalAttractions]      ,[Rates]      ,[CancellationPolicy]
+      ,[DepositRequired]      ,[IfMoreThan7PhotosAllowed]      ,[IfApproved]      ,[CityID]      ,[IfFinished]      ,[VirtualTour]
+      ,[RatesTable]      ,[PricesCurrency]      ,[CheckIn]      ,[CheckOut]      ,[LodgingTax]      ,[TaxIncluded]      ,[DateAdded]
+      ,[DateStartViewed]      ,[DateAvailable]      ,[IfDiscounted]      ,[IfLastMinuteCancellations]      ,[LastMinuteComments]
+      ,[HomeExchangeCityID1]      ,[HomeExchangeCityID2]      ,[HomeExchangeCityID3]      ,[HomeExchangeComments]      ,[IfFreeTrialExpirationSent]
+      ,[Name2]      ,[MinNightRate]      ,[MinRateCurrency]      ,[HiNightRate]      ,[PriType]
+  */
+
+        //  SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+
+        DataSet inquiry_set = new DataSet();
+        //  adapter.Fill(customers, "Customers");
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter())
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Properties em where UserID=@id", con);
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = ownerid;
+
+                    adapter.SelectCommand = cmd;
+
+                    adapter.Fill(inquiry_set, "InquiryList");
+
+                    con.Close();
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+        return inquiry_set;
+    }
+
 
     public static DataSet getInquiryInfoSet(int ownerid)
     {
@@ -99,7 +218,62 @@ public class BookDBProvider
         return inquiry_set;
      }
 
-     public static PropertyInform getPropertyInfo(int propid)
+
+    // PHas to add the parameter PropertyOwnerID=userid
+    public static InquiryInfo getQuoteInfo(int quoteid)
+    {
+        InquiryInfo propinfo = new InquiryInfo();
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("select * from EmailQuote where ID=@id", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = quoteid;
+
+
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                //SentTime,ContactorName,ContactorEmail,ArrivalDate,DepartDate,Adults,Children,Telephone,UserID,PropertyID,PropertyOwnerID,Nights,IfReplied
+                                propinfo.id = quoteid;
+                                propinfo.ContactorName = reader["ContactorName"].ToString();
+                                propinfo.ContactorEmail = reader["ContactorEmail"].ToString();
+                                propinfo.Adults = Convert.ToInt32(reader["Adults"]);
+                                propinfo.UserID = Convert.ToInt32(reader["UserID"]);
+                                propinfo.PropertyID = Convert.ToInt32(reader["PropertyID"]);
+                                propinfo.Nights = Convert.ToInt32(reader["Nights"]);
+                                propinfo.ArrivalDate = Convert.ToDateTime(reader["ArrivalDate"]).ToString("yyyy-MM-dd");
+                            }
+                        }
+
+                    }
+
+
+                    con.Close();
+
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // throw ex;
+            // return 0;
+        }
+        return propinfo;
+
+
+    }
+
+
+    public static PropertyInform getPropertyInfo(int propid)
      {
          PropertyInform propinfo = new PropertyInform();
          try
@@ -387,6 +561,48 @@ public class BookDBProvider
            // return 0;
         }
         return ret_val;
+    }
+
+    public static bool addEmailResponse(int userid, int travelerid, int quoteid, decimal nightrate, decimal sum, decimal clea)
+    {
+        //@UserID, @TravelerID, @QuoteID, @NightRate, @Sum, @CleaningFee, @SecurityDeposit
+	//,@LoadingTax, @Balance, @Cancel30,@Cancel60, @Cancel90, @DateReplied,@IsValid
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("dbo.uspAddEmailResponse", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@SentTime", SqlDbType.DateTime).Value = DateTime.Now;
+                    cmd.Parameters.Add("@ContactorName", SqlDbType.NVarChar, 50).Value = getValue(name);
+                    cmd.Parameters.Add("@ContactorEmail", SqlDbType.NVarChar, 300).Value = getValue(email);
+                    cmd.Parameters.Add("@ArrivalDate", SqlDbType.DateTime).Value = getValue(arrive);
+                    cmd.Parameters.Add("@Adults", SqlDbType.Int).Value = getValue(adults);
+                    cmd.Parameters.Add("@Children", SqlDbType.Int).Value = getValue(child);
+                    cmd.Parameters.Add("@Comment", SqlDbType.NVarChar, 500).Value = getValue(comment);
+                    cmd.Parameters.Add("@Phone", SqlDbType.NVarChar, 50).Value = getValue(telephone);
+                    cmd.Parameters.Add("@UserID", SqlDbType.BigInt).Value = getValue(userid);
+                    cmd.Parameters.Add("@PropertyID", SqlDbType.Int).Value = getValue(propid);
+                    cmd.Parameters.Add("@PropertyOwnerID", SqlDbType.Int).Value = getValue(ownerid);
+                    cmd.Parameters.Add("@Nights", SqlDbType.Int).Value = getValue(nights);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    con.Close();
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // throw ex;
+            return false;
+        }
+
+
+        return true;
     }
 
     public static bool addEmailQuote(string name, string email, string arrive, int adults, int child, string comment, string telephone, int userid, int propid, int ownerid, int nights)

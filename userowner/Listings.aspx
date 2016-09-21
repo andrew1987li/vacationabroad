@@ -69,7 +69,15 @@
                                               <tr>
                                                 <td>Property<%=inquiry_set.Tables[0].Rows[index]["PropertyID"] %></td>
                                                 <td><%=inquiry_set.Tables[0].Rows[index]["ArrivalDate"] %></td>
-                                                <td><a href="/userowner/TravelerResponse.aspx?quoteid=<%=inquiry_set.Tables[0].Rows[index]["ID"] %>"></a></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                     Int32.TryParse(inquiry_set.Tables[0].Rows[index]["IfReplied"].ToString(), out replied);
+                                                    if ( replied != 1)
+                                                    {%><a href="/userowner/TravelerResponse.aspx?quoteid=<%=inquiry_set.Tables[0].Rows[index]["ID"] %>">Respond</a>
+                                                  <%}else { %>
+                                                     Responded
+                                                    <%} %>
+                                                </td>
                                               </tr>
                                         <%} %>
                                         <%} %>
@@ -229,9 +237,17 @@
                             </tr>
                             </thead>
                         <tbody>
+                            <% if (property_set.Tables.Count > 0)
+                                {
+                                    int count = property_set.Tables[0].Rows.Count;
+                                    int prop_id = 0;
+                                    for (int index = 0; index < count; index++)
+                                    {
+                                        prop_id = Convert.ToInt32( property_set.Tables[0].Rows[index]["ID"]);
+                                     %>
                             <tr>
-                            <td>John</td>
-                            <td>Doe</td>
+                            <td><a href="/ViewProperty.aspx"> Property<%=prop_id %></a></td>
+                            <td><% =property_set.Tables[0].Rows[index]["Name"] %></td>
                             <td>
                                 <span class="pull-right">
                                     <asp:Button ID="bt_payment" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="w" />
@@ -241,6 +257,8 @@
                                 </span>
                             </td>
                             </tr>
+                            <%}
+                               }%>
                         </tbody>
                     </table>
 

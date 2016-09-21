@@ -11,6 +11,7 @@ public partial class userowner_Listing : CommonPage
 {
     public UserInfo userinfo;
     public DataSet inquiry_set;
+    public DataSet property_set;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,6 +20,7 @@ public partial class userowner_Listing : CommonPage
         userinfo = BookDBProvider.getUserInfo(userid);
 
         inquiry_set = BookDBProvider.getInquiryInfoSet(userid);
+        property_set = BookDBProvider.getPropertySet(userid);
     }
 
     protected void ListProperty_Click(object sender, EventArgs e)
