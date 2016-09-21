@@ -567,8 +567,39 @@ public class BookDBProvider
         return ret_val;
     }
 
+    public static bool updateEmailQuoteState(int quoteid)
+    {
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("update EmailQuote set IfReplied =1 where ID=@id", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = getValue(quoteid);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    con.Close();
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // throw ex;
+            return false;
+        }
+
+
+        return true;
+    }
+
+
     public static bool addEmailResponse(int userid, int travelerid, int quoteid, decimal nightrate, decimal sum, decimal cleanfee, decimal securitydep,
-        decimal loadingtax, decimal balance, decimal can30, decimal can60, decimal can90, DateTime datereplied, int validdays, int currencytype)
+        decimal loadingtax, decimal balance, decimal can30, decimal can60, decimal can90, DateTime datereplied, int validdays, int currencytype, decimal taxrate)
     {
         //@UserID, @TravelerID, @QuoteID, @NightRate, @Sum, @CleaningFee, @SecurityDeposit
 	//,@LoadingTax, @Balance, @Cancel30,@Cancel60, @Cancel90, @DateReplied,@IsValid
@@ -594,8 +625,8 @@ public class BookDBProvider
                     cmd.Parameters.Add("@Cancel90", SqlDbType.Decimal).Value = getValue(can90);
                     cmd.Parameters.Add("@DateReplied", SqlDbType.DateTime).Value = getValue(datereplied);
                     cmd.Parameters.Add("@IsValid", SqlDbType.Int).Value = getValue(validdays);
-                    cmd.Parameters.Add("@CurrencyType", SqlDbType.Int).Value = getValue(validdays);
-
+                    cmd.Parameters.Add("@CurrencyType", SqlDbType.Int).Value = getValue(currencytype);
+                    cmd.Parameters.Add("@LoadingTaxRate", SqlDbType.Int).Value = getValue(taxrate);
                     int rows = cmd.ExecuteNonQuery();
 
                     con.Close();

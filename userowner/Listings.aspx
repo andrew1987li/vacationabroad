@@ -112,7 +112,7 @@
                                                 <%   int replied=0;
                                                      Int32.TryParse(owner_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
                                                     if ( replied != 1)
-                                                    {%><a>Quote</a> Quote
+                                                    {%><a>Quote</a> 
                                                   <%}else { %>
                                                      Quoted
                                                     <%} %>
@@ -164,7 +164,7 @@
                                         <tr>
                                             <th></th>
                                             <th>Date of Arrival</th>
-                                            <th>Link To Response</th>
+                                            <th>Response Status</th>
                                         </tr>
                                      </thead>
                                     <tbody>
@@ -207,11 +207,27 @@
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                      </tr>
+                                       <% if (traveler_response_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = traveler_response_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=traveler_response_set.Tables[0].Rows[index]["PropertyID"] %></td>
+                                                <td><%=traveler_response_set.Tables[0].Rows[index]["DateReplied"] %></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                     Int32.TryParse(traveler_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
+                                                    if ( replied != 1)
+                                                    {%><a href="/userowner/QuoteResponse.aspx?respid=<%=traveler_response_set.Tables[0].Rows[index]["ID"] %>">Quote</a>
+                                                  <%}else { %>
+                                                     Quoted
+                                                    <%} %>
+                                                </td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>
@@ -282,10 +298,10 @@
                             <td><% =property_set.Tables[0].Rows[index]["Name"] %></td>
                             <td>
                                 <span class="pull-right">
-                                    <asp:Button ID="bt_payment" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="w" />
-                                    <asp:Button ID="bt_edittxt" OnCommand="bt_edittxt_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="EditText" CommandArgument="w"/>
-                                    <asp:Button ID="bt_editphoto" OnCommand="bt_editphoto_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Edit Photo" CommandArgument="w" />
-                                    <asp:Button ID="bt_calendar" OnCommand="bt_calendar_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Calendar" CommandArgument="w" />
+                                    <asp:Button ID="bt_payment" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="<%=prop_id %>" />
+                                    <asp:Button ID="bt_edittxt" OnCommand="bt_edittxt_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="EditText" CommandArgument="%=prop_id %>"/>
+                                    <asp:Button ID="bt_editphoto" OnCommand="bt_editphoto_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Edit Photo" CommandArgument="%=prop_id %>" />
+                                    <asp:Button ID="bt_calendar" OnCommand="bt_calendar_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Calendar" CommandArgument="%=prop_id %>" />
                                 </span>
                             </td>
                             </tr>

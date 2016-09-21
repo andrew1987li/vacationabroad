@@ -31,35 +31,37 @@ public partial class userowner_Listing : CommonPage
 
     protected void ListProperty_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect(CommonFunctions.PrepareURL("EditProperty.aspx?UserID=" + userid.ToString(), "*User* Listings"));
     }
     protected void ListTour_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect(CommonFunctions.PrepareURL("EditTour.aspx?UserID=" + userid.ToString(), "*User* Listings"));
     }
 
     protected void OurCommision_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect(CommonFunctions.PrepareURL("AgentAccount.aspx?UserID=" + userid.ToString(), "*User* Account"));
     }
 
     protected void bt_payment_Command(object sender, CommandEventArgs e)
     {
-
+        //CommonFunctions.PrepareURL ("MakePayment.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}") + "&InvoiceID=-1", "*User* Listings"
+        Button btn = (Button)(sender);
+        string yourValue = btn.CommandArgument;
     }
 
     protected void bt_edittxt_Command(object sender, CommandEventArgs e)
     {
-
+        //CommonFunctions.PrepareURL ("EditProperty.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings")
     }
 
     protected void bt_editphoto_Command(object sender, CommandEventArgs e)
     {
-
+        // CommonFunctions.PrepareURL ("PropertyPhotos.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings") 
     }
 
     protected void bt_calendar_Command(object sender, CommandEventArgs e)
     {
-
+        //CommonFunctions.PrepareURL ("PropertyCalendar.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings")
     }
 }

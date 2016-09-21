@@ -28,7 +28,11 @@ public class EmailResponseInfo
 
     public int IsValid { get; set; }
     public int CurrencyType { get; set; }
-
+    public decimal LoadingTaxRate { get; set; }
+    public EmailResponseInfo()
+    {
+        ID = 0;
+    }
 }
 
 /// <summary>
