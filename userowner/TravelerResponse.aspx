@@ -38,7 +38,7 @@
                           <div class="form-group">
                             <label for="currency" class="normaltxt">Select Currency </label>
                              <asp:DropDownList ID="currency" runat="server" CssClass="form-control" ClientIDMode="Static">
-                                 <asp:ListItem Text="dollar" Value="0">
+                                 <asp:ListItem Text="dollar" Value="0" Selected="True">
                                   </asp:ListItem>
                                  <asp:ListItem Text="euro" Value="1">
                                   </asp:ListItem>

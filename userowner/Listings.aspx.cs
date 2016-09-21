@@ -10,8 +10,9 @@ using System.Web.UI.WebControls;
 public partial class userowner_Listing : CommonPage
 {
     public UserInfo userinfo;
-    public DataSet inquiry_set;
+    public DataSet inquiry_set, traveler_inquery_set;
     public DataSet property_set;
+    public DataSet owner_response_set, traveler_response_set;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,8 +20,13 @@ public partial class userowner_Listing : CommonPage
 
         userinfo = BookDBProvider.getUserInfo(userid);
 
-        inquiry_set = BookDBProvider.getInquiryInfoSet(userid);
+        inquiry_set = BookDBProvider.getInquiryInfoSet(userid,0);
+        traveler_inquery_set = BookDBProvider.getInquiryInfoSet(userid, 1);
+
         property_set = BookDBProvider.getPropertySet(userid);
+        
+        owner_response_set = BookResponseEmail.getResponseInfoSet(userid, 0); //0:User=> owner
+        traveler_response_set = BookResponseEmail.getResponseInfoSet(userid, 1);
     }
 
     protected void ListProperty_Click(object sender, EventArgs e)

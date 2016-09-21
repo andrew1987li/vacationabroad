@@ -99,11 +99,27 @@
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                      </tr>
+                                       <% if (owner_response_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = owner_response_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=owner_response_set.Tables[0].Rows[index]["PropertyID"] %></td>
+                                                <td><%=owner_response_set.Tables[0].Rows[index]["DateReplied"] %></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                     Int32.TryParse(owner_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
+                                                    if ( replied != 1)
+                                                    {%><a>Quote</a> Quote
+                                                  <%}else { %>
+                                                     Quoted
+                                                    <%} %>
+                                                </td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>
@@ -152,11 +168,27 @@
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                      </tr>
+                                       <% if (traveler_inquery_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = traveler_inquery_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=traveler_inquery_set.Tables[0].Rows[index]["PropertyID"] %></td>
+                                                <td><%=traveler_inquery_set.Tables[0].Rows[index]["ArrivalDate"] %></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                     Int32.TryParse(traveler_inquery_set.Tables[0].Rows[index]["IfReplied"].ToString(), out replied);
+                                                    if ( replied != 1)
+                                                    {%>Not Responded
+                                                  <%}else { %>
+                                                     Responded
+                                                    <%} %>
+                                                </td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>

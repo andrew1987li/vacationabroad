@@ -167,7 +167,7 @@ public class BookDBProvider
     }
 
 
-    public static DataSet getInquiryInfoSet(int ownerid)
+    public static DataSet getInquiryInfoSet(int userid, int type)
     {
         /*
   * [ID]
@@ -198,8 +198,12 @@ public class BookDBProvider
                 using (SqlDataAdapter adapter = new SqlDataAdapter())
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("select * from EmailQuote em where PropertyOwnerID=@id", con);
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = ownerid;
+                    string sql = "";
+                    if (type == 0) sql = "select * from EmailQuote em where PropertyOwnerID=@id";
+                    else if (type == 1) sql = "select * from EmailQuote em where UserID=@id";
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = userid;
 
                     adapter.SelectCommand = cmd;
 
@@ -563,7 +567,8 @@ public class BookDBProvider
         return ret_val;
     }
 
-    public static bool addEmailResponse(int userid, int travelerid, int quoteid, decimal nightrate, decimal sum, decimal clea)
+    public static bool addEmailResponse(int userid, int travelerid, int quoteid, decimal nightrate, decimal sum, decimal cleanfee, decimal securitydep,
+        decimal loadingtax, decimal balance, decimal can30, decimal can60, decimal can90, DateTime datereplied, int validdays, int currencytype)
     {
         //@UserID, @TravelerID, @QuoteID, @NightRate, @Sum, @CleaningFee, @SecurityDeposit
 	//,@LoadingTax, @Balance, @Cancel30,@Cancel60, @Cancel90, @DateReplied,@IsValid
@@ -575,18 +580,21 @@ public class BookDBProvider
                 {
                     con.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@SentTime", SqlDbType.DateTime).Value = DateTime.Now;
-                    cmd.Parameters.Add("@ContactorName", SqlDbType.NVarChar, 50).Value = getValue(name);
-                    cmd.Parameters.Add("@ContactorEmail", SqlDbType.NVarChar, 300).Value = getValue(email);
-                    cmd.Parameters.Add("@ArrivalDate", SqlDbType.DateTime).Value = getValue(arrive);
-                    cmd.Parameters.Add("@Adults", SqlDbType.Int).Value = getValue(adults);
-                    cmd.Parameters.Add("@Children", SqlDbType.Int).Value = getValue(child);
-                    cmd.Parameters.Add("@Comment", SqlDbType.NVarChar, 500).Value = getValue(comment);
-                    cmd.Parameters.Add("@Phone", SqlDbType.NVarChar, 50).Value = getValue(telephone);
-                    cmd.Parameters.Add("@UserID", SqlDbType.BigInt).Value = getValue(userid);
-                    cmd.Parameters.Add("@PropertyID", SqlDbType.Int).Value = getValue(propid);
-                    cmd.Parameters.Add("@PropertyOwnerID", SqlDbType.Int).Value = getValue(ownerid);
-                    cmd.Parameters.Add("@Nights", SqlDbType.Int).Value = getValue(nights);
+                    cmd.Parameters.Add("@UserID", SqlDbType.BigInt).Value = userid;
+                    cmd.Parameters.Add("@TravelerID", SqlDbType.BigInt).Value = travelerid;
+                    cmd.Parameters.Add("@QuoteID", SqlDbType.BigInt).Value = getValue(quoteid);
+                    cmd.Parameters.Add("@NightRate", SqlDbType.Decimal).Value = getValue(nightrate);
+                    cmd.Parameters.Add("@Sum", SqlDbType.Decimal).Value = getValue(sum);
+                    cmd.Parameters.Add("@CleaningFee", SqlDbType.Decimal).Value = getValue(cleanfee);
+                    cmd.Parameters.Add("@SecurityDeposit", SqlDbType.Decimal).Value = getValue(securitydep);
+                    cmd.Parameters.Add("@LoadingTax", SqlDbType.Decimal).Value = getValue(loadingtax);
+                    cmd.Parameters.Add("@Balance", SqlDbType.Decimal).Value = getValue(balance);
+                    cmd.Parameters.Add("@Cancel30", SqlDbType.Decimal).Value = getValue(can30);
+                    cmd.Parameters.Add("@Cancel60", SqlDbType.Decimal).Value = getValue(can60);
+                    cmd.Parameters.Add("@Cancel90", SqlDbType.Decimal).Value = getValue(can90);
+                    cmd.Parameters.Add("@DateReplied", SqlDbType.DateTime).Value = getValue(datereplied);
+                    cmd.Parameters.Add("@IsValid", SqlDbType.Int).Value = getValue(validdays);
+                    cmd.Parameters.Add("@CurrencyType", SqlDbType.Int).Value = getValue(validdays);
 
                     int rows = cmd.ExecuteNonQuery();
 
