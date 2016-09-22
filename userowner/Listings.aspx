@@ -65,10 +65,12 @@
                                             { %>
                                         <%  int count = inquiry_set.Tables[0].Rows.Count;
                                             for (int index =0;index<count; index++  )
-                                            { %>
+                                            {
+                                                string arive_date = Convert.ToDateTime(inquiry_set.Tables[0].Rows[index]["ArrivalDate"]).ToString("yyyy-MM-dd");
+                                                 %>
                                               <tr>
                                                 <td>Property<%=inquiry_set.Tables[0].Rows[index]["PropertyID"] %></td>
-                                                <td><%=inquiry_set.Tables[0].Rows[index]["ArrivalDate"] %></td>
+                                                <td><%=arive_date %></td>
                                                 <td>
                                                 <%   int replied=0;
                                                      Int32.TryParse(inquiry_set.Tables[0].Rows[index]["IfReplied"].ToString(), out replied);
@@ -110,11 +112,19 @@
                                                 <td><%=owner_response_set.Tables[0].Rows[index]["DateReplied"] %></td>
                                                 <td>
                                                 <%   int replied=0;
-                                                     Int32.TryParse(owner_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
-                                                    if ( replied != 1)
-                                                    {%><a>Quote</a> 
-                                                  <%}else { %>
-                                                     Quoted
+                                                    int validdays = 0;
+                                                    Int32.TryParse(owner_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
+                                                    Int32.TryParse(owner_response_set.Tables[0].Rows[index]["IsValid"].ToString(), out validdays);
+                                                    if (replied == 1)
+                                                    {%><a>Quoted</a> 
+                                                  <%}
+                                                    else if (validdays == 0)
+                                                    { %>
+                                                     Not Valid
+                                                    <%}
+                                                    else
+                                                    { %>
+                                                    Not Reserved
                                                     <%} %>
                                                 </td>
                                               </tr>
@@ -148,8 +158,62 @@
                             </div>
                         </div>  
                             </div>
+                          <div class="row top_formrow">
+                                    <div class="row textcenter">
+                                        MY PROPERTIES
+                                    </div>
+                                    <form id="Form1" runat="server" class="normalmargin">
+                                        <div class="row text-center">
+                                            <asp:Button ID="Button1" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="ListProperty" OnClick="ListProperty_Click" /><asp:Button ID="Button2"  OnClick="ListTour_Click" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List a Tour" />
+                                        </div>
+                                        <div class="row text-center">
+                                            <asp:Button ID="Button3"  CssClass="formcontrolmargin btn btn-primary" OnClick="OurCommision_Click"  runat="server" Text="OurCommission %" />
+                                        </div>
+
+                                        <div class="row formcontrolmargin">
+                                            <table class="table formtable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Number</th>
+                                                        <th>Name</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    </thead>
+                                                <tbody>
+                                                    <% if (property_set.Tables.Count > 0)
+                                                        {
+                                                            int count = property_set.Tables[0].Rows.Count;
+                                                            int prop_id = 0;
+                                                            for (int index = 0; index < count; index++)
+                                                            {
+                                                                prop_id = Convert.ToInt32( property_set.Tables[0].Rows[index]["ID"]);
+                                                             %>
+                                                    <tr>
+                                                    <td><a href="/ViewProperty.aspx"> Property<%=prop_id %></a></td>
+                                                    <td><% =property_set.Tables[0].Rows[index]["Name"] %></td>
+                                                    <td>
+                                                        <span class="pull-right">
+                                                            <asp:Button ID="Button4" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="<%=prop_id %>" />
+                                                            <asp:Button ID="Button5" OnCommand="bt_edittxt_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="EditText" CommandArgument="%=prop_id %>"/>
+                                                            <asp:Button ID="Button6" OnCommand="bt_editphoto_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Edit Photo" CommandArgument="%=prop_id %>" />
+                                                            <asp:Button ID="Button7" OnCommand="bt_calendar_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Calendar" CommandArgument="%=prop_id %>" />
+                                                        </span>
+                                                    </td>
+                                                    </tr>
+                                                    <%}
+                                                       }%>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </form>
+
+
+
+                                </div>
+                        
             
- 
+            
 
 			            </div>
 			            <div class="tab-pane tabback" id="2b">
@@ -173,10 +237,11 @@
                                             { %>
                                         <%  int count = traveler_inquery_set.Tables[0].Rows.Count;
                                             for (int index =0;index<count; index++  )
-                                            { %>
+                                            {  string arive_date = Convert.ToDateTime(traveler_inquery_set.Tables[0].Rows[index]["ArrivalDate"]).ToString("yyyy-MM-dd");
+                                                %>
                                               <tr>
                                                 <td>Property<%=traveler_inquery_set.Tables[0].Rows[index]["PropertyID"] %></td>
-                                                <td><%=traveler_inquery_set.Tables[0].Rows[index]["ArrivalDate"] %></td>
+                                                <td><%=arive_date %></td>
                                                 <td>
                                                 <%   int replied=0;
                                                      Int32.TryParse(traveler_inquery_set.Tables[0].Rows[index]["IfReplied"].ToString(), out replied);
@@ -218,11 +283,19 @@
                                                 <td><%=traveler_response_set.Tables[0].Rows[index]["DateReplied"] %></td>
                                                 <td>
                                                 <%   int replied=0;
-                                                     Int32.TryParse(traveler_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
-                                                    if ( replied != 1)
+                                                    int validdays = 0;
+                                                    Int32.TryParse(traveler_response_set.Tables[0].Rows[index]["IsQuoted"].ToString(), out replied);
+                                                    Int32.TryParse(traveler_response_set.Tables[0].Rows[index]["IsValid"].ToString(), out validdays);
+                                                    if (replied != 1 && validdays > 0)
                                                     {%><a href="/userowner/QuoteResponse.aspx?respid=<%=traveler_response_set.Tables[0].Rows[index]["ID"] %>">Quote</a>
-                                                  <%}else { %>
-                                                     Quoted
+                                                  <%}
+                                                    else if (replied != 1 && validdays == 0)
+                                                    { %>
+                                                     Not Valid
+                                                    <%}
+                                                        else
+                                                        { %>
+                                                    Quoted
                                                     <%} %>
                                                 </td>
                                               </tr>
@@ -263,59 +336,6 @@
             </div>
         </div>
 
-        <div class="row top_formrow">
-            <div class="row textcenter">
-                MY PROPERTIES
-            </div>
-            <form id="listbuttons" runat="server">
-                <div class="row text-center">
-                    <asp:Button ID="ListProperty" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="ListProperty" OnClick="ListProperty_Click" /><asp:Button ID="ListTour"  OnClick="ListTour_Click" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List a Tour" />
-                </div>
-                <div class="row text-center">
-                    <asp:Button ID="OurCommission"  CssClass="formcontrolmargin btn btn-primary" OnClick="OurCommision_Click"  runat="server" Text="OurCommission %" />
-                </div>
-
-                <div class="row formcontrolmargin">
-                    <table class="table formtable">
-                        <thead>
-                            <tr>
-                                <th>Number</th>
-                                <th>Name</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                        <tbody>
-                            <% if (property_set.Tables.Count > 0)
-                                {
-                                    int count = property_set.Tables[0].Rows.Count;
-                                    int prop_id = 0;
-                                    for (int index = 0; index < count; index++)
-                                    {
-                                        prop_id = Convert.ToInt32( property_set.Tables[0].Rows[index]["ID"]);
-                                     %>
-                            <tr>
-                            <td><a href="/ViewProperty.aspx"> Property<%=prop_id %></a></td>
-                            <td><% =property_set.Tables[0].Rows[index]["Name"] %></td>
-                            <td>
-                                <span class="pull-right">
-                                    <asp:Button ID="bt_payment" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="<%=prop_id %>" />
-                                    <asp:Button ID="bt_edittxt" OnCommand="bt_edittxt_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="EditText" CommandArgument="%=prop_id %>"/>
-                                    <asp:Button ID="bt_editphoto" OnCommand="bt_editphoto_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Edit Photo" CommandArgument="%=prop_id %>" />
-                                    <asp:Button ID="bt_calendar" OnCommand="bt_calendar_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Calendar" CommandArgument="%=prop_id %>" />
-                                </span>
-                            </td>
-                            </tr>
-                            <%}
-                               }%>
-                        </tbody>
-                    </table>
-
-                </div>
-            </form>
-
-
-
-        </div>
          
     </div>
 </asp:Content>

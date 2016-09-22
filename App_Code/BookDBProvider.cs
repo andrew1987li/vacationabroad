@@ -41,6 +41,7 @@ public class InquiryInfo
     public int PropertyID { get; set; }
     public int Nights { get; set; }
 
+    public int PropertyOwnerID { get; set; }
        //,[DepartDate]
 
 }
@@ -52,6 +53,7 @@ public class UserInfo
     public string email { get; set; }
     public string lastname { get; set; }
     public string firstname { get; set; }
+    public string PrimaryTelephone { get; set; }
 
     public UserInfo()
     {
@@ -254,6 +256,7 @@ public class BookDBProvider
                                 propinfo.PropertyID = Convert.ToInt32(reader["PropertyID"]);
                                 propinfo.Nights = Convert.ToInt32(reader["Nights"]);
                                 propinfo.ArrivalDate = Convert.ToDateTime(reader["ArrivalDate"]).ToString("yyyy-MM-dd");
+                                propinfo.PropertyOwnerID= Convert.ToInt32(reader["PropertyOwnerID"]);
                             }
                         }
 
@@ -276,6 +279,19 @@ public class BookDBProvider
 
     }
 
+    public static string DoFormat(decimal myNumber)
+    {
+        var s = string.Format("{0:0.00}", myNumber);
+
+        if (s.EndsWith("00"))
+        {
+            return ((int)myNumber).ToString();
+        }
+        else
+        {
+            return s;
+        }
+    }
 
     public static PropertyInform getPropertyInfo(int propid)
      {
@@ -329,7 +345,7 @@ public class BookDBProvider
          {
              using (SqlConnection con = new SqlConnection(connString))
              {
-                 using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName,FirstName from Users  where ID=@id", con))
+                 using (SqlCommand cmd = new SqlCommand("select Username,Email,LastName,FirstName,PrimaryTelephone from Users  where ID=@id", con))
                  {
                      con.Open();
                      cmd.CommandType = CommandType.Text;
@@ -349,6 +365,7 @@ public class BookDBProvider
                                  userinfo.email = reader[1].ToString();
                                  userinfo.lastname = reader[2].ToString();
                                  userinfo.firstname = reader[3].ToString();
+                                userinfo.PrimaryTelephone = reader[4].ToString();
                              }
                          }
 

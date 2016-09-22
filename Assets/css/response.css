@@ -43,6 +43,15 @@
     padding-bottom:10px;    
 }
 
+.borderpane{
+    text-align:center;
+    border:3px solid black;
+    border-radius:3px;
+    background-color:#f3ede3;
+    padding-top:10px;
+    padding-bottom:10px;    
+}
+
 .textcenter{
     text-align:center;
 }
@@ -69,7 +78,7 @@
     margin-right:10px;
 }
 
-.smallwidth{ width:30px;}
+.smallwidth{ width:60px;}
 
 .formtable{
     background-color:#f3ede3;
@@ -90,11 +99,24 @@
 
 }
 
+.normalmargin{
+    margin-left:20px;
+    margin-right:20px;
+}
+
 #exTab3{
     background-color:white;
     padding:5px 5px 5px;
     margin-left:10px;
     margin-right:10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tablerow{
+    background-color:lightblue;
 }
 
 .titletxt{

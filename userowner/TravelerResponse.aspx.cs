@@ -36,16 +36,15 @@ public partial class userowner_TravelerResponse : CommonPage
         decimal tax_val = 0; Decimal.TryParse(loadingtax.Text, out tax_val);
         decimal clean_val = 0; Decimal.TryParse(cleaningfee.Text, out clean_val);
         decimal sec_val = 0; Decimal.TryParse(secdeposit.Text, out sec_val);
-        decimal loading_val = rate_val * tax_val;
+        decimal total_sum = rate_val * inquiryinfo.Nights;
+        decimal loading_val = total_sum * tax_val/100;
 
-        totalsum.InnerText = (rate_val * inquiryinfo.Nights).ToString();
+        totalsum.InnerText = total_sum.ToString();
         loadingtaxval.InnerText = loading_val.ToString();
 
         balance.Text = (clean_val + sec_val + loading_val).ToString();
     }
-
-
-
+    
     protected void SendQuote_Click(object sender, EventArgs e)
     {
         BookDBProvider.addEmailResponse(userid, inquiryinfo.UserID, quoteid, Convert.ToDecimal(rates.Text),
@@ -55,6 +54,20 @@ public partial class userowner_TravelerResponse : CommonPage
             Convert.ToDecimal(loadingtax.Text));
 
         BookDBProvider.updateEmailQuoteState(quoteid);
+
+        UserInfo userinfo = BookDBProvider.getUserInfo(userid);
+        //  BookResponseEmail  /for owner
+        string toOwner = String.Format("Hi, {0}!<br> You have replied the inquiry for the property {1} in {2},{3},{4}.<br> Thanks.",
+            userinfo.firstname+" "+userinfo.lastname, inquiryinfo.PropertyID, countryinfo.city, countryinfo.state, countryinfo.country);
+
+        BookResponseEmail.sendEmail(userinfo.email, toOwner,"You have replied for the inquiry");
+        //To traveler
+        UserInfo traveler = BookDBProvider.getUserInfo(inquiryinfo.UserID);
+        string toTraveler = String.Format("Hi, {0}!<br> You have received the inquiry response for the property {1} in {2},{3},{4}.<br>Please log in and check. Thanks.",
+               inquiryinfo.ContactorName, inquiryinfo.PropertyID, countryinfo.city, countryinfo.state, countryinfo.country);
+
+        BookResponseEmail.sendEmail(traveler.email, toTraveler, "You have received the response from the property owner");
+        BookResponseEmail.sendEmail(inquiryinfo.ContactorEmail, toTraveler, "You have received the response from the property owner");
 
         Response.Redirect("/userowner/listings.aspx");
     }

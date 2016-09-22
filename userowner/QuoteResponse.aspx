@@ -29,7 +29,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="rates" class="normaltxt">Price Quote Nightly Rates</label>
-                              <label id="rates" class="normalval"><%=email_resp.NightRate %></label>
+                              <label id="rates" class="normalval"><%=BookDBProvider.DoFormat(email_resp.NightRate) %></label>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -45,7 +45,7 @@
                             <label class="normaltxt">Total Due to Reserve</label>
                         </div>
                         <div class="col-md-4">
-                            <label class="normalval" id="totalsum" runat="server"> <%=email_resp.Sum %></label>
+                            <label class="normalval" id="totalsum" runat="server"> <%=BookDBProvider.DoFormat(email_resp.Sum) %></label>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                             <label class="normaltxt">Cleaning Fee</label>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
-                           <label class="normalval" id="Label1" runat="server"> <%=email_resp.CleaningFee %>%</label>
+                           <label class="normalval" id="Label1" runat="server"> <%=BookDBProvider.DoFormat(email_resp.CleaningFee) %></label>
 
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <label class="normaltxt">Security Deposit</label>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
-                          <label class="normalval" id="Label2" runat="server"> <%=email_resp.SecurityDeposit %>%</label>
+                          <label class="normalval" id="Label2" runat="server"> <%=BookDBProvider.DoFormat(email_resp.SecurityDeposit) %></label>
                          </div>
                     </div>
 
@@ -73,10 +73,10 @@
                             <label class="normaltxt">Lodging Tax</label>
                         </div>
                         <div class="col-md-4">
-                               <label class="normalval" id="Label3" runat="server"> <%=email_resp.LoadingTaxRate %>%</label>
+                               <label class="normalval" id="Label3" runat="server"> <%=BookDBProvider.DoFormat(email_resp.LoadingTaxRate) %>%</label>
                         </div>
                         <div class="col-md-4">
-                            <label class="normaltxt" id="loadingtaxval" runat="server"><%=email_resp.LoadingTax %></label>
+                            <label class="normaltxt" id="loadingtaxval" runat="server"><%=BookDBProvider.DoFormat(email_resp.LoadingTax) %></label>
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@
                             <label class="normaltxt">Balance Due Upon Arrival</label>
                         </div>
                         <div class="col-md-4">
-                            <label class="normalval" id="Label4" runat="server"> <%=email_resp.Balance %></label>
+                            <label class="normalval" id="Label4" runat="server"> <%=BookDBProvider.DoFormat(email_resp.Balance) %></label>
                         </div>
                     </div>
 
@@ -95,17 +95,17 @@
 
                     <div class="row">
                         <div class="col-md-3"><label class="normaltxt">90 days prior to arrival</label></div>
-                        <div class="col-md-3"> <label class="normalval" id="Label5" runat="server"> <%=email_resp.Cancel90 %></label>
+                        <div class="col-md-3"> <label class="normalval" id="Label5" runat="server"> <%=BookDBProvider.DoFormat(email_resp.Cancel90) %>%</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3"><label class="normaltxt">60 days prior to arrival</label></div>
-                        <div class="col-md-3"> <label class="normalval" id="Label6" runat="server"> <%=email_resp.Cancel60 %></label>
+                        <div class="col-md-3"> <label class="normalval" id="Label6" runat="server"> <%=BookDBProvider.DoFormat(email_resp.Cancel60) %>%</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3"><label class="normaltxt">30 days prior to arrival</label></div>
-                        <div class="col-md-3"> <label class="normalval" id="Label7" runat="server"> <%=email_resp.Cancel30 %></label>
+                        <div class="col-md-3"> <label class="normalval" id="Label7" runat="server"> <%=BookDBProvider.DoFormat(email_resp.Cancel30) %>%</label>
                         </div>
                     </div>
 
@@ -114,12 +114,22 @@
                          %>
 
                     <div class="row top_formrow">
-                        This offer is valid for <%=email_resp.IsValid %> days from <%=cur.ToString("MM/dd/yyyy") %>.<br />
+                         This offer is valid until 5:00 pm
                         30 days prior to renter’s arrival; the funds are transferred to the property owner.
-
+                       <div class="row text-center">
+                           <input id="chk_agree" type="checkbox" runat="server" />agree to all the terms specified above. 
+                           <div class="row">
+                                <asp:Label ID="errormsg" runat="server" Text="" ForeColor="Red"></asp:Label>
+                           </div>
+                       </div>
+                       <div class="row text-center top_formrow">
+                            <asp:Button ID="SendQuote" CssClass="btn btn-primary" runat="server" Text="Reserve this Property" OnClick="SendQuote_Click" />
+                    <asp:HiddenField ID="resp_number" runat="server" />  
+                       </div>
+                                                   
                     </div>
 
-                    <asp:Button ID="SendQuote" CssClass="btn btn-primary" runat="server" Text="Send Quote to Traveler" OnClick="SendQuote_Click" />
+
                 </form>
             </div>
         </div>

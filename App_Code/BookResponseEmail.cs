@@ -4,7 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Web;
 
 
@@ -44,6 +46,75 @@ public class BookResponseEmail
     public BookResponseEmail()
     {
  
+    }
+
+    public static bool sendEmail(string dest_email, string msg,string subject) 
+    {
+        Regex regex = new Regex("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+        //   int.Parse(ConfigurationManager.AppSettings["SMTPPort"]));
+        SmtpClient smtpclient = new SmtpClient("mail.vacations-abroad.com", 25);
+
+        MailMessage message = new MailMessage("noreply@vacations-abroad.com", dest_email);
+        message.Subject = subject;
+        message.Body = msg;
+        message.IsBodyHtml = true;
+
+        message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
+        // message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
+
+        smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com", System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
+        //smtpclient.UseDefaultCredentials = false;
+
+
+        try
+        {
+            smtpclient.Send(message);
+        }
+        catch (Exception ex)
+        {
+            //throw ex;
+            return false;
+        }
+        return true;
+    }
+
+    public static object getValue(object par)
+    {
+        if (par == null)
+        {
+            return DBNull.Value;
+        }
+        return par;
+    }
+
+    public static bool updateEmailResponseState(int respid)
+    {
+        int rows = 0;
+        try
+        {
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("update EmailResponse set IsQuoted =1 where ID=@id and IsValid>0", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = getValue(respid);
+
+                     rows = cmd.ExecuteNonQuery();
+
+                    con.Close();
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // throw ex;
+            return false;
+        }
+
+        return (rows > 0) ? true : false;
     }
 
     public static EmailResponseInfo getResponseInfo(int id)
