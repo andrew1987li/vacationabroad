@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <form id="resp_form" class="formborder" runat="server">
+                <div id="resp_form" class="formborder">
                     <div class="row">
                         <div id="headertitle" class="col-md-6">Property <%=inquiryinfo.PropertyID %> in <%=countryinfo.city %>, <%=countryinfo.state %>,<%=countryinfo.country %></div>
                         <div id="headerlast" class="col-md-6"><span class="pull-right">Owner Response</span></div>
@@ -145,7 +145,7 @@
                     </div>
 
                     <asp:Button ID="SendQuote" CssClass="btn btn-primary" runat="server" Text="Send Quote to Traveler" OnClick="SendQuote_Click" />
-                </form>
+                </div>
             </div>
         </div>
     </div>

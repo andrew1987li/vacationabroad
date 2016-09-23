@@ -66,7 +66,11 @@ public partial class accounts_Login : CommonPage
                         // FormsAuthentication.RedirectFromLoginPage(usrname, false);
                         FormsAuthentication.SetAuthCookie(usrname, false);
                         if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
-                        else Response.Redirect("/myaccount.aspx");
+                        if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
+                        else if (AuthenticationManager.IfAdmin)
+                            Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
+                        else
+                            Response.Redirect("/userowner/listings.aspx");
                         //  if (backlinkpassed) Response.Redirect(CommonFunctions.PrepareURL(backlinkurl));
                         //  else Response.Redirect(CommonFunctions.PrepareURL("myaccount.aspx"));
                         /*  if (backlinkpassed) Response.Redirect(CommonFunctions.PrepareURL(backlinkurl));
@@ -163,7 +167,10 @@ public partial class accounts_Login : CommonPage
                         FormsAuthentication.SetAuthCookie(signname, false);
                         //Response.Write(backlinkurl);
                         if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"]+ backlinkurl);
-                        else Response.Redirect("/myaccount.aspx");
+                        else if (AuthenticationManager.IfAdmin)
+                            Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
+                        else
+                            Response.Redirect("/userowner/listings.aspx");
                         /* if (AuthenticationManager.IfAdmin)
                               Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
                           else
@@ -287,7 +294,11 @@ public partial class accounts_Login : CommonPage
         if ((username = AuthenticationManager.Login(usrname.Text, pwd.Text, 0)) != ""){
             FormsAuthentication.SetAuthCookie(username, false);
             if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
-            else Response.Redirect("myaccount.aspx");
+            else if (AuthenticationManager.IfAdmin)
+                Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
+            else
+                Response.Redirect(CommonFunctions.PrepareURL("Listings.aspx?UserID=" +
+                    AuthenticationManager.UserID.ToString()));
         }
 
     }

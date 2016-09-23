@@ -2,7 +2,8 @@
 
 <asp:Content ID="cont_listing" runat="server" ContentPlaceHolderID="bodycontent">
     <div class="containter">
-        <div class="row">
+      <div class="row">
+       <div class="row">
             <div class ="col-sm-2 col-sm-offset-5 listingpadding">
                 <div class ="row">
                     <strong>
@@ -162,8 +163,8 @@
                                     <div class="row textcenter">
                                         MY PROPERTIES
                                     </div>
-                                    <form id="Form1" runat="server" class="normalmargin">
-                                        <div class="row text-center">
+                                    
+                                        <div class="row text-center normalmargin">
                                             <asp:Button ID="Button1" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="ListProperty" OnClick="ListProperty_Click" /><asp:Button ID="Button2"  OnClick="ListTour_Click" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List a Tour" />
                                         </div>
                                         <div class="row text-center">
@@ -206,7 +207,7 @@
                                             </table>
 
                                         </div>
-                                    </form>
+                                    
 
 
 
@@ -335,6 +336,8 @@
 
             </div>
         </div>
+        </div>
+ 
 
          
     </div>

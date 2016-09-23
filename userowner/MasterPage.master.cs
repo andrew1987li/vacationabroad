@@ -11,4 +11,12 @@ public partial class userowner_MasterPage : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btnSearchByKeyWords_Click(object sender, EventArgs e)
+    {
+        if (tbKeyWords.Value.Length > 0)
+        {
+            Response.Redirect(CommonFunctions.PrepareURL("SearchTerms.aspx?SearchTerms=" + HttpUtility.UrlEncode(tbKeyWords.Value)), true);
+        }
+    }
 }

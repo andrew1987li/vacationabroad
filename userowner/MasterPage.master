@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Vocation Abroad</title>
         <!-- Bootstrap -->
     <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/Assets/css/customs.css" rel="stylesheet" />
@@ -18,15 +18,135 @@
     <![endif]-->
 </head>
 <body>
+
     <!-- For Javascript -->
     <script src="/Assets/js/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/Assets/js/bootstrap.min.js"></script>
     <link href="/Assets/css/response.css" rel="stylesheet" />
 
-    <asp:ContentPlaceHolder id="bodycontent" runat="server">
-        
-    </asp:ContentPlaceHolder>
+    <form id="mainforms" runat="server">
+        <div class="container">
+            <div class="row">
+
+                <div class="row normalbackground">
+                    <span class="pull-left headerbartxt">
+                        Search by Property Name,City,State or Country
+                    </span>
+
+                    <span class="pull-right">
+
+                        <input type="text" runat="server" id="tbKeyWords" placeholder="Property Search"/>
+                        <button type="button" runat="server" onserverclick="btnSearchByKeyWords_Click">
+                                 <span class="glyphicon glyphicon-search"></span>
+                        </button> 
+
+
+                    </span>
+                   
+                 </div>
+                <div class="row">
+                    <div class="navigation">
+                            <% if (AuthenticationManager.IfAuthenticated)
+                                {%>
+                            <ul class="nav nav-pills">
+                                <li style="width: 20%" class="dropdown"><a rel="nofollow" href="#" data-toggle="dropdown" class="dropdown-toggle">list a property</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/applications.aspx">TERMS</a></li>
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/MyAccount.aspx">MY ACCOUNT</a></li>
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/logout.aspx">LOG OUT</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li  class="dropdown" style="width: 20%"><a rel="nofollow" href="#" data-toggle="dropdown" class="dropdown-toggle">rent a property</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/rentalguarantee.aspx ">RENTAL GUARANTEE</a></li>
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/travelagents.aspx  ">TRAVEL AGENTS</a></li>
+                                    </ul>
+                                </li>
+                                <li  class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">About us</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/AboutUs.aspx">WHO WE ARE</a></li>
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/press/AboutLindaKJenkins.pdf">THE FOUNDER</a></li>
+                                    </ul>
+                                </li>
+                                <li  class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">our press</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/presscoverage.aspx">PRESS COVERAGE</a></li>
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/pressreleases.aspx">PRESS RELEASES</a></li>
+                                    </ul>
+                                </li>
+                                <li  class="dropdown" style="width: 19%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">stay in touch</a>
+                                    <ul class="dropdown-menu" id="stayulwith" >
+                                        <li><a rel="nofollow" href="http://69.89.14.163:86/Contacts.aspx ">CONTACT</a></li>
+                                        <li><a rel="nofollow" href="http://blog2.vacations-abroad.com">blog</a></li>
+                                        <li><a rel="nofollow" href="http://madmimi.com/signups/121428/join">newsletter</a></li>
+                                        <li><a rel="nofollow" href="https://plus.google.com/+Vacations-abroad/posts">googleplus</a></li>
+                                        <li><a rel="nofollow" href="https://twitter.com/vacationsabroad">twitter</a></li>
+                                        <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad">facebook</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <% } else {%>
+                         <ul class="nav nav-pills">
+                            <li class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">LIST a PROPERTY</a>
+                                <ul class="dropdown-menu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/applications.aspx">TERMS</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/FindOwner.aspx">CREATE AN ACCOUNT</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/Login.aspx">LOGIN</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">RENT a PROPERTY</a>
+                                <ul class="dropdown-menu">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/rentalguarantee.aspx ">RENTAL GUARANTEE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/travelagents.aspx  ">TRAVEL AGENTS</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">About us</a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/AboutUs.aspx"  data-toggle="dropdown" class="dropdown-toggle">WHO WE ARE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/press/AboutLindaKJenkins.pdf">THE FOUNDER</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="width: 20%"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">our press</a>
+                                <ul class="dropdown-menu" style="right: 5%;">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/presscoverage.aspx">PRESS COVERAGE</a></li>
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/pressreleases.aspx">PRESS RELEASES</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="width: 19%;"><a rel="nofollow" href="#"  data-toggle="dropdown" class="dropdown-toggle">stay in touch</a>
+                                <ul class="dropdown-menu" id="stayul" style="right:50px;">
+                                    <li><a rel="nofollow" href="http://69.89.14.163:86/Contacts.aspx ">CONTACT</a></li>
+                                    <li><a rel="nofollow" href="http://blog2.vacations-abroad.com">blog</a></li>
+                                    <li><a rel="nofollow" href="http://madmimi.com/signups/121428/join">newsletter</a></li>
+                                    <li><a rel="nofollow" href="https://plus.google.com/+Vacations-abroad/posts">googleplus</a></li>
+                                    <li><a rel="nofollow" href="https://twitter.com/vacationsabroad">twitter</a></li>
+                                    <li><a rel="nofollow" href="https://www.facebook.com/VacationsAbroad">facebook</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <%}%>               
+                        </div>
+                </div>
+
+                <div  class ="row text-center companyname">
+                    <a href="/">VACATIONS ABROAD</a>
+                </div>
+                 <asp:ContentPlaceHolder id="bodycontent" runat="server">
+                
+                 </asp:ContentPlaceHolder>
+                 
+            </div>
+
+        </div>
+
+
+    </form>
 
 </body>
 </html>

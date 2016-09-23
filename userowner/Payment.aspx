@@ -50,7 +50,7 @@
                       <th scope="row"><%=countryinfo.city %>,<%=countryinfo.state %>,<%=countryinfo.country %></th>
                       <td><%=inquiryinfo.PropertyID %></td>
                       <td>10</td>
-                      <td><%=BookDBProvider.DoFormat(email_resp.Sum*Convert.ToDecimal(0.1)) %></td>
+                      <td>$<%=BookDBProvider.DoFormat(email_resp.Sum*Convert.ToDecimal(0.1)) %></td>
                     </tr>
                    </tbody>
                 </table>
@@ -72,8 +72,8 @@
                     <tr>
                       <th scope="row"><%=inquiryinfo.Nights %></th>
                       <td><%=prop_info.name %></td>
-                      <td><%=email_resp.NightRate %></td>
-                      <td><%=BookDBProvider.DoFormat(email_resp.Sum) %></td>
+                      <td><%=BookDBProvider.DoFormat(email_resp.NightRate) %></td>
+                      <td>$<%=BookDBProvider.DoFormat(email_resp.Sum) %></td>
                     </tr>
                    </tbody>
                 </table>
@@ -103,7 +103,7 @@
 
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4 listingpadding text-center">
-                <form id="pay_form" runat="server">
+                <div id="pay_form">
                     <div class="row">
                         <asp:Label ID="Label1" runat="server" Text="Payment Method"></asp:Label>
                        <asp:DropDownList ID="DropDownList1" runat="server">
@@ -112,10 +112,10 @@
                        </asp:DropDownList>
                     </div>
                     <div class="row">
-                        <asp:Button ID="payment" CssClass="btn btn-primary top_formrow" runat="server" Text="Pay To Reserve" />
+                        <asp:Button ID="payment" OnClick="payment_Click" CssClass="btn btn-primary top_formrow" runat="server" Text="Pay To Reserve" />
                     </div>
                             <asp:HiddenField ID="resp_id" runat="server" />
-                </form>
+                </div>
             </div>
         </div>
     

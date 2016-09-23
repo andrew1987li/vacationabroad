@@ -1105,14 +1105,17 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
          //  Response.Write(String.Format("{0}   {1} {2} {3}", userinfo.id, userinfo.name, userinfo.email, userinfo.lastname));
           //  return;
 
-          //  BookDBProvider.sendEmailToAdmin(ownerinfo.name, ownerinfo.email,
-           //     contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+            BookDBProvider.sendEmailToAdmin(ownerinfo.name, ownerinfo.email,
+                contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
-           // BookDBProvider.sendEmailToOwner(ownerinfo.name, ownerinfo.email,
-             //   contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+            BookDBProvider.sendEmailToOwner(ownerinfo.name, ownerinfo.email,
+                contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
             BookDBProvider.sendEmailToTraveler(userinfo.name, userinfo.email,
                 contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
+
+            BookDBProvider.sendEmailToTraveler(contactname, contactemail,
+    contactname, contactemail, arrivedate, nights, adults, children, comment, phone, propinfo.name);
 
             //adding sending email to emailquote table.
             BookDBProvider.addEmailQuote(contactname, contactemail, arrivedate, adults, children, comment,phone,userid,  propertyid, ownerid,nights);

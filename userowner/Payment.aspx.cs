@@ -39,4 +39,9 @@ public partial class userowner_Payment : CommonPage
         owner_info = BookDBProvider.getUserInfo(inquiryinfo.PropertyOwnerID);
         prop_info = BookDBProvider.getPropertyInfo(inquiryinfo.PropertyID);
     }
+
+    protected void payment_Click(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/accounts/Accounts.master" AutoEventWireup="true" CodeFile="SocialSignup.aspx.cs" Inherits="accounts_SocialSignup" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/userowner/MasterPage.master" AutoEventWireup="true" CodeFile="SocialSignup.aspx.cs" Inherits="accounts_SocialSignup" %>
 
-<asp:Content runat="server" ID="LoginContent" ContentPlaceHolderID="ContentPlaceHolder1">
+<asp:Content runat="server" ID="LoginContent" ContentPlaceHolderID="bodycontent">
        
-        <div id="exTab3" class="container">	
+        <div id="exTab3">	
                <div class="row">
                    <div class="col-md-offset-3 col-md-6 ">
                         <h3 class="formpadding">
