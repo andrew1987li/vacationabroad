@@ -31,6 +31,10 @@ public partial class accounts_SocialSignup : CommonPage
 
 
         }
+        else
+        {
+            Response.Redirect("/accounts/login.aspx");
+        }
     }
 
     protected void bt_register_Click(object sender ,  EventArgs e)

@@ -45,16 +45,8 @@
                     </span>
                    
                  </div>
-
-
-                <div  class ="row text-center companyname">
-                    <a href="/">VACATIONS ABROAD</a>
-                </div>
-                 <asp:ContentPlaceHolder id="bodycontent" runat="server">
-                
-                 </asp:ContentPlaceHolder>
                 <div class="row">
-                    <div class="navigation bottommargin">
+                    <div class="navigation">
                             <% if (AuthenticationManager.IfAuthenticated)
                                 {%>
                             <ul class="nav nav-pills">
@@ -140,7 +132,15 @@
                         </ul>
                         <%}%>               
                         </div>
-                </div>                 
+                </div>
+
+                <div  class ="row text-center companyname">
+                    <a href="/">VACATIONS ABROAD</a>
+                </div>
+                 <asp:ContentPlaceHolder id="bodycontent" runat="server">
+                
+                 </asp:ContentPlaceHolder>
+                 
             </div>
 
         </div>

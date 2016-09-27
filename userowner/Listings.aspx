@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/userowner/MasterPage.master" AutoEventWireup="true" CodeFile="Listings.aspx.cs" Inherits="userowner_Listing" %>
+﻿<%@ Page Language="C#" EnableEventValidation="false" MasterPageFile="~/userowner/MasterPage.master" AutoEventWireup="true" CodeFile="Listings.aspx.cs" Inherits="userowner_Listing" %>
+<asp:Content ID="title" runat="server" ContentPlaceHolderID="titleheader">Listings</asp:Content>
 
 <asp:Content ID="cont_listing" runat="server" ContentPlaceHolderID="bodycontent">
     <div class="containter">
@@ -47,7 +48,7 @@
                     <div class="tab-content clearfix">
 			            <div class="tab-pane active tabback" id="1b">
                             <div class="row">
-                           <div class="col-sm-4">
+                           <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Current Request for a Quote
                             </div>
@@ -88,7 +89,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Current Quote Submitted
                             </div>
@@ -135,7 +136,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Quote Accepted
                             </div>
@@ -165,43 +166,52 @@
                                     </div>
                                     
                                         <div class="row text-center normalmargin">
-                                            <asp:Button ID="Button1" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="ListProperty" OnClick="ListProperty_Click" /><asp:Button ID="Button2"  OnClick="ListTour_Click" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List a Tour" />
+                                            <asp:Button ID="Button1" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List A Property" OnClick="ListProperty_Click" /><asp:Button ID="Button2"  OnClick="ListTour_Click" CssClass="formcontrolmargin btn btn-primary" runat="server" Text="List A Tour" />
                                         </div>
                                         <div class="row text-center">
-                                            <asp:Button ID="Button3"  CssClass="formcontrolmargin btn btn-primary" OnClick="OurCommision_Click"  runat="server" Text="OurCommission %" />
+                                            <asp:Button ID="Button3"  CssClass="formcontrolmargin btn btn-primary" OnClick="OurCommision_Click"  runat="server" Text="Our Commission %" />
                                         </div>
 
                                         <div class="row formcontrolmargin">
                                             <table class="table formtable">
                                                 <thead>
                                                     <tr>
-                                                        <th>Number</th>
+                                                        <th>Property</th>
                                                         <th>Name</th>
-                                                        <th></th>
+                                                        <th class="btgroupcontainer"></th>
                                                     </tr>
                                                     </thead>
                                                 <tbody>
-                                                    <% if (property_set.Tables.Count > 0)
+                                                    <%  
+                                                        if (property_set.Tables.Count > 0)
                                                         {
                                                             int count = property_set.Tables[0].Rows.Count;
-                                                            int prop_id = 0;
-                                                            for (int index = 0; index < count; index++)
-                                                            {
-                                                                prop_id = Convert.ToInt32( property_set.Tables[0].Rows[index]["ID"]);
+
                                                              %>
+                                                    <asp:Repeater runat="server" id="propertylist">
+                                                       <ItemTemplate>
                                                     <tr>
-                                                    <td><a href="/ViewProperty.aspx"> Property<%=prop_id %></a></td>
-                                                    <td><% =property_set.Tables[0].Rows[index]["Name"] %></td>
-                                                    <td>
-                                                        <span class="pull-right">
-                                                            <asp:Button ID="Button4" OnCommand="bt_payment_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Payment" CommandArgument="<%=prop_id %>" />
-                                                            <asp:Button ID="Button5" OnCommand="bt_edittxt_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="EditText" CommandArgument="%=prop_id %>"/>
-                                                            <asp:Button ID="Button6" OnCommand="bt_editphoto_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Edit Photo" CommandArgument="%=prop_id %>" />
-                                                            <asp:Button ID="Button7" OnCommand="bt_calendar_Command" CssClass="formcommadbt btn btn-primary" runat="server" Text="Calendar" CommandArgument="%=prop_id %>" />
-                                                        </span>
+                                                    <td><a href="/ViewProperty.aspx"> <%#Eval("ID") %></a></td>
+                                                    <td><%#Eval("Name") %></td>
+                                                    <td class="btgroupcontainer">
+                                                        <div class="row buttongroup">
+                                                            <asp:Button ID="Button8" OnCommand="bt_delete_Command" CssClass="formcommadbt" runat="server" Text="Delete" OnClientClick="return confirm('Are you certain you want to delete this property?');" CommandArgument='<%#Eval("ID") %>'/>
+                                                            <asp:Button ID="Button5" OnCommand="bt_edittxt_Command" CssClass="formcommadbt" runat="server" Text="Edit Text" CommandArgument='<%#Eval("ID") %>'/>
+                                                            <asp:Button ID="Button6" OnCommand="bt_editphoto_Command" CssClass="formcommadbt" runat="server" Text="Edit Photo" CommandArgument='<%#Eval("ID") %>' />
+                                                            <asp:Button ID="Button7" OnCommand="bt_calendar_Command" CssClass="formcommadbt" runat="server" Text="Calendar" CommandArgument='<%#Eval("ID") %>' />
+                                                            <asp:Button ID="Button4" OnCommand="bt_payment_Command" CssClass="formcommadbt" runat="server" Text="Payment" CommandArgument='<%#Eval("ID") %>' />
+
+
+
+                                                        </div>
+                                                                 
+                                                            
+                                                            
                                                     </td>
                                                     </tr>
-                                                    <%}
+                                                           </ItemTemplate>
+                                                    </asp:Repeater>
+                                                    <%
                                                        }%>
                                                 </tbody>
                                             </table>
@@ -219,7 +229,7 @@
 			            </div>
 			            <div class="tab-pane tabback" id="2b">
                             <div class="row">
-                          <div class="col-sm-4">
+                          <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Current Request for a Quote
                             </div>
@@ -259,7 +269,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Current Quote Submitted
                             </div>
@@ -306,7 +316,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="row textcenter">
                                  Quote Accepted
                             </div>

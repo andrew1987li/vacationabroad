@@ -27,6 +27,9 @@ public partial class userowner_Listing : CommonPage
         
         owner_response_set = BookResponseEmail.getResponseInfoSet(userid, 0); //0:User=> owner
         traveler_response_set = BookResponseEmail.getResponseInfoSet(userid, 1);
+
+        propertylist.DataSource = property_set;
+        propertylist.DataBind();
     }
 
     protected void ListProperty_Click(object sender, EventArgs e)
@@ -47,21 +50,43 @@ public partial class userowner_Listing : CommonPage
     {
         //CommonFunctions.PrepareURL ("MakePayment.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}") + "&InvoiceID=-1", "*User* Listings"
         Button btn = (Button)(sender);
-        string yourValue = btn.CommandArgument;
+        string prop_id = btn.CommandArgument;
+        Response.Redirect(CommonFunctions.PrepareURL(String.Format("MakePayment.aspx?UserID={0}&PropertyID={1}&InvoiceID=-1",userid, prop_id), "*User* Listings"));
     }
 
     protected void bt_edittxt_Command(object sender, CommandEventArgs e)
     {
         //CommonFunctions.PrepareURL ("EditProperty.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings")
+        Button btn = (Button)(sender);
+        string prop_id = btn.CommandArgument;
+        Response.Redirect(CommonFunctions.PrepareURL(String.Format("EditProperty.aspx?UserID={0}&PropertyID={1}", userid, prop_id), "*User* Listings"));
+
     }
 
     protected void bt_editphoto_Command(object sender, CommandEventArgs e)
     {
         // CommonFunctions.PrepareURL ("PropertyPhotos.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings") 
+        Button btn = (Button)(sender);
+        string prop_id = btn.CommandArgument;
+        Response.Redirect(CommonFunctions.PrepareURL(String.Format("PropertyPhotos.aspx?UserID={0}&PropertyID={1}", userid, prop_id), "*User* Listings"));
+
     }
 
     protected void bt_calendar_Command(object sender, CommandEventArgs e)
     {
         //CommonFunctions.PrepareURL ("PropertyCalendar.aspx?UserID=" + userid.ToString () + "&PropertyID=" + DataBinder.Eval(Container.DataItem, "ID", "{0:d}"), "*User* Listings")
+        Button btn = (Button)(sender);
+        string prop_id = btn.CommandArgument;
+        Response.Redirect(CommonFunctions.PrepareURL(String.Format("PropertyCalendar.aspx?UserID={0}&PropertyID={1}", userid, prop_id), "*User* Listings"));
+     //   Response.Write(CommonFunctions.PrepareURL(String.Format("PropertyCalendar.aspx?UserID={0}&PropertyID={1}", userid, prop_id), "*User* Listings"));
+
+    }
+    protected void bt_delete_Command(object sender, CommandEventArgs e)
+    {
+        //"DeleteProperty.aspx?PropertyID=" + propertyid + "&BackLink=<%= System.Web.HttpUtility.UrlEncode (Request.Url.ToString ()) %>"
+        Button btn = (Button)(sender);
+        string prop_id = btn.CommandArgument;
+        Response.Redirect(CommonFunctions.PrepareURL(String.Format("DeleteProperty.aspx?UserID={0}&PropertyID={1}", userid, prop_id), System.Web.HttpUtility.UrlEncode(Request.Url.ToString())));
+
     }
 }

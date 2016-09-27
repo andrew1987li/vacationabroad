@@ -76,8 +76,18 @@
 .formcommadbt{
     font-size:10px;
     font-family:Verdana;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left:1px;
+    margin-right:1px;
+    float:right;
+}
+
+.buttongroup{
+    margin-right:0px;
+}
+.btgroupcontainer{
+    width:350px;
+    background-color:white;
+    border:none;
 }
 
 .pagewidth{
@@ -172,4 +182,17 @@ ul {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.navigation{
+    border-top:1px solid #e1d4c0;
+    color:#323e4f;
+}
+
+.bottommargin{
+    margin-bottom:200px;
+}
+
+.navigation ul li:hover{
+    color:azure;
 }

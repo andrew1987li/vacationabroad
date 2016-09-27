@@ -26,8 +26,7 @@ public partial class accounts_Login : CommonPage
     {
         if (User!=null && User.Identity.IsAuthenticated)
         {
-            Response.Redirect(CommonFunctions.PrepareURL("Listings.aspx?UserID=" + 
-                AuthenticationManager.UserID.ToString()));
+            Response.Redirect("/userowner/listings.aspx");
         }
 
         FaceBookConnect.API_Key = ConfigurationManager.AppSettings["FacebookAppId"];
