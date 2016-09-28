@@ -7,16 +7,16 @@
 <%@ Import Namespace="System.Threading" %>
 
 <script RunAt="server">
-	protected System.Threading.Timer timer = null;
+    protected System.Threading.Timer timer = null;
 
-	protected void Application_PreSendRequestHeaders (object sender, EventArgs e)
-	{
-		foreach (string cookiename in Response.Cookies)
-			Response.Cookies[cookiename].Path = "/; HttpOnly";
-	}
+    protected void Application_PreSendRequestHeaders (object sender, EventArgs e)
+    {
+        foreach (string cookiename in Response.Cookies)
+            Response.Cookies[cookiename].Path = "/; HttpOnly";
+    }
 
-	protected void Application_Error (object sender, EventArgs e)
-	{
+    protected void Application_Error (object sender, EventArgs e)
+    {
 
         Exception objErr = Server.GetLastError().GetBaseException();
         string strPage = Request.Url.ToString();
@@ -40,25 +40,25 @@
         {
             //Utility.SendMail("steve@digitaltoolfactory.net", "There has been an error on the Vacations-Abroad.com Site", sb.ToString());
         }
-        
+
         //Exception error = Server.GetLastError ();
         //while (error is System.Web.HttpUnhandledException)
         //    error = error.InnerException;
-		//if (error == null)
-			//return;
-//
-		// if (CommonFunctions.Connection.State == ConnectionState.Closed)
-			// CommonFunctions.Connection.Open ();
+        //if (error == null)
+        //return;
+        //
+        // if (CommonFunctions.Connection.State == ConnectionState.Closed)
+        // CommonFunctions.Connection.Open ();
 
-		//ProcessException (error, Request);		
+        //ProcessException (error, Request);		
 
-		//Server.ClearError ();
+        //Server.ClearError ();
 
-		//Response.Redirect (CommonFunctions.PrepareURL ("InternalError.aspx"));
-	}
+        //Response.Redirect (CommonFunctions.PrepareURL ("InternalError.aspx"));
+    }
 
-	private void ProcessException (Exception error, HttpRequest Request)
-	{
+    private void ProcessException (Exception error, HttpRequest Request)
+    {
         using(SqlConnection connection = CommonFunctions.GetConnection()) {
             connection.Open();
             try {
@@ -66,7 +66,7 @@
                 DataSet MainDataSet = new DataSet();
 
                 // lock(CommonFunctions.Connection)
-                    ExceptionsAdapter.FillSchema(MainDataSet, SchemaType.Mapped, "Exceptions");
+                ExceptionsAdapter.FillSchema(MainDataSet, SchemaType.Mapped, "Exceptions");
 
                 DataRow newexception = MainDataSet.Tables["Exceptions"].NewRow();
 
@@ -95,38 +95,38 @@
                 MainDataSet.Tables["Exceptions"].Rows.Add(newexception);
 
                 // lock(CommonFunctions.Connection)
-                    ExceptionsAdapter.Update(MainDataSet, "Exceptions");
-                    connection.Close();
+                ExceptionsAdapter.Update(MainDataSet, "Exceptions");
+                connection.Close();
             }
             catch(Exception) {
             }
             connection.Close();
         }
-	}  
+    }
 
 
-	protected void Application_BeginRequest (object sender, EventArgs e)
-	{
-	
+    protected void Application_BeginRequest (object sender, EventArgs e)
+    {
+
         //if (HttpContext.Current.Request.IsSecureConnection.Equals(false) && HttpContext.Current.Request.IsLocal.Equals(false))
         //{
         //    Response.Redirect("https://" + Request.ServerVariables["HTTP_HOST"] + HttpContext.Current.Request.RawUrl);
         //}
-     /*   if (Request.QueryString["code"] != null)
-        {
-           // Response.Cookies.Add(fbdata);
-            HttpCookie myCookie = new HttpCookie("fbdata");
-            myCookie.Value = Request.QueryString["code"];
-            // Set the cookie expiration date.
-            //myCookie.Expires = DateTime.Now.AddDays(1); // For a cookie to effectively never expire
+        /*   if (Request.QueryString["code"] != null)
+           {
+              // Response.Cookies.Add(fbdata);
+               HttpCookie myCookie = new HttpCookie("fbdata");
+               myCookie.Value = Request.QueryString["code"];
+               // Set the cookie expiration date.
+               //myCookie.Expires = DateTime.Now.AddDays(1); // For a cookie to effectively never expire
 
-            // Add the cookie.
-            Response.Cookies.Add(myCookie);
+               // Add the cookie.
+               Response.Cookies.Add(myCookie);
 
-        }
-	*/
+           }
+       */
 
-		//SqlConnection Connection = new SqlConnection (ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        //SqlConnection Connection = new SqlConnection (ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         //if (CommonFunctions.Connection.State == ConnectionState.Closed)
         //    CommonFunctions.Connection.Open ();
 
@@ -134,7 +134,7 @@
         string wwwtest = Request.Url.ToString();
         //Label1.Text = wwwtest;
 
-        
+
         //if (wwwtest.IndexOf("www.vacations-abroad") == -1)
         //{
         //    if (sOldPath == "/default.aspx") sOldPath = "";
@@ -144,25 +144,29 @@
         //    Response.AddHeader("Location", redirtext);
         //    Response.End();
         //};
-        
-		//Nimesh www Logic
-		//string URL = Context.Request.Url.AbsoluteUri.ToString();
-		//string host = Context.Request.Url.Host.ToLower();
-		//if (false == host.StartsWith("www."))
-		//{
-		 //Uri uri = new Uri(URL);
-		 //UriBuilder builder = new UriBuilder(uri);
-		 //builder.Host = "www." + builder.Host;
-		 //Uri result = builder.Uri;
-		 //URL = result.AbsoluteUri.ToString();
 
-		 //HttpContext.Current.Response.Clear();
-		 //HttpContext.Current.Response.Status = "301 Moved Permanently";
-		 //HttpContext.Current.Response.AddHeader("Location", URL);
-		//}
+        //Nimesh www Logic
+        //string URL = Context.Request.Url.AbsoluteUri.ToString();
+        //string host = Context.Request.Url.Host.ToLower();
+        //if (false == host.StartsWith("www."))
+        //{
+        //Uri uri = new Uri(URL);
+        //UriBuilder builder = new UriBuilder(uri);
+        //builder.Host = "www." + builder.Host;
+        //Uri result = builder.Uri;
+        //URL = result.AbsoluteUri.ToString();
 
-        
-        
+        //HttpContext.Current.Response.Clear();
+        //HttpContext.Current.Response.Status = "301 Moved Permanently";
+        //HttpContext.Current.Response.AddHeader("Location", URL);
+        //}
+        string rawurl = Request.Path.ToLower();
+        if (rawurl.Contains("ajaxhelper.aspx") || rawurl.Contains("webservice.asmx"))
+        {
+            return;
+        }
+
+
         using(SqlConnection connection = CommonFunctions.GetConnection()) {
             connection.Open();
             // mod by LMG 6-5-08
@@ -176,7 +180,7 @@
             if(timer == null)
                 timer = new System.Threading.Timer(new TimerCallback(TimerCallback), null, 0,
                     Convert.ToInt32(ConfigurationManager.AppSettings["Timeout"]) * 60 * 1000);
-// This is apparently doing what an HttpHandler is meant to do.
+            // This is apparently doing what an HttpHandler is meant to do.
             // the gets the current Full URL
             HttpContext incoming = HttpContext.Current;
             string oldpath = Request.Path;
@@ -202,11 +206,11 @@
                 return;
             }
             //  I believe that this part basically scans the URL?  to see if there's a match for city, state, or country
-            
+
             Regex regex1 = new Regex(@"([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/(\d+)/default.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches1 = regex1.Matches(oldpath);
 
-            
+
             if(matches1.Count > 0) {
                 try {
                     string country = matches1[0].Groups[1].ToString();
@@ -227,7 +231,7 @@
 
                     if (city.Contains("tour"))
                     {
-                       
+
                         incoming.RewritePath(CommonFunctions.PrepareURL("viewtour.aspx?tourid=" + propnumber));
                         return;
                     }
@@ -258,14 +262,14 @@
                                     incoming.RewritePath("http://www.Microsoft.com");
 
                                 }
-                    }  
+                    }
                 }
-                catch(Exception exc) {                    
+                catch(Exception exc) {
                     ProcessException(exc, null);
                 }
             }
 
-                      
+
             Regex regex10 = new Regex(@"([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/page(\d+).aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches10 = regex10.Matches(oldpath);
 
@@ -306,7 +310,7 @@
                             return;
                         }
                     }
-                                      
+
                 }
                 catch (Exception exc)
                 {
@@ -334,10 +338,10 @@
                         tours = true;
 
                         GetIDsAdapter.SelectCommand.Parameters["@City"].Value = city.Replace("tours", "").Trim();
-                        
+
                     }
                     else
-                    GetIDsAdapter.SelectCommand.Parameters["@City"].Value = city;
+                        GetIDsAdapter.SelectCommand.Parameters["@City"].Value = city;
 
                     GetIDsAdapter.SelectCommand.Parameters["@PropertyID"].Value = -1;
 
@@ -383,7 +387,7 @@
                             }
                         }
                     }
-                   
+
                 }
                 catch (Exception exc)
                 {
@@ -393,12 +397,12 @@
 
 
 
-           
-            
-            
-            
-            
-// This forwards to the STATE if the State is found
+
+
+
+
+
+            // This forwards to the STATE if the State is found
             Regex regex3 = new Regex(@"([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/default.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches3 = regex3.Matches(oldpath);
             if(matches3.Count > 0) {
@@ -440,15 +444,15 @@
                                 ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
                                "&category=" + state.ToString()));
                             return;
-                        }    
+                        }
                     }
                 }
                 catch(Exception exc) {
                     ProcessException(exc, null);
                 }
             }
-	    
-	    //All properties url 
+
+            //All properties url 
             Regex regex9 = new Regex(@"([a-zA-Z0-9_\- ]+)/countryproperties.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches9 = regex9.Matches(oldpath);
             if (matches9.Count > 0)
@@ -467,28 +471,28 @@
                     GetIDsAdapter.SelectCommand.Parameters["@PropertyID"].Value = -1;
 
                     //lock(CommonFunctions.Connection)
-                        if(GetIDsAdapter.Fill(MainDataSet) > 0) {
-                            //CommonFunctions.Connection.Close ();
-                            incoming.RewritePath(CommonFunctions.PrepareURL("countryproperties.aspx?CountryID=" +
-                                ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
-                                ((querystring.Length > 0) ? "&" + querystring : "")));
-                            return;
-                        }
+                    if(GetIDsAdapter.Fill(MainDataSet) > 0) {
+                        //CommonFunctions.Connection.Close ();
+                        incoming.RewritePath(CommonFunctions.PrepareURL("countryproperties.aspx?CountryID=" +
+                            ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
+                            ((querystring.Length > 0) ? "&" + querystring : "")));
+                        return;
+                    }
                 }
                 catch (Exception exc)
                 {
                     ProcessException(exc, null);
                 }
             }
-	    
-	    //All properties paging 
+
+            //All properties paging 
             Regex regex7 = new Regex(@"([a-zA-Z0-9_\- ]+)/page(\d+).aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches7 = regex7.Matches(oldpath);
             if (matches7.Count > 0)
             {
                 //try
                 {
-                    string country = matches7[0].Groups[1].ToString();               
+                    string country = matches7[0].Groups[1].ToString();
                     string page = matches7[0].Groups[2].ToString();
 
                     //if (CommonFunctions.Connection.State == ConnectionState.Closed)
@@ -501,15 +505,15 @@
                     GetIDsAdapter.SelectCommand.Parameters["@PropertyID"].Value = -1;
 
                     //lock(CommonFunctions.Connection)
-                        if(GetIDsAdapter.Fill(MainDataSet) > 0) {
-                            //CommonFunctions.Connection.Close ();
-                            incoming.RewritePath(CommonFunctions.PrepareURL("countryproperties.aspx?CountryID=" +
-                                ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
-                                ((querystring.Length > 0) ? "&" + querystring : "") +
-                            "&pageid=" + page.ToString()));
-	    throw new Exception(page);
+                    if(GetIDsAdapter.Fill(MainDataSet) > 0) {
+                        //CommonFunctions.Connection.Close ();
+                        incoming.RewritePath(CommonFunctions.PrepareURL("countryproperties.aspx?CountryID=" +
+                            ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
+                            ((querystring.Length > 0) ? "&" + querystring : "") +
+                        "&pageid=" + page.ToString()));
+                        throw new Exception(page);
 
-                        }
+                    }
                 }
                 //catch (Exception exc)
                 //{
@@ -528,8 +532,8 @@
                     string state = matches33[0].Groups[2].ToString();
                     string city = matches33[0].Groups[3].ToString();
                     string apartment = matches33[0].Groups[4].ToString();
-                    
-                    
+
+
                     //if (CommonFunctions.Connection.State == ConnectionState.Closed)
                     //CommonFunctions.Connection.Open ();
 
@@ -544,21 +548,21 @@
                     {
                         //CommonFunctions.Connection.Close ();
                         incoming.RewritePath(CommonFunctions.PrepareURL("CityList.aspx?CityID=" +
-                            ((int)MainDataSet.Tables[0].Rows[0]["CityID"]).ToString() + "&category=" + apartment.ToString() + 
+                            ((int)MainDataSet.Tables[0].Rows[0]["CityID"]).ToString() + "&category=" + apartment.ToString() +
                             ((querystring.Length > 0) ? "&" + querystring : "")));
                         return;
                     }
-                    
+
                 }
                 catch (Exception exc)
                 {
                     ProcessException(exc, null);
                 }
             }
-            
-            
-            
-            
+
+
+
+
             Regex regexMapsCat = new Regex(@"([a-zA-Z_\- ]+)/([a-zA-Z_\- ]+)/Maps.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matchesMapsCat = regexMapsCat.Matches(oldpath);
             if (matchesMapsCat.Count > 0)
@@ -581,7 +585,7 @@
                             ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
                             "&StateProvinceID=" + ((int)MainDataSet.Tables[0].Rows[0]["StateProvinceID"]).ToString()));
                         return;
-                    }  
+                    }
                 }
                 catch (Exception exc)
                 {
@@ -597,9 +601,9 @@
                 try
                 {
                     string country = matchesSG[0].Groups[1].ToString();
-                    string state = matchesSG[0].Groups[2].ToString();                    
+                    string state = matchesSG[0].Groups[2].ToString();
                     string statePg = matchesSG[0].Groups[3].ToString();
-                    
+
                     GetIDsAdapter.SelectCommand.Parameters["@Region"].Value = "";
                     GetIDsAdapter.SelectCommand.Parameters["@Country"].Value = country;
                     GetIDsAdapter.SelectCommand.Parameters["@StateProvince"].Value = state;
@@ -645,7 +649,7 @@
                             ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
                            "&pageid=" + page.ToString()));
                         return;
-                    }                    
+                    }
                 }
                 catch (Exception exc)
                 {
@@ -661,10 +665,10 @@
                 {
                     string country = matchesCal[0].Groups[1].ToString();
                     string propID = matchesCal[0].Groups[2].ToString();
-                    
-                        incoming.RewritePath(CommonFunctions.PrepareURL("viewCalendar.aspx?propertyID=" + propID));
-                        
-                        return;
+
+                    incoming.RewritePath(CommonFunctions.PrepareURL("viewCalendar.aspx?propertyID=" + propID));
+
+                    return;
                     //}
                 }
                 catch (Exception exc)
@@ -705,11 +709,11 @@
                     ProcessException(exc, null);
                 }
             }
-// This forwards to the REGION if the region is found
+            // This forwards to the REGION if the region is found
             Regex regex4 = new Regex(@"([a-zA-Z0-9_\- ]+)/default.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches4 = regex4.Matches(oldpath);
             if(matches4.Count > 0) {
-                try {                                       
+                try {
                     string region = matches4[0].Groups[1].ToString();
 
                     //UNIQUE URL FOR CONTACT PAGE CODE...USES SAME URL TYPE AS REGION
@@ -722,7 +726,7 @@
                     }
                     else
                     {
-                       
+
 
                         GetIDsAdapter.SelectCommand.Parameters["@Region"].Value = region;
                         GetIDsAdapter.SelectCommand.Parameters["@Country"].Value = "";
@@ -743,8 +747,8 @@
                             return;
                         }
                     }
-                    }
-                
+                }
+
                 catch(Exception exc) {
                     ProcessException(exc, null);
                 }
@@ -761,13 +765,13 @@
                     GetIDsAdapter.SelectCommand.Parameters["@PropertyID"].Value = -1;
 
                     //lock(CommonFunctions.Connection)
-                        if(GetIDsAdapter.Fill(MainDataSet) > 0) {
-                            //CommonFunctions.Connection.Close ();
-                            incoming.RewritePath(CommonFunctions.PrepareURL("CountryList.aspx?CountryID=" +
-                                ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
-                                ((querystring.Length > 0) ? "&" + querystring : "")));
-                            return;
-                        }
+                    if(GetIDsAdapter.Fill(MainDataSet) > 0) {
+                        //CommonFunctions.Connection.Close ();
+                        incoming.RewritePath(CommonFunctions.PrepareURL("CountryList.aspx?CountryID=" +
+                            ((int)MainDataSet.Tables[0].Rows[0]["CountryID"]).ToString() +
+                            ((querystring.Length > 0) ? "&" + querystring : "")));
+                        return;
+                    }
                 }
                 catch(Exception exc) {
                     ProcessException(exc, null);
@@ -781,17 +785,17 @@
             {
                 try
                 {
-                    string propID = matchesRev[0].Groups[1].ToString();                    
-                   
+                    string propID = matchesRev[0].Groups[1].ToString();
+
                     incoming.RewritePath(CommonFunctions.PrepareURL("Reviews.aspx?propID=" + propID));
-                        return;                   
+                    return;
                 }
                 catch (Exception exc)
                 {
                     ProcessException(exc, null);
                 }
             }
-            
+
             //write reviews  .../123/newreview.aspx
             Regex regexRevW = new Regex(@"(\d+)/newreview.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matchesRevW = regexRevW.Matches(oldpath);
@@ -809,7 +813,7 @@
                     ProcessException(exc, null);
                 }
             }
-            
+
             // county page
             Regex regexCounty = new Regex(@"([a-zA-Z_\- ]+)/Holiday-Rentals/([a-zA-Z0-9_\- ]+)/default.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matchesCounty = regexCounty.Matches(oldpath);
@@ -822,13 +826,13 @@
                     string county = matchesCounty[0].Groups[2].ToString();
 
                     string[] vTemp;
-                    
+
                     if(county.Contains("-vacation"))
-                    vTemp = Regex.Split(county, "-vacation");
+                        vTemp = Regex.Split(county, "-vacation");
                     else
                         vTemp = Regex.Split(county, "-Vacation");
-                    
-                    
+
+
                     DBConnection objCounty = new DBConnection();
                     DataTable dtC = new DataTable();
 
@@ -847,12 +851,12 @@
                     //GetIDsAdapter.SelectCommand.Parameters["@PropertyID"].Value = -1;
 
                     //lock(CommonFunctions.Connection)
-                    
+
                     if (dtC.Rows.Count > 0)
                     {
                         GetIDsAdapter.Fill(MainDataSet);
                         incoming.RewritePath(CommonFunctions.PrepareURL("CountiesList.aspx?county=" + dtC.Rows[0]["id"].ToString()));
-                            
+
                         return;
                     }
                 }
@@ -862,8 +866,8 @@
                 }
             }
 
-           
-            
+
+
             Regex regex5 = new Regex(@"(\d+)/default.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matches5 = regex5.Matches(oldpath);
             if(matches5.Count > 0) {
@@ -880,21 +884,21 @@
                 catch(Exception exc) {
                     ProcessException(exc, null);
                 }
-            }            
+            }
 
             int ind = oldpath.IndexOf(".aspx");
             if(ind != -1) {
-                
+
                 string aspxfile = oldpath.Substring(oldpath.LastIndexOf("/") + 1);
-/*
-                if(File.Exists(Request.PhysicalApplicationPath + aspxfile)) {
-                    //CommonFunctions.Connection.Close ();
-                    incoming.RewritePath(CommonFunctions.PrepareURL(aspxfile +
-                        ((querystring.Length > 0) ? "?" + querystring : "")));
-                    return;
-                }
-                */
-               if(File.Exists(Request.PhysicalPath + aspxfile)) {
+                /*
+                                if(File.Exists(Request.PhysicalApplicationPath + aspxfile)) {
+                                    //CommonFunctions.Connection.Close ();
+                                    incoming.RewritePath(CommonFunctions.PrepareURL(aspxfile +
+                                        ((querystring.Length > 0) ? "?" + querystring : "")));
+                                    return;
+                                }
+                                */
+                if(File.Exists(Request.PhysicalPath + aspxfile)) {
                     //CommonFunctions.Connection.Close ();
                     incoming.RewritePath(CommonFunctions.PrepareURL(aspxfile +
                         ((querystring.Length > 0) ? "?" + querystring : "")));
@@ -913,22 +917,22 @@
             //CommonFunctions.Connection.Close ();
             connection.Close();
         }
-	}
+    }
 
-	private string First (string str, int characters)
-	{
-		if (str.Length > characters)
-			return str.Substring (0, characters);
-		else
-			return str;
-	}
+    private string First (string str, int characters)
+    {
+        if (str.Length > characters)
+            return str.Substring (0, characters);
+        else
+            return str;
+    }
 
-	private bool timerrunning = false;
+    private bool timerrunning = false;
 
-	private void TimerCallback (object obj)
-	{
-		try
-		{
+    private void TimerCallback (object obj)
+    {
+        try
+        {
             if(!timerrunning) {
                 timerrunning = true;
 
@@ -1056,7 +1060,7 @@
 
                     SqlDataAdapter CommissionsAdapter = CommonFunctions.PrepareAdapter(connection,
                         "SELECT * FROM Commissions");
-// this is possibly the trial setting - it looks as though it's comparing the dateStartViewed between 55 & 60 , this would be 2 months per 30/month (changed it from 55 & 60 , to 115 & 120 (buffer room apparently)- LMG
+                    // this is possibly the trial setting - it looks as though it's comparing the dateStartViewed between 55 & 60 , this would be 2 months per 30/month (changed it from 55 & 60 , to 115 & 120 (buffer room apparently)- LMG
                     SqlDataAdapter FreeTrialNotificationsAdapter = CommonFunctions.PrepareAdapter(connection,
                         "SELECT ID, Name, IfFreeTrialExpirationSent, (SELECT TOP 1 FirstName FROM Users" +
                         " WHERE Properties.UserID = Users.ID) AS FirstName, (SELECT TOP 1 LastName FROM Users" +
@@ -1088,7 +1092,7 @@
                     //CommonFunctions.Connection.Open ();
 
                     //lock(CommonFunctions.Connection)
-                        PeriodicAdapter.Fill(MainDataSet, "PeriodicOperations");
+                    PeriodicAdapter.Fill(MainDataSet, "PeriodicOperations");
                     if((MainDataSet.Tables["PeriodicOperations"].Rows.Count > 0) &&
                             ((DateTime.Now - (DateTime)MainDataSet.Tables["PeriodicOperations"].Rows[0]["TimeRan"]).Minutes <
                             Convert.ToInt32(ConfigurationManager.AppSettings["Timeout"]))) {
@@ -1098,9 +1102,9 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            InvoicesToRenewAdapter.Fill(MainDataSet, "InvoicesToRenew");
+                        InvoicesToRenewAdapter.Fill(MainDataSet, "InvoicesToRenew");
                         //lock(CommonFunctions.Connection)
-                            InvoicesAdapter.FillSchema(MainDataSet, SchemaType.Source, "Invoices");
+                        InvoicesAdapter.FillSchema(MainDataSet, SchemaType.Source, "Invoices");
                         MainDataSet.Tables["Invoices"].Columns["ID"].ReadOnly = false;
                         MainDataSet.Tables["Invoices"].PrimaryKey = null;
                         MainDataSet.Tables["Invoices"].Columns["ID"].Unique = false;
@@ -1117,7 +1121,7 @@
                             MainDataSet.Tables["Invoices"].Rows.Add(newinvoice);
 
                             //lock(CommonFunctions.Connection)
-                                InvoicesAdapter.Update(MainDataSet, "Invoices");
+                            InvoicesAdapter.Update(MainDataSet, "Invoices");
 
                             SqlCommand getidentity = new SqlCommand("SELECT @@IDENTITY AS ID", connection);
 
@@ -1125,7 +1129,7 @@
                         }
 
                         //lock(CommonFunctions.Connection)
-                            EmailsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Emails");
+                        EmailsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Emails");
                         foreach(DataRow datarow in MainDataSet.Tables["InvoicesToRenew"].Rows) {
                             int invoiceid = -1;
 
@@ -1165,9 +1169,9 @@
 
                             smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com",
                             System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-                            
+
                             smtpclient.UseDefaultCredentials = false;
-                            
+
 
                             message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
                             message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
@@ -1192,7 +1196,7 @@
                         }
 
                         //lock(CommonFunctions.Connection)
-                            EmailsAdapter.Update(MainDataSet, "Emails");
+                        EmailsAdapter.Update(MainDataSet, "Emails");
                     }
                     catch(Exception exc) {
                         ProcessException(exc, null);
@@ -1200,11 +1204,11 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            InvoicesToDeleteAdapter.Fill(MainDataSet, "InvoicesToDelete");
+                        InvoicesToDeleteAdapter.Fill(MainDataSet, "InvoicesToDelete");
                         foreach(DataRow datarow in MainDataSet.Tables["InvoicesToDelete"].Rows)
                             datarow.Delete();
                         //lock(CommonFunctions.Connection)
-                            InvoicesToDeleteAdapter.Update(MainDataSet, "InvoicesToDelete");
+                        InvoicesToDeleteAdapter.Update(MainDataSet, "InvoicesToDelete");
                     }
                     catch(Exception exc) {
                         ProcessException(exc, null);
@@ -1212,7 +1216,7 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            FinishedAuctionsAdapter.Fill(MainDataSet, "Auctions");
+                        FinishedAuctionsAdapter.Fill(MainDataSet, "Auctions");
                         foreach(DataRow datarow in MainDataSet.Tables["Auctions"].Rows) {
                             if((datarow["HighestBidderID"] is int) && (datarow["BidAmount"] is int)) {
                                 decimal amount;
@@ -1236,32 +1240,32 @@
                                     alreadypaid = 0;
 
                                 amount = (decimal)(int)datarow["BidAmount"] * (decimal)percentage - alreadypaid;
-/*  
-                                string errors;
-                                
-                               LMG : commented out to get new paypal functions running, also added result = false below
-                                
-                                if(amount > 0)
-                                    if((datarow["CreditCardType"] is int) && (datarow["CreditCardExpMonth"] is int) &&
-                                            (datarow["CreditCardExpYear"] is int))
-                                        result = PayPalFunctions.PerformPayment((int)datarow["CreditCardType"],
-                                            datarow["CreditCardNumber"].ToString(), datarow["CVV2"].ToString(),
-                                            (int)datarow["CreditCardExpMonth"], (int)datarow["CreditCardExpYear"],
-                                            datarow["CreditCardFirstName"].ToString(),
-                                            datarow["CreditCardLastName"].ToString(), datarow["Address1"].ToString(),
-                                            datarow["Address2"].ToString(), datarow["City"].ToString(),
-                                            datarow["State"].ToString(), datarow["Zip"].ToString(),
-                                            datarow["Country"].ToString(), datarow["CountryCode"].ToString(), amount,
-                                            out errors);
-                                    else
-                                        result = false;
-                                else
-                                    result = true;
-                            */
+                                /*  
+                                                                string errors;
+
+                                                               LMG : commented out to get new paypal functions running, also added result = false below
+
+                                                                if(amount > 0)
+                                                                    if((datarow["CreditCardType"] is int) && (datarow["CreditCardExpMonth"] is int) &&
+                                                                            (datarow["CreditCardExpYear"] is int))
+                                                                        result = PayPalFunctions.PerformPayment((int)datarow["CreditCardType"],
+                                                                            datarow["CreditCardNumber"].ToString(), datarow["CVV2"].ToString(),
+                                                                            (int)datarow["CreditCardExpMonth"], (int)datarow["CreditCardExpYear"],
+                                                                            datarow["CreditCardFirstName"].ToString(),
+                                                                            datarow["CreditCardLastName"].ToString(), datarow["Address1"].ToString(),
+                                                                            datarow["Address2"].ToString(), datarow["City"].ToString(),
+                                                                            datarow["State"].ToString(), datarow["Zip"].ToString(),
+                                                                            datarow["Country"].ToString(), datarow["CountryCode"].ToString(), amount,
+                                                                            out errors);
+                                                                    else
+                                                                        result = false;
+                                                                else
+                                                                    result = true;
+                                                            */
                                 result = false;
                                 if(result) {
                                     //lock(CommonFunctions.Connection)
-                                        TransactionsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Transactions");
+                                    TransactionsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Transactions");
 
                                     DataRow newtransaction = MainDataSet.Tables["Transactions"].NewRow();
 
@@ -1275,7 +1279,7 @@
                                     MainDataSet.Tables["Transactions"].Rows.Add(newtransaction);
 
                                     //lock(CommonFunctions.Connection)
-                                        TransactionsAdapter.Update(MainDataSet, "Transactions");
+                                    TransactionsAdapter.Update(MainDataSet, "Transactions");
 
                                     int transactionid = -1;
 
@@ -1306,7 +1310,7 @@
                                             newid = 1;
 
                                         //lock(CommonFunctions.Connection)
-                                            CommissionsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Commissions");
+                                        CommissionsAdapter.FillSchema(MainDataSet, SchemaType.Source, "Commissions");
 
                                         DataRow newcommission = MainDataSet.Tables["Commissions"].NewRow();
 
@@ -1320,7 +1324,7 @@
                                         MainDataSet.Tables["Commissions"].Rows.Add(newcommission);
 
                                         //lock(CommonFunctions.Connection)
-                                            CommissionsAdapter.Update(MainDataSet, "Commissions");
+                                        CommissionsAdapter.Update(MainDataSet, "Commissions");
 
                                         getagentid.Parameters["@UserID"].Value = (int)agentidresult;
 
@@ -1351,7 +1355,7 @@
                                             MainDataSet.Tables["Commissions"].Rows.Add(newcommission);
 
                                             //lock(CommonFunctions.Connection)
-                                                CommissionsAdapter.Update(MainDataSet, "Commissions");
+                                            CommissionsAdapter.Update(MainDataSet, "Commissions");
                                         }
                                     }
 
@@ -1388,13 +1392,13 @@
 
                                     message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
                                     message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-                                    
-                                     // added to take care of creditial problem by LMG 4-2008
+
+                                    // added to take care of creditial problem by LMG 4-2008
 
                                     smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com",
                            System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
-                            smtpclient.UseDefaultCredentials = false;
-                                    
+                                    smtpclient.UseDefaultCredentials = false;
+
 #if DEBUG
 								if (message.To[0].Address.Contains ("k66.ru") || message.To[0].Address.Contains ("mail.ur.ru"))
 #endif
@@ -1516,7 +1520,7 @@
                             datarow["IfProcessed"] = true;
 
                             //lock(CommonFunctions.Connection)
-                                FinishedAuctionsAdapter.Update(MainDataSet, "Auctions");
+                            FinishedAuctionsAdapter.Update(MainDataSet, "Auctions");
                         }
                     }
                     catch(Exception exc) {
@@ -1525,7 +1529,7 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            SendNotificationsAdapter.Fill(MainDataSet, "SendNotifications");
+                        SendNotificationsAdapter.Fill(MainDataSet, "SendNotifications");
                         foreach(DataRow datarow in MainDataSet.Tables["SendNotifications"].Rows) {
                             string emailbody;
 
@@ -1548,13 +1552,13 @@
 
                             message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
                             message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-                             // added to take care of creditial problem by LMG 4-2008
+                            // added to take care of creditial problem by LMG 4-2008
 
                             smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com",
                            System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
                             smtpclient.UseDefaultCredentials = false;
-                            
-                            
+
+
 #if DEBUG
 						if (message.To[0].Address.Contains ("k66.ru") || message.To[0].Address.Contains ("mail.ur.ru"))
 #endif
@@ -1568,7 +1572,7 @@
                             datarow["IfReviewNotificationSent"] = true;
 
                             //lock(CommonFunctions.Connection)
-                                FinishedAuctionsAdapter.Update(MainDataSet, "SendNotifications");
+                            FinishedAuctionsAdapter.Update(MainDataSet, "SendNotifications");
                         }
                     }
                     catch(Exception exc) {
@@ -1577,7 +1581,7 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            FreeTrialNotificationsAdapter.Fill(MainDataSet, "FreeTrialNotifications");
+                        FreeTrialNotificationsAdapter.Fill(MainDataSet, "FreeTrialNotifications");
                         foreach(DataRow datarow in MainDataSet.Tables["FreeTrialNotifications"].Rows) {
                             string emailbody;
 
@@ -1613,8 +1617,8 @@
 
                             message.Body = message.Body.Replace("\r", "").Replace("\n", Environment.NewLine);
                             message.Headers["Content-Type"] = "text/plain; charset = \"iso-8859-1\"";
-                            
-                             // added to take care of creditial problem by LMG 4-2008
+
+                            // added to take care of creditial problem by LMG 4-2008
 
                             smtpclient.Credentials = new System.Net.NetworkCredential("noreply@vacations-abroad.com",
                            System.Configuration.ConfigurationManager.AppSettings["smtpCredential"].ToString());
@@ -1653,7 +1657,7 @@
                             datarow["IfFreeTrialExpirationSent"] = true;
 
                             //lock(CommonFunctions.Connection)
-                                FreeTrialNotificationsAdapter.Update(MainDataSet, "FreeTrialNotifications");
+                            FreeTrialNotificationsAdapter.Update(MainDataSet, "FreeTrialNotifications");
                         }
                     }
                     catch(Exception exc) {
@@ -1662,11 +1666,11 @@
 
                     try {
                         //lock(CommonFunctions.Connection)
-                            DeletePropertiesAdapter.Fill(MainDataSet, "DeleteProperties");
+                        DeletePropertiesAdapter.Fill(MainDataSet, "DeleteProperties");
                         //					foreach (DataRow datarow in MainDataSet.Tables["DeleteProperties"].Rows)
                         //						datarow.Delete ();
                         //lock(CommonFunctions.Connection)
-                            DeletePropertiesAdapter.Update(MainDataSet, "DeleteProperties");
+                        DeletePropertiesAdapter.Update(MainDataSet, "DeleteProperties");
                     }
                     catch(Exception exc) {
                         ProcessException(exc, null);
@@ -1683,24 +1687,24 @@
                     }
 
                     //lock(CommonFunctions.Connection)
-                        PeriodicAdapter.Update(MainDataSet, "PeriodicOperations");
+                    PeriodicAdapter.Update(MainDataSet, "PeriodicOperations");
 
                     //CommonFunctions.Connection.Close ();
                     connection.Close();
                 }
-                
+
             }
-			timerrunning = false;
-		}
-		catch (Exception exc)
-		{
-			ProcessException (exc, null);
+            timerrunning = false;
+        }
+        catch (Exception exc)
+        {
+            ProcessException (exc, null);
 
-			timerrunning = false;
-		}
-	
+            timerrunning = false;
+        }
 
 
-}	
+
+    }
 </script>
 

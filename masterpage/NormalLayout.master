@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalMaster.master.cs" Inherits="masterpage_NoramlMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalLayout.master.cs" Inherits="masterpage_NoramlMaster" %>
 
 <!DOCTYPE html>
 
@@ -71,7 +71,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <h2>All properties</h2>
-                                        <a class="allprop">To view the all the properties</a>
+                                        <a class="allprop"></a>
                                     </div>
                                 </div>
                             </div>
