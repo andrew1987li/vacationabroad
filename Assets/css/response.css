@@ -41,6 +41,7 @@
     background-color:#f3ede3;
     padding-top:10px;
     padding-bottom:10px;    
+    margin-bottom:10px;
 }
 
 .borderpane{
@@ -54,6 +55,11 @@
 
 .textcenter{
     text-align:center;
+}
+
+
+.formmargin{
+    margin-bottom:200px;
 }
 
 .tablepanel{

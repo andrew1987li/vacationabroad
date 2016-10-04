@@ -1,5 +1,5 @@
-﻿var redirect_links = [["/applications.aspx", "/accounts/login.aspx"], ["/rentalguarantte.aspx"], ["/aboutus.aspx", "/press/AboutLindaKJenkins.pdf"]
-    , ["/presscoverage.aspx", "/pressreleases.aspx"], ["/Contacts.aspx", "http://blog2.vacations-abroad.com", "http://madmimi.com/signups/121428/join", "https://plus.google.com/+Vacations-abroad/posts", "https://twitter.com/vacationsabroad","https://www.facebook.com/VacationsAbroad"]];
+﻿var redirect_links = [["/applications.aspx", "/accounts/login.aspx?type=0"], ["/rentalguarantee.aspx"], ["/aboutus.aspx", "/press/AboutLindaKJenkins.pdf"]
+    , ["/presscoverage.aspx", "/pressreleases.aspx"], ["/Contacts.aspx", "http://blog2.vacations-abroad.com", "http://madmimi.com/signups/121428/join", "https://plus.google.com/+Vacations-abroad/posts", "https://twitter.com/vacationsabroad", "https://www.facebook.com/VacationsAbroad"]];
 
 function onclickevent_footerment(menuindex, itemindex) {
     //alert(menuindex + "   " + itemindex);
@@ -51,6 +51,8 @@ $(document).ready(function() {
         getmainmenu(call_cid);
     });
 
+
+
 });
 
 function processTopMenuData(response){
@@ -60,7 +62,8 @@ function processTopMenuData(response){
     $(".statelists").empty();
     for (var i = 0; i < states.length; i++) {
         var link = "http://69.89.14.163:86/"+callcountry+"/"+states[i].name+"/default.aspx";
-        $(".statelists").append('<li><a href="' + link + '">' + states[i].name + '</a></li>');
+         $(".statelists").append('<li><a href="' + link + '">' + states[i].name + '</a></li>');
+       // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
         $(".allprop").attr("href", "http://69.89.14.163:86/" + callcountry + "/countryproperties.aspx");
     }
 }

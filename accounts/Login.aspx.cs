@@ -21,6 +21,7 @@ using Twitterizer;
 public partial class accounts_Login : CommonPage
 {
     public string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+    public int logtype = 0;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -28,6 +29,8 @@ public partial class accounts_Login : CommonPage
         {
             Response.Redirect("/userowner/listings.aspx");
         }
+
+        Int32.TryParse(Request.QueryString["type"], out logtype);
 
         FaceBookConnect.API_Key = ConfigurationManager.AppSettings["FacebookAppId"];
         FaceBookConnect.API_Secret = ConfigurationManager.AppSettings["FacebookAppSecret"];

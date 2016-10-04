@@ -178,6 +178,10 @@ public partial class newCityList : CommonPage
             head.Controls.Add(description);
 
             DataBind();
+            ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = "Boutique "+city+" Vacation Rentals, Boutique "+city+" Hotels";
+            //((System.Web.UI.WebControls.Image)Master.FindControl("MainLogo")).AlternateText =  " Vacation rentals & Holiday rentals @ Vacations-Abroad.com";
+            /////// common for postback and ! postback        
+            //INDIVIDUAL CITY TEXT INSERT HERE*****
            
                 DBConnection obj = new DBConnection();
                 DataTable dt = new DataTable();
@@ -626,7 +630,7 @@ public partial class newCityList : CommonPage
                 string tempcountry = CommonFunctions.GetSiteAddress() + "/" + country.ToLower().Replace(" ", "_") +
                                                          "/default.aspx";
                 lbltText.Text = "<a href=\"" + tempcountry + "\"><span class=\"tdNoSleeps\">" + country + "</span></a>" + " , " + "<a href=\"" + tempstate + "\"><span class=\"tdNoSleeps\">" + stateprovince + "</span></a>" + " , " + "<a href=\"" + tempcity + "\"><span class=\"tdNoSleeps\">" + city + "</span></a>";
-             //   Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css' />"));
+                Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css' />"));
             //Page.Header.Controls.Add(new LiteralControl("<script src='http://vacations-abroad.com/wz_tooltip.js' type='text/javascript'></script>"));
         
     }

@@ -106,7 +106,7 @@
                 <div id="pay_form">
                     <div class="row">
                         <asp:Label ID="Label1" runat="server" Text="Payment Method"></asp:Label>
-                       <asp:DropDownList ID="DropDownList1" runat="server">
+                       <asp:DropDownList ID="paytype" runat="server">
                            <asp:ListItem Text="PayPal" Value="0" Selected="True"></asp:ListItem>
                            <asp:ListItem Text="Credit" Value="1"></asp:ListItem>
                        </asp:DropDownList>

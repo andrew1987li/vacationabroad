@@ -231,7 +231,7 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
             Replace("%numbedrooms%", PropertiesFullSet.Tables["Properties"].Rows[0]["NumBedrooms"].ToString()).
             Replace("%numsleeps%", PropertiesFullSet.Tables["Properties"].Rows[0]["NumSleeps"].ToString());
 
-        ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() + " " + PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString();
+        //((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() + " " + PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString();
 
         city = PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString();
         //add cities to right column  

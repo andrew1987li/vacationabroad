@@ -150,11 +150,29 @@
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                      </tr>
+                                        <% if (owner_book_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = owner_book_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=owner_book_set.Tables[0].Rows[index]["propertyid"] %></td>
+                                                <td><%=Convert.ToDateTime(owner_book_set.Tables[0].Rows[index]["arrivedate"]).ToString("yyyy-MM-dd") %></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                    Int32.TryParse(owner_book_set.Tables[0].Rows[index]["isconfirmed"].ToString(), out replied);
+                                                   
+                                                    if (replied == 1)
+                                                    {%><a>Booked</a> 
+                                                  <%}else {%>
+                                                    
+                                                     <a>Booking</a>
+                                                    <%} %>
+                                                </td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>
@@ -326,15 +344,33 @@
                                         <tr>
                                             <th></th>
                                             <th>Date of Arrival</th>
-                                            <th>Link To Booking</th>
+                                            <th>State To Booking</th>
                                         </tr>
                                      </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>johnss@example.com</td>
-                                      </tr>
+                                      <% if (traveler_book_set.Tables.Count > 0)
+                                                
+                                            { %>
+                                        <%  int count = traveler_book_set.Tables[0].Rows.Count;
+                                            for (int index =0;index<count; index++  )
+                                            { %>
+                                              <tr>
+                                                <td>Property<%=traveler_book_set.Tables[0].Rows[index]["propertyid"] %></td>
+                                                <td><%=Convert.ToDateTime(traveler_book_set.Tables[0].Rows[index]["arrivedate"]).ToString("yyyy-MM-dd") %></td>
+                                                <td>
+                                                <%   int replied=0;
+                                                    Int32.TryParse(traveler_book_set.Tables[0].Rows[index]["isconfirmed"].ToString(), out replied);
+                                                   
+                                                    if (replied == 1)
+                                                    {%><a>Booked</a> 
+                                                  <%}else {%>
+                                                    
+                                                     Not confirmed
+                                                    <%} %>
+                                                </td>
+                                              </tr>
+                                        <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>

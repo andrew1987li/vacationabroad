@@ -2,18 +2,29 @@
 
 
 <asp:Content runat="server" ID="LoginContent" ContentPlaceHolderID="bodycontent">
-   <div class="row">
+   <div class="row formmargin">
     <div class="col-sm-6 col-sm-offset-3">	
         <ul  class="nav nav-tabs" role="tablist">
+            <% if (logtype == 0)
+                { %>
 		    <li class="active lblFor">
                 <a  href="#2b" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
 		    </li>
 		    <li class="lblFor"><a href="#1b" role="tab" data-toggle="tab"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
 		    </li>
+            <%}
+            else
+            { %>
+		    <li class="lblFor">
+                <a  href="#2b" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
+		    </li>
+		    <li class="active lblFor"><a href="#1b" role="tab" data-toggle="tab"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+		    </li>
+            <%} %>
 	     </ul>
 
         <div class="tab-content clearfix">
-			<div class="tab-pane tabback" id="1b">
+			<div class="tab-pane  <%=(logtype!=0)?"active":"" %> tabback" id="1b">
                 <div class="row">
                    <div class="col-sm-offset-1 col-sm-10 ">
 
@@ -52,7 +63,7 @@
  
 
 			</div>
-			<div class="tab-pane active tabback" id="2b">
+			<div class="tab-pane <%=(logtype==0)?"active":"" %> tabback" id="2b">
                <div class="row">
                    <div class="col-sm-offset-1 col-sm-10 ">
                        <div class="row">

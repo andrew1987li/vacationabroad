@@ -30,8 +30,10 @@ public class AjaxProvider
                         using (SqlDataAdapter adapter = new SqlDataAdapter())
                         {
                             con.Open();
-                            SqlCommand cmd = new SqlCommand("select ID, Country  from Countries  where RegionID=@id and titleoverride is not null", con);
-                            cmd.Parameters.Add("@id", SqlDbType.Int).Value = regionid;
+                            SqlCommand cmd = new SqlCommand("uspGetCountryList", con);
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("@RegionID", SqlDbType.Int).Value = regionid;
 
                             adapter.SelectCommand = cmd;
 
@@ -101,10 +103,11 @@ public class AjaxProvider
         {
             using (SqlConnection con = new SqlConnection(connString))
             {
-                using (SqlCommand cmd = new SqlCommand("select ID,StateProvince from StateProvinces where CountryID=@id", con))
+                using (SqlCommand cmd = new SqlCommand("uspGetStateList", con))
                 {
                     con.Open();
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = countryid;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CountryID", SqlDbType.Int).Value = countryid;
 
 
                     using (SqlDataReader reader = cmd.ExecuteReader())

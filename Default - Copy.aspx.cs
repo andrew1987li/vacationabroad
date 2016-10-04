@@ -132,6 +132,14 @@ public partial class Default : CommonPage
 
         string temp = "Vacation rentals at ";
 
+        System.Web.UI.HtmlControls.HtmlGenericControl searchwithout = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("searchwithoutnavigation");
+        System.Web.UI.HtmlControls.HtmlGenericControl searchwith = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("searchwithnavigation");
+        searchwith.Style.Add("display", "none");
+        searchwithout.Style.Add("display", "block");
+
+        ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = temp + "Vacations-Abroad.com";
+        //((System.Web.UI.WebControls.Image)Master.FindControl ("MainLogo")).AlternateText = temp + "@ Vacations-Abroad.com";
+
         foreach (DataRow datarow in RegionsSet.Tables["Regions"].Rows)
             if (datarow["Region"] is string)
                 regions += " " + (string)datarow["Region"];

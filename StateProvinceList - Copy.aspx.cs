@@ -217,7 +217,7 @@ public partial class StateProvinceList : CommonPage
                     
                     hyplnkBackLink.NavigateUrl = "/" + country.ToLower().ToLower().Replace(" ", "_") +"/" + "default.aspx";
                     ltrBackText.Text = country  + "<<";
-                    string iframe = "<iframe height='260' width='500' frameborder='0' src='/" + country + "/" + stateprovince + "/Maps.aspx'></iframe>";
+                    string iframe = "<iframe height='260' width='500' src='/" + country + "/" + stateprovince + "/Maps.aspx'></iframe>";
                     googlemap.InnerHtml = iframe;                    
                     page.Title = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1) + " Vacation Rentals, Boutique Hotels | Vacations Abroad";
                     

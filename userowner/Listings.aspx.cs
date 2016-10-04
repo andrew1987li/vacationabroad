@@ -13,6 +13,7 @@ public partial class userowner_Listing : CommonPage
     public DataSet inquiry_set, traveler_inquery_set;
     public DataSet property_set;
     public DataSet owner_response_set, traveler_response_set;
+    public DataSet owner_book_set, traveler_book_set;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -27,6 +28,9 @@ public partial class userowner_Listing : CommonPage
         
         owner_response_set = BookResponseEmail.getResponseInfoSet(userid, 0); //0:User=> owner
         traveler_response_set = BookResponseEmail.getResponseInfoSet(userid, 1);
+
+        owner_book_set = PaymentHelper.getBookInfoSet(userid, 0);
+        traveler_book_set = PaymentHelper.getBookInfoSet(userid, 1);
 
         propertylist.DataSource = property_set;
         propertylist.DataBind();

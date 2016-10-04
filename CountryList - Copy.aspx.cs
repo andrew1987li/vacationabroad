@@ -274,12 +274,12 @@ public partial class CountryList : CommonPage
 
                     altTag = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals";
                     ltrH11.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals";
-                    hyplnkBackLink.NavigateUrl = "/" + region.ToLower().Replace(" ", "_")+"/default.aspx";
+                    hyplnkBackLink.NavigateUrl = "/" + region.ToLower().Replace(" ", "_");
                     ltrBackText.Text = region + "<<";
 		    hyplnkAllProps.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/countryproperties.aspx";
                     ltrAllProps.Text = " View all " + char.ToUpper(country[0]) + country.Substring(1) + " properties";
                     ltrHeading.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacations";
-                    string iframe = "<iframe height='260' width='500' frameborder='0' src='/" + country + "/Maps.aspx'></iframe>";
+                    string iframe = "<iframe height='260' width='500' src='/" + country + "/Maps.aspx'></iframe>";
                     ltrCountryThing.Text = char.ToUpper(country[0]) + country.Substring(1);
                     googleCountrymap.InnerHtml = iframe;
                     page.Title = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals, Boutique Hotels | Vacations Abroad";
@@ -323,13 +323,13 @@ public partial class CountryList : CommonPage
                         }
                         altTag = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals";
                         ltrH11.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals";
-                        hyplnkBackLink.NavigateUrl = "/" + region.ToLower().Replace(" ", "_")+"/default.aspx";
+                        hyplnkBackLink.NavigateUrl = "/" + region.ToLower().Replace(" ", "_");
                         ltrBackText.Text = region + "<<";
 			hyplnkAllProps.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/countryproperties.aspx";
 			ltrAllProps.Text = " View all " + char.ToUpper(country[0]) + country.Substring(1) + " properties";
                         ltrHeading.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacations";
 
-                        string iframe = "<iframe height='260' frameborder='0' width='500' src='/" + country + "/Maps.aspx'></iframe>";
+                        string iframe = "<iframe height='260' width='500' src='/" + country + "/Maps.aspx'></iframe>";
                         googleCountrymap.InnerHtml = iframe;
                         ltrCountryThing.Text = char.ToUpper(country[0]) + country.Substring(1);
                         page.Title = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals, Boutique Hotels | Vacations Abroad";
@@ -494,7 +494,7 @@ public partial class CountryList : CommonPage
             
             string temp = "/" + country.ToLower().Replace(" ", "_") + "/" + dr["StateProvince"].ToString().ToLower().Replace(" ", "_") + "/default.aspx";
             states1 += "<li><a href='" + temp + "' class='StateTitle'>" + dr["StateProvince"].ToString().Replace(" ", "&nbsp;") + "</a><br/> ";
-            states1 += "<a href=\"" + temp + "\"><img width='160' height='125' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt.Rows[0]["PhotoImage"]) + "' alt='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' title='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' /></a></li>";
+            states1 += "<a href=\"" + temp + "\"><img width='140' height='115' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt.Rows[0]["PhotoImage"]) + "' alt='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' title='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' /></a></li>";
             str_states += Convert.ToString(dr["StateProvince"]) + ", ";
             str_keyword += Convert.ToString(dr["StateProvince"]) + " " + country + ", ";
         }
@@ -540,6 +540,7 @@ public partial class CountryList : CommonPage
         //  keywords.Content = page1.Title;
         keywords.Content = str_keyword + "etc.";
         head.Controls.Add(keywords);
+        ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = page1.Title;
     }
 
     private HtmlControl FindControl(string p)

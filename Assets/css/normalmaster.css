@@ -7,6 +7,7 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
 .footertopline{
     border-top:2px solid #e1d4c0;
     margin-top:10px;
+    margin-bottom:550px;
 }
 
 .footerparag{
@@ -15,6 +16,7 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
     display:inline-block;
     float:none;
     vertical-align:top;
+
 }
 
 .footerparag h4{
@@ -34,13 +36,14 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
     color:#6698ff;
     font-size:12px;
     font-family:Verdana;
+    cursor: pointer;
 }
 
 .btnsign{
     color:#323e4f;
-    background-color:white;
     border-radius:3px;
-    border:2px solid #cdbf72;
+    background-color:white;
+    border:2px solid #cdbfac;
     font-size:13px;
     font-family:Verdana;
     margin-top:10px;
@@ -51,8 +54,6 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
 
 .search-form {
     display: inline-block;
-    border: 2px solid #cdbf72;
-    border-radius:5px;
     background: #fff;
     margin-top:10px;
 }
@@ -63,17 +64,42 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
     height: 30px;
     border-radius:6px;
     border: none;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    padding-left:10px;
 	box-sizing: border-box;  
     display:inline-block;
+    border: 2px solid #cdbfac;
+    border-radius:5px;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #323e4f;
+    font-family:Verdana;
+    font-size:9pt;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #323e4f;
+    font-family:Verdana;
+    font-size:9pt;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #323e4f;
+   opacity:  1;
+       font-family:Verdana;
+    font-size:9pt;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #323e4f;
+       font-family:Verdana;
+    font-size:9pt;
+}
+
 
 .search-form button {
     display:block;
     border: none;
-    border-top-right-radius:5px;
-    border-bottom-right-radius:5px;
+     border: 2px solid #cdbfac;
+    border-radius:5px;
     color:white;
     font-family:Verdana;
     font-size:12px;
@@ -96,7 +122,7 @@ ul.main-navigation {
 }
 
 ul.main-navigation> li{
-    width:14%;
+    width:10.5%;
 }
 
 .main-navigation li {
@@ -105,13 +131,21 @@ ul.main-navigation> li{
 
 .main-navigation li a, .dropbtn {
     display: block;
-    color: #e1d4c0;
+    color: #404040;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7px 1px;
     text-decoration: none;
 }
 
-.main-navigation li a:hover, .dropdown:hover .dropbtn {
+.main-navigation> li> a {
+    display: block;
+    color: #404040;
+    text-align: center;
+    padding: 12px 1px;
+    text-decoration: none;
+}
+
+.main-navigation >li> a:hover, .dropdown:hover .dropbtn {
     border-bottom:2px solid #e16600;
 }
 
@@ -123,37 +157,48 @@ ul.main-navigation> li{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 715%;
-    border:1px solid #e16600;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 950%;
+    border:1px solid #e1d4c0;
 }
 
+#ss1{
+    border-right:1px solid #e1d4c0;
+}
+#ss2{
+    border-left:1px solid #e1d4c0;
+}
+
+#ss2 ul li a{text-align:left;  padding-left:15px;}
 
 .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 12;
 }
 
 h2{ color:#154890 ; font-family:Verdana; font-size:18px;}
 
 .dropdown-content li:hover {background-color: #f1f1f1}
-
+.dropdown-content a:hover {background-color: #f1f1f1}
 
 .itemselected{
-    border-bottom:2px solid #e16600;
     background-color: #f1f1f1;
 }
 
 .dropdown-content ul{list-style:none; list-style-type:none;}
 .dropdown-content ul li{
-    width:150%;
+    width:200%;
     list-style-type:none;
     margin:0;
     position:relative;
     left:-40%;
     padding:0;
+    text-align:left;
 }
 
-.dropdown-content > div div:first-child{border-right:1px solid #000;}
+    .dropdown-content div div:first-child  ul li a {
+        text-align:left;
+        padding-left:30px;
+    }
 div.dropdown-content, .dropdown-content div{overflow:hidden;}
 
 #menu1.dropdown-content{
@@ -175,4 +220,52 @@ div.dropdown-content, .dropdown-content div{overflow:hidden;}
 #menu6.dropdown-content{
     
     left:-600%;
+}
+
+
+
+
+ /* Dropdown Button */
+.wdropbtn {
+    cursor: pointer;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.wdropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.wdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    text-align:left;
+
+}
+
+/* Links inside the dropdown */
+.wdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.wdropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.wdropdown:hover .wdropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.wdropdown:hover .wdropbtn {
+    background-color: #f1f1f1;
 }

@@ -1,35 +1,21 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
-    CodeFile="default.aspx.cs" Inherits="Default" Title="<%# GetTitle () %>" EnableEventValidation="False" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/HomeMasterPage.master" AutoEventWireup="true"
+    CodeFile="Default - Copy.aspx.cs" Inherits="Default" Title="<%# GetTitle () %>" EnableEventValidation="False" %>
 
 <%@ OutputCache Duration="100" VaryByParam="*" %>
 
 
-<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
-    <div class ="row text-center">
-  <div>
-        <h1 style="width: 100%; font-family: Verdana; font-size: 28px; color: #3c3c3c;" align="center">Vacation Rentals, Boutique Hotels, Quaint B&Bs, Beach Resorts</h1>
-    </div>
-    <br />
-    <div id="map_canvas" style="width: 933px; height: 485px;margin:0px auto; "></div>
-
-    <div>
-        <%--<asp:Label ID="Title" runat="server" Visible="false" Text="Vacations-Abroad: Vacation Rentals, B&Bs, Resorts, Hotels"></asp:Label>--%>
-        <asp:label id="Title" runat="server" visible="false" text="Vacations Abroad: Vacation Rentals, B&Bs, Resorts, Hotels"></asp:label>
-        <asp:label id="Keywords" runat="server" visible="false" text="Vacation Beach Rentals, Vacation Apartments, Family Vacation Resorts, Small Boutique Hotels, Beach Vacation Rentals, Family Beach Apartments, Family Beach Resorts, Boutique Resorts, Boutique Beach Rentals"></asp:label>
-        <%--<asp:Label ID="Description" runat="server" Visible="false" Text="We constantly search the world to to find unique properties to make your vacation the best."></asp:Label>--%>
-        <asp:label id="Description" runat="server" visible="false" text="We constantly search the world to to find unique properties to make your vacation the best."></asp:label>
-        <br>
-        <asp:label id="lblInfo" runat="server" forecolor="Red"></asp:label>
-    </div>
-    <!-- Start of StatCounter Code for Default Guide -->
-    <script type="text/javascript">
-        var sc_project = 3336280;
-        var sc_invisible = 1;
-        var sc_security = "510252c5";
-    </script>
-
-    </div>
+<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
     <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         #map-canvas {
             height: 900px;
             width: 800px;
@@ -94,6 +80,38 @@
     </script>
 
 
-  
+    <div>
+        <h1 style="width: 100%; font-family: Verdana; font-size: 28px; color: #3c3c3c;" align="center">Vacation Rentals, Boutique Hotels, Quaint B&Bs, Beach Resorts</h1>
+    </div>
+    <br />
+    <div id="map_canvas" style="width: 933px; height: 485px;"></div>
+
+    <div>
+        <%--<asp:Label ID="Title" runat="server" Visible="false" Text="Vacations-Abroad: Vacation Rentals, B&Bs, Resorts, Hotels"></asp:Label>--%>
+        <asp:label id="Title" runat="server" visible="false" text="Vacations Abroad: Vacation Rentals, B&Bs, Resorts, Hotels"></asp:label>
+        <asp:label id="Keywords" runat="server" visible="false" text="Vacation Beach Rentals, Vacation Apartments, Family Vacation Resorts, Small Boutique Hotels, Beach Vacation Rentals, Family Beach Apartments, Family Beach Resorts, Boutique Resorts, Boutique Beach Rentals"></asp:label>
+        <%--<asp:Label ID="Description" runat="server" Visible="false" Text="We constantly search the world to to find unique properties to make your vacation the best."></asp:Label>--%>
+        <asp:label id="Description" runat="server" visible="false" text="We constantly search the world to to find unique properties to make your vacation the best."></asp:label>
+        <br>
+        <asp:label id="lblInfo" runat="server" forecolor="Red"></asp:label>
+    </div>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 3336280;
+        var sc_invisible = 1;
+        var sc_security = "510252c5";
+    </script>
+
+    <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript>
+        <div class="statcounter">
+            <a title="site stats" href="http://statcounter.com/" target="_blank">
+                <img class="statcounter" src="http://c.statcounter.com/3336280/0/510252c5/1/" alt="site stats"></a>
+        </div>
+    </noscript>
+
+    <script type="text/javascript">
+        document.getElementById("ctl00_dvLft").style.paddingTop = "50px";
+    </script>
 
 </asp:Content>

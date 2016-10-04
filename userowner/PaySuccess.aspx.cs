@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class userowner_ReserveSuccess : System.Web.UI.Page
+public partial class userowner_PaySuccess : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

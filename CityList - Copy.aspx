@@ -1,11 +1,7 @@
-<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
-    CodeFile="CityList.aspx.cs" Inherits="newCityList" EnableEventValidation="false" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+    CodeFile="CityList - Copy.aspx.cs" Inherits="newCityList" EnableEventValidation="false" %>
 
-<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
-    <link href="/Assets/css/citylist.css" rel="stylesheet" />
-</asp:Content>
-
-<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
     <asp:Label ID="Label2" runat="server" Visible="false" Text="%city% %stateprovinc% vacation Rentals, %city% %country% Holiday Rentals, %city% Rental Accommodations"></asp:Label>
     <asp:Label ID="Title" runat="server" Visible="false" Text="%city% %country% Vacation Rentals, %city% Villas, %city% Condos, Apartments, Hotels, Cottages"></asp:Label>
     <asp:Label ID="Keywords" runat="server" Visible="false" Text="%city% vacation rentals, %city% vacations, %city% %stateprovince% vacation rentals,   villas, cottages, boutique hotels"></asp:Label>
@@ -16,34 +12,81 @@
     <input type="hidden" name="step2radio" value="" />
     <input type="hidden" name="step3radio" value="" />
 
-    <div class="row">
-         <span id="test234" runat="server" style="display: none"></span>
-        <div class="internalpagewidth">
-            <div class="row">
-                    <div class="text-left topMargin">
-                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
-                        <div class="clear"></div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var href = $(".lower").attr("href");
+            href = href.toLowerCase().split(" ").join("_");
+            $(".lower").attr("href", href);
 
-                    </div>
-                <div class="text-center">
-                        <h1 class="H1CityText">
+            var hrefs = $(".lowers").attr("href");
+            hrefs = hrefs.toLowerCase().split(" ").join("_");
+            $(".lowers").attr("href", hrefs);
+
+            var btnname = "input[name='ctl00$Content$btnSubmit']";
+            var txtname = "input[name='ctl00$Content$txtCityText']";
+            $(btnname).live('click', function () {
+                var textcityvalue = $('#ctl00_Content_txtCityText').val().toString();
+                $('#ctl00_Content_txtCityVal').val(textcityvalue);
+                console.log($('#ctl00_Content_txtCityVal').val());
+            });
+
+            var btnname2 = "input[name='ctl00$Content$btnSubmit2']";
+            var txtname2 = "input[name='ctl00$Content$txtCityText2']";
+            $(btnname2).live('click', function () {
+                var textcityvalue2 = $('#ctl00_Content_txtCityText2').val().toString();
+                $('#ctl00_Content_txtCityVal2').val(textcityvalue2);
+                console.log($('#ctl00_Content_txtCityVal2').val());
+            });
+
+            var value = "";
+            $("input[name='ctl00$Content$rdoTypes']").click(function () {
+                value = $(this).val();
+                $('input[name="step1radio"]').val(value);
+                $('input[name="step2radio"]').val("");
+                $('input[name="step3radio"]').val("");
+            });
+
+            $("input[name='ctl00$Content$rdoBedrooms']").click(function () {
+                value = $(this).val();
+                $('input[name="step2radio"]').val(value);
+                value = $('input[name="ctl00$Content$rdoTypes"]:checked').val();
+                $('input[name="step1radio"]').val(value);
+                $('input[name="step3radio"]').val("");
+            });
+
+            $("input[name='ctl00$Content$btnFilter']").click(function () {
+                value = $('input[name="ctl00$Content$rdoFilter"]:checked').val();
+                $('input[name="step3radio"]').val(value);
+                value = $('input[name="ctl00$Content$rdoBedrooms"]:checked').val();
+                $('input[name="step2radio"]').val(value);
+                value = $('input[name="ctl00$Content$rdoTypes"]:checked').val();
+                $('input[name="step1radio"]').val(value);
+            });
+
+        });
+    </script>
+
+    <span id="test234" runat="server" style="display: none"></span>
+    <div align="center">
+        <table class="StateCityTable listingContainerMain">
+            <tr class="StateTable1Row1">
+                <td class="StateTable1TD1">
+                    <div class="listingPagesH1Container">
+                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server"><h3><asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server"><h3><asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
+                        <div class="clear"></div>
+                        <h1 class="listingPagesH1Color H1CityText">
                             <%--<%= city %> Vacation Rentals--%>
                             <asp:Literal ID="ltrH11" runat="server"></asp:Literal>
                             <br />
                         </h1>
-                </div>
+                    </div>
 
-            </div>
-            <div class="row">
-                 <div class="row">
+                    <div>
                         <asp:Label runat="server" ID="lblcity" Font-Size="Large"></asp:Label>
-                  </div>
-
-
-    
+                    </div>
                     <%--padding 305 center--%>
-                    <div class="row">
+                    <div>
                         <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
                            { %>
                         <asp:TextBox ID="txtCityText" runat="server" Rows="7" TextMode="MultiLine" Width="600px"></asp:TextBox><br />
@@ -55,15 +98,18 @@
                            {%>
                                          
 					<% if(string.IsNullOrEmpty(Convert.ToString(Request.QueryString["category"]))){ %> 
-					        <div >
-                                             <asp:Label ID="lblcityInfo" CssClass="txtalign" runat="server"></asp:Label>
-                                 </div>
+					<div class="LightText CityHeading">
+                                             <asp:Label ID="lblcityInfo" runat="server"></asp:Label>
+                                         </div>
 					<% } %>
                         <% } %>
                     </div>
 
                     
-
+                </td>
+            </tr>
+            <tr>
+                <td class="StateTable1TD2">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:herefordpiesConnectionString1 %>"
                         SelectCommand="GetPropertiesFromCityIDplay" SelectCommandType="StoredProcedure">
                         <SelectParameters>
@@ -71,7 +117,8 @@
                                 Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-                          <div class="row">
+                    <div style="width: 100%">
+                        <div style="float: right; margin-top: -23px;">
                             <div id="divTab1" runat="server" class="tourTabs2 vacationsAndSubsTabs" style="display: none;
                                 height: 10px !important; margin-bottom: -33px; margin-top: 15px; font-style: inherit;
                                 font-size: 1.5em;">
@@ -79,27 +126,32 @@
                                     Subscribe to newsletter</a>
                             </div>
                             <br />
-                       
-                            <div id="div1" runat="server" class="tourTabs2 vacationsAndSubsTabs" style="font-size: 1.5em;
-                                font-weight: normal !important; float: right; text-align: right; display: none;">
-                                <a class="subscribeLink" style="color: #a0522d;" rel="nofollow" href="http://eepurl.com/vac0P">
-                                    Subscribe to newsletter </a>
-                            </div>
-
                         </div>
-                <div class="row">
-
-                        <div style="padding-bottom: 10px;margin-left:20px;">
-                            <div class="heding_box">
-                                <h2 class="listingPagesH1Color">
-                                    <%--<%= city %> Vacation Rentals--%>
-                                    <asp:Literal ID="ltrH12" runat="server"></asp:Literal>
-                                    <br />
-                                </h2>
-                            </div>
-                        </div>
-                </div>
-                                                        <div id="breadcrumb" style="display:none;">
+                        <div class="lftPropertiesTbl">
+                            <table style="width: 900px;" cellspacing="0" border="0">
+                                <tr class="VacationAndSubscribeTabs" style="width: 100%;">
+                                    <td>
+                                        <span>
+                                            <div id="div1" runat="server" class="tourTabs2 vacationsAndSubsTabs" style="font-size: 1.5em;
+                                                font-weight: normal !important; float: right; text-align: right; display: none;">
+                                                <a class="subscribeLink" style="color: #a0522d;" rel="nofollow" href="http://eepurl.com/vac0P">
+                                                    Subscribe to newsletter </a>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="Left" style="padding-bottom: 10px;">
+                                            <div class="heding_box">
+                                                <h2 class="listingPagesH1Color">
+                                                    <%--<%= city %> Vacation Rentals--%>
+                                                    <asp:Literal ID="ltrH12" runat="server"></asp:Literal>
+                                                    <br />
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <div id="breadcrumb" style="display:none;">
                                             <div class="breadcrumb2" style="position: relative; width: 600px; font-size: 10pt;
                                                 font-weight: bold;">
                                                     <label id="lblBreadcrumb" runat="server" style="color: #71a3af;">
@@ -108,8 +160,13 @@
                                                     <asp:Literal ID="lbltText" runat="server"></asp:Literal>
                                             </div>
                                         </div>
-                <div class="row">
-                                            <div id="Div2" style="float: left; width: 900px; border: 2px solid #c4d9e2" runat="server">
+                                    </td>
+                                </tr>
+                                <tr style="margin-top: 10px">
+                                    <td colspan="5">
+                                        <div class="PurpleTable">
+                                            <div id="Div2" style="float: left; width: 900px; border: 2px solid #c4d9e2" class="stepsContainer"
+                                                runat="server">
                                                 <asp:DataList ID="dtlStates" runat="server" RepeatColumns="5" RepeatDirection="Horizontal"
                                                     Width="100%" OnItemCommand="dtlStates_ItemCommand" OnItemDataBound="dtlStates_ItemDataBound"
                                                     CellPadding="3" CellSpacing="2">
@@ -127,16 +184,23 @@
                                                                 AutoPostBack="True" OnSelectedIndexChanged="rdoTypes_SelectedIndexChanged" CellPadding="0"
                                                                 CellSpacing="0" Height="14px" ViewStateMode="Enabled" CssClass="test">
                                              </asp:RadioButtonList>
-                </div>
-               <div class="row">
-        
-
-                <div class="row tableborder">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                 <input type="hidden" id="selectedRdoTypes" runat="server" />
-                                        <label >Step 1:</label>
-
+                                            <input type="hidden" id="selectedRdoTypes" runat="server" />
+                                            <div id="filerMain" style="float: left; width: 900px;" class="stepsContainer">
+                                                <table style="padding: 0x; margin: 0px; border: 0px; width: 100%;" cellspacing="0" style="display:none;">
+                                                    <tr class="step1Bg">
+                                                       
+                                                        <td class="step1Bg" valign="top" style="border-radius: 0px;">
+                                                           
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="padding: 0x; margin: 0px; border: 0px; width: 100%; margin-top: -20px;
+                                                    " cellspacing="0">
+                                                    <tr class="step2-3Height">
+                                                        <td class="flrLeft steps1-3 step2Bg">
+                                                            Step 1:
+                                                        </td>
+                                                        <td class="align-top step2Bg step2DescWidth">
                                                             <asp:RadioButtonList ID="rdoBedrooms" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" AutoPostBack="True" OnSelectedIndexChanged="rdoBedrooms_SelectedIndexChanged">
                                                                 <asp:ListItem>0-2 Bedrooms</asp:ListItem>
@@ -144,14 +208,18 @@
                                                                 <asp:ListItem>5+ Bedrooms</asp:ListItem>
                                                                 <asp:ListItem Selected="True">Display</asp:ListItem>
                                                             </asp:RadioButtonList>
-                        </div>
-       
-  
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8">
-                            <label >Step 2:</label>   
-
+                                                        </td>
+                                                        <td rowspan="2" class="showMePropContainer" style="width: 117px !important;">
+                                                            <asp:Button ID="btnFilter" runat="server" Text="Search" Style="width: 117px !important;"
+                                                                OnClick="btnFilter_Click" CssClass="WrapButtonText showMePropBox" CausesValidation="False"
+                                                                OnClientClick="$('#ctl00_Content_selectedRdoTypes').val($('.test').find('input:checked')[0].value)" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="step3Bg step2-3Height">
+                                                        <td class="flrLeft steps1-3 step3Bg">
+                                                            Step 2:
+                                                        </td>
+                                                        <td class="flr3 step2DescWidth">
                                                             <asp:RadioButtonList ID="rdoFilter" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                                 <asp:ListItem>Hot Tub</asp:ListItem>
                                                                 <asp:ListItem>Internet</asp:ListItem>
@@ -159,32 +227,16 @@
                                                                 <asp:ListItem>Pool</asp:ListItem>
                                                                 <asp:ListItem Selected="True">Display All</asp:ListItem>
                                                             </asp:RadioButtonList>
-                        </div>
-  
-                        <div class="col-md-2 col-sm-2 ">
-                            <div class="text-right">
-                                <asp:Button ID="btnFilter"  runat="server" Text="Search" 
-                                                                OnClick="btnFilter_Click" CssClass="btnsigns" CausesValidation="False"
-                                                                OnClientClick="$('#ctl00_Content_selectedRdoTypes').val($('.test').find('input:checked')[0].value)" />
-
-                            </div>
-                            
-                        </div>
-                    </div>
-    
-       
-  
-                                        </div>
-                </div>
-
-
-                <div class="row">
-                                           <div style="float: left; width: 100%">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div style="float: left; width: 100%">
                                                 <div style="float: left; width: 82%">
                                                     <asp:GridView ID="City_datagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="ID"
                                                         GridLines="None" OnRowDataBound="City_datagrid_RowDataBound" CellPadding="1" 
                                                         ShowHeader="false" Width="100%" OnPageIndexChanging="City_datagrid_PageIndexChanging"
-                                                        OnPageIndexChanged="City_datagrid_PageIndexChanged"  >
+                                                        OnPageIndexChanged="City_datagrid_PageIndexChanged" CssClass="propertiesRowsContainer" >
                                                         <FooterStyle CssClass="StateFooter" />
                                                         <RowStyle CssClass="StateRow tableMainContainer" />
                                                         <Columns>
@@ -225,13 +277,13 @@
                                                                                 
                                                                             </td>
                                                                             <%--start of edit--%>
-                                                                            <td >
-                                                                                <div style="min-height: 140px; float: left; width: 100%; vertical-align:top" >
+                                                                            <td valign="top" class="propertyDetails" style="text-align: left; width: 100%">
+                                                                                <div style="min-height: 140px; float: left; width: 100%;" class="propLink">
                                                                                     <table width="100%" class="propLink">
                                                                                         <tr>
                                                                                             <td>
-                                                                                                <ul class="proplist">
-                                                                                                    <li><h3><span class="H3CityText"><a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
+                                                                                                <ul>
+                                                                                                    <li><h3><span class="categoryTitle H3CityText"><a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
                                                                                                         <asp:Label ID="Label4" class="tdNoSleepsBathNum" runat="server" Text='<%# String.Format("{0}{1}{2}{3}",Eval("type"),"","", "")%>'></asp:Label>
                                                                                                         <span class="tdNoSleepsBathNum">
                                                                                                             <asp:Label ID="Label5" runat="server"><%# Eval("NumBedrooms")%></asp:Label>
@@ -375,17 +427,25 @@
 
                                                 </div>
                                             </div>
-                </div>
-
-
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
                     <div class="OrangeText" style="text-align: left; float: left;">
                         <br />
                     </div>
+                </td>
+            </tr>
+            
+        </table>
         <asp:Label ID="lblInfo22" runat="server" ForeColor="Red"></asp:Label>
         <div class="country_list_box">
 
-                <ul class="proplists">
-                    <li><div id="rtHd3" runat="server"  style="display:inline;"></div></li>
+                <ul>
+                    <li><div id="rtHd3" runat="server" style="display:inline;"></div></li>
                     <asp:Literal id="rtLow3" runat="server">
                             </asp:Literal>
 
@@ -394,8 +454,45 @@
             </div>
         <p align="left">
             
-       
-  
+            <%--<br />
+            <div class="listingContainerMain" style="border: none; box-shadow: none; margin-left: 0px !important;float: left; width: 82%;">
+                <div class="rtHeader rightSideHeaders" id="rtHd3" runat="server" style="width: 100%;
+                    text-align: left; background-color: transparent !important; font-size: 10pt; font-weight: bold;">
+                </div>
+                <div id="rtLow3" runat="server" style="border: none; box-shadow: none; margin-left: 0px !important;
+                    font-size: 10pt; font-weight: bold; color: #2f6547;">
+                </div>
+            </div>--%>
+
+            <script type="text/javascript">
+                sc_project = 3345790;
+                sc_invisible = 1;
+                sc_partition = 36;
+                sc_security = "b7bf8208";
+            </script>
+
+            <script type="text/javascript">
+
+                $(".propImg").mouseenter(function () {
+                    //$(this).hide();
+                    //$(this).siblings($('.clickToViewDiv')).show();
+                });
+                $('.clickToViewDiv').mouseleave(function () {
+                    //$(".propImg").show();
+                    //$(".propImg").siblings($('.clickToViewDiv')).hide();
+
+                });
+
+
+                //                $("#Content_divTab1").mouseenter(function () {
+                //                    $(this).hide();
+                //                    $(this).siblings($('#Content_divClicktoSubscribe')).show();
+                //                });
+                //                $('#Content_divClicktoSubscribe').mouseleave(function () {
+                //                    $(this).hide();
+                //                    $("#Content_divTab1").show();
+                //                });
+            </script>
 
             <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 
@@ -404,15 +501,20 @@
                     <a title="web counter" href="http://www.statcounter.com/free_hit_counter.html" target="_blank">
                         <img class="statcounter" src="http://c37.statcounter.com/3345790/0/b7bf8208/1/" alt="web counter" /></a>
                 </div>
-           </noscript>
+
+                <script type="text/javascript">
+                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+
+            </noscript>
+
+            <script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-1499424-2");
+                    pageTracker._trackPageview();
+                } catch (err) { }</script>
 
         </p>
     </div>
-
-        </div>
-    </div>
-
-   
-    
-    <script src="/Assets/js/citylist.js"></script>
 </asp:Content>

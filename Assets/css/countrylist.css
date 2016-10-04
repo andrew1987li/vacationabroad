@@ -1,0 +1,44 @@
+﻿
+.backitem{
+    margin-left:20px;
+    margin-top:15px;
+    font-size:12pt;
+    font-family:Verdana;
+}
+
+.H1CityText{
+    font-family:Verdana;
+    margin-top:10px;
+    color:#ff6600;
+}
+
+.txtalign{
+     display: inline-block;
+     text-align:left;
+}
+
+.inlineblock{
+    display:inline;
+}
+
+.viewalllink{
+    margin-left:15px;
+    font-size:11pt;
+}
+
+.linkpadding{
+    margin-left:30px;
+    margin-top:30px;
+}
+
+.stateful{
+    margin:20px 100px;
+}
+
+ul.stateful li{
+  display: inline-block;
+     list-style-position:inside;
+    border: 1px solid #0094ff;
+    padding:20px;
+
+}
