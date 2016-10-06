@@ -279,7 +279,7 @@ public partial class CountryList : CommonPage
 		    hyplnkAllProps.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/countryproperties.aspx";
                     ltrAllProps.Text = " View all " + char.ToUpper(country[0]) + country.Substring(1) + " properties";
                     ltrHeading.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacations";
-                    string iframe = "<iframe height='260' width='500' frameborder='0' src='/" + country + "/Maps.aspx'></iframe>";
+                    string iframe = "<iframe height='260' width='95%' frameborder='0' src='/" + country + "/Maps.aspx'></iframe>";
                     ltrCountryThing.Text = char.ToUpper(country[0]) + country.Substring(1);
                     googleCountrymap.InnerHtml = iframe;
                     page.Title = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals, Boutique Hotels | Vacations Abroad";
@@ -329,7 +329,7 @@ public partial class CountryList : CommonPage
 			ltrAllProps.Text = " View all " + char.ToUpper(country[0]) + country.Substring(1) + " properties";
                         ltrHeading.Text = char.ToUpper(country[0]) + country.Substring(1) + " Vacations";
 
-                        string iframe = "<iframe height='260' frameborder='0' width='500' src='/" + country + "/Maps.aspx'></iframe>";
+                        string iframe = "<iframe height='260' frameborder='0' width='95%' src='/" + country + "/Maps.aspx'></iframe>";
                         googleCountrymap.InnerHtml = iframe;
                         ltrCountryThing.Text = char.ToUpper(country[0]) + country.Substring(1);
                         page.Title = char.ToUpper(country[0]) + country.Substring(1) + " Vacation Rentals, Boutique Hotels | Vacations Abroad";
@@ -486,14 +486,20 @@ public partial class CountryList : CommonPage
         states1 = "";
         string str_states = "";
         string str_keyword = "";
+        int ind = 0;
+        // string cls = " class='borderright' ";
+        string cls = "border-right:1px solid #0094ff;";
+        string li = "";
         foreach (DataRow dr in MainDataSet.Tables["StateProvinces"].Rows)
         {
             DataFunctions objcate = new DataFunctions();
             DataTable dt1 = new DataTable();
             dt = obj.PropertiesByCase(vList, Convert.ToInt32(dr["id"]), "State");
-            
+
+            li =" style='"+ ((ind > 4) ? "border-top:0px;" : "")+ (((ind++ % 5) == 4) ? cls : "")+"'";
+
             string temp = "/" + country.ToLower().Replace(" ", "_") + "/" + dr["StateProvince"].ToString().ToLower().Replace(" ", "_") + "/default.aspx";
-            states1 += "<li><a href='" + temp + "' class='StateTitle'>" + dr["StateProvince"].ToString().Replace(" ", "&nbsp;") + "</a><br/> ";
+            states1 += "<li"+li +"><a href='" + temp + "' class='StateTitle'>" + dr["StateProvince"].ToString().Replace(" ", "&nbsp;") + "</a><br/> ";
             states1 += "<a href=\"" + temp + "\"><img width='160' height='125' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt.Rows[0]["PhotoImage"]) + "' alt='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' title='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' /></a></li>";
             str_states += Convert.ToString(dr["StateProvince"]) + ", ";
             str_keyword += Convert.ToString(dr["StateProvince"]) + " " + country + ", ";
@@ -516,7 +522,7 @@ public partial class CountryList : CommonPage
         
 
         Statesul.InnerHtml = states1;
-        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
+        //Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
 
         int num_properties = MainDataSet.Tables["Properties"].Rows.Count;
         

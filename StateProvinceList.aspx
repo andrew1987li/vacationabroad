@@ -21,6 +21,9 @@
                 <div class="row">
                    <div>
                        <div class=" backitem text-left">
+                       <asp:HyperLink ID="hyplinkBackRegion" runat="server">
+                                <asp:Literal ID="ltrRegion" runat="server"></asp:Literal>
+                        </asp:HyperLink>
                        <asp:HyperLink ID="hyplnkBackLink" runat="server">
                                 <asp:Literal ID="ltrBackText" runat="server"></asp:Literal>
                         </asp:HyperLink>
@@ -91,8 +94,8 @@
             <div class="row">
                    <div class="col-100">
 
-                    <div class="sub-title test orange" visible="true" id="OrangeTitle" runat="server">
-                        <h2>Things to see and do in
+                    <div class="subtitle" visible="true" id="OrangeTitle" runat="server">
+                        <h2 style="margin-top:10px">Things to see and do in
                         <asp:Literal ID="ltrStateThing" runat="server"></asp:Literal></h2>
 
                     </div>

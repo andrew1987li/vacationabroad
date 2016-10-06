@@ -1,7 +1,8 @@
-﻿div#cus_head > h2 { display: inline-block; color:#154890 ; font-family:Verdana; font-size:18px;}
+﻿div#cus_head  h2 { display: inline-block; color:#154890 ; font-family:Verdana; font-size:23pt;margin-top:5px;}
 div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-size:12px; }
 
 .headerunderline{
+
     border-bottom:2px solid #e1d4c0;
 }
 .footertopline{
@@ -51,11 +52,18 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
     height:30px;
 }
 
+a.nodecoration{
+    text-decoration:none;
+}
+a.nodecoration:hover{
+    text-decoration:none;
+}
 
 .search-form {
     display: inline-block;
     background: #fff;
     margin-top:10px;
+    margin-left:30%; 
 }
 
 .search-form input {

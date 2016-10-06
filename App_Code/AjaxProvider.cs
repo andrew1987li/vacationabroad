@@ -52,18 +52,21 @@ public class AjaxProvider
                 return inquiry_set;
             }
 
-    public static List<Ajaxcountryinfo> getCountryInfo(int regionid)
+    public static AjaxCountryList getCountryInfo(int regionid)
     {
+        AjaxCountryList ajaxlist = new AjaxCountryList();
+        ajaxlist.regionid = regionid;
         //uspGetCountryInfo  @PropID
         List<Ajaxcountryinfo> list = new List<Ajaxcountryinfo>();
         try
         {
             using (SqlConnection con = new SqlConnection(connString))
             {
-                using (SqlCommand cmd = new SqlCommand("select ID, Country  from Countries  where RegionID=@id", con))
+                using (SqlCommand cmd = new SqlCommand("uspGetCountryList", con))
                 {
                     con.Open();
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = regionid;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@RegionID", SqlDbType.Int).Value = regionid;
 
 
 
@@ -91,7 +94,8 @@ public class AjaxProvider
             // throw ex;
             // return 0;
         }
-        return list;
+        ajaxlist.statelist = list;
+        return ajaxlist;
     }
     public static AjaxStateList getSateInfo(int countryid)
     {

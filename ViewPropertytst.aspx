@@ -1,25 +1,69 @@
 <%--<%@ Page Language="C#" MasterPageFile="~/MasterPPropertiesFullSetageNoCss.master" AutoEventWireup="true" CodeFile="~/viewproperty.aspx.cs" Inherits="ViewProperty" Title="<%# GetTitle () %>" EnableEventValidation="false" %>--%>
 <%--EnableViewState="false"--%>
 
-<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="~/viewproperty.aspx.cs" Inherits="ViewProperty" Title="<%# GetTitle () %>" EnableEventValidation="false" %>
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="~/ViewPropertytst.aspx.cs" Inherits="ViewProperty" Title="<%# GetTitle () %>" EnableEventValidation="false" %>
 
 <%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
 
-<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
-    <link href="/Assets/css/viewproperty.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="/css/jcarousel.css"/>
-</asp:Content>
-
 <asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
-    <div class="row">
-     <div class="internalpagewidth">
-          <script type="text/javascript" src="/js/responsiveCarousel.min.js"></script>
+    <script type="text/javascript" src="/js/responsiveCarousel.min.js"></script>
+    <script type="text/javascript">
+        var RecaptchaOptions = {
+            theme: 'white'
+        };
+    </script>
+    <style type="text/css">
+        .recaptchatable .recaptcha_image_cell, #recaptcha_table {
+            background-color: #ffffff !important;
+        }
 
+        #recaptcha_table {
+            background-color: #ffffff !important;
+        }
 
+        #recaptcha_response_field {
+            background-color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+        
+    </style>
 
+    <link rel="stylesheet" type="text/css" href="/css/jcarousel.css">
     <script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
     <script type="text/javascript" src="/js/jcarousel.basic.js"></script>
+    <style type="text/css">
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+            background: #ffffff;
+        }
 
+            .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default a {
+                color: rgb(21,72,144);
+            }
+
+        .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+            background: rgb(21,72,144);
+        }
+
+            .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active a {
+                color: #ffffff;
+            }
+
+        .listingContainerMain .tdNoSleeps {
+            font-size: 13px;
+            font-style: normal;
+            color: rgb(102,153,255);
+        }
+        .jcarousel li {
+            display: table-cell;
+            float: none;
+        }
+        a:link {
+            color: #6699ff;
+        }
+        a:hover {
+            text-decoration: none !important;
+        }
+    </style>
     <asp:Label ID="Title" runat="server" Visible="false" Text="%city% %bedroom% Bedroom %type% # %propid% | Vacations Abroad"></asp:Label>
     <asp:Label ID="Keywords" runat="server" Visible="false" Text="%city% %bedroom% Bedroom %type%, %city% %stateprovince% %type% rental, %city% %country% %type% "></asp:Label>
     <asp:Label ID="Description" runat="server" Visible="false" Text="Kickback and relax in this %city% %type% in %stateprovince% %country% from Vacations-Abroad"></asp:Label>
@@ -32,12 +76,11 @@
         </div>
     </div>--%>
     <asp:Label ID="lblTest" runat="server" Style="display: none"></asp:Label>
-    <div class="row">
-                    <div class="listingPagesH1Container">   
-                         <asp:HyperLink ID="hyplnkRegionBackLink" runat="server">
-                            <h3>
-                                <asp:Literal ID="ltrRegionBackText" runat="server"></asp:Literal></h3>
-                        </asp:HyperLink>
+    <div style="width: 100%;">
+        <table id="PropertyTable">
+            <tr>
+                <td>
+                    <div class="listingPagesH1Container">
                         <asp:HyperLink ID="hyplnkCountryBackLink" runat="server">
                             <h3>
                                 <asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3>
@@ -52,20 +95,19 @@
                         </asp:HyperLink>
 
                     </div>
-    </div>
-     <div class="row">
-                    <div class="text-center">
-                        <h1><span class="H1CityText">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="listingPagesH1Container" style="margin-top: 50px">
+                        <h1><span class="listingPagesH1Color H1CityText">
                             <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> </span></h1>
                         <br />
 
                        
                     </div>
-     </div>
-     <div class="row">
-         <div class="text-center">
                     <div class="wrapper">
-                        <div class="jcarousel-wrapper" style="margin-bottom: 100px; margin-top: -30px">
+                        <div class="jcarousel-wrapper" style="margin-bottom: 200px; margin-top: -30px">
                             <div class="jcarousel" id="">
                                 <ul>
                                     <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0)
@@ -141,20 +183,16 @@
                                             width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Width"].ToString () : "0" %>'
                                             height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Height"].ToString () : "0" %>' /></li>
                                     <%} %>
-                                </ul>
                             </div>
                             
                             <a href="#" class="jcarousel-control-prev" style="color: white">&lsaquo;</a>
                             <a href="#" class="jcarousel-control-next" style="color: white">&rsaquo;</a>
                         </div>
-
+                        </ul>
                     </div>
-         </div>
-     </div>
-    <div class="row">
-
-        <div class="TitleFont">
-            <h2 class="ViewPropertyPageFonts">
+        </table>
+        <div class="PropTable11 ViewPropertyPageFonts" style="color: #1D2D33; margin-top: -70px; margin-bottom: 20px">
+            <h2 style="font-weight: bold; font-size: 12pt;" class="ViewPropertyPageFonts">
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %>
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumBedrooms"] %> Bedroom <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %>
                 , Sleeps <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumSleeps"] %>
@@ -162,7 +200,7 @@
                 <br />
                 <%# ((int)PropertiesFullSet.Tables["Properties"].Rows[0]["IfPaid"] == 1) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["IfShowAddress"] ? "Address: " + PropertiesFullSet.Tables["Properties"].Rows[0]["Address"] : "" %>
             </h2>
-            <div>
+            <div style="text-align: justify; font-weight: normal;" class="ViewPropertyPageFonts">
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumTVs"] %>
                 TVs,
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumVCRs"] %>
@@ -180,61 +218,20 @@
                 </asp:Repeater>
             </div>
         </div>
-
-          <div id="tabs" >
-            <ul class="tabs">
-                <li data-tab="tabs-1" class="current">Amenities</li>
-                <li data-tab="tabs-5">Attractions</li>
-                <li data-tab="tabs-2">Rates & Calendar</li>
-                <li data-tab="tabs-4">Reviews</li>
-                <li data-tab="tabs-3">Inquire</li>
+        <div id="tabs" style="background: transparent; border: none; font-family: arial;">
+            <ul style="background: transparent; border: none; border-bottom: 3px solid #154890; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;">
+                <li><a href="#tabs-1" style="font-size: 14.66px; width: 146.5px;">Amenities</a></li>
+                <li><a href="#tabs-5" style="font-size: 14.66px; width: 146.5px;">Attractions</a></li>
+                <li><a href="#tabs-2" style="font-size: 14.66px; width: 146.5px; background: none">Rates & Calendar</a></li>
+                <li><a href="#tabs-4" style="font-size: 14.66px; width: 146.5px;">Reviews</a></li>
+                <li><a href="#tabs-3" style="font-size: 14.66px; width: 146.5px;">Inquire</a></li>
             </ul>
-            <div id="tabs-1"  class="tab-content current" style="text-align: left;font-size: 14.66px;">
-
-                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Description"] %><br />
-                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Amenities"] %>
-           <div class ="centered" style="margin-top:30px;">
-                        <table class="PropTable10">
-                            <tr>
-                                <asp:Repeater ID="Repeater5" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
-                                    <HeaderTemplate>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <td style="font-size: 14px; background-color: #154890; color: White;">
-                                            <%# DataBinder.Eval(Container.DataItem, "RoomTitle", "{0}") %>
-                                        </td>
-                                    </ItemTemplate>
-                                    <FooterTemplate>
-                                    </FooterTemplate>
-                                </asp:Repeater>
-                            </tr>
-                            <tr>
-                                <asp:Repeater ID="Repeater6" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
-                                    <HeaderTemplate>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <td class="PropTable10B ViewPropertyPageFonts">
-                                            <asp:Repeater ID="Repeater7" runat="server" DataMember="FurnitureItems" DataSource='<%# ((System.Data.DataRowView)Container.DataItem).CreateChildView("RoomsFurniture") %>'>
-                                                <HeaderTemplate>
-                                                </HeaderTemplate>
-                                                <ItemTemplate>
-                                                    <%# DataBinder.Eval(Container.DataItem, "FurnitureItem", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
-                                                </ItemTemplate>
-                                                <FooterTemplate>
-                                                </FooterTemplate>
-                                            </asp:Repeater>
-                                        </td>
-                                    </ItemTemplate>
-                                    <FooterTemplate>
-                                    </FooterTemplate>
-                                </asp:Repeater>
-                            </tr>
-                        </table>
-           </div>
+            <div id="tabs-1" style="text-align: left;font-size: 14.66px;">
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Description"] %><br />
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Amenities"] %>
             </div>
-
-            <div id="tabs-2"  class="tab-content">
-                <div align="center" class="contentfont" style="color: #343d6c;">
+            <div id="tabs-2">
+                <div align="center" style="color: #343d6c;">
                     <table class="PropTable12">
                         <tr>
                             <td class="Center">
@@ -249,7 +246,7 @@
                             
                         </div>--%>
                     
-                        <div class="contentfont">
+                        <div class="PropTable11 ViewPropertyPageFonts">
                             <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Rates"] %><br />
                         </div>
                         <% if (RatesSet.Tables["Rates"].Rows.Count > 0)
@@ -295,7 +292,7 @@
                         </asp:Repeater>
                         <% } %>
                     
-                    <div class="contentfont">
+                    <div class="Center ViewPropertyPageFonts">
                         Pricing for  <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> in <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Country"] %> are quoted in
                             <%# PropertiesFullSet.Tables["Properties"].Rows[0]["PricesCurrency"] %><br />
                         <br />
@@ -304,7 +301,7 @@
                         <br />
 
                     </div>
-                    <div class="text-left" style="font-size: 11pt; font-family: Arial; color: #1D2D33;">
+                    <div class="Left" style="font-size: 11pt; font-family: Arial; color: #1D2D33;">
                         Check in time <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckIn"] %><br />
                         Check out time   <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckOut"] %><br />
                         Payment methods accepted:
@@ -339,8 +336,7 @@
                         <%# PropertiesFullSet.Tables["Properties"].Rows[0]["DepositRequired"] %><br />
                     </div>
                 </div>
-                <div class="centered">
-                    <table style="margin-top: 50px">
+                <table width="100%" style="margin-top: 50px">
                     <tr>
                         <td width="25%">
                             <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender"
@@ -449,16 +445,14 @@
 
                     </tr>
                 </table>
-                </div>
             </div>
-            <div id="tabs-3"  class="tab-content">
-                <div class="centered">
+            <div id="tabs-3">
                 <table>
                     <tr>
-                        <td align="center" >
+                        <td align="center" valign="top" style="vertical-align: top; margin-left: -50px" width="40%">
                             <% if (EmailPresent())
                                { %>
-                            <table>
+                            <table class="PropTable12">
                                 <tr>
                                     <td class="Center">
                                         <label class="colorOnHover" style="color: rgb(205,191,172) !important;">
@@ -467,8 +461,7 @@
                                 </tr>
                             </table>
                             <br />
-                            <div class="inquriyform">
-                          <table >
+                            <table style="border: 5px solid #f0b892; border-radius: 55px; padding: 30px 10px 10px;background-color: rgb(250, 251, 252);color:rgb(118,114,113);">
                                 <tr align="center">
                                     <td style="width: 100px" align="left">
                                         <asp:Label ID="Label1" runat="server">Your name:</asp:Label>
@@ -499,7 +492,7 @@
                                             ErrorMessage="Too long email address entered" ControlToValidate="ContactEmail"
                                             Display="Dynamic" />
                                         <asp:RegularExpressionValidator ID="CheckEmail" runat="server" ValidationExpression="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
-                                            ErrorMessage="Invalid email" ControlToValidate="ContactEmail"
+                                            ErrorMessage="Invalid email address entered" ControlToValidate="ContactEmail"
                                             Display="Dynamic" />
                                     </td>
                                 </tr>
@@ -520,7 +513,7 @@
                                         <asp:Label ID="Label4" runat="server">Arrival:</asp:Label>
                                     </td>
                                     <td></td>
-                                    <td align="right" style="width: 172px">
+                                    <td align="left" style="width: 175px">
                                         <asp:DropDownList ID="ArrivalDay" runat="server" Width="47px" Height="24px">
                                             <asp:ListItem Value="1">1</asp:ListItem>
                                             <asp:ListItem Value="2">2</asp:ListItem>
@@ -568,7 +561,7 @@
                                             <asp:ListItem Value="November">Nov</asp:ListItem>
                                             <asp:ListItem Value="December">Dec</asp:ListItem>
                                         </asp:DropDownList>
-                                        <asp:DropDownList ID="ArrivalYear" runat="server" Width="62px" Height="24px">
+                                        <asp:DropDownList ID="ArrivalYear" runat="server" Width="68px" Height="24px">
 
                                             <asp:ListItem Value="2016">2016</asp:ListItem>
                                             <asp:ListItem Value="2017">2017</asp:ListItem>
@@ -598,7 +591,7 @@
                                         <asp:Label ID="Label7" runat="server"># Adults:</asp:Label>
                                     </td>
                                     <td></td>
-                                    <td colspan="2" align="right" style="width: 175px">
+                                    <td colspan="2" align="left" style="width: 175px">
                                         <asp:TextBox ID="HowManyAdults" runat="server" Width="46px" MaxLength="300" />
                                         <asp:RegularExpressionValidator ID="Regularexpressionvalidator2" runat="server" ValidationExpression="^[0-9 \.\-\(\)]{1,300}$"
                                             ErrorMessage="Invalid number entered" ControlToValidate="HowManyAdults" Display="Dynamic" />
@@ -644,8 +637,6 @@
                                     </td>
                                 </tr>
                             </table>
-                            </div>
-  
                             <% }
                                else
                                { %>
@@ -659,11 +650,10 @@
                         </td>
                     </tr>
                 </table>
-                </div>
             </div>
-            <div id="tabs-4"  class="tab-content">
+            <div id="tabs-4">
                 <%--reviews--%>
-                <div id="divReviews" runat="server" class="contentfont" style="width: 100%;">
+                <div id="divReviews" runat="server" style="width: 100%;">
                     <table width="100%">
                         <tr>
                             <td style="width: 50%;">
@@ -677,9 +667,9 @@
                 </div>
                 <%--reviews--%>
             </div>
-            <div id="tabs-5"  class="tab-content text-center">
+            <div id="tabs-5">
                 <div align="center" style="color: #1D2D33;">
-                    <table class="PropTable12 contentfont">
+                    <table class="PropTable12">
                         <tr>
                             <td align="center" style="color: #000072;">
                                 <a name="Attractions"></a>
@@ -698,9 +688,9 @@
                     <div style="width: 70%; margin-top: 20px; margin-bottom: 20px">
                         <asp:Repeater ID="Repeater2" runat="server" DataMember="Attractions" DataSource="<%# AttractionsDistancesSet %>">
                             <HeaderTemplate>
-                                <table class="proptable">
+                                <table class="PropTable13 ViewPropertyPageFonts">
                                     <tr>
-                                        <td align="center" colspan="4" style="background-color: #154890; color: White; font-size: 12pt;">
+                                        <td align="center" colspan="4" style="background-color: #343d6c; color: White; font-size: 12pt;">
                                             <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> Local Attractions
                                                 
                                         </td>
@@ -708,10 +698,10 @@
                                     <tr>
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <td >
+                                <td class="PropTable13A">
                                     <%# DataBinder.Eval(Container.DataItem, "Attraction", "{0}") %>
                                 </td>
-                                <td >
+                                <td class="PropTable13B">
                                     <%# DataBinder.Eval(Container.DataItem, "Distance", "{0}") %>
                                 </td>
                                 <%# IfEvenRow ((System.Data.DataRowView)Container.DataItem) ? "</tr><tr>" : "" %>
@@ -723,9 +713,13 @@
                     </div>
                 </div>
             </div>
-
+            <script type="text/javascript">
+                $(function () {
+                    $("#tabs").tabs();
+                });
+            </script>
             <asp:Label ID="lblInfo" runat="server" ForeColor="Red"></asp:Label>
-            <div class="TitleFont" style="display:none">
+            <div class="listingContainerMain" style="border: none; box-shadow: none; margin-left: 0px !important;">
                 <div class="rtHeader rightSideHeaders" id="rtHd3" runat="server" style="width: 917px; text-align: left; background-color: transparent !important; font-size: 10pt; font-weight: bold;">
                 </div>
                 <div id="rtLow3" runat="server" style="border: none; box-shadow: none; margin-left: 0px !important; font-size: 10pt; font-weight: bold; color: #2f6547;">
@@ -734,14 +728,26 @@
 
         </div>
         <br />
-     </div>
-
-    </div>
-
         <!-- Start of StatCounter Code -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".grdImg2").each(function (index) {
+                    var height = $(this).height;
+                    var width = $(this).width();
+                    if (height == 0 || width == 0) {
+                        $(this).hide();
+                    }
+                });
+            })
+        </script>
 
+        <script type="text/javascript">
+            sc_project = 3614019;
+            sc_invisible = 1;
+            sc_partition = 41;
+            sc_security = "5d0ed9a7";
+        </script>
 
- 
         <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 
         <noscript>
@@ -754,9 +760,17 @@
         <!-- End of StatCounter Code -->
         <!-- End counter code -->
 
-  
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-1499424-2");
+                pageTracker._trackPageview();
+            } catch (err) { }</script>
 
         <asp:Label ID="devnote" runat="server" Text="" BackColor="White" ForeColor="White"
             Visible="false" />
-        <script src="/Assets/js/viewproperty.js"></script>
 </asp:Content>

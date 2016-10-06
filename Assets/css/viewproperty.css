@@ -1,0 +1,202 @@
+﻿.internalpagewidth {
+    margin-left: 10%;
+    width: 80%;
+    margin-top:25px;
+}
+
+.backitem{
+    margin-left:20px;
+    margin-top:15px;
+    font-size:12pt;
+    font-family:Verdana;
+}
+
+.H1CityText{
+    font-family:Verdana;
+    margin-top:30px;
+    color:#ff6600;
+}
+.orangetxt{
+    color:white;
+    font-family:Verdana;
+    font-size:13pt;
+    background-color:#ff6600;
+    text-align:center;
+    height:35px;
+    margin-top:15px;
+    padding-top:5px;
+    margin-bottom:15px;
+}
+
+.txtalign{
+     display: inline-block;
+     text-align:left;
+     margin-left:20px;
+}
+
+.inlineblock{
+    display:inline;
+    margin-left:15px;
+}
+
+.viewalllink{
+    margin-left:15px;
+    font-size:11pt;
+}
+
+.linkpadding{
+    margin-left:30px;
+    margin-top:30px;
+}
+
+.stateful{
+    margin-top:20px;
+    margin-left:0px;
+    padding:20px;
+}
+
+ul.stateful li{
+  display: inline-block;
+     list-style-position:inside;
+    border: 1px solid #0094ff;
+    padding:10px;
+
+}
+
+ul.countrylist{
+    list-style:none;
+
+}
+
+
+ul.countrylist li{
+    display:inline-block;
+}
+
+.contentpadding{
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.contentstyle{
+    font-family:Verdana;
+    font-size:11pt;
+    margin-left:5px;
+}
+
+.listingPagesH1Container{
+    margin-top:5px;
+    margin-left:15px;
+}
+
+.listingPagesH1Container h3{
+    display:inline;
+    font-size:10pt;
+    font-family:Verdana;
+}
+
+.wrapper{
+    margin-top:30px; margin-bottom:10px;
+}
+
+.inquriyform td{
+    height:40px;
+}
+
+.proptable td{
+    width:150px;
+    padding-left:5px;
+}
+
+table.proptable {
+    			background: #ededed;
+}
+
+.ViewPropertyPageFonts{
+    font-size:14px;
+    font-family:Verdana;
+    color:#1d2d33;
+}
+
+.TitleFont{
+    font-size:14px;
+    font-family:Verdana;
+    color:#1D2D33;
+    margin:15px 25px;
+    margin-top:0px;
+}
+
+
+	ul.tabs{
+			margin: 30px 15px;
+			padding: 0px;
+			list-style: none;
+            background: transparent;
+           border-bottom: 3px solid #154890; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+		}
+		ul.tabs li{
+			background-color: #154890;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+            border:none;
+			color: white;
+			display: inline-block;
+			padding: 5px 15px;
+			cursor: pointer;
+            margin-left:0px;
+            width:19%;
+            text-align:center;
+		}
+
+		ul.tabs li.current{
+			background: #ededed;
+			color: #222;
+		}
+
+		.tab-content{
+			display: none;
+			background-color:transparent;
+			padding: 5px;
+            margin:0px 15px;
+		}
+
+
+		.tab-content.current{
+			display: block;
+		}
+
+        div.centered 
+{
+    text-align: center;
+}
+
+div.centered> table 
+{
+    margin: 0 auto; 
+    text-align: left;
+}
+
+
+.inquriyform{
+     border: 5px solid #f0b892;    border-radius: 55px; padding: 30px 10px 10px;background-color: rgb(250, 251, 252);color:rgb(118,114,113);
+ }
+
+.btnBookNow{
+    color:white;
+}
+
+.PropTable10 td{
+    text-align:center;
+    width:250px;
+}
+
+table.PropTable10{
+    background-color:#ededed;
+      font-size: 11pt;
+      font-family:Verdana;
+}
+
+.contentfont{
+      font-size: 14px;
+      font-family:Verdana;
+}

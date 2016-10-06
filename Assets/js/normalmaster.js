@@ -6,6 +6,48 @@ function onclickevent_footerment(menuindex, itemindex) {
     window.location.href = redirect_links[menuindex][itemindex];
 }
 
+function getcountrylist(item) {
+
+    //console.log(item.id);
+    var rid = item.id.split("_")[1];
+    if (menuitem[rid] != 0) {
+        dropdownbtn(item);
+        return;
+    }
+    console.log("countrylist" + rid);
+    call_rid = rid;
+    $.ajax({
+        type: "POST",
+        url: "/AjaxHelper.aspx/GetCountryList",
+        data: '{id:' + rid + '}',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: processTopCountryData,
+        failure: function (response) {
+            alert(response.d);
+        }
+    });
+}
+
+
+function processTopCountryData(response) {
+    var statelist = response.d;
+    //console.log(statelist);
+    if (call_rid != statelist.regionid) return;
+    var states = statelist.statelist;
+    //$(".ajcountry").empty();
+    for (var i = 0; i < states.length; i++) {
+        var id = "item" + call_rid + '_' + states[i].id ;
+        var item = ' <li ><a class="mmitem" onmouseover="callstateslist(\''+id+'\')" id="' + id + '">' + states[i].name + '</a></li>';
+        $("#ajcountry"+call_rid).append(item);
+        // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
+    }
+    menuitem[call_rid] = 1;
+    dropdownbtn("#reg_" + call_rid);
+}
+
+
+
 function getmainmenu(cid) {
     $.ajax({
         type: "POST",
@@ -24,23 +66,45 @@ function getmainmenu(cid) {
 }
 
 var call_cid = 0;
+var call_rid = 0;
 var callcountry = "";
 var data_arr = [];
+var menuitem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+function callstateslist(cid) {
+
+    $(".itemselected").removeClass("itemselected");
+    $("#" + cid).parent().parent().find(".itemselected").removeClass("itemselected");
+    $("#" + cid).addClass("itemselected");
+    var sp_str = cid.split("_");
+    call_cid = sp_str[1];
+    callcountry = $("#" + cid).text();
+    getmainmenu(call_cid);
+}
+
+function dropdownbtn(item){
+     $(".statelists").empty();
+    $(".allprop").attr("href", "#");
+    $(".itemselected").removeClass("itemselected");
+    var cid = $(item).parent().find("div div ul .mmitem").first().attr("id");
+    $("#" + cid).addClass("itemselected");
+    var sp_str = cid.split("_");
+    call_cid = sp_str[1];
+    callcountry = $("#" + cid).text();
+    getmainmenu(call_cid);
+}
+
 
 $(document).ready(function() {
     //mmitem
-    $(".mmitem").mouseover(function () {
+  /*  $(".mmitem").mouseover(function () {
 
-        var cid = this.id;
-        $(this).parent().parent().find(".itemselected").removeClass("itemselected");
-        $("#" + cid).addClass("itemselected");
-        var sp_str = cid.split("_");
-        call_cid = sp_str[1];
-        callcountry = $("#" + cid).text();
-        getmainmenu(call_cid);
+        callstateslist();
     });
+    */
+    /*
     $(".dropbtn").mouseover(function () {
-        $(".statelists").empty();
+      $(".statelists").empty();
         $(".allprop").attr("href", "#");
         $(".itemselected").removeClass("itemselected");
         var cid = $(this).parent().find("div div ul .mmitem").first().attr("id");
@@ -49,7 +113,8 @@ $(document).ready(function() {
         call_cid = sp_str[1];
         callcountry = $("#" + cid).text();
         getmainmenu(call_cid);
-    });
+       
+    }); */
 
 
 
@@ -61,10 +126,11 @@ function processTopMenuData(response){
     var states = statelist.statelist;
     $(".statelists").empty();
     for (var i = 0; i < states.length; i++) {
-        var link = "http://69.89.14.163:86/"+callcountry+"/"+states[i].name+"/default.aspx";
+        var link = "http://69.89.14.163:86/" + callcountry.toLowerCase().replace(" ", "_") + "/" + states[i].name.toLowerCase().replace(" ", "_") + "/default.aspx";
          $(".statelists").append('<li><a href="' + link + '">' + states[i].name + '</a></li>');
        // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
-        $(".allprop").attr("href", "http://69.89.14.163:86/" + callcountry + "/countryproperties.aspx");
+         $(".allprop").attr("href", "http://69.89.14.163:86/" + callcountry.toLowerCase().replace(" ", "_") + "/countryproperties.aspx");
+         $(".allprop").text("View all " +callcountry+ " properties");
     }
 }
 

@@ -362,8 +362,10 @@ public partial class newCityList : CommonPage
                             ltrH11.Text = char.ToUpper(city[0]) + city.Substring(1) + " Vacations";
                             ltrH12.Text = char.ToUpper(city[0]) + city.Substring(1) + " Vacation Rentals and Hotels";
 
+                            hyperRegion.NavigateUrl = "/" + region.ToLower().Replace(" ", "_") + "/default.aspx";
+                            ltrRegion.Text = region + "<<";
 
-                            hyplnkCountryBackLink.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/default.aspx";
+                             hyplnkCountryBackLink.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/default.aspx";
                             ltrCountryBackText.Text = country + "<<";
 
                             hyplnkStateBackLink.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/" + stateprovince.ToLower().Replace(" ", "_") + "/default.aspx";

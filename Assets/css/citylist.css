@@ -1,6 +1,6 @@
 ﻿
 .backitem{
-    font-size:12pt;
+    font-size:10pt;
     font-family:Verdana;
     display:inline;
 }
@@ -16,8 +16,8 @@
 }
 
 .internalpagewidth{
-    margin-left:20%;
-    width:60%;
+    margin-left:10%;
+    width:80%;
 
 }
 
@@ -26,7 +26,7 @@
     color:white;
     border-radius:19px;
     border:none;
-    background-color:#154890;
+    background-color:#002160;
     font-size:13px;
     font-family:Verdana;
     padding:10px,20px,10px,20px;
@@ -36,6 +36,44 @@
     right:30px;
 }
 
+            .tdRentalRatesBlue    {
+            font-family: Arial;
+            color:  #002160;
+            font-weight: bold;
+            font-size: 14px;
+        }
+            .tdRentalRates
+        {
+            padding-left: 5px;
+            padding-right:3px;
+            font-family: Arial;
+            color:  #738EA7;
+            /*font-weight: bold;*/
+            font-size: 14px;
+        }
+                   .amenities
+        {
+            padding-left: 15px;
+            color: #050505;
+            font-size:14px;
+            font-weight: bold;
+        }
+                   .amenitiesCaption
+        {
+            color: #050505;
+            font-size:14px;
+            font-weight: bold;
+            
+        }
+                  .liDesccity
+        {
+
+            padding-right: 15px;
+            margin-top: 10px;
+            color: #3c3c3c;
+            font-size: 14px;
+         }
+
 .btnsigns:hover{
     border:none;
     background-color:#154890;
@@ -43,9 +81,15 @@
 
 .tableborder{
     border:2px solid #cdbfac;
+
     padding-left:20px;
     padding-top:10px;
     padding-bottom:10px;
+    margin-left:10px;
+    margin-right:20px;
+    color:#9b7f59;
+    font-family:Verdana;
+    font-size:9pt;
 }
 
 
@@ -82,13 +126,32 @@ ul.stateful li{
 
 ul.proplist{
     list-style:none;
+    margin-top:0px;
+}
 
+td{
+    vertical-align:baseline;
 }
 
 .H3CityText{
     font-size:12pt;
     font-style:italic;
 
+}
+.bottomline{
+    border-bottom:1px solid #cdbfac;
+    height:180px;
+    
+}
+
+.imgstyle{
+    margin-top:10px;
+    margin-bottom:10px;
+    box-shadow: 4px 4px 5px grey;
+}
+
+.newline{
+    display:block;
 }
 
 ul.proplists{

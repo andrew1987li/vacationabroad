@@ -21,6 +21,7 @@
         <div class="internalpagewidth">
             <div class="row">
                     <div class="text-left topMargin">
+                        <asp:HyperLink ID="hyperRegion" runat="server"><h3 class="backitem"><asp:Literal ID="ltrRegion" runat="server"></asp:Literal></h3></asp:HyperLink>
                         <asp:HyperLink ID="hyplnkCountryBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
                         <asp:HyperLink ID="hyplnkStateBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
                         <div class="clear"></div>
@@ -130,8 +131,7 @@
                 </div>
                <div class="row">
         
-
-                <div class="row tableborder">
+                   <div class="tableborder">
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                  <input type="hidden" id="selectedRdoTypes" runat="server" />
@@ -171,6 +171,8 @@
                             
                         </div>
                     </div>
+                   </div>
+
     
        
   
@@ -194,7 +196,7 @@
                                                                         <asp:Panel ID="test" runat="server">
                                                                             <tr>
                                                                                 <td align="center" colspan="2">
-                                                                                    <h2 style="font-size: 1.5em; color: #050505">
+                                                                                    <h2 style="font-size: 14pt; color: #050505">
                                                                                         <b>
                                                                                         <% if (Request.QueryString["category"] != null){ %>
                                                                                             <asp:Label ID="Label1" runat="server"><%#Eval("City") %><sp/> <%#Eval("Category")%>s</asp:Label></b></h2>
@@ -209,8 +211,8 @@
                                                                         <tr>
                                                                             <td valign="top" class="propertyThumbnail" style="vertical-align: top; text-align: center;
                                                                                 width: 110px" rowspan="1">
-                                                                                <a class="linkImgClickToView" href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
-                                                                                    <asp:Image ID="imgProp" CssClass="grdImg propImg propertyImg" Width="140px" Height="115px"
+                                                                                <a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
+                                                                                    <asp:Image ID="imgProp" CssClass="imgstyle" Width="150px" Height="125px"
                                                                                         Style="border-width: 1px;" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PhotoImage", "http://www.vacations-abroad.com/images/{0}").Trim() %>'
                                                                                         runat="server" alt='<%#String.Format("{0}{1}{2}{3}{4}",Eval("Type"),"","","","") %>' />
                                                                                     <%--runat  ="server" alt='<%#String.Format("{0}{1}{2}{3}{4}{5}","Boutique ", Eval("City")," Vacation Rentals, Boutique ",Eval("City")," ",Eval("Category")) %>' />--%>
@@ -218,22 +220,23 @@
                                                                                 </a>
                                                                                 
                                                                          
-                                                                                <p class="namebelowthumbnail" style="display: none">
+                                                                                <p class="namebelowthumbnail" style="display: none;height:10px;">
                                                                                 </p>
-                                                                                <br />
+                                                                                
                                                                                 <asp:Label ID="propname" runat="server" Text='<%#Eval("name2")%>'></asp:Label>
                                                                                 
                                                                             </td>
                                                                             <%--start of edit--%>
-                                                                            <td >
-                                                                                <div style="min-height: 140px; float: left; width: 100%; vertical-align:top" >
-                                                                                    <table width="100%" class="propLink">
+                                                                            <td>
+                                                                                <div >
+                                                                                    <table>
                                                                                         <tr>
-                                                                                            <td>
+                                                                                            <td class="bottomline"  >
+                                                                                                <div>
                                                                                                 <ul class="proplist">
-                                                                                                    <li><h3><span class="H3CityText"><a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
+                                                                                                    <li><h3 style="margin-top:0px;padding:0px;"><span class="H3CityText"><a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
                                                                                                         <asp:Label ID="Label4" class="tdNoSleepsBathNum" runat="server" Text='<%# String.Format("{0}{1}{2}{3}",Eval("type"),"","", "")%>'></asp:Label>
-                                                                                                        <span class="tdNoSleepsBathNum">
+                                                                                                        <span style="padding:0px; margin:0px;">
                                                                                                             <asp:Label ID="Label5" runat="server"><%# Eval("NumBedrooms")%></asp:Label>
                                                                                                             <asp:Label ID="Label6" runat="server">Bedroom</asp:Label>
                                                                                                             <asp:Label ID="BathNum" runat="server" Text='<%# Bind("NumBaths") %> '></asp:Label>
@@ -252,11 +255,11 @@
                                                                                                 </center>
                                                                                                         --%>
                                                                                                         
-                                                                                                        <span class="tdRentalRates CityText">
+                                                                                                        <span>
                                                                                                             <asp:Label ID="lblPNRatesCaption" class="tdRentalRatesBlue" runat="server">Rates:&nbsp;</asp:Label>
-                                                                                                            <asp:Label ID="lblPNRates" runat="server"></asp:Label>
+                                                                                                            <asp:Label ID="lblPNRates" CssClass="tdRentalRates"  runat="server"></asp:Label>
                                                                                                             <asp:Label ID="lblPNRatesCurrency" class="tdRentalRatesBlue" runat="server"></asp:Label>
-                                                                                                            <asp:Label ID="lblPNRatesBasis" runat="server"></asp:Label>
+                                                                                                            <asp:Label ID="lblPNRatesBasis" CssClass="tdRentalRates" runat="server"></asp:Label>
                                                                                                             <asp:Label ID="lblMinimumNights" class="tdRentalRatesBlue" Style="text-transform: capitalize;"
                                                                                                                 runat="server" Text='<%# Bind("MinimumNightlyRental") %>'></asp:Label>
                                                                                                             <asp:Label ID="Label2" class="tdRentalRatesBlue" runat="server">Minimum</asp:Label>
@@ -278,14 +281,16 @@
                                                                                                             --%>
                                                                                                         </center>
                                                                                                     </li>
-                                                                                                    <li id="liAmenity" class="amenities H4CityText" runat="server">
+                                                                                                    <li id="liAmenity"  runat="server">
                                                                                                         <asp:Label ID="lblAmenitiesCaption" CssClass="amenitiesCaption" runat="server">Amenities:</asp:Label>
-                                                                                                        <h4><asp:Label ID="lblAmenities" CssClass="amenities" runat="server"></asp:Label></h4>
+                                                                                                        <h4 style="display:inline;"><asp:Label ID="lblAmenities" CssClass="amenities" runat="server"></asp:Label></h4>
                                                                                                     </li>
                                                                                                     <li class="liDesccity">
                                                                                                         <asp:Label ID="lblDesc" runat="server" Text='<%# Eval("Name","{0} ")  %>'></asp:Label>
                                                                                                     </li>
                                                                                                 </ul>
+                                                                                                </div>
+
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>

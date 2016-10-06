@@ -144,7 +144,6 @@ public partial class ViewProperty : CommonPage
 
             PropertyViewsAdapter.SelectCommand.Parameters["@PropertyID"].Value = propertyid;
             PropertyViewsAdapter.SelectCommand.Parameters["@Date"].Value = DateTime.Now.Date;
-            string region = PropertiesFullSet.Tables["Properties"].Rows[0]["Region"].ToString();
             var country = PropertiesFullSet.Tables["Properties"].Rows[0]["Country"].ToString();
             var stateprovince = PropertiesFullSet.Tables["Properties"].Rows[0]["StateProvince"].ToString();
             city = PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString();
@@ -170,8 +169,6 @@ public partial class ViewProperty : CommonPage
             //**find and insert ip + country + date ...CAPTURE, CONVERT, STORE
             ipHandler();
             //**find and insert ip + country + date
-            hyplnkRegionBackLink.NavigateUrl= "/" + region.ToLower().Replace(" ", "_") + "/default.aspx";
-            ltrRegionBackText.Text = region + "<<";
 
             hyplnkCountryBackLink.NavigateUrl = "/" + country.ToLower().Replace(" ", "_") + "/default.aspx";
             ltrCountryBackText.Text = country + "<<";
@@ -300,7 +297,7 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
         }
         //catch (Exception ex) { lblInfo.Text = ex.Message; }
         finally { objR.CloseConnection(); }
-        //Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetProperty.css' rel='stylesheet' type='text/css'></script>"));
+        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetProperty.css' rel='stylesheet' type='text/css'></script>"));
 
     }
     public void ipHandler()

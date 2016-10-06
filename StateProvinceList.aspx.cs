@@ -215,6 +215,9 @@ public partial class StateProvinceList : CommonPage
                     ltrHeading.Text = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1) + " Vacation Rentals and Hotels";
                     ltrStateThing.Text = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1);
                     
+                    hyplinkBackRegion.NavigateUrl = "/" + region.ToLower().ToLower().Replace(" ", "_") + "/" + "default.aspx";
+                    ltrRegion.Text = region + "<<";
+
                     hyplnkBackLink.NavigateUrl = "/" + country.ToLower().ToLower().Replace(" ", "_") +"/" + "default.aspx";
                     ltrBackText.Text = country  + "<<";
                     string iframe = "<iframe height='260' width='500' frameborder='0' src='/" + country + "/" + stateprovince + "/Maps.aspx'></iframe>";
@@ -355,6 +358,11 @@ public partial class StateProvinceList : CommonPage
         }
 
         string str_cities = "";
+        int ind = 0;
+        // string cls = " class='borderright' ";
+        string cls = "border-right:1px solid #0094ff;";
+        string li = "";
+
         foreach (DataRow dr in MainDataSet.Tables["Cities"].Rows)
         {
             string temp = "/" + country +
@@ -365,10 +373,12 @@ public partial class StateProvinceList : CommonPage
             DataTable dt1 = new DataTable();
             dt1 = obj.PropertiesByCase(vList, Convert.ToInt32(dr["id"]), "City");
 
-            citiesNew += "<li>" +
+            li = " style='" + ((ind > 4) ? "border-top:0px;" : "") + (((ind++ % 5) == 4) ? cls : "") + "'";
+
+            citiesNew += "<li"+li+">" +
                 "<a href='" + temp + "' class='StateTitle'>" + dr["City"].ToString() + "</a> <br/>" +
                 "<a href='" + temp + "'>" +
-                "<img width='140' height='115' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt1.Rows[0]["PhotoImage"]) + "' alt='" + dr["City"].ToString() + " vacation rentals and boutique hotels' title='" + dr["City"].ToString() + " Properties' /></a>" +
+                "<img width='160' height='125' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt1.Rows[0]["PhotoImage"]) + "' alt='" + dr["City"].ToString() + " vacation rentals and boutique hotels' title='" + dr["City"].ToString() + " vacation rentals and boutique hotels' /></a>" +
             "</li>";
             str_cities += dr["City"].ToString() + ",";
         }

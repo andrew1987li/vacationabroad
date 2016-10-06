@@ -6,8 +6,8 @@
 
     [WebMethod]
     // Get session state value.
-    public static List<Ajaxcountryinfo> GetCountryList(int regid) {
-        return AjaxProvider.getCountryInfo(regid);
+    public static AjaxCountryList GetCountryList(int id) {
+        return AjaxProvider.getCountryInfo(id);
     }
     [WebMethod]
     // Get session state value.

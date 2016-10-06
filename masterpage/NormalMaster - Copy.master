@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalMaster.master.cs" Inherits="masterpage_NoramlMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalMaster - Copy.master.cs" Inherits="masterpage_NoramlMaster" %>
 
 <!DOCTYPE html>
 
@@ -30,11 +30,11 @@
     <div class="container">
         <div class="row">
             <!--- Header -->
-            <div class="row headerunderline" style="margin-top:20px;">
-                <div id="cus_head" class="col-md-3">
-                    <a href="/default.aspx" class="nodecoration"><h2>Vacations Abroad</h2></a>
+            <div class="row headerunderline">
+                <div id="cus_head" class="col-md-2">
+                    <a href="/default.aspx" class="nodecoration"><h2 >Vacations Abroad</h2></a>
                 </div>
-                <div  class="col-md-6">
+                <div  class="col-md-5 text-left">
                     <div class="search-form">
                         <input type="text" name="tbKeyWords" id="tbKeyWords" runat="server" placeholder="Search Country State or City" />
                         <button type="button" runat="server" id="searchbt" onserverclick="searchbt_ServerClick">
@@ -43,7 +43,7 @@
                         </button>    
                     </div>
                 </div>
-                <div class="col-md-3 text-right">
+                <div class="col-md-5 text-right">
                      <div class="wdropdown">
                          <button class="wdropbtn btnsign">My Account</button>
                           <div class="wdropdown-content">
@@ -59,13 +59,16 @@
                         <% for (int i = 0; i < 7; i++)
                             { %>
                        <li class="dropdown">
-                            <a href="#" class="dropbtn" id="reg_<%=regionid[i] %>" onmouseover="getcountrylist(this)"><%=CountryName[i] %></a>
+                            <a href="#" class="dropbtn"><%=CountryName[i] %></a>
                             <div class="dropdown-content" id="menu<%=i %>">
                                 <div class="row">
                                     <div class="col-sm-2 col-xs-2" id="ss1">
-                                        <ul id="ajcountry<%=regionid[i] %>">
-                                             
-
+                                        <ul>
+                                            <%  int count = countrylist[i].Tables[0].Rows.Count;
+                                                for (int rowindex = 0; rowindex < count; rowindex++)
+                                                { %>
+                                            <li ><a class="mmitem" id="item<%=regionid[i]+"_"+countrylist[i].Tables[0].Rows[rowindex]["CountryID"] %>"><%=countrylist[i].Tables[0].Rows[rowindex]["Country"] %></a></li>
+                                              <%} %>
                                         </ul>
                                     </div>
                                     <div class="col-sm-2 col-xs-4" id="ss2">

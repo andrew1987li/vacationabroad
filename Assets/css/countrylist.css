@@ -1,4 +1,9 @@
-﻿
+﻿.internalpagewidth{
+    margin-left:10%;
+    width:80%;
+
+}
+
 .backitem{
     margin-left:20px;
     margin-top:15px;
@@ -8,17 +13,31 @@
 
 .H1CityText{
     font-family:Verdana;
+    font-size:10pt;
     margin-top:10px;
     color:#ff6600;
+}
+.orangetxt{
+    color:white;
+    font-family:Verdana;
+    font-size:13pt;
+    background-color:#ff6600;
+    text-align:center;
+    height:35px;
+    margin-top:15px;
+    padding-top:5px;
+    margin-bottom:15px;
 }
 
 .txtalign{
      display: inline-block;
      text-align:left;
+     margin-left:20px;
 }
 
 .inlineblock{
     display:inline;
+    margin-left:15px;
 }
 
 .viewalllink{
@@ -32,13 +51,46 @@
 }
 
 .stateful{
-    margin:20px 100px;
+    margin-top:20px;
+    margin-left:0px;
+    padding:20px;
 }
+
 
 ul.stateful li{
   display: inline-block;
-     list-style-position:inside;
+     list-style-position:outside;
     border: 1px solid #0094ff;
-    padding:20px;
+    border-right:0px;
+    padding:10px;
+}
 
+ul.stateful li:last-child{
+    border-right:1px solid #0094ff;
+
+}
+
+.borderright{
+    border-right:1px solid #0094ff;
+}
+
+ul.countrylist{
+    list-style:none;
+
+}
+
+
+ul.countrylist li{
+    display:inline-block;
+}
+
+.contentpadding{
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.contentstyle{
+    font-family:Verdana;
+    font-size:11pt;
+    margin-left:5px;
 }

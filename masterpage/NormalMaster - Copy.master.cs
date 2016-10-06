@@ -13,11 +13,10 @@ public partial class masterpage_NoramlMaster : System.Web.UI.MasterPage
     public int[] regionid = { 1, 2, 6, 7, 8, 3, 9 };
     protected void Page_Load(object sender, EventArgs e)
     {
-     /*   for(int i=0;i<7; i++)
+        for(int i=0;i<7; i++)
         {
             countrylist[i] = AjaxProvider.getCountryInfoSet(regionid[i]);
         }
-        */
     }
 
     protected void searchbt_ServerClick(object sender, EventArgs e)

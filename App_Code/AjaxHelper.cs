@@ -35,3 +35,9 @@ public class AjaxStateList
     public List<AjaxStateInfo> statelist { get; set; }
     public int countryid { get; set; }
 }
+
+public class AjaxCountryList
+{
+    public List<Ajaxcountryinfo> statelist { get; set; }
+    public int regionid { get; set; }
+}

@@ -8,7 +8,7 @@
 
 <asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
     <div class="row">
-    <div class ="col-md-10 col-md-offset-1 col-sm-1 col-sm-offset-1">
+    <div class="internalpagewidth">
 
         <%--    <asp:TextBox runat="server" ID ="txtCityVal"  value="" Style="display:none;" ></asp:TextBox>
         --%>
@@ -73,7 +73,7 @@
                      </div>          
  
               <div class="row">
-                <div >
+                  <div class="text-center">
                         <ul id="Statesul" class="stateful" runat="server">
                             <%--<asp:Repeater ID="rptrStates" runat="server">
                                 <ItemTemplate>
@@ -85,16 +85,14 @@
                                 </ItemTemplate>
                             </asp:Repeater>--%>
                         </ul>
-                    </div>
+                   </div>
               </div>
         
         <div class="row">
-             <div class="custm-content">
+            <div class="contentpadding">
+ 
 
-                    <div class="row">
-                            <div class="col-100">
-
-                            <div class="sub-title orange" id="OrangeTitle" runat="server">
+                            <div class="orangetxt" id="OrangeTitle" runat="server">
                                 Things to see and do in <asp:Literal ID="ltrCountryThing" runat ="server"></asp:Literal>
                             </div>
                                 <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
@@ -104,26 +102,25 @@
                             <asp:Button ID="btnSubmit2" runat="server" Text="Save Text" OnClick="btnSubmit2_Click" /></center>
                         <br />
                         <% } %>
-                        <p><asp:Label ID="lblInfo2" runat="server" EnableViewState="False" CssClass="LightTextLower"></asp:Label>
+                        <p><asp:Label ID="lblInfo2" CssClass="contentstyle" runat="server" EnableViewState="False"></asp:Label>
                             </p>
 
-                        </div>
-                    </div>
 
-                </div>
+  
+            </div>
         </div>
 
-        <div class="row">
-            <div class="country_list_box">
+        <div class="row contentpadding">
+            
 
-                <ul>
+                <ul class="countrylist">
                     <li><div id="rtHd3" runat="server" style="display:inline;"></div></li>
                     <asp:Literal id="rtLow3" runat="server">
                             </asp:Literal>
 
                 </ul>
 
-            </div>
+   
         </div>
                       
 
