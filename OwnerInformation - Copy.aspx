@@ -1,11 +1,11 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
-    CodeFile="OwnerInformation2.aspx.cs" Inherits="OwnerInformation" Title="Owner Personal Information" %>
+    CodeFile="OwnerInformation - Copy.aspx.cs" Inherits="OwnerInformation" Title="Owner Personal Information" %>
 
 <asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
 <div class="left">
     <% if (BackLink.Visible)
        { %>
-    <table bgcolor="#e4e4af" cellspacing="0" cellpadding="0" width="250" align="center"
+    <table bgcolor="#F5EDE3" cellspacing="0" cellpadding="0" width="250" align="center"
         border="2">
         <tr>
             <td>
@@ -157,7 +157,8 @@
             <td width="8">
                 <font color="red">*</font>
             <td>
-                <asp:DropDownList ID="ddlCountries" runat="server" AppendDataBoundItems="True">
+                <asp:DropDownList ID="ddlCountries" runat="server" AppendDataBoundItems="True" 
+                    DataTextField="country" DataValueField="country">
                     <asp:ListItem Selected="True" Value="0">Select your country</asp:ListItem>
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 

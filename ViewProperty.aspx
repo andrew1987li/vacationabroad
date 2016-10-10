@@ -667,7 +667,10 @@
                     <table width="100%">
                         <tr>
                             <td style="width: 50%;">
-                                <label>Member Since: <%#((DateTime)PropertiesFullSet.Tables["Properties"].Rows[0]["DateCreated"]).ToString("MMM yyyy")%></label>
+                                 <% DateTime dt;
+                                     DateTime.TryParse(PropertiesFullSet.Tables["Properties"].Rows[0]["DateCreated"].ToString(),out dt);
+                            %>
+                                <label>Member Since:<%= dt.ToString("MMM yyyy") %></label>
                             </td>
                             <td style="width: 50%;">
                                 <a rel="nofollow" href='WriteReview.aspx?PropID=<%# propertyid %>'>Write a Review</a>
@@ -736,6 +739,7 @@
         <br />
      </div>
 
+    </div>
     </div>
 
         <!-- Start of StatCounter Code -->

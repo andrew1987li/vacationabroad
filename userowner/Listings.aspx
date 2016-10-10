@@ -1,9 +1,12 @@
-﻿<%@ Page Language="C#" EnableEventValidation="false" MasterPageFile="~/userowner/MasterPage.master" AutoEventWireup="true" CodeFile="Listings.aspx.cs" Inherits="userowner_Listing" %>
-<asp:Content ID="title" runat="server" ContentPlaceHolderID="titleheader">Listings</asp:Content>
+﻿<%@ Page Language="C#" EnableEventValidation="false" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="Listings.aspx.cs" Inherits="userowner_Listing" %>
+<asp:Content ID="title" runat="server" ContentPlaceHolderID="head">Listings</asp:Content>
+<asp:Content ID="links" runat="server" ContentPlaceHolderID="links">
+    <link href="/Assets/css/listings.css" rel="stylesheet" />
+    <link href="/Assets/css/response.css" rel="stylesheet" />
+</asp:Content>
 
 <asp:Content ID="cont_listing" runat="server" ContentPlaceHolderID="bodycontent">
-    <div class="containter">
-      <div class="row">
+       <div class="row">
        <div class="row">
             <div class ="col-sm-2 col-sm-offset-5 listingpadding">
                 <div class ="row">
@@ -34,7 +37,7 @@
             Welcome <%=(userinfo.firstname+ " "+userinfo.lastname) %> !
         </div>
 
-        <div class="row top_formrow">
+        <div class="newline top_formrow">
             <div id="exTab3">	
                     <ul  class="nav nav-tabs" role="tablist">
 		                <li class="active lblFor">
@@ -49,10 +52,10 @@
 			            <div class="tab-pane active tabback" id="1b">
                             <div class="row">
                            <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Current Request for a Quote
                             </div>
-                            <div class="row tablepanel">
+                            <div class="tablepanel">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -90,10 +93,10 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Current Quote Submitted
                             </div>
-                            <div class="row tablepanel">
+                            <div class="tablepanel">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -137,10 +140,10 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Quote Accepted
                             </div>
-                            <div class="row tablepanel">
+                            <div class="tablepanel">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -178,7 +181,8 @@
                             </div>
                         </div>  
                             </div>
-                          <div class="row top_formrow">
+                            <div class="clear"></div>
+                          <div class="newline top_formrow">
                                     <div class="row textcenter">
                                         MY PROPERTIES
                                     </div>
@@ -209,10 +213,10 @@
                                                     <asp:Repeater runat="server" id="propertylist">
                                                        <ItemTemplate>
                                                     <tr>
-                                                    <td><a href="/ViewProperty.aspx"> <%#Eval("ID") %></a></td>
+                                                    <td><a href="<%# CommonFunctions.PrepareURL ("ViewProperty.aspx?UserID=" + userid.ToString () + "&PropertyID=" + Eval("ID"), "*User* Listings") %>"> <%#Eval("ID") %></a></td>
                                                     <td><%#Eval("Name") %></td>
                                                     <td class="btgroupcontainer">
-                                                        <div class="row buttongroup">
+                                                        <div class="buttongroup">
                                                             <asp:Button ID="Button8" OnCommand="bt_delete_Command" CssClass="formcommadbt" runat="server" Text="Delete" OnClientClick="return confirm('Are you certain you want to delete this property?');" CommandArgument='<%#Eval("ID") %>'/>
                                                             <asp:Button ID="Button5" OnCommand="bt_edittxt_Command" CssClass="formcommadbt" runat="server" Text="Edit Text" CommandArgument='<%#Eval("ID") %>'/>
                                                             <asp:Button ID="Button6" OnCommand="bt_editphoto_Command" CssClass="formcommadbt" runat="server" Text="Edit Photo" CommandArgument='<%#Eval("ID") %>' />
@@ -248,10 +252,10 @@
 			            <div class="tab-pane tabback" id="2b">
                             <div class="row">
                           <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Current Request for a Quote
                             </div>
-                            <div class="row tablepanel">
+                            <div class="newline tablepanel">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -288,7 +292,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Current Quote Submitted
                             </div>
                             <div class="row tablepanel">
@@ -335,10 +339,10 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <div class="row textcenter">
+                            <div class="newline textcenter">
                                  Quote Accepted
                             </div>
-                            <div class="row tablepanel">
+                            <div class="newline tablepanel">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -386,5 +390,5 @@
  
 
          
-    </div>
+    <script src="/Assets/js/listings.js"></script>
 </asp:Content>

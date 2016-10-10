@@ -1,0 +1,26 @@
+﻿.internalpagewidth{
+    margin-left:10%;
+    width:80%;
+}
+
+
+
+.newline{
+    margin:5px 10px;
+    display:block;
+}
+
+
+.col-6{
+    width:60% ;
+    display:inline-block;
+}
+
+.col-3{
+    width:35% ;
+    display:inline-block;
+ }
+
+     .clear{
+         clear:both;
+     }

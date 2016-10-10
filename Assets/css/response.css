@@ -88,12 +88,13 @@
 }
 
 .buttongroup{
-    margin-right:0px;
+    margin-right:10px;
 }
 .btgroupcontainer{
     width:350px;
     background-color:white;
     border:none;
+    margin-right:0px;
 }
 
 .pagewidth{

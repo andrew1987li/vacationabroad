@@ -1,5 +1,13 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true" CodeFile="PropertyPhotos.aspx.cs" Inherits="PropertyPhotos" Title="Property Photos" %>
-<asp:Content ID="Content" ContentPlaceHolderID="Content" Runat="Server">
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="PropertyPhotos.aspx.cs" Inherits="PropertyPhotos" Title="Property Photos" %>
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Property Photos
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/photoproperty.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" Runat="Server">
+    <div class="internalpagewidth">
+        <div class="newline centered">
 	<% if (BackLink.Visible) { %>
     <table bgcolor="#e4e4af" cellspacing="0" cellpadding="0" width="250" align="center"
         border="2">
@@ -76,11 +84,12 @@
     <% } %>
         <asp:Label ID="lblInfo" runat="server" ForeColor="Red"></asp:Label>
     </div>
+        </div>
+    </div>
+
     <noscript>
         <img src="http://www.watchwise.net/cgi-watchwise/monitor.cgi?<%= CommonFunctions.GetSiteAddress ().ToLower () %>:all" width="1" height="1"><br />
 	</noscript>
 
-    <script language="javascript">
-	    document.write('<img src="http://www.watchwise.net/cgi-watchwise/monitorwise.cgi?URL=<%= CommonFunctions.GetSiteAddress ().ToLower () %>:all&LINK=',escape(document.referrer),'" height=1 width=1>')
-    </script>
+    <script src="/Assets/js/photoproperty.js"></script>
 </asp:Content>

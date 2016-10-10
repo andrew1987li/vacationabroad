@@ -110,7 +110,7 @@
                                             </div>
                                         </div>
                 <div class="row">
-                                            <div id="Div2" style="float: left; width: 900px; border: 2px solid #c4d9e2" runat="server">
+                                            <div id="Div2" style="float: left; width: 900px; border: 2px solid #c4d9e2; margin:20px;" runat="server">
                                                 <asp:DataList ID="dtlStates" runat="server" RepeatColumns="5" RepeatDirection="Horizontal"
                                                     Width="100%" OnItemCommand="dtlStates_ItemCommand" OnItemDataBound="dtlStates_ItemDataBound"
                                                     CellPadding="3" CellSpacing="2">
@@ -182,7 +182,7 @@
 
                 <div class="row">
                                            <div style="float: left; width: 100%">
-                                                <div style="float: left; width: 82%">
+                                                <div style="float: left;">
                                                     <asp:GridView ID="City_datagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="ID"
                                                         GridLines="None" OnRowDataBound="City_datagrid_RowDataBound" CellPadding="1" 
                                                         ShowHeader="false" Width="100%" OnPageIndexChanging="City_datagrid_PageIndexChanging"
@@ -371,7 +371,7 @@
                                                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
                                                     <!-- Country Ads -->
-                                                    <ins class="adsbygoogle" style="display: inline-block; width: 160px; height: 600px"
+                                                    <ins class="adsbygoogle" style="display: inline-block; width: 160px; height: 10px"
                                                         data-ad-client="ca-pub-0264789273185284" data-ad-slot="9499072355"></ins>
 
                                                     <script>

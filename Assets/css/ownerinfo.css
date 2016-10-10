@@ -1,0 +1,82 @@
+﻿.internalpagewidth{
+    margin-left:10%;
+    width:80%;
+}
+
+
+@media screen and (max-width: 400px) {
+
+}
+
+.newline{
+    margin:5px 10px;
+}
+
+
+.col-6{
+    width:60% ;
+    display:inline-block;
+}
+
+.col-3{
+    width:35% ;
+    display:inline-block;
+ }
+
+.centered{
+    text-align:center;
+}
+
+     .clear{
+         clear:both;
+     }
+
+div.centered >strong{
+    font-family:Verdana;
+    font-size:13pt;
+    color:orangered;
+}
+
+         .pg-normal {
+                color: #6699FF;
+                font-weight: normal;
+                font-size: 14px;
+                text-decoration: none;    
+                cursor: pointer;    
+            }
+            .pg-selected {
+                color: #6699FF;
+                font-size: 14px;
+                font-weight: bold;        
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .listingPagesContainer a {
+    float: left;
+    font-size: 1.3em;
+    color: #6699FF;
+}
+
+    .listingPagesContainer a:visited {
+        color: #6699FF;
+    }
+
+    .listingPagesContainer a:hover {
+        color: #6699FF;
+    }
+
+            a:link {
+    color: #6699FF;
+}
+            a:hover {
+    color: #6699FF;
+}a:visited {
+    color: #6699FF;
+    text-decoration:underline;
+}
+
+ .H1CityText{
+    font-family:Verdana;
+    margin-top:10px;
+    color:#ff6600;
+}

@@ -1,7 +1,11 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="OwnerInformation.aspx.cs" Inherits="OwnerInformation" Title="Owner Personal Information" %>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/ownerinfo.css" rel="stylesheet" />
+</asp:Content>
 
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+    <div class="internalpagewidth">
 <div class="left">
     <% if (BackLink.Visible)
        { %>
@@ -402,8 +406,9 @@
             width="1" height="1">
     </noscript>
 
-    <script language="javascript">
-        document.write('<img src="http://www.watchwise.net/cgi-watchwise/monitorwise.cgi?URL=<%= CommonFunctions.GetSiteAddress ().ToLower () %>:all&LINK=', escape(document.referrer), '" height=1 width=1>')
-    </script>
+
 </div>
+    </div>
+
+    <script src="/Assets/js/ownerinfo.js"></script>
 </asp:Content>

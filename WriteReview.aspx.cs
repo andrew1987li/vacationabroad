@@ -58,8 +58,8 @@ public partial class PropertyReview : System.Web.UI.Page
 
                             if (dt.Rows[0]["county"] != DBNull.Value)
                                 county = dt.Rows[0]["county"].ToString();
-
-                            string url = CommonFunctions.GetSiteAddress() + "/" + dt.Rows[0]["country"].ToString() + "/" +
+                            //CommonFunctions.GetSiteAddress() + 
+                            string url = "/" + dt.Rows[0]["country"].ToString() + "/" +
                                 dt.Rows[0]["stateprovince"].ToString() + "/" + dt.Rows[0]["city"].ToString() + "/" +
                                 Request.QueryString["propID"].ToString() + "/default.aspx";
                             Session["commentsRedirect"] = url;
@@ -80,7 +80,7 @@ public partial class PropertyReview : System.Web.UI.Page
                             url = CommonFunctions.GetSiteAddress() + "/" + dt.Rows[0]["country"].ToString() +
                                 "/default.aspx";
                             //hlkCountry.NavigateUrl = url.Replace(' ', '_').ToLower();
-                            Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
+                            //Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
 
                             DataBind();
                         }

@@ -192,6 +192,10 @@ h2{ color:#154890 ; font-family:Verdana; font-size:18px;}
     background-color: #f1f1f1;
 }
 
+.itemselected::after{
+    content:" >>";
+}
+
 .dropdown-content ul{list-style:none; list-style-type:none;}
 .dropdown-content ul li{
     width:200%;

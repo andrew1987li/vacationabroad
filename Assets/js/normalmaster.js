@@ -37,8 +37,9 @@ function processTopCountryData(response) {
     var states = statelist.statelist;
     //$(".ajcountry").empty();
     for (var i = 0; i < states.length; i++) {
-        var id = "item" + call_rid + '_' + states[i].id ;
-        var item = ' <li ><a class="mmitem" onmouseover="callstateslist(\''+id+'\')" id="' + id + '">' + states[i].name + '</a></li>';
+        var id = "item" + call_rid + '_' + states[i].id;
+        var href = "/" + states[i].name + "/default.aspx";
+        var item = ' <li ><a href="'+href+'" class="mmitem" onmouseover="callstateslist(\''+id+'\')" id="' + id + '">' + states[i].name + '</a></li>';
         $("#ajcountry"+call_rid).append(item);
         // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
     }

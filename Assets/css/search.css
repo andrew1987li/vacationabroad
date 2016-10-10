@@ -1,0 +1,47 @@
+﻿.internalpagewidth{
+    margin-left:10%;
+    width:80%;
+}
+
+
+@media screen and (max-width: 400px) {
+
+}
+
+.newline{
+    margin:5px 10px;
+}
+
+
+.col-6{
+    width:60% ;
+    display:inline-block;
+}
+
+.col-3{
+    width:35% ;
+    display:inline-block;
+ }
+
+.centered{
+    text-align:center;
+}
+
+     .clear{
+         clear:both;
+     }
+
+div.centered >strong{
+    font-family:Verdana;
+    font-size:13pt;
+    color:orangered;
+}
+
+table td{
+    border:1px solid #333366;
+    height:150px;
+}
+
+table tr:first-child td{
+    height:35px;
+}

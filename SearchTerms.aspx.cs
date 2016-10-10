@@ -15,13 +15,15 @@ public partial class SearchTerms : CommonPage
 	protected int sorder = 1;
 	protected int startpos = 0;
 	protected int numitems = 0;
-	protected string terms = "";
+	public string terms = "";
 	protected int ifonly = 0;
 
 	//protected SqlConnection Connection = new SqlConnection (ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 	protected SqlDataAdapter AuctionsAdapter;
 	protected SqlDataAdapter PropertiesAdapter;
 	protected DataSet MainDataSet = new DataSet ();
+
+
 
 	protected void Page_Load (object sender, EventArgs e)
     {
@@ -226,7 +228,7 @@ public partial class SearchTerms : CommonPage
                 if(ifonly != 2)
                     numitems += (int)numauctionsresult;
             }
-            Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
+           // Page.Header.Controls.Add(new LiteralControl("<link href='/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
 
             DataBind();
             connection.Close();

@@ -23,9 +23,14 @@ public partial class OwnerInformation : ClosedPage
 	{
 		//CommonFunctions.Connection.Open ();
 
-		MainAdapter = CommonFunctions.PrepareAdapter (CommonFunctions.GetConnection(), "SELECT * FROM Users WHERE ID = @UserID",SqlDbType.Int);
-		CountriesAdapter = CommonFunctions.PrepareAdapter (CommonFunctions.GetConnection(), "SELECT DISTINCT(Country) AS Country FROM Users WHERE (IfAgent = 1) AND (LEN(Country) > 0) AND NOT (ID = @UserID)", SqlDbType.Int);
-        AgentsAdapter = CommonFunctions.PrepareAdapter(CommonFunctions.GetConnection(), "SELECT -1 AS ID, 'Not referred by anyone' AS FullName UNION SELECT ID, LastName + ', ' + FirstName AS FullName FROM Users WHERE (Country = @Country) AND  (IfAgent = 1) AND NOT (ID = @UserID)", SqlDbType.NVarChar, 300, SqlDbType.Int);
+		MainAdapter = CommonFunctions.PrepareAdapter (CommonFunctions.GetConnection(), "SELECT * FROM Users WHERE ID = @UserID", SqlDbType.Int);
+
+		CountriesAdapter = CommonFunctions.PrepareAdapter (CommonFunctions.GetConnection(), "SELECT DISTINCT(Country) AS Country " +
+			"FROM Users WHERE (IfAgent = 1) AND (LEN(Country) > 0) AND NOT (ID = @UserID)", SqlDbType.Int);
+
+        AgentsAdapter = CommonFunctions.PrepareAdapter(CommonFunctions.GetConnection(), "SELECT -1 AS ID, 'Not referred by anyone' AS FullName " +
+			"UNION SELECT ID, LastName + ', ' + FirstName AS FullName FROM Users WHERE (Country = @Country) AND" +
+			" (IfAgent = 1) AND NOT (ID = @UserID)", SqlDbType.NVarChar, 300, SqlDbType.Int);
 
 		IfAdmin.Visible = AuthenticationManager.IfAdmin && (AuthenticationManager.UserID != userid);
 		IfAdminLabel.Visible = AuthenticationManager.IfAdmin && (AuthenticationManager.UserID != userid);
@@ -33,21 +38,27 @@ public partial class OwnerInformation : ClosedPage
 		MainAdapter.SelectCommand.Parameters["@UserID"].Value = userid;
 		//lock (CommonFunctions.Connection)
 			if (MainAdapter.Fill (MainDataSet, "Users") == 0)
-			{
-                Response.Redirect(CommonFunctions.PrepareURL("InternalError.aspx"), true);
-			}
-				
+				Response.Redirect (CommonFunctions.PrepareURL ("InternalError.aspx"), true);
 
         //CountryRequired.Enabled = (MainDataSet.Tables["Users"].Rows[0]["IfAgent"] is bool) &&
         //    (bool)MainDataSet.Tables["Users"].Rows[0]["IfAgent"];
             DBConnection obj = new DBConnection();
             try
             {
-                DataTable dt = VADBCommander.CountryList();
-                ddlCountries.DataSource = dt;
-                ddlCountries.DataTextField = "country";
-                ddlCountries.DataValueField = "country";
-                ddlCountries.DataBind();
+                if (!IsPostBack)
+                {
+                    DataTable dt = VADBCommander.CountyDistinctSimpleList();
+                    ddlCountries.DataSource = dt;
+                    //ddlCountries.DataTextField = "country";
+                    //ddlCountries.DataValueField = "country";
+
+                    if (ddlCountries.Items.Contains(new ListItem(MainDataSet.Tables["Users"].Rows[0]["country"].ToString(),
+                        MainDataSet.Tables["Users"].Rows[0]["country"].ToString())))
+                    {
+                        ddlCountries.SelectedValue = MainDataSet.Tables["Users"].Rows[0]["country"].ToString();
+                    }
+                    //ddlCountries.DataBind();
+                }
                 
             }
             catch (Exception ex) { Response.Write(ex.Message); }
@@ -65,13 +76,13 @@ public partial class OwnerInformation : ClosedPage
 			State.Text = MainDataSet.Tables["Users"].Rows[0]["State"].ToString ();
 			Zip.Text = MainDataSet.Tables["Users"].Rows[0]["Zip"].ToString ();
 
-            foreach (ListItem li in ddlCountries.Items)
-            {
-                if (li.Value.ToLower() == MainDataSet.Tables["Users"].Rows[0]["Country"].ToString().ToLower())
-                {
-                    ddlCountries.SelectedValue = MainDataSet.Tables["Users"].Rows[0]["Country"].ToString();                    
-                }               
-            }                
+            //foreach (ListItem li in ddlCountries.Items)
+            //{
+            //    if (li.Value.ToLower() == MainDataSet.Tables["Users"].Rows[0]["Country"].ToString().ToLower())
+            //    {
+            //        ddlCountries.SelectedValue = MainDataSet.Tables["Users"].Rows[0]["Country"].ToString();                    
+            //    }               
+            //}                
             
 			PrimaryTelephone.Text = MainDataSet.Tables["Users"].Rows[0]["PrimaryTelephone"].ToString ();
 			EveningTelephone.Text = MainDataSet.Tables["Users"].Rows[0]["EveningTelephone"].ToString ();
@@ -202,11 +213,12 @@ public partial class OwnerInformation : ClosedPage
 		MainDataSet.Tables["Users"].Rows[0]["City"] = City.Text;
 		MainDataSet.Tables["Users"].Rows[0]["State"] = State.Text;
 		MainDataSet.Tables["Users"].Rows[0]["Zip"] = Zip.Text;
-        MainDataSet.Tables["Users"].Rows[0]["Country"] = ddlCountries.SelectedValue;
+        MainDataSet.Tables["Users"].Rows[0]["Country"] = ddlCountries.SelectedItem.Text;
 		MainDataSet.Tables["Users"].Rows[0]["PrimaryTelephone"] = PrimaryTelephone.Text;
 		MainDataSet.Tables["Users"].Rows[0]["EveningTelephone"] = EveningTelephone.Text;
 		MainDataSet.Tables["Users"].Rows[0]["DaytimeTelephone"] = DaytimeTelephone.Text;
 		MainDataSet.Tables["Users"].Rows[0]["MobileTelephone"] = MobileTelephone.Text;
+        MainDataSet.Tables["Users"].Rows[0]["dateModified"] = DateTime.Today.ToString();
 
 		if (Website.Text.Length > 0)
 		{
@@ -251,10 +263,25 @@ public partial class OwnerInformation : ClosedPage
 		if (AuthenticationManager.IfAdmin && IfAdmin.Visible)
 			MainDataSet.Tables["Users"].Rows[0]["IfAdmin"] = IfAdmin.Items[IfAdmin.SelectedIndex].Text == "Yes";
 
-		//lock (CommonFunctions.Connection)
+		
+            DBConnection obj = new DBConnection();
+            DataTable dt = new DataTable();
+            try
+            {
+//lock (CommonFunctions.Connection)
 			MainAdapter.Update (MainDataSet, "Users");
 
-		Response.Redirect (backlinkurl);
+                dt =VADBCommander.NewsletterListByEmail(EmailAddress.Text);
+                if (dt.Rows.Count == 0)
+                {
+                    string strFullName = FirstName.Text + " " + LastName.Text;
+                    VADBCommander.NewsLetterEmailShortAdd(EmailAddress.Text, strFullName);
+                }
+            }
+            catch (Exception ex) { lblInfo.Text = ex.Message; }
+            finally { obj.CloseConnection(); }
+
+		Response.Redirect (CommonFunctions.PrepareURL("listings.aspx"));
 	}
 
 	protected void CancelButton_Click (object sender, System.EventArgs e)

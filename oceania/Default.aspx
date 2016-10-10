@@ -1,9 +1,12 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+﻿<%@ Page Language="C#" MasterPageFile="/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="default.aspx.cs" Inherits="Default" Title="<%# GetTitle () %>" EnableEventValidation="False"
     EnableViewState="false" %>
 
-<%@ OutputCache Duration="600" VaryByParam="*" %>
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/africa.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
     <%-- <style>
         .PDescText
         {
@@ -14,68 +17,38 @@
         }
     </style>--%>
     <%--header--%>
-    <div class="upperheader" style="width: 68.8%">
-        <h1>Oceania Vacations</h1>
-    </div>
-    <%--Main div--%>
-    <div>
-        <div>
-            <%--VBR--%>
+    <div class="internalpagewidth">
+        <div class="upperheader">
+            <h1>Oceania Vacations</h1>
+        </div>
             <div class="vbrblue">
                 Oceania Destinations
             </div>
             <%--content VBR--%>
-            <div class="contenttextleft">
+            <div class="newline">
                 <%--content text--%>
-                <table>
-                    <tr>
-                        <td class="content1 tbody">
-                            <p>
+                <div class="col-7">
+                           <p>
                                 Stunningly beautiful beaches, lush green forests, tranquilizing lagoons, and sumptuous cruises are just some of the attractions of Oceania vacations. From the underwater caves of the Cook Islands to the flower orchards of Fiji, and from the sublime seashores of Tahiti to the vibrant cities of Australia and New Zealand, the Oceania is studded with countless enchanting destinations that can take a lifetime to fully explore.
                             </p>
-                            <br>
+                            <br/>
                             <p>
                                 The Oceania region comprises of numerous tiny islands located in the South Pacific. The term is loosely used to include cities on the coasts of Australia and New Zealand as well as secluded, deep-sea islands such as Tahiti, the Cook Islands, Fiji, Tonga, and many other little-known and unbelievably charming destinations. Most of the popular Oceania islands sport international airports and can be reached by air from most parts of the world.
                             </p>
-                            <br>
+                            <br/>
                             <p>Imagine living in an offshore hut, perched above water so clear that you could see colourful fishes and other sea creatures swimming over the white seabed. Picture yourself cruising to breathtakingly beautiful volcanic islands scattered amidst the sprawling blue sea like green emeralds. Or, you could relish the ideal combination of a refreshingly idyllic and a sensually exciting vacation at Oceania cities such as Melbourne, Perth, and Auckland. </p>
 
-                        </td>
-                        <%--image--%>
-                        <td class="imgright" style="border: none; box-shadow: none">
-                            <img src="/images/oceaniavacations.jpg" height="190" width="300" alt="">
+                </div>
+                <div class="col-3">
+                            <img src="/images/oceaniavacations.jpg" height="190" width="300" alt=""/>
                             <img src="../Images/likeusonfacebook.jpg" />
                             <div id="fb-root"></div>
-                            <script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=159812020755747";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+                            
                             <div class="fb-like" style="float: left; padding-left: 5px" data-href="https://www.facebook.com/VacationsAbroad" data-width="75" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="greytext" style="background-color: white;">
-                <div style="border: solid 0px #ececec; padding: 2px; background-color: white; width: 928px">
-                    <div id="ctl00_TabContainer_divAfrica">
-                        <ul class="TripleListMain">
-
-                            <li style="width: 16%"><a class="mainPgCountry" href="http://www.vacations-abroad.com/australia/default.aspx"><b>Australia</b></a></li>
-                            <li style="width: 16%"><a class="mainPgCountry" href="http://www.vacations-abroad.com/cook_islands/default.aspx"><b>Cook Islands</b></a></li>
-                            <li style="width: 16%"><a class="mainPgCountry" href="http://www.vacations-abroad.com/fiji/default.aspx"><b>Fiji</b></a></li>
-                            <li style="width: 16%"><a class="mainPgCountry" href="http://www.vacations-abroad.com/new_zealand/default.aspx"><b>New Zealand</b></a></li>
-                            <li style="width: 16%"><a class="mainPgCountry" href="http://www.vacations-abroad.com/tahiti/default.aspx"><b>Tahiti</b></a></li>
-
-
-                        </ul>
-                    </div>
+  
                 </div>
-         
-            </div>
 
+            </div>
             <asp:Repeater ID="Repeater1" runat="server" DataMember="Countries" DataSource="<%# CountriesStates %>" Visible="false">
                 <HeaderTemplate>
                     <table width="97%" cellpadding="0" cellspacing="2" border="0"
@@ -142,40 +115,35 @@
             </div>
             <div class="clear">
             </div>
-        </div>
-        <%--2nd part begins--%>
-        <%--VBR--%>
-        <div style="float: left;">
-            <div>
-            <div class="vbrgreen">
-                Oceania Beach Vacations
+            <div class="newline">
+                <div class="vbrgreen">
+                    Oceania Beach Vacations
+                </div>
             </div>
-            <div class="contenttextright">
-                <table>
-                    <tr>
-                        <%--image--%>
-                        <td class="imgleft">
-                            <img src="/images/oceaniabeachvacations.jpg" height="233" width="300" alt="">
-                        </td>
-                        <%--content VBR--%>
-                        <%--content text--%>
-                        <td class="content2 tbody">
-                            <p>
+
+            <div class="newline">
+            <div class="clear">
+               <div class="col-3">
+
+                   <img src="/images/oceaniabeachvacations.jpg" height="233" width="300" alt=""/>
+               </div>
+               <div class="col-r7">
+                           <p>
                                 Oceania beach vacations take you to some of the most scenic seascapes of the world. Surrounded by the expansive South Pacific Ocean, the secluded Oceania beach resorts of Fiji, Tahiti and the Cook Islands are fringed with thick, towering palms and carpeted with white powdery sands. The sweeping views of the ocean, the lush green tropical hills and forests, and the stunning oceanic peaks protruding out of the sea can make most vacationers drunk on natural beauty.
                             </p>
-                            <br>
+                            <br/>
 
                             <p>There are literally hundreds of beach resorts dotting the Oceania seascape like precious jewels. Located in Australia, New Zealand, Tahiti, Fiji, the Cook Islands, and other Oceania destinations, these exotic beaches are carved straight out of paradise and don’t leave much to imagination. Oceania beach vacations are the dream of most people because of the sheer beauty and tranquillity that inundates this region. Relax, rejuvenate, and reward yourself as you behold the best that nature has to offer.</p>
-                            <br>
+                            <br/>
                             <p>Oceania beach vacations are equally relished by families, romantic couples and divers. Many beach resorts in Oceania allow social nudity, while others have topless or clothing-optional beaches. There's no dearth of family beaches in Oceania, where your kids can record their most precious childhood memories, and you and your spouse can rekindle the flame of love that might have mellowed down because of the stresses of everyday life. Romantic couples find these Oceania beach destinations electrifying for their romance, and adventurers discover the excitement to be just too much to handle.</p>
 
-
-                        </td>
-                    </tr>
-                </table>
+               </div>
+ 
             </div>
-       
-        <div class="greytext">
+
+            </div>
+        <div class="newline">
+        <div>
             <p>Be it the nude beaches of Australia and New Zealand, the heavenly coasts of Tahiti and the Cook Islands, or the spellbinding seashores of Fiji, Oceania just has no parallel in terms of beauty, climate, and serenity. Most of the Oceania beach resorts offer a variety of tours, boat rides and activities such as scuba diving, snorkelling, jet-skiing, paragliding, and many others.</p>
             <%--<div style="border: solid 0px #ececec; padding: 2px; background-color: white; text-align: center; width: 800px">
 
@@ -194,25 +162,19 @@
 
             </div>--%>
         </div>
+        </div>
         <div class="linegreen">
         </div>
-        </div>
-        <%--3rdpart--%>
-        <div>
-            <%--VBR--%>
             <div class="vbrblue">
                 Oceania Exotic Vacations
             </div>
-            <%--content VBR--%>
-            <div class="contenttextleft">
-                <table>
-                    <tr>
-                        <%--content text--%>
-                        <td class="content1 tbody">
-                            <p>
+        <div class="newline">
+                        <div class="clear">
+                <div class="col-7">
+                           <p>
                                 Oceania destinations are awash with natural beauty and calmness. Millions of weary vacationers board their flights for Oceania destinations each year, looking to rejuvenate and be reborn before returning to their routines with a new gusto. Abundant scenic beauty, excellent facilities, and complete privacy make the South Pacific destinations rank among the best vacation retreats on the planet.
                             </p>
-                            <br>
+                            <br/>
                             <p>
                                 Oceania destinations spread out from the coasts of Australia and New Zealand right into the middle of the great Pacific. Oceania city destinations include Sydney, Melbourne, Perth, Auckland, Devonport, Christchurch, and other coastal cities of the two neighbouring countries. Exotic Oceania destinations comprise of a plethora of tiny islands including the Cook Islands, Fiji, Tahiti, and the French Polynesia. Most places, other than, perhaps, the nude beaches are suitable for family vacations.
                             </p>
@@ -220,15 +182,15 @@
                             <p>With the exhausting number Oceania destinations available and each one being more exquisite than the others in its own way, it may be hard to make a choice. Much would depend upon the purpose of your vacation. If you are tired of city life and looking for a private time with your family, perhaps the flower-filled tropical jungles and ethereal beaches of the Cook Islands, Tahiti and Fiji are just for you. And, if you want to enjoy the warmth of a slick city while being able to surf the waves and sprawl on white sands, perhaps you should consider Melbourne or Auckland.</p>
 
 
-                        </td>
-                        <%--image--%>
-                        <td class="imgright">
-                            <img src="/images/oceaniadestinations.jpg" height="233" width="300" alt="">
-                        </td>
-                    </tr>
-                </table>
+                </div>
+                <div class="col-3">
+                        <img src="/images/oceaniadestinations.jpg" height="233" width="300" alt=""/>
+                </div>
+
             </div>
-            <div class="greytext">
+        </div>
+        <div class="newline">
+           <div>
                 <p>The best time to travel to Oceania destinations is from October to March, which is the summer season in the Southern hemisphere. When most areas of Europe and America are buried under snow and the sky is covered by grey clouds, the sun is shining warm and bright every day in the bright-blue Oceania skies. Vacations-abroad.com offers the widest collection of plush and unique vacation rentals at the most attractive Oceania destinations.</p>
                 <%--<div style="border: solid 0px #ececec; padding: 2px; background-color: white; text-align: center; width: 800px">
 
@@ -247,32 +209,27 @@
 
                 </div>--%>
             </div>
+        </div>
             <div class="lineblue">
             </div>
             <div class="clear">
             </div>
-        </div>
-        <%--4th part begins--%>
-        <div>
-            <%--VBR--%>
-            <div style="float: left;">
+        <div class="newline">
                 <div class="vbrgreen">
                     Oceania Family Vacations
                 </div>
-                <div class="contenttextright">
+        </div>
+        <div class="newline">
+                <div class="clear">
                     <%--image--%>
-                    <table>
-                        <tr>
-                            <td class="imgleft">
-                                <img src="/images/oceaniaaccommodation.jpg" height="245px" width="300px" alt="">
-                            </td>
-                            <%--content VBR--%>
-                            <%--content text--%>
-                            <td class="content2 tbody">
-                                <p>
+                   <div class="col-3">
+                       <img src="/images/oceaniaaccommodation.jpg" height="245px" width="300px" alt=""/>
+                   </div>
+                    <div class="col-r7">
+                               <p>
                                     Finding the perfect Oceania accommodation is not a problem, thanks to the extensive property listings that are available on vacations-abroad.com. Vacation rentals are available to suit every need and budget. The available accommodations range from basic, but comfortable and compact country cottages to modern apartments, expansive villas, and resort-style residences. You can browse through the website to your destination and readily look at a variety of Oceania accommodations available for short and long term rental.
                                 </p>
-                                <br>
+                                <br/>
                                 <p>
                                     We have taken great care to list only verified and reviewed Oceania accommodations on our website. Oceania city accommodations are situated close to city centres, restaurants and shopping, while beach accommodations are ideally placed at the most picturesque locations. Each property is unique and different from the rest, yet all of them are equipped with every modern luxury and comfort. Located at exclusive spots, these vacation rentals provide easy access to tourist attractions, beaches, and a plethora of exciting activities. Most of them feature their private swimming pools, bars, spas, and orchards to consummate your Oceania vacations.
                                 </p>
@@ -280,12 +237,10 @@
                                 <p>The apartments, B&Bs, cottages, resorts, and other Oceania accommodations are featured along with complete details about rooms, available facilities and rent. Each property is illustrated by multiple interior and exterior views, so that you can book the accommodation that suits your needs perfectly. Regardless of whether you are going to Oceania on a romantic, family, exotic, or adventure vacation, you'll find the ideal abode at vacations-abroad.com.</p>
 
 
-                            </td>
-                        </tr>
-                    </table>
+                    </div>
                 </div>
-            </div>
-            <div class="greytext">
+         </div>
+            <div class="newline">
                 <p>Booking a splendid yet economical accommodation before departing on your journey to Oceania can save you from unnecessary hassle and expenses. Why take chances when you can look before you book? Feel free to click through to your destination and view the available vacation rentals.</p>
                 <%--<div style="border: solid 0px #ececec; padding: 2px; background-color: white; text-align: center; width: 800px">
 
@@ -306,8 +261,10 @@
             </div>
             <div class="linegreen">
             </div>
-        </div>
     </div>
+
+
+ 
     <%-- <div class="tapsection" style="border: 1px;">
         <div class="section" style="position: absolute;top: 86px;left: 72px;">
             <h1 style="width: 230px; text-align: center; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 21px; color: white; font-weight: bold; text-shadow: #005784 2px 2px;">
@@ -318,11 +275,6 @@
 </div>--%>
 
     <!-- Start of StatCounter Code for Default Guide -->
-    <script type="text/javascript">
-        var sc_project = 3336280;
-        var sc_invisible = 1;
-        var sc_security = "510252c5";
-    </script>
 
     <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
     <noscript>
@@ -348,6 +300,7 @@
 
     </script>--%>
     </div>
+    <script src="/Assets/js/africa.js"></script>
 </asp:Content>
 <%--<asp:Content ID="Content3" ContentPlaceHolderID="DefaultPageFeaturedCitiesContainer"
     runat="server">

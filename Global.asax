@@ -797,7 +797,7 @@
             }
 
             //write reviews  .../123/newreview.aspx
-            Regex regexRevW = new Regex(@"(\d+)/newreview.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
+            Regex regexRevW = new Regex(@"(\d+)/writereview.aspx", RegexOptions.IgnoreCase | RegexOptions.IgnorePatternWhitespace);
             MatchCollection matchesRevW = regexRevW.Matches(oldpath);
             if (matchesRevW.Count > 0)
             {

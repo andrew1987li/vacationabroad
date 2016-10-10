@@ -1,8 +1,13 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="countryproperties.aspx.cs" Inherits="allPropertiesList" EnableEventValidation="false" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
-    <asp:Label ID="Label2" runat="server" Visible="false" Text="%country% vacation Rentals, %country% Holiday Rentals, %country% Rental Accommodations"></asp:Label>
+<asp:Content ID="link" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/countryproperty.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+    <div class="internalpagewidth">
+   <asp:Label ID="Label2" runat="server" Visible="false" Text="%country% vacation Rentals, %country% Holiday Rentals, %country% Rental Accommodations"></asp:Label>
     <asp:Label ID="Title" runat="server" Visible="false" Text="Vacation Properties in %country%"></asp:Label>
     <asp:Label ID="Keywords" runat="server" Visible="false" Text="%country% apartments, %country% villas, %country% hotels, %country% B&Bs."></asp:Label>
     <asp:Label ID="Description" runat="server" Visible="false" Text="%country%  Find and Book : Apartments, Villas, Hotels and B&Bs"></asp:Label>
@@ -12,100 +17,11 @@
     <input type="hidden" name="step2radio" value="" />
     <input type="hidden" name="step3radio" value="" />
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var href = $(".lower").attr("href");
-            href = href.toLowerCase().split(" ").join("_");
-            $(".lower").attr("href", href);
-
-            var hrefs = $(".lowers").attr("href");
-            hrefs = hrefs.toLowerCase().split(" ").join("_");
-            $(".lowers").attr("href", hrefs);
-
-            var btnname = "input[name='ctl00$Content$btnSubmit']";
-            var txtname = "input[name='ctl00$Content$txtCityText']";
-            $(btnname).live('click', function () {
-                var textcityvalue = $('#ctl00_Content_txtCityText').val().toString();
-                $('#ctl00_Content_txtCityVal').val(textcityvalue);
-                console.log($('#ctl00_Content_txtCityVal').val());
-            });
-
-            var btnname2 = "input[name='ctl00$Content$btnSubmit2']";
-            var txtname2 = "input[name='ctl00$Content$txtCityText2']";
-            $(btnname2).live('click', function () {
-                var textcityvalue2 = $('#ctl00_Content_txtCityText2').val().toString();
-                $('#ctl00_Content_txtCityVal2').val(textcityvalue2);
-                console.log($('#ctl00_Content_txtCityVal2').val());
-            });
-
-            var value = "";
-            $("input[name='ctl00$Content$rdoTypes']").click(function () {
-                value = $(this).val();
-                $('input[name="step1radio"]').val(value);
-                $('input[name="step2radio"]').val("");
-                $('input[name="step3radio"]').val("");
-            });
-
-            $("input[name='ctl00$Content$rdoBedrooms']").click(function () {
-                value = $(this).val();
-                $('input[name="step2radio"]').val(value);
-                value = $('input[name="ctl00$Content$rdoTypes"]:checked').val();
-                $('input[name="step1radio"]').val(value);
-                $('input[name="step3radio"]').val("");
-            });
-
-            $("input[name='ctl00$Content$btnFilter']").click(function () {
-                value = $('input[name="ctl00$Content$rdoFilter"]:checked').val();
-                $('input[name="step3radio"]').val(value);
-                value = $('input[name="ctl00$Content$rdoBedrooms"]:checked').val();
-                $('input[name="step2radio"]').val(value);
-                value = $('input[name="ctl00$Content$rdoTypes"]:checked').val();
-                $('input[name="step1radio"]').val(value);
-            });
-        });
-    </script>
-    <style type="text/css">    
-            .pg-normal {
-                color: #6699FF;
-                font-weight: normal;
-                font-size: 14px;
-                text-decoration: none;    
-                cursor: pointer;    
-            }
-            .pg-selected {
-                color: #6699FF;
-                font-size: 14px;
-                font-weight: bold;        
-                text-decoration: underline;
-                cursor: pointer;
-            }
-            .listingPagesContainer a {
-    float: left;
-    font-size: 1.3em;
-    color: #6699FF;
-}
-
-    .listingPagesContainer a:visited {
-        color: #6699FF;
-    }
-
-    .listingPagesContainer a:hover {
-        color: #6699FF;
-    }
-
-            a:link {
-    color: #6699FF;
-}
-            a:hover {
-    color: #6699FF;
-}a:visited {
-    color: #6699FF;
-    text-decoration:underline;
-}
-        </style>
+  
 
     <span id="test234" runat="server" style="display: none"></span>
-    <div align="center" style="position: relative; top: -80px">
+        <div class=" newline">
+    <div>
         <table>
             <tr>
                 <td>
@@ -176,12 +92,7 @@
         </table>
         <asp:Label ID="lblInfo22" runat="server" ForeColor="Red"></asp:Label>
         <p align="left">
-            <script type="text/javascript">
-            var sc_project = 3341533;
-            var sc_invisible = 1;
-            var sc_security = "ebe10c56";
-        </script>
-        <script type="text/javascript"
+         <script type="text/javascript"
             src="http://www.statcounter.com/counter/counter.js"></script>
         <noscript>
             <div class="statcounter">
@@ -194,20 +105,16 @@
             </div>
         </noscript>
 
-            <script type="text/javascript" src="../scripts/pager.js"></script>	
-            <script type="text/javascript"><!--
-        var pager = new Pager('results', 10); 
-        pager.init(); 
-        pager.showPageNav('pager', 'pageNavPosition'); 
-        pager.showPage(1);
-    </script>
 
-            <script type="text/javascript">
-                try {
-                    var pageTracker = _gat._getTracker("UA-1499424-2");
-                    pageTracker._trackPageview();
-                } catch (err) { }</script>
-
+ 
         </p>
     </div>
+        </div>
+
+
+
+    </div>
+ 
+    <script type="text/javascript" src="/scripts/pager.js"></script>	
+    <script src="/Assets/js/countryproperty.js"></script>
 </asp:Content>

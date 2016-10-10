@@ -108,6 +108,7 @@ addLoadEvent(function () {
 });
 
 function setPriTypes() {
+    //alert("types");
     selectField = document.getElementById("PrimaryType");
     selectField.options.length = 0;
 
@@ -132,7 +133,7 @@ function setPriTypes() {
     setPropertyDropDown();
 }
 function setPropertyDropDown() {
-
+    //alert("sss");
     staticField = document.getElementById("PrimaryType");
     selectField = document.getElementById("PropertyType");
     selectField.options.length = 0;
@@ -179,8 +180,9 @@ function setPropertyDropDown() {
     }
 }
 function InitializeDropdowns() {
-    setCountries();
     setPriTypes();
+    setCountries();
+ 
 }
 function PropertyTypeChanged(selectedindex) {
     var proptype = document.getElementById("PropertyType");

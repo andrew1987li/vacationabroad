@@ -6,7 +6,7 @@
 }
 
 .topMargin{
-    margin-top:15px;
+    margin-top:30px;
 }
 
 .H1CityText{
@@ -90,6 +90,10 @@
     color:#9b7f59;
     font-family:Verdana;
     font-size:9pt;
+}
+
+.tableborder  input[type="radio"]{
+    margin-left:20px;
 }
 
 

@@ -91,7 +91,7 @@ public partial class Default : CommonPage
 
 
 
-        ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = temp + "Vacations-Abroad.com";
+        //((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = temp + "Vacations-Abroad.com";
         //((System.Web.UI.WebControls.Image)Master.FindControl ("MainLogo")).AlternateText = temp + "@ Vacations-Abroad.com";
 
         foreach (DataRow datarow in RegionsSet.Tables["Regions"].Rows)
@@ -125,7 +125,7 @@ public partial class Default : CommonPage
         if (!IsPostBack)
         {
             DataBind();
-            Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css' />"));
+            //Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css' />"));
         }
         DataSet ds = Utility.dsGrab("RegionTextList");
         

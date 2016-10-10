@@ -1,78 +1,33 @@
-﻿<%@ Page Title="<%# GetTitle () %>" Language="C#" MasterPageFile="~/MasterPageNoCss.master"
+﻿<%@ Page Title="<%# GetTitle () %>" Language="C#" MasterPageFile="/masterpage/NormalMaster.master"
     AutoEventWireup="true" EnableEventValidation="true" ValidateRequest="true" CodeFile="WriteReview.aspx.cs"
     Inherits="PropertyReview" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="Server">
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/writereview.css" rel="stylesheet" />
+</asp:Content>
 
-    <script language="javascript" type="text/javascript">
-        function Validate() {
-            var vValue = true;
-            rb1 = document.getElementById('ctl00_Content_rbnOne');
-            rb2 = document.getElementById('ctl00_Content_rbnTwo');
-            rb3 = document.getElementById('ctl00_Content_rbnThree');
-            rb4 = document.getElementById('ctl00_Content_rbnFour');
-            vFName = document.getElementById('ctl00_Content_txtFName');
-            vLName = document.getElementById('ctl00_Content_txtLName');
-            vComments = document.getElementById('ctl00_Content_txtComments');
-            vMonth = document.getElementById('ctl00_Content_ddlMonth');
-            vYear = document.getElementById('ctl00_Content_ddlYear');
+<asp:Content ID="Content1" ContentPlaceHolderID="bodycontent" runat="Server">
 
-            if (vFName.value == "") {
-                alert('Please enter first name.');
-                vValue = false;
-            }
-            if ((vLName.value == '') || (vLName.value == null)) {
-                alert('Please enter last name.');
-                vValue = false;
-            }
-            if (vMonth.value == 0) {
-                alert('Please specify month.');
-                vValue = false;
-            }
-            if (vYear.value == 0) {
-                alert('Please specify year.');
-                vValue = false;
-            }
-            if (vComments.value == "") {
-                alert('Please enter comments.');
-                vValue = false;
-            }
-            if ((rb1.checked == false) && (rb2.checked == false) && (rb3.checked == false) && (rb4.checked == false)) {
-                alert('Please enter star rating.');
-                vValue = false;
-            }
-            //        else {
-            //            return true;
-            //        }
-            return vValue;
-        }
-        //-->
-    </script>
-
-    <br />
-    <center>
-        <div style="width: 95%">
-            <%--<div style="width: 18%; float: right;">
-                <div class="rtOuter" style="width: 96%; text-align: left;">
-                    <div id="rtHead" runat="server" class="rtHeader">
-                    </div>
-                    <div id="divCitiesRt" runat="server" class="rtText">
-                    </div>
-                </div>
-            </div>--%>
-            <div style="width: 100%; min-height: 400px; float: left;">
+   <div class="internalpagewidth">
+            <div class="newline">
+               <div class="col-3">
                 <div style="float: left; text-align: left;">
                     <asp:Label ID="lblTitle" runat="server" Text="Review for " Font-Bold="True"></asp:Label><br />
                     <asp:Label ID="lblAddress" runat="server"></asp:Label>
                 </div>
+               </div>
+               <div class="col-6">
                 <div style="float: right;">
                     <%-- <asp:HyperLink ID="hlkCountry" runat="server"></asp:HyperLink>,
                     <asp:HyperLink ID="hlkState" runat="server"></asp:HyperLink>,
                     <asp:HyperLink ID="hlkCity" runat="server"></asp:HyperLink>,--%>
                     <asp:HyperLink ID="hlkPropNum" runat="server"></asp:HyperLink>
                 </div>
-                <br />
-                <br />
+               </div>
+           </div>
+           <div class="clear"></div>
+        <div class="newline">
+            <div style="width: 100%; min-height: 400px; float: left;">
                 <div id="divLftContent" style="width: 45%; float: left; text-align: left;">
                     <div style="float: left;">
                         <asp:Image ID="imgProperty" runat="server" />
@@ -158,7 +113,7 @@
                             <%--<asp:Label ID="Label1" runat="server" Text="STEP TWO" Font-Bold="True" Font-Size="15px"></asp:Label>&nbsp;-Write
             Comments--%>
                         </div>
-                        <asp:TextBox ID="txtComments" runat="server" Width="100%" Rows="10" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="txtComments" runat="server" Width="97%" Rows="10" TextMode="MultiLine"></asp:TextBox>
                         <br />
                         <%--<asp:Label ID="Label3" runat="server" Text="STEP THREE" Font-Bold="True" Font-Size="15px"></asp:Label>&nbsp;-Submit Comments--%>
                         <br />
@@ -172,5 +127,9 @@
                 </div>
             </div>
         </div>
-    </center>
+    <div class="clear"></div>
+
+   </div>
+
+    <script src="/Assets/js/writereview.js"></script>
 </asp:Content>

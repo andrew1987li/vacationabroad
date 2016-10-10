@@ -407,7 +407,7 @@ public partial class allPropertiesList : CommonPage
         Session["country"] = country;
 
 
-        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css' />"));
+//        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css' />"));
         //Page.Header.Controls.Add(new LiteralControl("<script src='http://vacations-abroad.com/wz_tooltip.js' type='text/javascript'></script>"));
 
     }

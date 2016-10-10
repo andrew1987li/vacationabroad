@@ -1,5 +1,14 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true" CodeFile="MakePayment.aspx.cs" Inherits="MakePayment" Title="Make Payment" %>
-<asp:Content ID="Content" ContentPlaceHolderID="Content" Runat="Server">
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="MakePayment.aspx.cs" Inherits="MakePayment" Title="Make Payment" %>
+
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Make Payment
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/makepayment.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" Runat="Server">
+    <div class="internalpagewidth">
+        <div class=" newline">
     <div class="left" style="padding-left:10px; padding-right:10px;">
 	<% if (BackLink.Visible) { %>
     <table bgcolor="#F5EDE3" cellspacing="0" cellpadding="0" width="350" align="center" border="2">
@@ -552,4 +561,8 @@
 	770-687-6889<br />
     </div>
 </div>
+        </div>
+    </div>
+
+    <script src="/Assets/js/makepayment.js"></script>
 </asp:Content>

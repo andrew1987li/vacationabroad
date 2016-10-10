@@ -67,8 +67,8 @@ public partial class accounts_Login : CommonPage
                           Response.Redirect(FormsAuthentication.GetRedirectUrl(usrname, false));*/
                         // FormsAuthentication.RedirectFromLoginPage(usrname, false);
                         FormsAuthentication.SetAuthCookie(usrname, false);
-                        if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
-                        if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
+                        if (backlinkpassed) Response.Redirect(backlinkurl);
+                      //  if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
                         else if (AuthenticationManager.IfAdmin)
                             Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
                         else
@@ -168,7 +168,7 @@ public partial class accounts_Login : CommonPage
                         //FormsAuthentication.RedirectFromLoginPage(signname, false);
                         FormsAuthentication.SetAuthCookie(signname, false);
                         //Response.Write(backlinkurl);
-                        if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"]+ backlinkurl);
+                        if (backlinkpassed) Response.Redirect( backlinkurl);
                         else if (AuthenticationManager.IfAdmin)
                             Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
                         else
@@ -295,12 +295,19 @@ public partial class accounts_Login : CommonPage
         string username = "";
         if ((username = AuthenticationManager.Login(usrname.Text, pwd.Text, 0)) != ""){
             FormsAuthentication.SetAuthCookie(username, false);
-            if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
+            //            if (backlinkpassed) Response.Redirect("http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + backlinkurl);
+            if (backlinkpassed) Response.Redirect(backlinkurl);
+            else if (AuthenticationManager.IfAdmin)
+                Response.Redirect("/Administration.aspx");
+            else
+                Response.Redirect("/userowner/Listings.aspx?UserID=" +
+                    AuthenticationManager.UserID.ToString());
+          /*  if (backlinkpassed) Response.Redirect( backlinkurl);
             else if (AuthenticationManager.IfAdmin)
                 Response.Redirect(CommonFunctions.PrepareURL("Administration.aspx"));
             else
                 Response.Redirect(CommonFunctions.PrepareURL("Listings.aspx?UserID=" +
-                    AuthenticationManager.UserID.ToString()));
+                    AuthenticationManager.UserID.ToString()));*/
         }
 
     }

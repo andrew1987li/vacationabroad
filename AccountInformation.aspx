@@ -1,7 +1,17 @@
-<%@ Page Language="C#" Debug="true" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true" CodeFile="AccountInformation.aspx.cs" Inherits="AccountInformation" Title="Account Information" %>
+<%@ Page Language="C#" Debug="true" MasterPageFile="/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="AccountInformation.aspx.cs" Inherits="AccountInformation" Title="Account Information" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
-    <% if (BackLink.Visible)
+<asp:Content ID="title" ContentPlaceHolderID="head" runat="server">
+    Account Information
+</asp:Content>
+
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/accountinfo.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+    <div class="internalpagewidth">
+    <div class="newline centered">
+  <% if (BackLink.Visible)
        { %>
     <table bgcolor="#e4e4af" cellspacing="0" cellpadding="0" width="250" align="center" border="2">
         <tr>
@@ -126,6 +136,10 @@
             </td>
         </tr>
     </table>
+    </div>
+    </div>
 
+  
 
+    <script src="/Assets/js/accountinfo.js"></script>
 </asp:Content>

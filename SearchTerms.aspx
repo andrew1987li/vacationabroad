@@ -1,32 +1,46 @@
 <%--<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SearchTerms.aspx.cs" Inherits="SearchTerms" Title="Search Terms" %>--%>
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true" CodeFile="SearchTerms.aspx.cs" Inherits="SearchTerms" Title="Search Terms" EnableEventValidation="False" %>
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="SearchTerms.aspx.cs" Inherits="SearchTerms" Title="Search Terms" EnableEventValidation="False" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="Content" Runat="Server">
-    <asp:Label id="lbl1" runat="server" style="display:none"></asp:Label>
-	<div align="center">
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/search.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" Runat="server">
+    <div class="internalpagewidth">
+  <asp:Label id="lbl1" runat="server" style="display:none"></asp:Label>
+
+        <div class="newline" style="display:none;">
 		Enter Key Words<asp:TextBox ID="RefineTerms" runat="server" />
 		<asp:Button ID="SearchButton" runat="server" Text="Search" /><br />
 		<asp:RadioButton ID="OnlyAuction" runat="server" Text="Search Auction Items" GroupName="1" Visible="false"/>
 		<asp:RadioButton ID="OnlyNonAuction" runat="server" Text="Vacation Properties" GroupName="1" Visible="false" />
 		<asp:RadioButton ID="Both" runat="server" Text="Vacation Properties" GroupName="1" Visible="false" /><br />
+        </div>
+
+    
+	<div align="center">
+
 	</div>
 	<br />
 	<% if (MainDataSet.Tables["Auctions"].Rows.Count > 0) { %>
-	<div align="center">
-		<strong>Auction Items:</strong>
-		Sort in order of
-		<asp:DropDownList ID="SortOrder" runat="server" Width="202px"
-				AutoPostBack="True">
-			<asp:ListItem Value="1">Least Time Remaining - First</asp:ListItem>
-			<asp:ListItem Value="2">Most Time Remaining - First</asp:ListItem>
-			<asp:ListItem Value="3">Lowest Current Bid</asp:ListItem>
-			<asp:ListItem Value="4">Highest Current Bid</asp:ListItem>
-		</asp:DropDownList>
-	</div>
+        <div class="newline">
+	        <div class="centered">
+		        <strong>Auction Items:</strong>
+		        Sort in order of
+		        <asp:DropDownList ID="SortOrder" runat="server" Width="202px"
+				        AutoPostBack="True">
+			        <asp:ListItem Value="1">Least Time Remaining - First</asp:ListItem>
+			        <asp:ListItem Value="2">Most Time Remaining - First</asp:ListItem>
+			        <asp:ListItem Value="3">Lowest Current Bid</asp:ListItem>
+			        <asp:ListItem Value="4">Highest Current Bid</asp:ListItem>
+		        </asp:DropDownList>
+	        </div>
+        </div>
+
 	<br />
-	<div align="center">
+	<div class="newline">
 		<strong>Auction Items</strong>
 	</div>
+        <div class="newline">
 	<asp:Repeater ID="Repeater2" runat="server" DataMember="Auctions" DataSource="<%# MainDataSet %>">
 		<HeaderTemplate>
 			<table bordercolor="#ffffff" cellspacing="1" cellpadding="0" width="100%" align="center" bgcolor="#ffffff"
@@ -104,11 +118,14 @@
 			</table>
 		</FooterTemplate>
 	</asp:Repeater>
+        </div>
+
 	<% } %>
 	<% if (MainDataSet.Tables["Properties"].Rows.Count > 0) { %>
-	<div align="center">
-		<strong>Vacation Property Results</strong>
+	<div class="centered">
+		<strong>Vacation Property Results For Keyword "<%=terms %>"</strong>
 	</div>
+    <div class="newline centered">
 	<asp:Repeater ID="Repeater1" runat="server" DataMember="Properties" DataSource="<%# MainDataSet %>">
 		<HeaderTemplate>
 			<table cellspacing="1" cellpadding="0" width="750" align="center" border="0" bgcolor="#333366">
@@ -182,6 +199,8 @@
 			</table>
 		</FooterTemplate>
 	</asp:Repeater>
+    </div>
+
 	<% } %>
 	<div align="center">
 		<% if (numitems > 25) for (int i = 0; i <= numitems / 25; i++) { %>
@@ -190,4 +209,7 @@
 			</a><%= (i < numitems / 25 - 1) ? "," : ""%>
 		<% } %>
 	</div>
+    </div>
+  
+    <script src="/Assets/js/search.js"></script>
 </asp:Content>

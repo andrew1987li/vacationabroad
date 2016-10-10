@@ -1,5 +1,16 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true" CodeFile="ViewEmails.aspx.cs" Inherits="ViewEmails" Title="Vacations-Abroad.com: Vacation Rentals Holiday Rentals Vacations Holidays Cottages Cabins Homes Condos USA Mexico Caribbean Bahamas Canada France Italy Greece Spain England Brazil Costa Rica Scotland Portugal" %>
-<asp:Content ID="Content" ContentPlaceHolderID="Content" Runat="Server">
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="ViewEmails.aspx.cs" Inherits="ViewEmails" Title="Vacations-Abroad.com: Vacation Rentals Holiday Rentals Vacations Holidays Cottages Cabins Homes Condos USA Mexico Caribbean Bahamas Canada France Italy Greece Spain England Brazil Costa Rica Scotland Portugal" %>
+
+
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    View Email
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/viewemail.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" Runat="Server">
+    <div class="internalpagewidth">
+        <div class="newline">
 <div align="left">
 	<% if (BackLink.Visible) { %>
 	<table bgcolor="#e4e4af" cellspacing="0" cellpadding="0" width="250" align="center" border="2">
@@ -51,8 +62,10 @@
 			width="1" height="1" />
 	</noscript>
 
-	<script type="text/javascript" language="Javascript">
-		    document.write('<img src="http://www.watchwise.net/cgi-watchwise/monitorwise.cgi?URL=<%= CommonFunctions.GetSiteAddress ().ToLower () %>:all&LINK=',escape(document.referrer),'" height=1 width=1>')
-	</script>
+
 	</div>
+        </div>
+    </div>
+
+    <script src="/Assets/js/viewemail.js"></script>
 </asp:Content>

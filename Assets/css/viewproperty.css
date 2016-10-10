@@ -86,7 +86,7 @@ ul.countrylist li{
 
 .listingPagesH1Container{
     margin-top:5px;
-    margin-left:15px;
+
 }
 
 .listingPagesH1Container h3{
@@ -132,14 +132,15 @@ table.proptable {
 			padding: 0px;
 			list-style: none;
             background: transparent;
-           border-bottom: 3px solid #154890; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+            border-bottom: 3px solid #154890; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+            text-align:center;
 		}
 		ul.tabs li{
-			background-color: #154890;
+			background-color: #e1d4c0;
             border-top-left-radius:5px;
             border-top-right-radius:5px;
             border:none;
-			color: white;
+			color: #6699ff;
 			display: inline-block;
 			padding: 5px 15px;
 			cursor: pointer;
@@ -149,8 +150,8 @@ table.proptable {
 		}
 
 		ul.tabs li.current{
-			background: #ededed;
-			color: #222;
+			background: #f5ede3;
+			color: #ff6600;
 		}
 
 		.tab-content{
@@ -188,12 +189,15 @@ div.centered> table
 .PropTable10 td{
     text-align:center;
     width:250px;
+          color:#f5ede3;
+          border:1px solid white;
 }
 
 table.PropTable10{
-    background-color:#ededed;
+    background-color:#ff6600;
       font-size: 11pt;
       font-family:Verdana;
+      color:#f5ede3;
 }
 
 .contentfont{

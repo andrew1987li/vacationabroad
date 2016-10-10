@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-3 text-right">
                      <div class="wdropdown">
-                         <button class="wdropbtn btnsign">My Account</button>
+                         <button class="wdropbtn btnsign"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> My Account</button>
                           <div class="wdropdown-content">
                             <a href="/accounts/login.aspx?type=1"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
                             <a href="/accounts/login.aspx?type=0"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
