@@ -140,7 +140,7 @@ table.proptable {
             border-top-left-radius:5px;
             border-top-right-radius:5px;
             border:none;
-			color: #6699ff;
+			color: #154890;
 			display: inline-block;
 			padding: 5px 15px;
 			cursor: pointer;
@@ -189,15 +189,15 @@ div.centered> table
 .PropTable10 td{
     text-align:center;
     width:250px;
-          color:#f5ede3;
+          color:#000;
           border:1px solid white;
 }
 
 table.PropTable10{
-    background-color:#ff6600;
+    background-color:#eeeeee;
       font-size: 11pt;
       font-family:Verdana;
-      color:#f5ede3;
+      color:black;
 }
 
 .contentfont{

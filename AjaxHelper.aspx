@@ -15,16 +15,21 @@
         return AjaxProvider.getSateInfo(id);
     }
 
+    [WebMethod]
+    // Get session state value.AjaxPropListSet
+    public static AjaxPropListSet GetPropertyListKeyword(string keyword, int proptype, int amenitytype, int roomnum, int sorttype, int pagenum ) {
+         return SearchProvider.getAjaxPropListSet(keyword, proptype, amenitytype, roomnum,sorttype,pagenum);
+        // AjaxPropListSet ajx=SearchProvider.getAjaxPropListSet(keyword, proptype, amenitytype, roomnum,sorttype,pagenum);
+       // return keyword + proptype + amenitytype + roomnum+sorttype+pagenum;
+       // return keyword +ajx.allnums;
+
+    }
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head >
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    tst
-    </div>
-    </form>
+
 </body>
 </html>

@@ -36,8 +36,8 @@
                 </div>
                 <div  class="col-md-6">
                     <div class="search-form">
-                        <input type="text" name="tbKeyWords" id="tbKeyWords" runat="server" placeholder="Search Country State or City" />
-                        <button type="button" runat="server" id="searchbt" onserverclick="searchbt_ServerClick">
+                        <input type="text" name="tbKeyWords" id="tbKeyWords" runat="server"  placeholder="Search Country State or City" />
+                        <button type="button" runat="server" id="searchbt" onclick="redirect()">
                             <span>Search</span> <!-- should use background image centered, and give text intend -9999px perhaps, or a font with a magnifying glass icon? -->
                   
                         </button>    

@@ -84,11 +84,11 @@
     font-family:Verdana;
     margin-left:1px;
     margin-right:1px;
-    float:right;
+    float:left;
 }
 
 .buttongroup{
-    margin-right:10px;
+    margin-left:4px;
 }
 .btgroupcontainer{
     width:350px;

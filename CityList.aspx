@@ -1,5 +1,9 @@
 <%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="CityList.aspx.cs" Inherits="newCityList" EnableEventValidation="false" %>
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    <%=city %> Properties
+</asp:Content>
+
 
 <asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
     <link href="/Assets/css/citylist.css" rel="stylesheet" />
@@ -212,9 +216,9 @@
                                                                             <td valign="top" class="propertyThumbnail" style="vertical-align: top; text-align: center;
                                                                                 width: 110px" rowspan="1">
                                                                                 <a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
-                                                                                    <asp:Image ID="imgProp" CssClass="imgstyle" Width="150px" Height="125px"
+                                                                                    <asp:Image ID="imgProp" ToolTip='<%#string.Format("{0} {1} Bedroom Vacation Rental"   , Eval("City") , Eval("NumBedrooms")) %>' CssClass="imgstyle" Width="150px" Height="125px" alt='<%#string.Format("{0} {1} Bedroom Vacation Rental"   , Eval("City") , Eval("NumBedrooms")) %>' 
                                                                                         Style="border-width: 1px;" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PhotoImage", "http://www.vacations-abroad.com/images/{0}").Trim() %>'
-                                                                                        runat="server" alt='<%#String.Format("{0}{1}{2}{3}{4}",Eval("Type"),"","","","") %>' />
+                                                                                        runat="server" />
                                                                                     <%--runat  ="server" alt='<%#String.Format("{0}{1}{2}{3}{4}{5}","Boutique ", Eval("City")," Vacation Rentals, Boutique ",Eval("City")," ",Eval("Category")) %>' />--%>
                                                                                     
                                                                                 </a>
@@ -387,7 +391,7 @@
                         <br />
                     </div>
         <asp:Label ID="lblInfo22" runat="server" ForeColor="Red"></asp:Label>
-        <div class="country_list_box">
+        <div style="display:none;">
 
                 <ul class="proplists">
                     <li><div id="rtHd3" runat="server"  style="display:inline;"></div></li>

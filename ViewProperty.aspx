@@ -200,7 +200,7 @@
                                     <HeaderTemplate>
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <td style="font-size: 14px; background-color: #154890; color: White;">
+                                        <td style="font-size: 14px; background-color: #ff6414; color: #f5ede3;">
                                             <%# DataBinder.Eval(Container.DataItem, "RoomTitle", "{0}") %>
                                         </td>
                                     </ItemTemplate>

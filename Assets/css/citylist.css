@@ -39,7 +39,6 @@
             .tdRentalRatesBlue    {
             font-family: Arial;
             color:  #002160;
-            font-weight: bold;
             font-size: 14px;
         }
             .tdRentalRates
@@ -56,13 +55,13 @@
             padding-left: 15px;
             color: #050505;
             font-size:14px;
-            font-weight: bold;
+            
         }
                    .amenitiesCaption
         {
             color: #050505;
             font-size:14px;
-            font-weight: bold;
+            
             
         }
                   .liDesccity
@@ -139,7 +138,6 @@ td{
 
 .H3CityText{
     font-size:12pt;
-    font-style:italic;
 
 }
 .bottomline{

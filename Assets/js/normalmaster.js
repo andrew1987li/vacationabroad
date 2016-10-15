@@ -6,6 +6,20 @@ function onclickevent_footerment(menuindex, itemindex) {
     window.location.href = redirect_links[menuindex][itemindex];
 }
 
+
+$(document).ready(function () {
+    $('input[type="text"]').keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+})
+
+function redirect() {
+    window.location.href = "/SearchTerms.aspx?SearchTerms=" + $('#tbKeyWords').val();
+}
+
 function getcountrylist(item) {
 
     //console.log(item.id);
