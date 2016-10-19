@@ -6,6 +6,10 @@
     <link href="/Assets/css/writereview.css" rel="stylesheet" />
 </asp:Content>
 
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Post Review for Vacation Rental Property #<%=propNum %>, <%=city %>, <%=country %>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="bodycontent" runat="Server">
 
    <div class="internalpagewidth">

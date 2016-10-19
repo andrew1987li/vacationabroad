@@ -585,7 +585,7 @@ public partial class allPropertiesList : CommonPage
                 {
                     propertyTypes.Add(propertyType);
                 }
-                propertyHtmlText += "<td><div style='padding: 24px;'><div style='text-align: center;'>" +
+                propertyHtmlText += "<td><div class='clink' ><div style='text-align: center;'>" +
                                     "<a href='http://www.vacations-abroad.com" + CommonFunctions.PrepareURL(row["Country"].ToString().Replace(" ", "_").ToLower() +
                                                                "/" +
                                                                row["StateProvince"].ToString()
@@ -606,14 +606,14 @@ public partial class allPropertiesList : CommonPage
                                                                row["City"].ToString().Replace(" ", "_").ToLower() + "/" +
                                                                row["ID"].ToString().Replace(" ", "_").ToLower() +
                                                                "/default.aspx") + "'>" +
-                                    "<img Width='170px' Height='140px' Style='border: 1px solid #ACA593; box - shadow: 1px 3px 3px 3px #E9E3D6; padding: 0px; margin: 2px;' src ='http://www.vacations-abroad.com/images/" +
+                                    "<img Width='170px' Height='140px' Style='border: 1px solid #ACA593; box - shadow: 1px 3px 3px 3px #E9E3D6; padding: 0px;margin-bottom:2px; ' src ='http://www.vacations-abroad.com/images/" +
                                     row["PhotoImage"].ToString() +
                                     "' runat='server' alt='no image' /></a><p style='display: none; margin - top: 7px; font - family: arial; font - size: 14px; color:#9B7F59; width: 147px; text - align:center; '></p>" +
                                     "<br/>" +
-                                    "<label style='display:block; width: 180px'>" + propertyType + "</label>" +
-                                    "<span>Sleeps " + row["NumSleeps"].ToString() + "</span>" +
-                                    "<br/>" +
-                                    "<span>Rates " + row["minNightRate"].ToString() + "-" + row["HiNightRate"].ToString() + " " + GetSpecificRowFromTable("Properties", "ID = " + Convert.ToInt32(row["ID"]))[
+                                    "<span class='comments'>" + propertyType + "</span>" +
+                                    "<span class='comments'>Sleeps " + row["NumSleeps"].ToString() + "</span>" 
+                                     +
+                                    "<span class='comments'>Rates " + row["minNightRate"].ToString() + "-" + row["HiNightRate"].ToString() + " " + GetSpecificRowFromTable("Properties", "ID = " + Convert.ToInt32(row["ID"]))[
                                         "minRateCurrency"] + "</span>" +
                                     "</div>" +
                                     "</td>";

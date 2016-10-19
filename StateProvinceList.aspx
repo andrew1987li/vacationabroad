@@ -3,6 +3,9 @@
     Title="<%# GetTitle () %>" EnableEventValidation="false" %>
 
 <%--<%@ OutputCache Duration="600" VaryByParam="*" %>--%>
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+   <%=stateprovince %> Vacation Rentals, Boutique Hotels | Vacations Abroad
+</asp:Content>
 <asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
     <link href="/Assets/css/stateprovince.css" rel="stylesheet" />
 </asp:Content>
@@ -15,8 +18,9 @@
     <%--    <asp:TextBox runat="server" ID ="txtCityVal"  value="" Style="display:none;" ></asp:TextBox>
     --%>
     
-    <div class="row">
-        <div class="internalpagewidth">
+
+ <div class="row">
+       <div class="internalpagewidth">
             <div class="row">
                 <div class="row">
                    <div>
@@ -85,9 +89,11 @@
 
         </div>
 
-        <div class="country_box">
+        <div class="row">
+            <div class="text-center">
             <ul id="ulManiGrid" class="stateful" runat="server">
             </ul>
+            </div>
         </div>
         <div class="custm-content">
 
@@ -95,7 +101,7 @@
                    <div class="col-100">
 
                     <div class="subtitle" visible="true" id="OrangeTitle" runat="server">
-                        <h2 style="margin-top:10px">Things to see and do in
+                        <h2 style="margin-top:5px; background-color:white; color:#ff6600">Things to see while on vacation in 
                         <asp:Literal ID="ltrStateThing" runat="server"></asp:Literal></h2>
 
                     </div>
@@ -135,7 +141,8 @@
         </div>
     </div>
         </div>
-    </div>
+ </div>
+ 
 
     <%--end right column edit--%>
     <div class="OrangeText" style="text-align: left; float: left;">

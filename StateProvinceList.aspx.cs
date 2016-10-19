@@ -373,12 +373,12 @@ public partial class StateProvinceList : CommonPage
             DataTable dt1 = new DataTable();
             dt1 = obj.PropertiesByCase(vList, Convert.ToInt32(dr["id"]), "City");
 
-            li = " style='" + ((ind > 4) ? "border-top:0px;" : "") + (((ind++ % 5) == 4) ? cls : "") + "'";
+           // li = " style='" + ((ind > 4) ? "border-top:0px;" : "") + (((ind++ % 5) == 4) ? cls : "") + "'";
 
-            citiesNew += "<li"+li+">" +
+            citiesNew += "<li" + li+">" +
                 "<a href='" + temp + "' class='StateTitle'>" + dr["City"].ToString() + "</a> <br/>" +
                 "<a href='" + temp + "'>" +
-                "<img width='160' height='125' src='http://www.vacations-abroad.com/images/" + Convert.ToString(dt1.Rows[0]["PhotoImage"]) + "' alt='" + dr["City"].ToString() + " vacation rentals and boutique hotels' title='" + dr["City"].ToString() + " vacation rentals and boutique hotels' /></a>" +
+                "<div class='drop-shadow effect4'><img width='160' height='125' src='/images/" + Convert.ToString(dt1.Rows[0]["PhotoImage"]) + "' alt='" + dr["City"].ToString() + " vacation rentals and boutique hotels' title='" + dr["City"].ToString() + " vacation rentals and boutique hotels' /></a></div>" +
             "</li>";
             str_cities += dr["City"].ToString() + ",";
         }

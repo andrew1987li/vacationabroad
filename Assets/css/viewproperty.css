@@ -109,7 +109,7 @@ ul.countrylist li{
 }
 
 table.proptable {
-    			background: #ededed;
+    			background: #f5ede3;
 }
 
 .ViewPropertyPageFonts{
@@ -117,6 +117,61 @@ table.proptable {
     font-family:Verdana;
     color:#1d2d33;
 }
+
+.drop-shadow {
+  position:relative;
+  display:inline-block;
+  padding:4px;
+  border:1px solid #e1d4c0;
+  background:#fff;
+
+}
+.drop-shadow:after, .drop-shadow:before{
+     content:"";
+    position:absolute;
+    z-index:-2;
+}
+
+
+.perspective:after {
+    left:0px;
+    width:100px;
+    bottom:10%;
+    height:80%;
+    box-shadow:80px 0 8px rgba(0, 0, 0, 0.4);
+  -webkit-transform: skew(-10deg);
+   -moz-transform: skew(-10deg);
+   -ms-transform: skew(-10deg);
+   -o-transform: skew(-10deg);
+   transform: skew(-10deg);
+   -webkit-transform-origin: 0% 100%;
+   -moz-transform-origin: 0% 100%;
+   -ms-transform-origin: 0% 100%;
+   -o-transform-origin: 0% 100%;
+   transform-origin: 0% 100%;
+}
+
+.perspective:before{
+    display:none;
+}
+
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+     position: absolute;   
+    z-index: -1; 
+    top: 3px;
+    bottom: 0;
+    left: 79%;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 4px 0 3px rgba(0,0,0,0.3);
+    width: 20%; 
+    height:50%;   
+    transform: rotate(3deg);
+}  
 
 .TitleFont{
     font-size:14px;
@@ -132,20 +187,20 @@ table.proptable {
 			padding: 0px;
 			list-style: none;
             background: transparent;
-            border-bottom: 3px solid #154890; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+            border-bottom: 3px solid #ff6600; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
             text-align:center;
 		}
 		ul.tabs li{
-			background-color: #e1d4c0;
+			background-color: #ff6600;
             border-top-left-radius:5px;
             border-top-right-radius:5px;
             border:none;
-			color: #154890;
+			color: #f5ede3;
 			display: inline-block;
 			padding: 5px 15px;
 			cursor: pointer;
             margin-left:0px;
-            width:19%;
+            width:16%;
             text-align:center;
 		}
 
@@ -175,6 +230,7 @@ div.centered> table
 {
     margin: 0 auto; 
     text-align: left;
+    border:none;
 }
 
 
@@ -194,7 +250,7 @@ div.centered> table
 }
 
 table.PropTable10{
-    background-color:#eeeeee;
+    background-color:#f5ede3;
       font-size: 11pt;
       font-family:Verdana;
       color:black;
@@ -203,4 +259,74 @@ table.PropTable10{
 .contentfont{
       font-size: 14px;
       font-family:Verdana;
+      text-align:left;
+      color:black;
+}
+.NonTable{
+    display:none;
+}
+
+ /* The Modal (background) */
+.modalform {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.dlghead{
+    position:absolute;
+    right:45px;
+}
+
+/* Modal Content/Box */
+.modal_contents {
+    background-color: transparent;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 0px solid #888;
+    position:relative;
+    width: 400px; /* Could be more or less, depending on screen size */
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s
+}
+
+.animationCon{
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.7s;
+    animation-name: animatetop;
+    animation-duration: 0.7s
+}
+
+/* The Close Button */
+.mclose {
+    color: #000;
+
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mclose:hover,
+.mclose:focus {
+    color: #444;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+    
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+
 }

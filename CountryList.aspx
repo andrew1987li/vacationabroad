@@ -4,7 +4,9 @@
 <asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
     <link href="/Assets/css/countrylist.css" rel="stylesheet" />
 </asp:Content>
-
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    <%=country %> Vacation Rentals, Boutique Hotels | Vacations Abroad
+</asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
     <div class="row">
@@ -93,7 +95,7 @@
  
 
                             <div class="orangetxt" id="OrangeTitle" runat="server">
-                                Things to see and do in <asp:Literal ID="ltrCountryThing" runat ="server"></asp:Literal>
+                                Things to see while on vacation in <asp:Literal ID="ltrCountryThing" runat ="server"></asp:Literal>
                             </div>
                                 <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
                     { %>

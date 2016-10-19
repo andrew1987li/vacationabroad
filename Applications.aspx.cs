@@ -16,7 +16,7 @@ public partial class Applications : CommonPage
     {
         this.Page.Title = "Advertise on Vacations-Abroad.com : Vacation Rentals, B&Bs, Boutique Hotels.";
 
-        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css'></script>"));
+       // Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css'></script>"));
 
         HtmlMeta meta = new HtmlMeta();
         meta.Name = "description";

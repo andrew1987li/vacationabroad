@@ -1081,7 +1081,7 @@ Replace("%name%", PropertiesFullSet.Tables["Properties"].Rows[0]["Name"].ToStrin
         if (!User.Identity.IsAuthenticated || !AuthenticationManager.IfAuthenticated)
         {
             FormsAuthentication.SignOut();
-            Response.Redirect("/accounts/login.aspx?ReturnUrl=" + Request.RawUrl);
+            Response.Redirect("/accounts/login.aspx?type=1&ReturnUrl=" + Request.RawUrl);
         }
 
         

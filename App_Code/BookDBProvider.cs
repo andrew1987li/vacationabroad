@@ -408,7 +408,7 @@ public class BookDBProvider
          //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
          // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
 
-         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
+         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vacation-abroad.com.<br>" +
              "Deatiled inquiry:<br>"
              + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
 
@@ -453,7 +453,7 @@ public class BookDBProvider
          //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
          // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
 
-         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vocation-abroad.com.<br>" +
+         string mailbody = "Dear {0}!<br> This is an inquiry for your property {1} on vacation-abroad.com.<br>" +
              "Deatiled inquiry:<br>"
              + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>"
              +"<br>Property OwnerName:{10}<br> Email:{11}";
@@ -498,7 +498,7 @@ public class BookDBProvider
           //    ContactEmail.Text : "ar@" + CommonFunctions.GetDomainName (), (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
           // MailMessage message = new MailMessage("prop@vacations-abroad.com", (string)PropertiesFullSet.Tables["Properties"].Rows[0]["Email"]);
 
-          string mailbody = "Dear {0}! <br>Thanks for visiting our vocation abroad.<br> This is an inquiry for the property {1} on vocation-abroad.com.<br>" +
+          string mailbody = "Dear {0}! <br>Thanks for visiting our vacation abroad.<br> This is an inquiry for the property {1} on vacation-abroad.com.<br>" +
               "Deatiled inquiry:<br>"
               + "UserName:{2}<br> UserEmail:{3} <br> ArrivalDate:{4} <br> Nights:{5}<br> Adults:{6} Children:{7}<br>Telephone:{8} Comment:{9}<br>";
 

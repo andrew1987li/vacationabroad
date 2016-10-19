@@ -1,6 +1,10 @@
 <%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="countryproperties.aspx.cs" Inherits="allPropertiesList" EnableEventValidation="false" %>
 
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Vacation Properties in <%=country %>
+</asp:Content>
+
 <asp:Content ID="link" ContentPlaceHolderID="links" runat="server">
     <link href="/Assets/css/countryproperty.css" rel="stylesheet" />
 </asp:Content>
@@ -42,7 +46,7 @@
                             <tr>
                                 <td>
                                     <div style='padding-left: 10px; padding-right: 10px; padding-bottom: 10px;'>
-                                            <div id="filerMain" style="float: left; width: 900px; font-family: Arial; color: #9b7f59; font-size: 12px; border: 2px solid #ACA593;">
+                                            <div id="filerMain" class="stepbox" >
                                                 <table style="width: 100%;">
                                                     <tr>
                                                         <td style="color: #9b7f59 !important;font-size: 12px !important;text-align: center !important;vertical-align: top !important;width: 55px !important;">

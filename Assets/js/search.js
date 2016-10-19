@@ -86,7 +86,7 @@ function displayContent(proplist) {
                              prop.detail.City + '</a>,<a href="' + chref.toLowerCase().replace(" ", "_") + '" class="wlocation">' + prop.detail.StateProvince +
                         '</a></div>\
                        <div class="newrow">\
-                           <a href="' + href.toLowerCase().replace(" ", "_") + '"> <img title="'+alt+'" alt="'+alt+'" class="imgstyle" src="images/' + prop.detail.FileName + '" /> </a>\
+                          <div class="drop-shadow effect4">  <a href="' + href.toLowerCase().replace(" ", "_") + '"> <img title="'+alt+'" alt="'+alt+'" class="imgstyle" src="images/' + prop.detail.FileName + '" /> </a></div>\
                         </div>\
                         <div class="comments">\
                         <div class="newrow"><span class="clocation">' +
@@ -109,13 +109,21 @@ function showPagination(cur_group) {
     max_group = Math.min(max_page, cur_group + 10);
     min_groupnum = cur_group;
 
-    $('#paging').empty();
+   /* $('#paging').empty();
     $('#paging').append('<li><a onclick="backpage()">«</a></li>');
     for (i = cur_group; i < max_group; i++) {
         $('#paging').append('<li><a onclick="getpage(' + i + ')" id="page' + i + '">' + (i + 1) + '</a></li>');
     }
     $('#paging').append('<li><a onclick="nextpage()">»</a></li>');
     $('#page' + cur_page).addClass("curpage");
+    */
+    $('#paging').empty();
+    $('#paging').append('<span class="pg-normal" onclick="backpage()">«Prev</span>');
+    for (i = cur_group; i < max_page; i++) {
+        $('#paging').append('|<span class="pg-normal" onclick="getpage(' + i + ')" id="page' + i + '">' + (i + 1) + '</span>');
+    }
+    $('#paging').append('|<span class="pg-normal"  onclick="nextpage()"> Next»</span>');
+    $('#page' + cur_page).addClass("pg-selected");
 }
 
 function addPagination(allnums) {
@@ -129,8 +137,10 @@ function addPagination(allnums) {
 function callPropAjax() {
     var cont= ' <div class="loading-bro">  <h1>Searching...</h1>  <svg id="load" x="0px" y="0px" viewBox="0 0 150 150"> <circle id="loading-inner" cx="75" cy="75" r="60"/></svg>  </div>';
     $('.pcontent').empty().append(cont);
-    $('.pagination').find(".curpage").removeClass("curpage");
-    $('#page' + cur_page).addClass("curpage");
+   // $('.pagination').find(".curpage").removeClass("curpage");
+   // $('#page' + cur_page).addClass("curpage");
+    $('.pagination').find(".pg-selected").removeClass("pg-selected");
+    $('#page' + cur_page).addClass("pg-selected");
     //return;
     callProplistfunction(cur_page);
 }
@@ -139,19 +149,24 @@ function getpage(pagenum) {
     if (cur_page == pagenum) return;
     cur_page = pagenum;
     console.log(min_groupnum + ' ' + max_group + ' ' + cur_page);
-    if (cur_page == min_groupnum && min_groupnum != 0) {
+   /* if (cur_page == min_groupnum && min_groupnum != 0) {
 
         showPagination(Math.max(cur_page - 4,0));
     }
     else if (cur_page == (max_group - 1) && cur_page != (max_page - 1)) showPagination(cur_page - 4);
-    callPropAjax();
+    */
+    
+    //callPropAjax();
+    changedPage();
 }
 function changedPage() {
-    if (cur_page == min_groupnum && min_groupnum != 0) {
+  /*  if (cur_page == min_groupnum && min_groupnum != 0) {
 
-        showPagination(Math.max(cur_page - 4, 0));
+        
     }
     else if (cur_page == (max_group - 1) && cur_page != (max_page - 1)) showPagination(cur_page - 4);
+    */
+   // showPagination(cur_page);
     callPropAjax();
 }
 

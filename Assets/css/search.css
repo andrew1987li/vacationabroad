@@ -13,12 +13,13 @@
 }
 
 .newrow{
-    margin:0px;
-
+    margin-top:0px;
+    font: 12px Vedrana, Arial, Helvetica, sans-serif;
 }
 
 a.wlocation{
-    font: 14px Vedrana, Arial, Helvetica, sans-serif;
+    font: 12px Vedrana, Arial, Helvetica, sans-serif;
+    margin:0;
     font-weight:300;
     color:#6699FF;
     text-decoration:none;
@@ -62,10 +63,27 @@ a.wlocation:hover{
     vertical-align:top;
 }
 
+.pg-normal {
+    color: #6699FF;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    margin:0 2px;
+}
+
+.pg-selected {
+    color: #6699FF;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .imgstyle{
-    margin-top:5px;
-    margin-bottom:5px;
-    border: 1px solid #ACA593;
+    margin:2px 0px;
+
+    border: 0px solid #ACA593;
     width:170px;
     height:140px;
 }
@@ -223,3 +241,59 @@ ul.pagination li a:hover:not(.curpage) {background-color: #ddd;}
       stroke-dashoffset: -600;
     }
 }
+
+
+.drop-shadow {
+  position:relative;
+  display:inline-block;
+  padding:4px;
+  border:1px solid #e1d4c0;
+  background:#fff;
+
+}
+.drop-shadow:after, .drop-shadow:before{
+     content:"";
+    position:absolute;
+    z-index:-2;
+}
+
+
+.perspective:after {
+    left:0px;
+    width:100px;
+    bottom:10%;
+    height:80%;
+    box-shadow:80px 0 8px rgba(0, 0, 0, 0.4);
+  -webkit-transform: skew(-10deg);
+   -moz-transform: skew(-10deg);
+   -ms-transform: skew(-10deg);
+   -o-transform: skew(-10deg);
+   transform: skew(-10deg);
+   -webkit-transform-origin: 0% 100%;
+   -moz-transform-origin: 0% 100%;
+   -ms-transform-origin: 0% 100%;
+   -o-transform-origin: 0% 100%;
+   transform-origin: 0% 100%;
+}
+
+.perspective:before{
+    display:none;
+}
+
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+     position: absolute;   
+    z-index: -1; 
+    top: 3px;
+    bottom: 0;
+    left: 79%;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 4px 0 3px rgba(0,0,0,0.3);
+    width: 20%; 
+    height:50%;   
+    transform: rotate(3deg);
+}  

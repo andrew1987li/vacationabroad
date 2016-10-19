@@ -1,9 +1,14 @@
-﻿div#cus_head  h2 { display: inline-block; color:#154890 ; font-family:Verdana; font-size:23pt;margin-top:5px;}
+﻿div#cus_head  h2 { display: inline-block; color:#154890 ; font-family:Verdana; font-size:20pt;margin-top:5px;}
 div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-size:12px; }
+
+.mcontainer{
+    width:100%;
+}
 
 .headerunderline{
 
     border-bottom:2px solid #e1d4c0;
+
 }
 .footertopline{
     border-top:2px solid #e1d4c0;
@@ -155,6 +160,10 @@ ul.main-navigation> li{
 
 .main-navigation >li> a:hover, .dropdown:hover .dropbtn {
     border-bottom:2px solid #e16600;
+}
+
+.main-navigation >li> a,.dropdown .dropbtn{
+    border-bottom:2px solid #fff;
 }
 
 .main-navigation li.dropdown {

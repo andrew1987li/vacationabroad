@@ -1,8 +1,14 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+﻿<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="rentalguarantee.aspx.cs" Inherits="rentalguarantee" %>
 
-<%@ OutputCache Duration="600" VaryByParam="*" %>
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+   Rental Guarantee
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/staticspage.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+<div class="internalpagewidth">
     <div class="apphead">
     <h1>Rental Guarantee</h1>
         </div>
@@ -13,7 +19,7 @@
             through our website based on the following conditions:
         </p>
         <br />
-        <ol>
+        <ol class="appcont">
             <li><span>1st Condition: Vacations-Abroad.com must be notified by email by the renter
                 prior to sending a deposit on the property.</span> </li>
             <li><span>2nd Condition: Details must contain Property #, Owner Name, Owner Email, and
@@ -23,6 +29,7 @@
 <li><span>We review every property very thoroughly prior to approving them for inclusion on the website.</span></li>
         </ol>
     </div>
+</div>
     <script type="text/javascript">
         sc_project = 3632824;
         sc_invisible = 1;

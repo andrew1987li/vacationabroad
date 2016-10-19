@@ -80,3 +80,33 @@ div.centered >strong{
     margin-top:10px;
     color:#ff6600;
 }
+
+ div.clink a, div.clink a:hover{
+     margin:0px;
+     color: #6699FF;
+     text-decoration:none;
+     font: 12px Vedrana, Arial, Helvetica, sans-serif;
+ }
+
+ div.clink{
+     padding:24px;
+ }
+
+  div.clink div {
+     margin:0px;
+ }
+
+
+ .comments{
+     font: 12px Vedrana, Arial, Helvetica, sans-serif;
+     display:block; width: 180px;font-size:12px; font-weight:500;
+     color:#000;
+ }
+
+ .stepbox{
+     float: left; width: 900px; font-family: Arial; color: #9b7f59; font-size: 12px; border: 2px solid #ACA593;
+ }
+
+ .stepbox label{
+     font: 12px Vedrana, Arial, Helvetica, sans-serif;
+ }

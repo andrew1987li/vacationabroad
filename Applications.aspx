@@ -1,18 +1,18 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPageNoCss.master" AutoEventWireup="true"
+<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="Applications.aspx.cs" Inherits="Applications" Title="" %>
 
 <%@ OutputCache Duration="70" VaryByParam="*" %>
 
-<asp:Content ID="Content" ContentPlaceHolderID="Content" runat="Server">
-  <style type="text/css">
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Vacations-Abroad.com Our Mentions in the Press
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/staticspage.css" rel="stylesheet" />
+</asp:Content>
 
-.MainTable
-{
-   /*margin-bottom:-50px;*/
-}
-
-</style>
-      <div class="apphead">
+<asp:Content ID="Content" ContentPlaceHolderID="bodycontent" runat="Server">
+<div class="internalpagewidth">
+          <div class="apphead">
     <h1>Get More Bookings with Vacations Abroad!</h1>
         </div>
    <div class="advertise-con">
@@ -33,12 +33,14 @@ Or we can send your funds direct to you via paypal.<br><br><br>
             <li><span>Email storage - You can view all the emails you have received.</span></li>
             <li><span>Page Views Statistics</span></li>
             <li><span>You will receive emails which state all pertinent details concerning the inquiry. </span></li></ol> 
- <div align="center">
-            <div class="prop-con">
-                <strong><a href="FindOwner.aspx">Click here to List Your Property</a>
-                </strong>
+             <div class="text-center">
+                        <div class="prop-con">
+                            <strong><a href="FindOwner.aspx">Click here to List Your Property</a>
+                            </strong>
+                        </div>
             </div>
-</div>
+       </div>
+    </div>
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 7164674;
@@ -46,6 +48,8 @@ Or we can send your funds direct to you via paypal.<br><br><br>
         var sc_security = "7447e973";
     </script>
 
+    <div class="clear">
+        
     <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
     <noscript>
         <div class="statcounter">
@@ -57,6 +61,7 @@ visitors"
     </noscript>
     <!-- End of StatCounter Code for Default Guide -->
 
+    </div>
 </asp:Content>
 
 

@@ -9,6 +9,6 @@ public partial class rentalguarantee : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
   
-        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css' />"));
+       // Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheet.css' rel='stylesheet' type='text/css' />"));
     }
 }

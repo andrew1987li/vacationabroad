@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalMaster.master.cs" Inherits="masterpage_NoramlMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NormalMaster - Copy.master.cs" Inherits="masterpage_NoramlMaster" %>
 
 <!DOCTYPE html>
 
@@ -27,37 +27,33 @@
     <link href="/Assets/css/normalmaster.css" rel="stylesheet" />
 
     <form id="mainform" runat="server">
-            <div class="headerunderline" style="margin-top:20px;">
-                <div class="container">
-                    <div class="row">
-               
-                    <div id="cus_head" class="col-md-3">
-                        <a href="/default.aspx" class="nodecoration"><h2>Vacations Abroad</h2></a>
-                    </div>
-                    <div  class="col-md-6">
-                        <div class="search-form">
-                            <input type="text" name="tbKeyWords" id="tbKeyWords" runat="server"  placeholder="Search Country State or City" />
-                            <button type="button" runat="server" id="searchbt" onclick="redirect()">
-                                <span>Search</span> <!-- should use background image centered, and give text intend -9999px perhaps, or a font with a magnifying glass icon? -->
+    <div class="container">
+        <div class="row">
+            <!--- Header -->
+            <div class="row headerunderline" style="margin-top:20px;">
+                <div id="cus_head" class="col-md-3">
+                    <a href="/default.aspx" class="nodecoration"><h2>Vacations Abroad</h2></a>
+                </div>
+                <div  class="col-md-6">
+                    <div class="search-form">
+                        <input type="text" name="tbKeyWords" id="tbKeyWords" runat="server"  placeholder="Search Country State or City" />
+                        <button type="button" runat="server" id="searchbt" onclick="redirect()">
+                            <span>Search</span> <!-- should use background image centered, and give text intend -9999px perhaps, or a font with a magnifying glass icon? -->
                   
-                            </button>    
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-right">
-                         <div class="wdropdown">
-                             <button class="wdropbtn btnsign"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> My Account</button>
-                              <div class="wdropdown-content">
-                                <a href="/accounts/login.aspx?type=1"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
-                                <a href="/accounts/login.aspx?type=0"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
-                              </div>
-                          </div>
+                        </button>    
                     </div>
                 </div>
-              </div>
-             </div>
-          <div class="headerunderline">
-           <div class="container ">
-                 <div class="row ">
+                <div class="col-md-3 text-right">
+                     <div class="wdropdown">
+                         <button class="wdropbtn btnsign"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> My Account</button>
+                          <div class="wdropdown-content">
+                            <a href="/accounts/login.aspx?type=1"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+                            <a href="/accounts/login.aspx?type=0"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
+                          </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row headerunderline">
                 <div class="main-menu">
                     <ul class="main-navigation">
                         <% for (int i = 0; i < 7; i++)
@@ -93,32 +89,13 @@
                     </ul>
                 </div>
             </div>
-           </div>
-          </div>
-          
-
-
-    <div class="container">
-   
-        <div class="row">
-            <!--- Header -->
-
-
             <!--- End Header -->
             <asp:ContentPlaceHolder id="bodycontent" runat="server">
         
             </asp:ContentPlaceHolder>
 
             <!--- Footer -->
-    
-            <!--- End Footer -->
-
-        </div>
-    </div>
-    </form>
-    <div class="footertopline">
-    <div class="container">
-       <div class="row ">
+            <div class="row footertopline">
                 <div class="footerparag">
                     <h4>List A Property</h4>
                     <ul>
@@ -159,7 +136,10 @@
                     </ul>
                 </div>
             </div>
+            <!--- End Footer -->
+
+        </div>
     </div>
-    </div>
+    </form>
 </body>
 </html>

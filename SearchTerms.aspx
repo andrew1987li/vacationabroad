@@ -76,10 +76,10 @@
 
             </div>
         </div>
-        <div class="newline centered">
-            <ul class="pagination" id="paging">
+        <div class="newline">
+            <div class="pagination" id="paging">
 
-            </ul>
+            </div>
         </div>
     </div>
     <script src="Assets/js/search.js"></script>

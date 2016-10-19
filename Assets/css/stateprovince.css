@@ -40,21 +40,26 @@
 }
 
 .stateful{
-    margin:20px;
+    margin:0px;
+    width:100%;
+
+       padding:20px;
 }
 
 ul.stateful li{
-  display: inline-block;
+    display: inline-block;
      list-style-position:inside;
-    border: 1px solid #0094ff;
+    border: 0px solid #0094ff;
     border-right:0px;
     padding:10px;
 
+  
 }
 
-ul.stateful li:last-child{
-    border-right: 1px solid #0094ff;
+.country_boxs{
+    width:100%;
 }
+
 
 .subtitle {
 		color: #f5ede3;
@@ -64,5 +69,59 @@ ul.stateful li:last-child{
 		margin-bottom:10px;
         width:100%;
         height:40px;
-        background-color:#ff6600;
+        background-color:#fff;
 	}
+.drop-shadow {
+  position:relative;
+  display:inline-block;
+  padding:4px;
+  border:1px solid #e1d4c0;
+  background:#fff;
+
+}
+.drop-shadow:after, .drop-shadow:before{
+     content:"";
+    position:absolute;
+    z-index:-2;
+}
+
+
+.perspective:after {
+    left:0px;
+    width:100px;
+    bottom:10%;
+    height:80%;
+    box-shadow:80px 0 8px rgba(0, 0, 0, 0.4);
+  -webkit-transform: skew(-10deg);
+   -moz-transform: skew(-10deg);
+   -ms-transform: skew(-10deg);
+   -o-transform: skew(-10deg);
+   transform: skew(-10deg);
+   -webkit-transform-origin: 0% 100%;
+   -moz-transform-origin: 0% 100%;
+   -ms-transform-origin: 0% 100%;
+   -o-transform-origin: 0% 100%;
+   transform-origin: 0% 100%;
+}
+
+.perspective:before{
+    display:none;
+}
+
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+     position: absolute;   
+    z-index: -1; 
+    top: 3px;
+    bottom: 0;
+    left: 79%;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 4px 0 3px rgba(0,0,0,0.3);
+    width: 20%; 
+    height:50%;   
+    transform: rotate(3deg);
+}  

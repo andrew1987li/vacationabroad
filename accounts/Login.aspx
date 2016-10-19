@@ -1,5 +1,11 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/accounts/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="accounts_Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="accounts_Login" %>
 
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    Sign in
+</asp:Content>
+<asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
+    <link href="/Assets/css/customs.css" rel="stylesheet" />
+</asp:Content>
 
 <asp:Content runat="server" ID="LoginContent" ContentPlaceHolderID="bodycontent">
    <div class="row formmargin">

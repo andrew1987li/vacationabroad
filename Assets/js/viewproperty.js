@@ -1,10 +1,6 @@
 ﻿var RecaptchaOptions = {
     theme: 'white'
 };
-$(function () {
-    $("#tabs").tabs();
-});
-
 
 var sc_project = 3614019;
 var sc_invisible = 1;
@@ -29,8 +25,11 @@ pageTracker._trackPageview();
             }
         });
     })
-
+    var $element;
     $(document).ready(function () {
+        $element = $('#modal_contents').bind('webkitAnimationEnd', function () {
+            this.style.webkitAnimationName = '';
+        });
 
         $('ul.tabs li').click(function () {
             var tab_id = $(this).attr('data-tab');
@@ -40,6 +39,28 @@ pageTracker._trackPageview();
 
             $(this).addClass('current');
             $("#" + tab_id).addClass('current');
+            if (tab_id == "tabs-3") {
+                console.log("tst");
+
+
+                
+                $element.css('webkitAnimationName', 'animatetop');
+                    // you'll probably want to preventDefault here.
+                
+                $('#inqureform').show();
+            }
+        });
+
+        $('.mclose').click(function () {
+            $('#inqureform').hide();
         })
 
+    })
+
+    $(window).click(function (event) {
+        console.log("windows click");
+        // $('#inqureform').hide();
+        if (event.target.id == "inqureform") {
+            $('#inqureform').hide();
+        }
     })

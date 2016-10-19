@@ -52,7 +52,7 @@ function processTopCountryData(response) {
     //$(".ajcountry").empty();
     for (var i = 0; i < states.length; i++) {
         var id = "item" + call_rid + '_' + states[i].id;
-        var href = "/" + states[i].name + "/default.aspx";
+        var href = "/" + states[i].name.toLowerCase().replaceAll(" ", "_") + "/default.aspx";
         var item = ' <li ><a href="'+href+'" class="mmitem" onmouseover="callstateslist(\''+id+'\')" id="' + id + '">' + states[i].name + '</a></li>';
         $("#ajcountry"+call_rid).append(item);
         // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
@@ -135,16 +135,21 @@ $(document).ready(function() {
 
 });
 
+String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 function processTopMenuData(response){
     var statelist = response.d;
     if (call_cid != statelist.countryid) return;
     var states = statelist.statelist;
     $(".statelists").empty();
     for (var i = 0; i < states.length; i++) {
-        var link = "http://69.89.14.163:86/" + callcountry.toLowerCase().replace(" ", "_") + "/" + states[i].name.toLowerCase().replace(" ", "_") + "/default.aspx";
+        var link = "/" + callcountry.toLowerCase().replaceAll(" ", "_") + "/" + states[i].name.toLowerCase().replaceAll(" ", "_") + "/default.aspx";
          $(".statelists").append('<li><a href="' + link + '">' + states[i].name + '</a></li>');
        // $(".statelists").append('<li><a>' + states[i].name + '</a></li>');
-         $(".allprop").attr("href", "http://69.89.14.163:86/" + callcountry.toLowerCase().replace(" ", "_") + "/countryproperties.aspx");
+         $(".allprop").attr("href", "/" + callcountry.toLowerCase().replaceAll(" ", "_") + "/countryproperties.aspx");
          $(".allprop").text("View all " +callcountry+ " properties");
     }
 }

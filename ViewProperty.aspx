@@ -5,6 +5,10 @@
 
 <%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
 
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
+    <%=city %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumBedrooms"] %> Bedroom <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> # <%=propertyid %> | Vacations Abroad
+</asp:Content>
+
 <asp:Content ID="links" ContentPlaceHolderID="links" runat="server">
     <link href="/Assets/css/viewproperty.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/css/jcarousel.css"/>
@@ -31,442 +35,21 @@
         <div id="divCitiesRt" runat="server" class="rtText2">
         </div>
     </div>--%>
-    <asp:Label ID="lblTest" runat="server" Style="display: none"></asp:Label>
-    <div class="row">
-                    <div class="listingPagesH1Container">   
-                         <asp:HyperLink ID="hyplnkRegionBackLink" runat="server">
-                            <h3>
-                                <asp:Literal ID="ltrRegionBackText" runat="server"></asp:Literal></h3>
-                        </asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server">
-                            <h3>
-                                <asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3>
-                        </asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server">
-                            <h3>
-                                <asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3>
-                        </asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkCityBackLink" runat="server">
-                            <h3>
-                                <asp:Literal ID="ltrCityBackText" runat="server"></asp:Literal></h3>
-                        </asp:HyperLink>
+<!-- The Modal -->
+    <div id="inqureform" class="modalform">
 
-                    </div>
-    </div>
-     <div class="row">
-                    <div class="text-center">
-                        <h1><span class="H1CityText">
-                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> </span></h1>
-                        <br />
-
-                       
-                    </div>
-     </div>
-     <div class="row">
-         <div class="text-center">
-                    <div class="wrapper">
-                        <div class="jcarousel-wrapper" style="margin-bottom: 100px; margin-top: -30px">
-                            <div class="jcarousel" id="">
-                                <ul>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0)
-                                      { %>
-                                    <li>
-                                        <img alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>'
-                                            src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[0]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? PhotosSet.Tables["PropertyPhotos"].Rows[0]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? PhotosSet.Tables["PropertyPhotos"].Rows[0]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1)
-                                      { %>
-                                    <li>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[1]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? PhotosSet.Tables["PropertyPhotos"].Rows[1]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? PhotosSet.Tables["PropertyPhotos"].Rows[1]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2)
-                                      { %>
-                                    <li>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[2]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? PhotosSet.Tables["PropertyPhotos"].Rows[2]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? PhotosSet.Tables["PropertyPhotos"].Rows[2]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3)
-                                      { %>
-                                    <li>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[3]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? PhotosSet.Tables["PropertyPhotos"].Rows[3]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? PhotosSet.Tables["PropertyPhotos"].Rows[3]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4)
-                                      { %>
-                                    <li>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[4]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? PhotosSet.Tables["PropertyPhotos"].Rows[4]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? PhotosSet.Tables["PropertyPhotos"].Rows[4]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5)
-                                      { %>
-                                    <li>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[5]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? PhotosSet.Tables["PropertyPhotos"].Rows[5]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? PhotosSet.Tables["PropertyPhotos"].Rows[5]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6)
-                                      { %>
-                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6 ? "visibility: visible": "visibility: collapse"  %>'>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[6]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? PhotosSet.Tables["PropertyPhotos"].Rows[6]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? PhotosSet.Tables["PropertyPhotos"].Rows[6]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7)
-                                      { %>
-                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7 ? "visibility: visible": "visibility: collapse" %>'>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[7]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? PhotosSet.Tables["PropertyPhotos"].Rows[7]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? PhotosSet.Tables["PropertyPhotos"].Rows[7]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8)
-                                      { %>
-                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8 ? "visibility: visible": "visibility: collapse" %>'>
-                                        <img alt="" src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? 
-                                    PhotosSet.Tables["PropertyPhotos"].Rows[8]["FileName"].ToString () : "") %>'
-                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Width"].ToString () : "0" %>'
-                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Height"].ToString () : "0" %>' /></li>
-                                    <%} %>
-                                </ul>
-                            </div>
-                            
-                            <a href="#" class="jcarousel-control-prev" style="color: white">&lsaquo;</a>
-                            <a href="#" class="jcarousel-control-next" style="color: white">&rsaquo;</a>
-                        </div>
-
-                    </div>
-         </div>
-     </div>
-    <div class="row">
-
-        <div class="TitleFont">
-            <h2 class="ViewPropertyPageFonts">
-                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %>
-                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumBedrooms"] %> Bedroom <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %>
-                , Sleeps <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumSleeps"] %>
-                , Minimum nightly rental - <%# PropertiesFullSet.Tables["Properties"].Rows[0]["MinimumNightlyRental"] %>.
-                <br />
-                <%# ((int)PropertiesFullSet.Tables["Properties"].Rows[0]["IfPaid"] == 1) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["IfShowAddress"] ? "Address: " + PropertiesFullSet.Tables["Properties"].Rows[0]["Address"] : "" %>
-            </h2>
-            <div>
-                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumTVs"] %>
-                TVs,
-                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumVCRs"] %>
-                VCRs,
-                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumCDPlayers"] %>
-                CD Players<%# (AmenitiesSet.Tables["Amenities"].Rows.Count > 0) ? "," : "." %>
-                <asp:Repeater ID="Repeater9" runat="server" DataMember="Amenities" DataSource="<%# AmenitiesSet %>">
-                    <HeaderTemplate>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <%# DataBinder.Eval(Container.DataItem, "Amenity", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                    </FooterTemplate>
-                </asp:Repeater>
-            </div>
-        </div>
-
-          <div id="tabs" >
-            <ul class="tabs">
-                <li data-tab="tabs-1" class="current">Amenities</li>
-                <li data-tab="tabs-5">Attractions</li>
-                <li data-tab="tabs-2">Rates & Calendar</li>
-                <li data-tab="tabs-4">Reviews</li>
-                <li data-tab="tabs-3">Inquire</li>
-            </ul>
-            <div id="tabs-1"  class="tab-content current" style="text-align: left;font-size: 14.66px;">
-
-                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Description"] %><br />
-                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Amenities"] %>
-           <div class ="centered" style="margin-top:30px;">
-                        <table class="PropTable10">
-                            <tr>
-                                <asp:Repeater ID="Repeater5" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
-                                    <HeaderTemplate>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <td style="font-size: 14px; background-color: #ff6414; color: #f5ede3;">
-                                            <%# DataBinder.Eval(Container.DataItem, "RoomTitle", "{0}") %>
-                                        </td>
-                                    </ItemTemplate>
-                                    <FooterTemplate>
-                                    </FooterTemplate>
-                                </asp:Repeater>
-                            </tr>
-                            <tr>
-                                <asp:Repeater ID="Repeater6" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
-                                    <HeaderTemplate>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <td class="PropTable10B ViewPropertyPageFonts">
-                                            <asp:Repeater ID="Repeater7" runat="server" DataMember="FurnitureItems" DataSource='<%# ((System.Data.DataRowView)Container.DataItem).CreateChildView("RoomsFurniture") %>'>
-                                                <HeaderTemplate>
-                                                </HeaderTemplate>
-                                                <ItemTemplate>
-                                                    <%# DataBinder.Eval(Container.DataItem, "FurnitureItem", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
-                                                </ItemTemplate>
-                                                <FooterTemplate>
-                                                </FooterTemplate>
-                                            </asp:Repeater>
-                                        </td>
-                                    </ItemTemplate>
-                                    <FooterTemplate>
-                                    </FooterTemplate>
-                                </asp:Repeater>
-                            </tr>
-                        </table>
-           </div>
-            </div>
-
-            <div id="tabs-2"  class="tab-content">
-                <div align="center" class="contentfont" style="color: #343d6c;">
-                    <table class="PropTable12">
-                        <tr>
-                            <td class="Center">
-                                <a name="Rates"></a>
-                                <label class="colorOnHover" style="color: rgb(205,191,172) !important;">
-                                    Property Rates:</label>
-
-                            </td>
-                        </tr>
-                    </table>
-                    <%-- <div class="PropertiesFont3">
-                            
-                        </div>--%>
-                    
-                        <div class="contentfont">
-                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Rates"] %><br />
-                        </div>
-                        <% if (RatesSet.Tables["Rates"].Rows.Count > 0)
-                           { %>
-                        <asp:Repeater ID="Repeater8" runat="server" DataMember="Rates" DataSource="<%# RatesSet %>">
-                            <HeaderTemplate>
-                                <table class="PropTable14">
-                                    <tr>
-                                        <td class="Center">Start Mo/Da/Yr
-                                        </td>
-                                        <td class="Center">End Mo/Da/Yr
-                                        </td>
-                                        <td class="Center">Nightly
-                                        </td>
-                                        <td class="Center">Weekly
-                                        </td>
-                                        <td class="Center">Monthly
-                                        </td>
-                                    </tr>
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <tr>
-                                    <td class="Center">
-                                        <%# DataBinder.Eval(Container.DataItem, "StartDate", "{0:d}") %>
-                                    </td>
-                                    <td class="Center">
-                                        <%# DataBinder.Eval(Container.DataItem, "EndDate", "{0:d}") %>
-                                    </td>
-                                    <td class="Center">
-                                        <%# DataBinder.Eval(Container.DataItem, "Nightly", "{0:0}") %>
-                                    </td>
-                                    <td class="Center">
-                                        <%# DataBinder.Eval(Container.DataItem, "Weekly", "{0:0}") %>
-                                    </td>
-                                    <td class="Center">
-                                        <%# DataBinder.Eval(Container.DataItem, "Monthly", "{0:0}") %>
-                                    </td>
-                                </tr>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                </table>
-                            </FooterTemplate>
-                        </asp:Repeater>
-                        <% } %>
-                    
-                    <div class="contentfont">
-                        Pricing for  <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> in <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Country"] %> are quoted in
-                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["PricesCurrency"] %><br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-
-                    </div>
-                    <div class="text-left" style="font-size: 11pt; font-family: Arial; color: #1D2D33;">
-                        Check in time <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckIn"] %><br />
-                        Check out time   <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckOut"] %><br />
-                        Payment methods accepted:
-                            <% if (PaymentMethodsPresent())
-                               { %>
-                        <asp:Repeater ID="Repeater4" runat="server" DataMember="PaymentMethods" DataSource="<%# PaymentMethodsSet %>">
-                            <HeaderTemplate>
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <%# DataBinder.Eval(Container.DataItem, "PaymentMethod", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                            </FooterTemplate>
-                        </asp:Repeater>
-                        <% }
-                               else
-                               { %>
-                            Check with Property Owner
-                            <% } %>
-                        <br />
-                        <% if (LodgingTaxPresent())
-                           { %>
-                            Property Lodging Tax :
-                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["LodgingTax"] %><br />
-                        <%# (PropertiesFullSet.Tables["Properties"].Rows[0]["TaxIncluded"] is bool) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["TaxIncluded"] ? "Tax included in rates above" : "Tax not included in rates above" %><br />
-                        <% } %>
-                        <b>Cancellation Policy:</b>
-                        <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CancellationPolicy"] %><br />
-                        <b>Deposit Required for <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %>
-                          
-                            :</b>
-                        <%# PropertiesFullSet.Tables["Properties"].Rows[0]["DepositRequired"] %><br />
-                    </div>
-                </div>
-                <div class="centered">
-                    <table style="margin-top: 50px">
-                    <tr>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar2" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar3" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar4" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar5" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar6" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar7" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar8" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar9" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar10" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar11" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-
-                        <td width="25%">
-                            <asp:Calendar ID="Calendar12" runat="server" OnDayRender="Calendar1_DayRender"
-                                SelectionMode="Day" BorderColor="#000000" Width="175px"
-                                Font-Names="Arial" Font-Size="14px">
-                                <NextPrevStyle ForeColor="Black" />
-                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
-                            </asp:Calendar>
-                        </td>
-
-                    </tr>
-                </table>
-                </div>
-            </div>
-            <div id="tabs-3"  class="tab-content">
-                <div class="centered">
+      <!-- Modal content -->
+      <div id="modal_contents" class="modal_contents">
+          <div class="dlghead">
+                <span class="mclose">x</span>
+          </div>
+        
+<div class="centered">
                 <table>
                     <tr>
                         <td align="center" >
                             <% if (EmailPresent())
                                { %>
-                            <table>
-                                <tr>
-                                    <td class="Center">
-                                        <label class="colorOnHover" style="color: rgb(205,191,172) !important;">
-                                            Send Inquiry:</label>
-                                    </td>
-                                </tr>
-                            </table>
-                            <br />
                             <div class="inquriyform">
                           <table >
                                 <tr align="center">
@@ -660,6 +243,446 @@
                     </tr>
                 </table>
                 </div>
+      </div>
+
+    </div>
+
+     <asp:Label ID="lblTest" runat="server" Style="display: none"></asp:Label>
+    <div class="row">
+                    <div class="listingPagesH1Container">   
+                         <asp:HyperLink ID="hyplnkRegionBackLink" runat="server">
+                            <h3>
+                                <asp:Literal ID="ltrRegionBackText" runat="server"></asp:Literal></h3>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server">
+                            <h3>
+                                <asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server">
+                            <h3>
+                                <asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkCityBackLink" runat="server">
+                            <h3>
+                                <asp:Literal ID="ltrCityBackText" runat="server"></asp:Literal></h3>
+                        </asp:HyperLink>
+
+                    </div>
+    </div>
+     <div class="row">
+                    <div class="text-center">
+                        <h1><span class="H1CityText">
+                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> </span></h1>
+                        <br />
+
+                       
+                    </div>
+     </div>
+     <div class="row">
+         <div class="text-center">
+                    <div class="wrapper">
+                        <div class="jcarousel-wrapper" style="margin-bottom: 100px; margin-top: -30px">
+                            <div class="jcarousel" id="">
+                                <ul>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>'
+                                            src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[0]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? PhotosSet.Tables["PropertyPhotos"].Rows[0]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 0) ? PhotosSet.Tables["PropertyPhotos"].Rows[0]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[1]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? PhotosSet.Tables["PropertyPhotos"].Rows[1]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 1) ? PhotosSet.Tables["PropertyPhotos"].Rows[1]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[2]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? PhotosSet.Tables["PropertyPhotos"].Rows[2]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 2) ? PhotosSet.Tables["PropertyPhotos"].Rows[2]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[3]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? PhotosSet.Tables["PropertyPhotos"].Rows[3]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 3) ? PhotosSet.Tables["PropertyPhotos"].Rows[3]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[4]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? PhotosSet.Tables["PropertyPhotos"].Rows[4]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 4) ? PhotosSet.Tables["PropertyPhotos"].Rows[4]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5)
+                                      { %>
+                                    <li>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[5]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? PhotosSet.Tables["PropertyPhotos"].Rows[5]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 5) ? PhotosSet.Tables["PropertyPhotos"].Rows[5]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6)
+                                      { %>
+                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6 ? "visibility: visible": "visibility: collapse"  %>'>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[6]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? PhotosSet.Tables["PropertyPhotos"].Rows[6]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 6) ? PhotosSet.Tables["PropertyPhotos"].Rows[6]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7)
+                                      { %>
+
+                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7 ? "visibility: visible": "visibility: collapse" %>'>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[7]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? PhotosSet.Tables["PropertyPhotos"].Rows[7]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 7) ? PhotosSet.Tables["PropertyPhotos"].Rows[7]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                    <%if (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8)
+                                      { %>
+                                    <li style='<%# PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8 ? "visibility: visible": "visibility: collapse" %>'>
+                                        <div class='drop-shadow effect4'>
+                                        <img  alt='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' title='<%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"].ToString() +" "+ PropertiesFullSet.Tables["Properties"].Rows[0]["Type"].ToString() %>' src='<%# ConfigurationManager.AppSettings["ImagesVirtualLocation"] + ((PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? 
+                                    PhotosSet.Tables["PropertyPhotos"].Rows[8]["FileName"].ToString () : "") %>'
+                                            width='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Width"].ToString () : "0" %>'
+                                            height='<%# (PhotosSet.Tables["PropertyPhotos"].Rows.Count > 8) ? PhotosSet.Tables["PropertyPhotos"].Rows[8]["Height"].ToString () : "0" %>' /></div></li>
+                                    <%} %>
+                                </ul>
+                            </div>
+                            
+                            <a href="#" class="jcarousel-control-prev" style="color: white">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next" style="color: white">&rsaquo;</a>
+                        </div>
+
+                    </div>
+         </div>
+     </div>
+    <div class="row">
+
+        <div class="TitleFont">
+            <h2 class="ViewPropertyPageFonts">
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %>
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumBedrooms"] %> Bedroom <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %>
+                , Sleeps <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumSleeps"] %>
+                , Minimum nightly rental - <%# PropertiesFullSet.Tables["Properties"].Rows[0]["MinimumNightlyRental"] %>.
+                <br />
+                <%# ((int)PropertiesFullSet.Tables["Properties"].Rows[0]["IfPaid"] == 1) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["IfShowAddress"] ? "Address: " + PropertiesFullSet.Tables["Properties"].Rows[0]["Address"] : "" %>
+            </h2>
+            <div>
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumTVs"] %>
+                TVs,
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumVCRs"] %>
+                VCRs,
+                <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumCDPlayers"] %>
+                CD Players<%# (AmenitiesSet.Tables["Amenities"].Rows.Count > 0) ? "," : "." %>
+                <asp:Repeater ID="Repeater9" runat="server" DataMember="Amenities" DataSource="<%# AmenitiesSet %>">
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <%# DataBinder.Eval(Container.DataItem, "Amenity", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                    </FooterTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+
+          <div id="tabs" >
+            <ul class="tabs">
+                <li data-tab="tabs-1" class="current">Amenities</li>
+                <li data-tab="tabs-5">Attractions</li>
+                <li data-tab="tabs-2">Rates</li>
+                <li data-tab="tabs-6">Calendar</li>
+                <li data-tab="tabs-4">Reviews</li>
+                <li data-tab="tabs-3">Inquire</li>
+
+            </ul>
+            <div id="tabs-1"  class="tab-content current" style="text-align: left;font-size: 14.66px;">
+
+                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Description"] %><br />
+                <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Amenities"] %>
+           <div class ="centered" style="margin-top:30px;">
+                        <table class="PropTable10">
+                            <tr>
+                                <asp:Repeater ID="Repeater5" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
+                                    <HeaderTemplate>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <td style="font-size: 14px; background-color: #ff6414; color: #f5ede3;">
+                                            <%# DataBinder.Eval(Container.DataItem, "RoomTitle", "{0}") %>
+                                        </td>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </tr>
+                            <tr>
+                                <asp:Repeater ID="Repeater6" runat="server" DataMember="RoomInfo" DataSource="<%# RoomsFurnitureSet %>">
+                                    <HeaderTemplate>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <td class="PropTable10B ViewPropertyPageFonts">
+                                            <asp:Repeater ID="Repeater7" runat="server" DataMember="FurnitureItems" DataSource='<%# ((System.Data.DataRowView)Container.DataItem).CreateChildView("RoomsFurniture") %>'>
+                                                <HeaderTemplate>
+                                                </HeaderTemplate>
+                                                <ItemTemplate>
+                                                    <%# DataBinder.Eval(Container.DataItem, "FurnitureItem", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                </FooterTemplate>
+                                            </asp:Repeater>
+                                        </td>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </tr>
+                        </table>
+           </div>
+            </div>
+
+            <div id="tabs-2"  class="tab-content">
+                <div align="center" class="contentfont" style="color: #343d6c;">
+                    <table class="PropTable12">
+                        <tr>
+                            <td class="Center">
+                                <a name="Rates"></a>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <%-- <div class="PropertiesFont3">
+                            
+                        </div>--%>
+                    
+                        <div class="contentfont">
+                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Rates"] %><br />
+                        </div>
+                        <% if (RatesSet.Tables["Rates"].Rows.Count > 0)
+                           { %>
+                        <asp:Repeater ID="Repeater8" runat="server" DataMember="Rates" DataSource="<%# RatesSet %>">
+                            <HeaderTemplate>
+                                <table class="PropTable14">
+                                    <tr>
+                                        <td class="Center">Start Mo/Da/Yr
+                                        </td>
+                                        <td class="Center">End Mo/Da/Yr
+                                        </td>
+                                        <td class="Center">Nightly
+                                        </td>
+                                        <td class="Center">Weekly
+                                        </td>
+                                        <td class="Center">Monthly
+                                        </td>
+                                    </tr>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <tr>
+                                    <td class="Center">
+                                        <%# DataBinder.Eval(Container.DataItem, "StartDate", "{0:d}") %>
+                                    </td>
+                                    <td class="Center">
+                                        <%# DataBinder.Eval(Container.DataItem, "EndDate", "{0:d}") %>
+                                    </td>
+                                    <td class="Center">
+                                        <%# DataBinder.Eval(Container.DataItem, "Nightly", "{0:0}") %>
+                                    </td>
+                                    <td class="Center">
+                                        <%# DataBinder.Eval(Container.DataItem, "Weekly", "{0:0}") %>
+                                    </td>
+                                    <td class="Center">
+                                        <%# DataBinder.Eval(Container.DataItem, "Monthly", "{0:0}") %>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </table>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                        <% } %>
+                    
+                    <div class="contentfont">
+                        Pricing for  <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %> in <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Country"] %> are quoted in
+                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["PricesCurrency"] %><br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                    </div>
+                    <div class="text-left" style="font-size: 11pt; font-family: Arial; color: #000;">
+                        Check in time <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckIn"] %><br />
+                        Check out time   <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CheckOut"] %><br />
+                        Payment methods accepted:
+                            <% if (PaymentMethodsPresent())
+                               { %>
+                        <asp:Repeater ID="Repeater4" runat="server" DataMember="PaymentMethods" DataSource="<%# PaymentMethodsSet %>">
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <%# DataBinder.Eval(Container.DataItem, "PaymentMethod", "{0}") %><%# !CommonFunctions.IfLastRow ((System.Data.DataRowView)Container.DataItem) ? "," : "." %>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                        <% }
+                               else
+                               { %>
+                            Check with Property Owner
+                            <% } %>
+                        <br />
+                        <% if (LodgingTaxPresent())
+                           { %>
+                            Property Lodging Tax :
+                            <%# PropertiesFullSet.Tables["Properties"].Rows[0]["LodgingTax"] %><br />
+                        <%# (PropertiesFullSet.Tables["Properties"].Rows[0]["TaxIncluded"] is bool) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["TaxIncluded"] ? "Tax included in rates above" : "Tax not included in rates above" %><br />
+                        <% } %>
+                        <b>Cancellation Policy:</b>
+                        <%# PropertiesFullSet.Tables["Properties"].Rows[0]["CancellationPolicy"] %><br />
+                        <b>Deposit Required for <%# PropertiesFullSet.Tables["Properties"].Rows[0]["Type"] %>
+                          
+                            :</b>
+                        <%# PropertiesFullSet.Tables["Properties"].Rows[0]["DepositRequired"] %><br />
+                    </div>
+                </div>
+
+            </div>
+            <div id="tabs-6"  class="tab-content">
+                      <div class="centered">
+                         <h3> Property Availability Calendar</h3>
+                    <table style="margin-top: 10px">
+                    <tr>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar2" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar3" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar4" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar5" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar6" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar7" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar8" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar9" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar10" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar11" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px" ShowNextPrevMonth="False"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+
+                        <td width="25%">
+                            <asp:Calendar ID="Calendar12" runat="server" OnDayRender="Calendar1_DayRender"
+                                SelectionMode="Day" BorderColor="#000000" Width="175px"
+                                Font-Names="Arial" Font-Size="14px">
+                                <NextPrevStyle ForeColor="Black" />
+                                <TitleStyle BackColor="#ffffff" ForeColor="Black" />
+                            </asp:Calendar>
+                        </td>
+
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div id="tabs-3"  class="tab-content">
+                
             </div>
             <div id="tabs-4"  class="tab-content">
                 <%--reviews--%>
@@ -682,7 +705,7 @@
             </div>
             <div id="tabs-5"  class="tab-content text-center">
                 <div align="center" style="color: #1D2D33;">
-                    <table class="PropTable12 contentfont">
+                    <table class="NonTable contentfont">
                         <tr>
                             <td align="center" style="color: #000072;">
                                 <a name="Attractions"></a>
@@ -703,7 +726,7 @@
                             <HeaderTemplate>
                                 <table class="proptable">
                                     <tr>
-                                        <td align="center" colspan="4" style="background-color: #154890; color: White; font-size: 12pt;">
+                                        <td align="center" colspan="4" style="background-color: #ff6600; color: White; font-size: 12pt;">
                                             <%# PropertiesFullSet.Tables["Properties"].Rows[0]["City"] %> Local Attractions
                                                 
                                         </td>

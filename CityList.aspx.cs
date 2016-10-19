@@ -221,7 +221,7 @@ public partial class newCityList : CommonPage
                             lblInfo2.Text = dt.Rows[0]["cityText2"].ToString();
                             if (!string.IsNullOrEmpty(lblInfo2.Text))
                             {
-                                lblBottom.Text = "The Culture and History of " + char.ToUpper(city[0]) + city.Substring(1);
+                                lblBottom.Text = "Things to see while on vacation in " + char.ToUpper(city[0]) + city.Substring(1);
                             }
                             txtCityText2.Text = dt.Rows[0]["cityText2"].ToString().Replace("<br />", Environment.NewLine);
                         }
