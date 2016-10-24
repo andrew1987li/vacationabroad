@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="SearchTerms.aspx.cs" Inherits="SearchTerms" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true" CodeFile="SearchTerms - Copy.aspx.cs" Inherits="SearchTerms" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
     Search Terms
@@ -20,10 +20,14 @@
                 </div>
                  <div class="col-6">
                        <% 
-                           for (int i = 0; i < 2; i++) {%>
-                        <input type="radio" name="proptype" value="<%=prop_typeval[i]%>" /> <%=str_propcate[i] %>(<%=prop_nums[i] %>)
+                           for (int i = 0; i < 10; i++)
+                           {if (i == 6)
+                               { %> 
+                          <br />
+                       <%} %>
+                       <input type="radio" name="proptype" value="<%=prop_typeval[i]%>" /><%=str_propcate[i] %>(<%=prop_nums[i] %>)
                     <%} %>
-                    <input type="radio" name="proptype" value="<%=prop_typeval[2]%>" checked="checked" /> <%=str_propcate[2] %>(<%=prop_nums[2] %>)
+                    <input type="radio" name="proptype" value="<%=prop_typeval[10]%>" checked="checked" /><%=str_propcate[10] %>(<%=prop_nums[10] %>)
        
                  </div>
            
@@ -56,12 +60,12 @@
                     <label> Step 4: </label>
                 </div>
                 <div class="col-6">
-                 <input type="radio" name="pricesort" value="1" checked="checked" /> From high to low for the price
+                 <input type="radio" name="pricesort" value="1" /> From high to low for the price
                 <input type="radio" name="pricesort" value="2" /> From low to high for the price
-                <input type="radio" name="pricesort" value="0"  /> No sorting
+                <input type="radio" name="pricesort" value="0" checked="checked" /> No sorting
                 </div>
                 <div class="col-2">
-                    <input type="button" id="refresh" class="btnsigns" value="Search"  onclick="refreshprop()" />
+                    <input type="button" id="refresh" class="btnsigns" value="Refresh"  onclick="refreshprop()" />
                 </div>
 
             </div>

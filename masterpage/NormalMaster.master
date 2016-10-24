@@ -27,12 +27,12 @@
     <link href="/Assets/css/normalmaster.css" rel="stylesheet" />
 
     <form id="mainform" runat="server">
-            <div class="headerunderline" style="margin-top:20px;">
+            <div class="headerunderline" style="margin-top:20px;padding-bottom:10px;">
                 <div class="container">
                     <div class="row">
                
                     <div id="cus_head" class="col-md-3">
-                        <a href="/default.aspx" class="nodecoration"><h2>Vacations Abroad</h2></a>
+                        <a href="/default.aspx" class="nodecoration">Vacations Abroad</a>
                     </div>
                     <div  class="col-md-6">
                         <div class="search-form">

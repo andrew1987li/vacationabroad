@@ -20,19 +20,19 @@ public class CommonPage : Page
 	protected override void OnPreLoad (EventArgs e)
 	{
 		base.OnPreLoad (e);
-
-		if ((Request.Params["UserID"] != null) && (Request.Params["UserID"].Length > 0))
+         if ((Request.Params["UserID"] != null) && (Request.Params["UserID"].Length > 0) )
 			try
 			{
-				userid = Convert.ToInt32 (Request.Params["UserID"]);
-			}
+                userid = Convert.ToInt32 (Request.Params["UserID"]);
+               // Response.Write("Uid exe" + userid);
+            }
 			catch (Exception)
 			{
 			}
 		else
 			userid = AuthenticationManager.UserID;
 
-		if (Request.Params["BackLink"] != null)
+           if (Request.Params["BackLink"] != null)
 		{
 			backlinkpassed = true;
 

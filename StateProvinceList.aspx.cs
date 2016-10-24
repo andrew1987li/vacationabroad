@@ -22,7 +22,7 @@ public partial class StateProvinceList : CommonPage
     public string cities;
     public string County;
     public string altTag;
-
+    public string statestr;
 
     private int regionid = -1;
     private int countryid = -1;
@@ -209,10 +209,10 @@ public partial class StateProvinceList : CommonPage
                         dispString = UppercaseFirst(firstCategory) + "s";
                     }
 
-                    
+                     statestr = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1);
                     altTag = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1) + " Vacation Rentals";
                     ltrH1.Text = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1) + " Vacations";// Rentals";// And " +  dispString;
-                    ltrHeading.Text = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1) + " Vacation Rentals and Hotels";
+                    ltrHeading.Text = statestr + " Vacation Rentals and "+statestr+" Hotels";
                     ltrStateThing.Text = char.ToUpper(stateprovince[0]) + stateprovince.Substring(1);
                     
                     hyplinkBackRegion.NavigateUrl = "/" + region.ToLower().ToLower().Replace(" ", "_") + "/" + "default.aspx";
@@ -432,7 +432,7 @@ public partial class StateProvinceList : CommonPage
         keywords.Content = page1.Title;
         head.Controls.Add(keywords);
        // ((System.Web.UI.WebControls.Image)Master.FindControl("Logo")).AlternateText = page1.Title;
-        Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
+       // Page.Header.Controls.Add(new LiteralControl("<link href='http://vacations-abroad.com/css/StyleSheetBig4.css' rel='stylesheet' type='text/css'></script>"));
 
     }
     protected void dtlStates_ItemCommand(object source, DataListCommandEventArgs e)

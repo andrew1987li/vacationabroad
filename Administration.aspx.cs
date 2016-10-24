@@ -298,7 +298,8 @@ public partial class Administration : AdminPage
         //CommonFunctions.Connection.Close ();
 
         if (userid is int)
-            Response.Redirect(CommonFunctions.PrepareURL("Listings.aspx?UserID=" + ((int)userid).ToString(), "Administration"), true);
+            //  Response.Redirect(CommonFunctions.PrepareURL("Listings.aspx?UserID=" + ((int)userid).ToString(), "Administration"), true);
+            Response.Redirect(CommonFunctions.PrepareURL("userowner/Listings.aspx?UserID=" + ((int)userid).ToString(), "Administration"), true);
     }
 
     protected void ViewTour_Click(object sender, System.EventArgs e)

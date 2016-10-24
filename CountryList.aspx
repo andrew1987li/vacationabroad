@@ -95,7 +95,9 @@
  
 
                             <div class="orangetxt" id="OrangeTitle" runat="server">
+                                <h3>
                                 Things to see while on vacation in <asp:Literal ID="ltrCountryThing" runat ="server"></asp:Literal>
+                                    </h3>
                             </div>
                                 <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
                     { %>

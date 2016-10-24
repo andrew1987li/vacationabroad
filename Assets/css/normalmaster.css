@@ -59,6 +59,8 @@ div#cus_head span { margin-left: 50px; color:#323e4f; font-family:Verdana; font-
 
 a.nodecoration{
     text-decoration:none;
+    font-size:28px;
+    color: #154890;
 }
 a.nodecoration:hover{
     text-decoration:none;

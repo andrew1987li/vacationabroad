@@ -500,7 +500,7 @@ public partial class CountryList : CommonPage
 
             string temp = "/" + country.ToLower().Replace(" ", "_") + "/" + dr["StateProvince"].ToString().ToLower().Replace(" ", "_") + "/default.aspx";
             states1 += "<li"+li +"><a href='" + temp + "' class='StateTitle'>" + dr["StateProvince"].ToString().Replace(" ", "&nbsp;") + "</a><br/> ";
-            states1 += "<a href=\"" + temp + "\"><div class='drop-shadow effect4'><img width='160' height='125' src='/images/" + Convert.ToString(dt.Rows[0]["PhotoImage"]) + "' alt='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' title='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels ' /></div></a></li>";
+            states1 += "<a href=\"" + temp + "\"><div class='drop-shadow effect4'><img width='160' height='125' src='/images/" + Convert.ToString(dt.Rows[0]["PhotoImage"]) + "' alt='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels in "+country+" ' title='" + Convert.ToString(dr["StateProvince"]) + " vacation rentals and boutique hotels in " + country + "' /></div></a></li>";
             str_states += Convert.ToString(dr["StateProvince"]) + ", ";
             str_keyword += Convert.ToString(dr["StateProvince"]) + " " + country + ", ";
         }

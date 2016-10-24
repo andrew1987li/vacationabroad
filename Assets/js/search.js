@@ -127,7 +127,7 @@ function showPagination(cur_group) {
 }
 
 function addPagination(allnums) {
-    max_page = Math.ceil(allnums / 12);
+    max_page = Math.ceil(allnums / 20);
     console.log(max_page + '  ' + allnums);
     min_groupnum = cur_page;
     showPagination(cur_page);

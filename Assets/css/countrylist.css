@@ -17,16 +17,14 @@
     color:#ff6600;
 }
 
-.orangetxt{
-    color:#ff6600;
-    font-family:Verdana;
-    font-size:13pt;
-    background-color:#fff;
-    text-align:center;
-    height:35px;
-    margin-top:15px;
-    padding-top:5px;
-    margin-bottom:15px;
+.orangetxt, .orangetxt h3{
+		display: inline-block;
+        font-size:18px;
+        color:#154890;
+		font-weight: bold;
+        width:100%;
+        background-color:#fff;
+        text-align:left;
 }
 
 .txtalign{
@@ -73,7 +71,7 @@ ul.stateful li{
 
 ul.countrylist{
     list-style:none;
-
+    margin-top:30px;
 }
 
 
@@ -87,9 +85,10 @@ ul.countrylist li{
 }
 
 .contentstyle{
-    font-family:Verdana;
-    font-size:11pt;
-    margin-left:5px;
+ font-size: 14px;
+color: #050505;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height: 60%;
 }
 
 .drop-shadow {

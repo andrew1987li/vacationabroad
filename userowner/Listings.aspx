@@ -7,6 +7,17 @@
 
 <asp:Content ID="cont_listing" runat="server" ContentPlaceHolderID="bodycontent">
        <div class="row">
+	<% if (BackLink.Visible) { %>
+	<div class="text-center">
+					<strong>
+						<asp:HyperLink ID="BackLink" runat="server" NavigateUrl="OwnersList.aspx">
+							Return to Owners list
+						</asp:HyperLink>
+					</strong>
+	</div>
+	<br />
+	<% } %>
+
        <div class="row">
             <div class ="col-sm-2 col-sm-offset-5 listingpadding">
                 <div class ="row">

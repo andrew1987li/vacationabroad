@@ -15,11 +15,9 @@ public partial class SearchTerms : System.Web.UI.Page
     public int[] amenity_id = { 8, 33, 1, 11,0 };
     public int[] amenity_nums = new int[5];
 
-    // public string[] str_propcate = { "Chalet", "Apartment", "Villa", "Hotel", "Cottage", "Boat", "Castle", "B&B", "Guesthouse", "Farmhouse", "Display All" };
-    // public int[] prop_typeval = { 17, 4, 1, 2, 9, 15, 16, 5, 11, 13, 0 };
-    public string[] str_propcate = { "Vacation Rentals", "Hotels", "Display All" };
-    public int[] prop_typeval = { 1,2,0 };
-    public int[] prop_nums = new int[3];
+    public string[] str_propcate = { "Chalet", "Apartment", "Villa", "Hotel", "Cottage", "Boat", "Castle", "B&B", "Guesthouse", "Farmhouse", "Display All" };
+    public int[] prop_typeval = { 17, 4, 1, 2, 9, 15, 16, 5, 11, 13, 0 };
+    public int[] prop_nums = new int[11];
     //public AjaxPropListSet ajax_proplist;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -38,7 +36,7 @@ public partial class SearchTerms : System.Web.UI.Page
                 for (int i = 0; i < 5; i++)
                     amenity_nums[i] = SearchProvider.getNumbersOf(strkeyword, 0, amenity_id[i], 0);
 
-                for(int i = 0; i < 3; i++)
+                for(int i = 0; i < 11; i++)
                 {
                     prop_nums[i] = SearchProvider.getNumbersOf(strkeyword, prop_typeval[i], 0, 0);
                 }

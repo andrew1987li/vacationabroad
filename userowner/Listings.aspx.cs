@@ -7,7 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class userowner_Listing : CommonPage
+public partial class userowner_Listing : ClosedPage
 {
     public UserInfo userinfo;
     public DataSet inquiry_set, traveler_inquery_set;
@@ -18,6 +18,8 @@ public partial class userowner_Listing : CommonPage
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!AuthenticationManager.IfAuthenticated) FormsAuthentication.SignOut();
+
+       // Response.Write("Uid" + userid);
 
         userinfo = BookDBProvider.getUserInfo(userid);
 

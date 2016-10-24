@@ -1,7 +1,7 @@
 <%@ Page Language="C#" MasterPageFile="~/masterpage/NormalMaster.master" AutoEventWireup="true"
     CodeFile="CityList.aspx.cs" Inherits="newCityList" EnableEventValidation="false" %>
 <asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
-    <%=city %> Vacation Rentals And Hotels| Vacation abroad
+    <%=countryinfo.City %> Vacation Rentals And Boutique Hotels | Vacation abroad
 </asp:Content>
 
 
@@ -25,28 +25,28 @@
         <div class="internalpagewidth">
             <div class="row">
                     <div class="text-left topMargin">
-                        <asp:HyperLink ID="hyperRegion" runat="server"><h3 class="backitem"><asp:Literal ID="ltrRegion" runat="server"></asp:Literal></h3></asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrCountryBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
-                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server"><h3 class="backitem"><asp:Literal ID="ltrStateBackText" runat="server"></asp:Literal></h3></asp:HyperLink>
+                        <asp:HyperLink ID="hyperRegion" runat="server"><h3 class="backitem"><%=countryinfo.Region %><<</h3></asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkCountryBackLink" runat="server"><h3 class="backitem"><%=countryinfo.Country %><<</h3></asp:HyperLink>
+                        <asp:HyperLink ID="hyplnkStateBackLink" runat="server"><h3 class="backitem"><%=countryinfo.StateProvince %><<</h3></asp:HyperLink>
                         <div class="clear"></div>
 
                     </div>
                 <div class="text-center">
                         <h1 class="H1CityText">
                             <%--<%= city %> Vacation Rentals--%>
-                            <asp:Literal ID="ltrH11" runat="server"></asp:Literal>
+                            <asp:Literal ID="ltrH11"  runat="server"></asp:Literal>
                             <br />
                         </h1>
                 </div>
 
             </div>
             <div class="row">
-                 <div class="row">
-                        <asp:Label runat="server" ID="lblcity" Font-Size="Large"></asp:Label>
+                 <div class="newline citytext">
+                        <asp:Label runat="server" ID="lblcity"  ></asp:Label>
                   </div>
 
-
-    
+                <input type="hidden"  id="cityid" value="<%=cityid %>"  />
+                <input type="hidden"  id="CityParam" name="CityParam"  runat="server" />
                     <%--padding 305 center--%>
                     <div class="row">
                         <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
@@ -55,322 +55,119 @@
                         <asp:Button ID="btnSubmit" runat="server" Text="Save Text" OnClick="btnSubmit_Click" />
                         <br />
                         <asp:Label ID="lblInfo" runat="server" EnableViewState="False" ForeColor="Red"></asp:Label>
-                        <% }
-                           else
-                           {%>
-                                         
-					<% if(string.IsNullOrEmpty(Convert.ToString(Request.QueryString["category"]))){ %> 
-					        <div >
-                                             <asp:Label ID="lblcityInfo" CssClass="txtalign" runat="server"></asp:Label>
-                                 </div>
-					<% } %>
-                        <% } %>
+                        <% }%>
+                         
                     </div>
 
-                    
-
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:herefordpiesConnectionString1 %>"
-                        SelectCommand="GetPropertiesFromCityIDplay" SelectCommandType="StoredProcedure">
-                        <SelectParameters>
-                            <asp:QueryStringParameter DefaultValue="1849" Name="CityID" QueryStringField="CityID"
-                                Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                          <div class="row">
-                            <div id="divTab1" runat="server" class="tourTabs2 vacationsAndSubsTabs" style="display: none;
-                                height: 10px !important; margin-bottom: -33px; margin-top: 15px; font-style: inherit;
-                                font-size: 1.5em;">
-                                <a class="subscribeLink" style="color: #a0522d;" rel="nofollow" href="http://eepurl.com/vac0P">
-                                    Subscribe to newsletter</a>
-                            </div>
-                            <br />
-                       
-                            <div id="div1" runat="server" class="tourTabs2 vacationsAndSubsTabs" style="font-size: 1.5em;
-                                font-weight: normal !important; float: right; text-align: right; display: none;">
-                                <a class="subscribeLink" style="color: #a0522d;" rel="nofollow" href="http://eepurl.com/vac0P">
-                                    Subscribe to newsletter </a>
-                            </div>
-
-                        </div>
-                <div class="row">
-
-                        <div style="padding-bottom: 10px;margin-left:20px;">
-                            <div class="heding_box">
-                                <h2 class="listingPagesH1Color">
-                                    <%--<%= city %> Vacation Rentals--%>
-                                    <asp:Literal ID="ltrH12" runat="server"></asp:Literal>
-                                    <br />
+            <div class="newline" >
+                        <div class="heding_box">
+                                <h2>
+                                    <%=countryinfo.City %> Vacation Rentals and <%=countryinfo.City %> Hotels
                                 </h2>
                             </div>
-                        </div>
-                </div>
-                                                        <div id="breadcrumb" style="display:none;">
-                                            <div class="breadcrumb2" style="position: relative; width: 600px; font-size: 10pt;
-                                                font-weight: bold;">
-                                                    <label id="lblBreadcrumb" runat="server" style="color: #71a3af;">
-                                                        Vacation Rentals in:
-                                                    </label>
-                                                    <asp:Literal ID="lbltText" runat="server"></asp:Literal>
-                                            </div>
-                                        </div>
-                <div class="row">
-                                            <div id="Div2" style="float: left; width: 900px; border: 2px solid #c4d9e2; margin:20px;" runat="server">
-                                                <asp:DataList ID="dtlStates" runat="server" RepeatColumns="5" RepeatDirection="Horizontal"
-                                                    Width="100%" OnItemCommand="dtlStates_ItemCommand" OnItemDataBound="dtlStates_ItemDataBound"
-                                                    CellPadding="3" CellSpacing="2">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblCat" runat="server" Text='<%# Eval("category")%>' Visible="false"></asp:Label>
-                                                        <asp:HyperLink ID="hCategory" runat="server" cssClass="HyperLinkHover"><span class="tdNoSleeps" style="font-weight:normal;font-style:normal;font-size:12px">
-                                                          <%=city %>&nbsp;<%#Eval("category")%>s (<%#Eval("count")%>)
-                                                           &nbsp;
-                                                        </span>
-                                                        </asp:HyperLink>
-                                                    </ItemTemplate>
-                                                </asp:DataList>
-                                            </div>
-                                             <asp:RadioButtonList ID="rdoTypes" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"
-                                                                AutoPostBack="True" OnSelectedIndexChanged="rdoTypes_SelectedIndexChanged" CellPadding="0"
-                                                                CellSpacing="0" Height="14px" ViewStateMode="Enabled" CssClass="test">
-                                             </asp:RadioButtonList>
-                </div>
-               <div class="row">
+                        
+            </div>
+
+          <div class="row">
         
-                   <div class="tableborder">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                 <input type="hidden" id="selectedRdoTypes" runat="server" />
-                                        <label >Step 1:</label>
+       <div class="newline borerstep">
 
-                                                            <asp:RadioButtonList ID="rdoBedrooms" runat="server" RepeatDirection="Horizontal"
-                                                                RepeatLayout="Flow" AutoPostBack="True" OnSelectedIndexChanged="rdoBedrooms_SelectedIndexChanged">
-                                                                <asp:ListItem>0-2 Bedrooms</asp:ListItem>
-                                                                <asp:ListItem>3-4 Bedrooms</asp:ListItem>
-                                                                <asp:ListItem>5+ Bedrooms</asp:ListItem>
-                                                                <asp:ListItem Selected="True">Display</asp:ListItem>
-                                                            </asp:RadioButtonList>
-                        </div>
+            <div class="stepfont">
+                <div class="col-1">
+                     <label> Step 1: </label>
+                </div>
+                 <div class="col-5">
+                       <% 
+//"City" vacation Rentals (count) "City" Hotesl (count)
+                           for (int i = 0; i < 2; i++) {%>
+                        <input type="radio" name="proptype" value="<%=prop_typeval[i]%>" /><%=countryinfo.City %> <%=str_propcate[i] %> (<%=prop_nums[i] %>)
+                    <%} %>
+                    <input type="radio" name="proptype" value="<%=prop_typeval[2]%>" checked="checked" /> <%=str_propcate[2] %> (<%=prop_nums[2] %>)
        
-  
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8">
-                            <label >Step 2:</label>   
+                 </div>
+           
+            </div>
+            <div class="stepfont">
+                <div class="col-1">
+                    <label> Step 2: </label> 
+                </div>
+                <div class="col-5"><input type="radio" id="roomnums" name="roomnums" value="1" /> 0-2 Bedrooms (<%=bedroominfo[1] %>)
+                <input type="radio"  name="roomnums" value="2" /> 3-4 Bedrooms (<%=bedroominfo[2] %>)
+                <input type="radio"  name="roomnums" value="3" /> 5+ Bedrooms (<%=bedroominfo[3] %>)
+                <input type="radio"  name="roomnums" value="0" checked="checked" /> Display All (<%=bedroominfo[0] %>)</div>
+            </div>
+            <div class="stepfont">
+                <div class="col-1">
+                        <label> Step 3: </label>
+                </div>
+                <div class="col-5">
+                <input type="radio" name="amenitytype" value="8" /> Hot Tub (<%=amenity_nums[0] %>)
+                <input type="radio" name="amenitytype" value="33" /> Internet (<%=amenity_nums[1] %>)
+                <input type="radio" name="amenitytype" value="1" /> Pets (<%=amenity_nums[2] %>)
+                <input type="radio" name="amenitytype" value="11" /> Pool (<%=amenity_nums[3] %>)
+                <input type="radio" name="amenitytype" value="0" checked="checked" /> Display All (<%=amenity_nums[4] %>)
+                </div> 
 
-                                                            <asp:RadioButtonList ID="rdoFilter" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                                                                <asp:ListItem>Hot Tub</asp:ListItem>
-                                                                <asp:ListItem>Internet</asp:ListItem>
-                                                                <asp:ListItem>Pets</asp:ListItem>
-                                                                <asp:ListItem>Pool</asp:ListItem>
-                                                                <asp:ListItem Selected="True">Display All</asp:ListItem>
-                                                            </asp:RadioButtonList>
-                        </div>
-  
-                        <div class="col-md-2 col-sm-2 ">
-                            <div class="text-right">
-                                <asp:Button ID="btnFilter"  runat="server" Text="Search" 
-                                                                OnClick="btnFilter_Click" CssClass="btnsigns" CausesValidation="False"
-                                                                OnClientClick="$('#ctl00_Content_selectedRdoTypes').val($('.test').find('input:checked')[0].value)" />
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                   </div>
-
-    
-       
-  
-                                        </div>
+            </div>
+            <div class="stepfont">
+                <div class="col-1">
+                    <label> Step 4: </label>
+                </div>
+                <div class="col-5">
+                 <input type="radio" name="pricesort" value="1" checked="checked" /> From high to low for the price
+                <input type="radio" name="pricesort" value="2" /> From low to high for the price
+                <input type="radio" name="pricesort" value="0"  /> No sorting
+                </div>
+                <div class="col-2">
+                    <input type="button" id="refresh" class="btnsigns" value="Search"  onclick="refreshprop()" />
                 </div>
 
+            </div>
 
-                <div class="row">
-                                           <div style="float: left; width: 100%">
-                                                <div style="float: left;">
-                                                    <asp:GridView ID="City_datagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="ID"
-                                                        GridLines="None" OnRowDataBound="City_datagrid_RowDataBound" CellPadding="1" 
-                                                        ShowHeader="false" Width="100%" OnPageIndexChanging="City_datagrid_PageIndexChanging"
-                                                        OnPageIndexChanged="City_datagrid_PageIndexChanged"  >
-                                                        <FooterStyle CssClass="StateFooter" />
-                                                        <RowStyle CssClass="StateRow tableMainContainer" />
-                                                        <Columns>
-                                                            <asp:TemplateField>
-                                                                <ItemTemplate>
-                                                                    <table>
-                                                                        <asp:Panel ID="test" runat="server">
-                                                                            <tr>
-                                                                                <td align="center" colspan="2">
-                                                                                    <h2 style="font-size: 14pt; color: #050505">
-                                                                                        <b>
-                                                                                        <% if (Request.QueryString["category"] != null){ %>
-                                                                                            <asp:Label ID="Label1" runat="server"><%#Eval("City") %><sp/> <%#Eval("Category")%>s</asp:Label></b></h2>
-                                                                                            <%} else{%>
-                                                                                            <asp:Label ID="lblHeader" runat="server"><%#Eval("City") %><sp/> <%#Eval("Category")%>s</asp:Label></b></h2>
-                                                                                       <%} %>
-                                                                                        <asp:Label ID="lblCategoryNew" runat="server" Style="display: none" Text='<%#Eval("Category")%>'></asp:Label>
-                                                                                       <asp:Label ID="lblSubCategory" runat="server" Style="display: none" Text='<%#Eval("SubCategory")%>'></asp:Label>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </asp:Panel>
-                                                                        <tr>
-                                                                            <td valign="top" class="propertyThumbnail" style="vertical-align: top; text-align: center;
-                                                                                width: 110px" rowspan="1">
-                                                                                <div class="drop-shadow effect4">
-                                                                                <a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
-                                                                                    <asp:Image ID="imgProp" ToolTip='<%#string.Format("{0} {1} Bedroom Vacation Rental"   , Eval("City") , Eval("NumBedrooms")) %>'  Width="150px" Height="125px" alt='<%#string.Format("{0} {1} Bedroom Vacation Rental"   , Eval("City") , Eval("NumBedrooms")) %>' 
-                                                                                         ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PhotoImage", "http://www.vacations-abroad.com/images/{0}").Trim() %>'
-                                                                                        runat="server" />
-                                                                                    <%--runat  ="server" alt='<%#String.Format("{0}{1}{2}{3}{4}{5}","Boutique ", Eval("City")," Vacation Rentals, Boutique ",Eval("City")," ",Eval("Category")) %>' />--%>
-                                                                                    
-                                                                                </a>
-                                                                                </div>
-                                                                         
-                                                                                <p class="namebelowthumbnail" style="display: none;height:10px;">
-                                                                                </p>
-                                                                                
-                                                                                <asp:Label ID="propname" runat="server" Text='<%#Eval("name2")%>'></asp:Label>
-                                                                                
-                                                                            </td>
-                                                                            <%--start of edit--%>
-                                                                            <td>
-                                                                                <div >
-                                                                                    <table>
-                                                                                        <tr>
-                                                                                            <td class="bottomline"  >
-                                                                                                <div>
-                                                                                                <ul class="proplist">
-                                                                                                    <li><h3 style="margin-top:0px;padding:0px;"><span class="H3CityText"><a href="<%# CommonFunctions.PrepareURL (((string)DataBinder.Eval(Container.DataItem, "Country", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "StateProvince", "{0}")).Replace (" ", "_").ToLower () + "/" + ((string)DataBinder.Eval(Container.DataItem, "City", "{0}")).Replace (" ", "_").ToLower () + "/" + DataBinder.Eval(Container.DataItem, "ID", "{0}") + "/default.aspx") %>">
-                                                                                                        <asp:Label ID="Label4" class="tdNoSleepsBathNum" runat="server" Text='<%# String.Format("{0}{1}{2}{3}",Eval("type"),"","", "")%>'></asp:Label>
-                                                                                                        <span style="padding:0px; margin:0px;">
-                                                                                                            <asp:Label ID="Label5" runat="server"><%# Eval("NumBedrooms")%></asp:Label>
-                                                                                                            <asp:Label ID="Label6" runat="server">Bedroom</asp:Label>
-                                                                                                            <asp:Label ID="BathNum" runat="server" Text='<%# Bind("NumBaths") %> '></asp:Label>
-                                                                                                            <asp:Label ID="Label7" runat="server">BA Sleeps</asp:Label>
-                                                                                                            <asp:Label ID="Label8" runat="server"><%# Eval("NumSleeps")%></asp:Label>
-                                                                                                        </span></a></span>
-                                                                                                        </h3>
-                                                                                                   </li>
-                                                                                                    <li>
-                                                                                                        <%--                                                                                            <center class="tdRentalRates H3CityText">
-                                                                                                <asp:Label ID="lblPNRates" runat="server"></asp:Label>
-                                                                                                <asp:Label ID="lblSeparator" runat="server" Text=' - '></asp:Label>
-                                                                                                <asp:Label ID="BedNum" runat="server" Text='<%# Bind("NumBedrooms") %>'></asp:Label>
-                                                                                                <asp:Label ID="Label3" runat="server" Text="Bedroom Sleeps"></asp:Label>
-                                                                                                <asp:Label ID="Label1" runat="server" Text='<%# Bind("NumSleeps") %>'></asp:Label>
-                                                                                                </center>
-                                                                                                        --%>
-                                                                                                        
-                                                                                                        <span>
-                                                                                                            <asp:Label ID="lblPNRatesCaption" class="tdRentalRatesBlue" runat="server">Rates:&nbsp;</asp:Label>
-                                                                                                            <asp:Label ID="lblPNRates" CssClass="tdRentalRates"  runat="server"></asp:Label>
-                                                                                                            <asp:Label ID="lblPNRatesCurrency" class="tdRentalRatesBlue" runat="server"></asp:Label>
-                                                                                                            <asp:Label ID="lblPNRatesBasis" CssClass="tdRentalRates" runat="server"></asp:Label>
-                                                                                                            <asp:Label ID="lblMinimumNights" class="tdRentalRatesBlue" Style="text-transform: capitalize;"
-                                                                                                                runat="server" Text='<%# Bind("MinimumNightlyRental") %>'></asp:Label>
-                                                                                                            <asp:Label ID="Label2" class="tdRentalRatesBlue" runat="server">Minimum</asp:Label>
-                                                                                                            <%--<%# PropertiesFullSet.Tables["Properties"].Rows[0]["MinimumNightlyRental"] %>--%>
-                                                                                                            <%--<asp:Label ID="lblseparator" runat="server" Text=' - '></asp:Label>--%>
-                                                                                                        </span>
-                                                                                                        
-                                                                                                    </li>
-                                                                                                    <li>
-                                                                                                        <center class="tdNoSleeps">
-                                                                                                            <%--                                                                                                        <asp:Label ID="BedNum" runat="server" Text='<%# Bind("NumBedrooms") %>'></asp:Label>
-                                                                                                        <asp:Label runat="server" Text="Bedroom "></asp:Label>
-                                                                                                        <asp:Label ID="BathNum" runat="server" Text='<%# Bind("NumBaths") %> '></asp:Label>
-                                                                                                        <asp:Label runat="server" Text="BA Sleeps "></asp:Label>
-                                                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("NumSleeps") %>'></asp:Label>                                                                                                    
-                                                                                                            --%>
-                                                                                                            <%--                                                                                                    <asp:Label runat="server" Text='vacation rental in '></asp:Label>
-                                                                                                        <asp:Label runat="server" Text='<%#Eval("city")%>'></asp:Label>
-                                                                                                            --%>
-                                                                                                        </center>
-                                                                                                    </li>
-                                                                                                    <li id="liAmenity"  runat="server">
-                                                                                                        <asp:Label ID="lblAmenitiesCaption" CssClass="amenitiesCaption" runat="server">Amenities:</asp:Label>
-                                                                                                        <h4 style="display:inline;"><asp:Label ID="lblAmenities" CssClass="amenities" runat="server"></asp:Label></h4>
-                                                                                                    </li>
-                                                                                                    <li class="liDesccity">
-                                                                                                        <asp:Label ID="lblDesc" runat="server" Text='<%# Eval("Name","{0} ")  %>'></asp:Label>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                                </div>
+        </div>
+        <div class=" newline">
+            <div class="pcontent">
 
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                    <%--middle of edit--%>
-                                                                                </div>
-                                                                                <div style="float: right;">
-                                                                                    <center>
-                                                                                        <div id="divCalendar" runat="server">
-                                                                                        </div>
-                                                                                        <div id="divWrite" runat="server">
-                                                                                        </div>
-                                                                                    </center>
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
+                
+            </div>
+        </div>
+        <div class="newline">
+            <div class="pagination" id="paging">
 
-                                                                    </table>
-                                                                    <%--end of edits--%>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:BoundField DataField="NumBedrooms" HeaderText="Sort rentals by Bedrooms" SortExpression="NumBedrooms"
-                                                                Visible="False" />
-                                                            <asp:ImageField ControlStyle-Width="500px" ControlStyle-Height="500px" DataImageUrlField="PhotoImage"
-                                                                DataAlternateTextField="Type" DataImageUrlFormatString="http://www.vacations-abroad.com/images/{0}"
-                                                                Visible="False">
-                                                                <ControlStyle Height="500px" Width="500px"></ControlStyle>
-                                                            </asp:ImageField>
-                                                            <asp:TemplateField HeaderText="Amenities" Visible="False">
-                                                                <EditItemTemplate>
-                                                                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("NumBedrooms") %>'></asp:TextBox>
-                                                                </EditItemTemplate>
-                                                                <ItemTemplate>
-                                                                    Sleeps
-                                                                    <asp:Label ID="num_sleeps" runat="server" Text='<%# Eval("NumSleeps", "{0}") %>'></asp:Label>
-                                                                </ItemTemplate>
-                                                            </asp:TemplateField>
-                                                            <asp:TemplateField></asp:TemplateField>
-                                                        </Columns>
-                                                        <PagerStyle CssClass="StatePager" BackColor="#CCAF00" ForeColor="Black" />
-                                                        <EmptyDataTemplate>
-                                                            <br />
-                                                            <br />
-                                                            <center>
-                                                                No Propeties Found</center>
-                                                            <br />
-                                                        </EmptyDataTemplate>
-                                                        <SelectedRowStyle CssClass="StateSelected" />
-                                                        <HeaderStyle CssClass="StateHeader" />
-                                                        <EditRowStyle CssClass="StateEdit" />
-                                                    </asp:GridView>
-                                                    <table>
-                                                        <tr>
-                                                            <td align="left" style="float: left; width: 82%;">
+            </div>
+        </div>
+    
+  
+  
+        </div>
+    <% if (countryinfo.CityText2!="")
+{ %>
+                 <div class="com_box">
+                                <h3>
+                                    <%=countryinfo.City %> Vacations: Things to see while on vacation in <%=countryinfo.City %>,<%=countryinfo.StateProvince %>
+                                </h3><br />
+                     <label>
+                         <%=countryinfo.CityText2 %>
+                     </label>
+                   </div> 
+
+            <% } %>
+               </div>
+
+
+ 
+                                               <div>
 
                                                                 <br />
                                                                 <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
                                                                    { %>
                                                                 <center>
-                        <asp:TextBox ID="txtCityText2" runat="server" Rows="7" TextMode="MultiLine" Width="600px"></asp:TextBox>
-                        <br />
-                        <asp:Button ID="btnSubmit2" runat="server" Text="Save Text" OnClick="btnSubmit2_Click" /></center>
+                                                                        <asp:TextBox ID="txtCityText2" runat="server" Rows="7" TextMode="MultiLine" Width="600px"></asp:TextBox>
+                                                                        <br />
+                                                                        <asp:Button ID="btnSubmit2" runat="server" Text="Save Text" OnClick="btnSubmit2_Click" /></center>
                                                                 <br />
                                                                 <% } %>
-
-                                                                <% if (string.IsNullOrEmpty(Convert.ToString(Request.QueryString["category"])))
-                                                                   { %>
-                                                                <h2 style="font-size: 1.5em; color: #050505">
-                                                                    <b>
-                                                                        <span id="ctl00_Content_City_datagrid_ctl02_lblHeader"><asp:Label ID="lblBottom" runat="server"></asp:Label></span></b></h2>
-                                                                <asp:Label ID="lblInfo2" runat="server" EnableViewState="False" CssClass="" style="font-size:14px;color:#050505"></asp:Label>
-                                                                <% } %>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
+                                                    </div>
                                                 <div style="float: left; width: 18%">
 
                                                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -384,10 +181,6 @@
                                                     </script>
 
                                                 </div>
-                                            </div>
-                </div>
-
-
                     <div class="OrangeText" style="text-align: left; float: left;">
                         <br />
                     </div>
@@ -419,9 +212,8 @@
         </p>
     </div>
 
-        </div>
     </div>
-
+ 
    
     
     <script src="/Assets/js/citylist.js"></script>

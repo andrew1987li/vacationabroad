@@ -226,6 +226,11 @@ table.proptable {
     text-align: center;
 }
 
+
+.textfont{
+    text-align: left;color: #3c3c3c;font-size: 14px;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
 div.centered> table 
 {
     margin: 0 auto; 

@@ -388,7 +388,7 @@
                 <br />
                 <%# ((int)PropertiesFullSet.Tables["Properties"].Rows[0]["IfPaid"] == 1) && (bool)PropertiesFullSet.Tables["Properties"].Rows[0]["IfShowAddress"] ? "Address: " + PropertiesFullSet.Tables["Properties"].Rows[0]["Address"] : "" %>
             </h2>
-            <div>
+            <div class="textfont">
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumTVs"] %>
                 TVs,
                 <%# PropertiesFullSet.Tables["Properties"].Rows[0]["NumVCRs"] %>
@@ -417,7 +417,7 @@
                 <li data-tab="tabs-3">Inquire</li>
 
             </ul>
-            <div id="tabs-1"  class="tab-content current" style="text-align: left;font-size: 14.66px;">
+            <div id="tabs-1"  class="tab-content current textfont">
 
                 <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Description"] %><br />
                 <%= PropertiesFullSet.Tables["Properties"].Rows[0]["Amenities"] %>
@@ -716,7 +716,7 @@
                     <%--attractions--%>
                     <%if (PropertiesFullSet.Tables["Properties"].Rows[0]["LocalAttractions"].ToString().Length > 0)
                       {%>
-                    <div align="left" class="ViewPropertyPageFonts">
+                    <div align="left" class="ViewPropertyPageFonts textfont">
                         <%# PropertiesFullSet.Tables["Properties"].Rows[0]["LocalAttractions"]%>
                     </div>
                     <%} %>

@@ -101,9 +101,10 @@
                    <div class="col-100">
 
                     <div class="subtitle" visible="true" id="OrangeTitle" runat="server">
-                        <h2 style="margin-top:5px; background-color:white; color:#ff6600">Things to see while on vacation in 
-                        <asp:Literal ID="ltrStateThing" runat="server"></asp:Literal></h2>
 
+                        <h3 style="margin-top:55px; background-color:white;"><%=stateprovince %> Vacations: Things to see while on vacation in 
+                        <asp:Literal ID="ltrStateThing" runat="server"></asp:Literal> <%=country %></h3>
+  
                     </div>
 
                     <% if (AuthenticationManager.IfAuthenticated && AuthenticationManager.IfAdmin)
@@ -129,7 +130,6 @@
                 </li>
                 <asp:Literal ID="rtLow3" runat="server"></asp:Literal>
             </ul>
-            <br />
             <br />
             <ul>
                 <li>

@@ -189,10 +189,15 @@
             if(Request.RawUrl.IndexOf("WebResource.axd") >= 0)
                 return;
 
+
+
             if(Request.RawUrl.IndexOf("?") >= 0)
                 querystring = Request.RawUrl.Substring(Request.RawUrl.IndexOf("?") + 1);
             else
                 querystring = "";
+
+           // Response.Write(oldpath + "   " + querystring);
+           // return;
 
             if(oldpath.ToLower().StartsWith(Request.ApplicationPath.ToLower()))
                 oldpath = oldpath.Substring(Request.ApplicationPath.Length);
